@@ -16,6 +16,12 @@ def snapshot(client, bot_id):
     root = "/bots/" + quote(bot_id, safe="")
     profile = client.request("GET", root)
     settings = client.request("GET", root + "/settings")
+    # Upstream omits empty optional bindings on reads. Keep their empty values in
+    # backups so an explicitly added binding can be cleared by restore.
+    for key in ("default_bot_agent_id", "chat_acp_agent_id", "chat_acp_project_path",
+                "chat_acp_project_mode", "compaction_model_id", "discuss_probe_model_id", "overlay_provider"):
+        settings.setdefault(key, "")
+    settings.setdefault("overlay_config", {})
     try:
         file = client.request("GET", root + "/container/fs/read?" + urlencode({"path": AGENTS_PATH}))
     except APIError as exc:

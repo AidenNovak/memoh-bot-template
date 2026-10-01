@@ -128,6 +128,13 @@ class ApplyTests(unittest.TestCase):
         restore(self.client,state)
         self.assertIsNone(self.client.file)
 
+    def test_restore_clears_optional_binding_added_during_apply(self):
+        self.assertNotIn('compaction_model_id',self.client.settings)
+        result=self.apply(bindings={'compaction_model_id':'new-compaction-model'})
+        self.assertEqual(self.client.settings['compaction_model_id'],'new-compaction-model')
+        restore(self.client,json.loads(Path(result['backup']).read_text()))
+        self.assertEqual(self.client.settings['compaction_model_id'],'')
+
     def test_incompatible_server_and_bad_bindings_fail_before_mutation(self):
         contract=copy.deepcopy(CONTRACT)
         del contract['definitions']['settings.UpsertRequest']['properties']['tool_approval_config']
