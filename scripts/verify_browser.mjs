@@ -1,0 +1,31 @@
+// Browser verification without npm dependencies. Start dedicated Chrome with
+// --remote-debugging-port=9228 and the local gallery on port 8765 first.
+import fs from 'node:fs';
+const targets=await (await fetch('http://127.0.0.1:9228/json/list')).json();
+const target=targets.find(t=>t.url==='http://127.0.0.1:8765/');
+if(!target) throw new Error('Open the local gallery in the dedicated Chrome instance');
+const socket=new WebSocket(target.webSocketDebuggerUrl);
+await new Promise((resolve,reject)=>{socket.onopen=resolve;socket.onerror=reject;});
+let seq=0;const pending=new Map();socket.onmessage=event=>{const data=JSON.parse(event.data);if(data.id&&pending.has(data.id)){const {resolve,reject}=pending.get(data.id);pending.delete(data.id);data.error?reject(new Error(data.error.message)):resolve(data.result);}};
+const call=(method,params={})=>new Promise((resolve,reject)=>{const id=++seq;pending.set(id,{resolve,reject});socket.send(JSON.stringify({id,method,params}));});
+const evaluate=async(expression)=>{const r=await call('Runtime.evaluate',{expression,awaitPromise:true,returnByValue:true});if(r.exceptionDetails)throw new Error(r.exceptionDetails.text);return r.result.value;};
+const check=async(expr,label)=>{if(!await evaluate(expr))throw new Error(label);};
+fs.mkdirSync('verification',{recursive:true});
+await call('Emulation.setDeviceMetricsOverride',{width:1440,height:1080,deviceScaleFactor:1,mobile:false});
+await call('Page.reload');
+await evaluate(`new Promise(resolve=>{const poll=()=>document.querySelectorAll('.card').length===56?resolve(true):setTimeout(poll,30);poll();})`);
+await check(`document.querySelectorAll('.card').length===56`,'56 cards');
+let screenshot=await call('Page.captureScreenshot',{format:'png'});fs.writeFileSync('verification/gallery-desktop.png',Buffer.from(screenshot.data,'base64'));
+await evaluate(`document.querySelector('#search').value='芙莉莲';document.querySelector('#search').dispatchEvent(new Event('input'))`);
+await check(`document.querySelectorAll('.card').length===1`,'search');
+await evaluate(`document.querySelector('.card').click();new Promise(resolve=>{const poll=()=>document.querySelector('#detail').open?resolve(true):setTimeout(poll,30);poll();})`);
+await check(`document.querySelector('#detail-title').textContent.includes('芙莉莲')`,'detail');
+await evaluate(`document.querySelector('[data-tab="tune"]').click();document.querySelector('[data-parameter="user_name"]').value='小林'`);
+await check(`document.querySelectorAll('[data-parameter]').length===11&&!document.querySelector('#tab-tune').hidden`,'11 tunable parameters');
+screenshot=await call('Page.captureScreenshot',{format:'png'});fs.writeFileSync('verification/gallery-detail.png',Buffer.from(screenshot.data,'base64'));
+await evaluate(`document.querySelector('#close').click();document.querySelector('#search').value='';document.querySelector('#search').dispatchEvent(new Event('input'))`);
+await call('Emulation.setDeviceMetricsOverride',{width:390,height:844,deviceScaleFactor:1,mobile:true});
+await check(`document.documentElement.scrollWidth<=390`,'mobile overflow');
+screenshot=await call('Page.captureScreenshot',{format:'png'});fs.writeFileSync('verification/gallery-mobile.png',Buffer.from(screenshot.data,'base64'));
+console.log('Browser checks passed: catalog, search, detail, parameters, mobile layout');
+socket.close();

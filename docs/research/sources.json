@@ -1,0 +1,317 @@
+{
+  "musk": {
+    "title": "Everyday Astronaut：Starbase 采访",
+    "kind": "采访",
+    "url": "https://everydayastronaut.com/starbase-tour-and-interview-with-elon-musk/",
+    "checked_at": "2026-10-01",
+    "note": "公开工程方法与制造议题；本库把拆解成本、删减步骤改造成互动游戏。"
+  },
+  "trump": {
+    "title": "Miller Center：Trump 的商业与电视经历",
+    "kind": "学术人物史",
+    "url": "https://millercenter.org/president/trump/life-presidency",
+    "checked_at": "2026-10-01",
+    "note": "商业品牌与电视形象；夸张式谈判戏剧化演绎是本库创作。"
+  },
+  "jobs": {
+    "title": "Stanford：2005 Jobs 演讲原文",
+    "kind": "本人演讲",
+    "url": "https://news.stanford.edu/stories/2005/06/youve-got-find-love-jobs-says",
+    "checked_at": "2026-10-01",
+    "note": "兴趣、挫折与创造性经历；产品评审场景为原创。"
+  },
+  "bezos": {
+    "title": "Amazon：1997 股东信",
+    "kind": "本人公开信",
+    "url": "https://www.aboutamazon.com/news/company-news/amazons-original-1997-letter-to-shareholders",
+    "checked_at": "2026-10-01",
+    "note": "长期价值与客户价值；本库不复制信件，改写成客户倒推练习。"
+  },
+  "buffett": {
+    "title": "Berkshire：股东信索引",
+    "kind": "本人公开信",
+    "url": "https://www.berkshirehathaway.com/letters/letters.html",
+    "checked_at": "2026-10-01",
+    "note": "股东信阅读入口；耐心、能力圈等为演绎方向，不构成证券建议。"
+  },
+  "feynman": {
+    "title": "Nobel：Feynman 诺奖演讲",
+    "kind": "本人演讲",
+    "url": "https://www.nobelprize.org/prizes/physics/1965/feynman/lecture/",
+    "checked_at": "2026-10-01",
+    "note": "物理研究的试探与解释过程；教学游戏是原创设计。"
+  },
+  "einstein": {
+    "title": "Nobel：Einstein Facts",
+    "kind": "机构人物资料",
+    "url": "https://www.nobelprize.org/prizes/physics/1921/einstein/facts/",
+    "checked_at": "2026-10-01",
+    "note": "物理学家与光电效应；电梯与追光的对话情景为原创演绎。"
+  },
+  "pg": {
+    "title": "Paul Graham：Do Things that Don't Scale",
+    "kind": "本人文章",
+    "url": "https://paulgraham.com/ds.html",
+    "checked_at": "2026-10-01",
+    "note": "早期手动招募用户、手工解决需求；本库改写成创业诊所。"
+  },
+  "jay": {
+    "title": "JVR：Jay Chou 艺人资料",
+    "kind": "官方艺人页",
+    "url": "https://www.jvrmusic.com/artist/profile/1150822038412333056?lang=en_US",
+    "checked_at": "2026-10-01",
+    "note": "作曲、制作与导演经历；本库不引用歌词或杜撰私生活。"
+  },
+  "chow": {
+    "title": "香港电影金像奖：第21届名单",
+    "kind": "官方奖项",
+    "url": "https://hkfaa.com/winnerlist21.html",
+    "checked_at": "2026-10-01",
+    "note": "周星驰与少林足球获奖资料；反差喜剧玩法为原创，不复制电影台词。"
+  },
+  "chan": {
+    "title": "Academy：2016 Governors Awards",
+    "kind": "官方奖项",
+    "url": "https://www.oscars.org/news/jackie-chan-anne-v-coates-lynn-stalmaster-and-frederick-wiseman-receive-academys-2016-governors",
+    "checked_at": "2026-10-01",
+    "note": "成龙的动作喜剧与演员导演经历；片场拆镜为原创，排除危险特技教学。"
+  },
+  "faye": {
+    "title": "Universal Music：Faye Wong Biography",
+    "kind": "官方艺人页",
+    "url": "https://www.universal-music.co.jp/faye-wong/biography/",
+    "checked_at": "2026-10-01",
+    "note": "歌手身份资料；清冷、留白是本库选择的舞台演绎，不断言真人私下性格。"
+  },
+  "eason": {
+    "title": "UMG：Eason Chan 合作公告",
+    "kind": "官方艺人资料",
+    "url": "https://www.universalmusic.com/universal-music-group-extends-partnership-with-chinese-pop-megastar-eason-chan/",
+    "checked_at": "2026-10-01",
+    "note": "音乐生涯与作品介绍；情绪听歌室是原创玩法，不引用歌词。"
+  },
+  "liu": {
+    "title": "Hugo：2015 获奖名单",
+    "kind": "官方奖项",
+    "url": "https://www.thehugoawards.org/2015/08/2014-hugo-award-winners-announced/",
+    "checked_at": "2026-10-01",
+    "note": "刘慈欣与三体获奖记录；宇宙尺度创意桌不复制小说或假称作者本人。"
+  },
+  "chiang": {
+    "title": "Hoover：Chiang Diaries",
+    "kind": "档案机构",
+    "url": "https://www.hoover.org/library-archives/collections/featured/chiang-diaries?page=1",
+    "checked_at": "2026-10-01",
+    "note": "日记的时间范围与研究背景；民国幕僚室及复盘口吻为原创历史戏剧。"
+  },
+  "cao": {
+    "title": "中国哲学书电子化：三国志·武帝纪",
+    "kind": "历史文献",
+    "url": "https://ctext.org/text.pl?if=gb&node=601875",
+    "checked_at": "2026-10-01",
+    "note": "史书中的曹操；用人桌游为原创，不把演义桥段混作史实。"
+  },
+  "su": {
+    "title": "中国哲学书电子化：苏轼集卷四十三",
+    "kind": "文学文献",
+    "url": "https://ctext.org/wiki.pl?chapter=769319&if=en",
+    "checked_at": "2026-10-01",
+    "note": "苏轼议论文章；厨房夜谈与生活转化为本库演绎。"
+  },
+  "li": {
+    "title": "中国哲学书电子化：李白诗全集",
+    "kind": "文学文献",
+    "url": "https://ctext.org/wiki.pl?if=gb&res=748499",
+    "checked_at": "2026-10-01",
+    "note": "李白诗作目录；意象接龙为原创，不假称新诗出自李白。"
+  },
+  "lu": {
+    "title": "上海鲁迅纪念馆：鲁迅知识",
+    "kind": "纪念馆",
+    "url": "https://www.luxunmuseum.cn/study/index.html",
+    "checked_at": "2026-10-01",
+    "note": "作家相关研究入口；短句拆话术玩法为原创，不伪造语录。"
+  },
+  "zhuge": {
+    "title": "中国哲学书电子化：三国演义第43回",
+    "kind": "文学文献",
+    "url": "https://ctext.org/sanguo-yanyi/ch43/ens",
+    "checked_at": "2026-10-01",
+    "note": "演义中的论辩形象；本模板明确采用文学演绎，史实另外查证。"
+  },
+  "frieren": {
+    "title": "葬送的芙莉莲：官方人物设计介绍",
+    "kind": "官方角色资料",
+    "url": "https://frieren-anime.jp/news/133/",
+    "checked_at": "2026-10-01",
+    "note": "长寿精灵、魔法兴趣与日常节奏；慢旅行与魔法清单是原创。"
+  },
+  "fern": {
+    "title": "葬送的芙莉莲：新队伍角色介绍",
+    "kind": "官方角色资料",
+    "url": "https://frieren-anime.jp/news/197/",
+    "checked_at": "2026-10-01",
+    "note": "菲伦冷静与照顾同伴的角色特征；出行清单为原创。"
+  },
+  "maomao": {
+    "title": "药屋少女：第二季角色页",
+    "kind": "官方角色资料",
+    "url": "https://kusuriyanohitorigoto.jp/season2/character/index.php",
+    "checked_at": "2026-10-01",
+    "note": "猫猫的好奇心与药师身份；仅设计虚构线索游戏，不提供试毒操作。"
+  },
+  "spy": {
+    "title": "SPY×FAMILY：角色页",
+    "kind": "官方角色资料",
+    "url": "https://spy-family.net/tvseries/",
+    "checked_at": "2026-10-01",
+    "note": "阿尼亚、洛伊德、约尔的家庭角色与各自秘密；家庭任务均为原创。"
+  },
+  "gojo": {
+    "title": "咒术回战：角色与周年演员资料",
+    "kind": "官方角色资料",
+    "url": "https://jujutsukaisen.jp/5th/cast_message.html",
+    "checked_at": "2026-10-01",
+    "note": "五条悟的角色身份；甜品挑战与导师口吻为本库演绎。"
+  },
+  "nanami": {
+    "title": "咒术回战：七海建人角色页",
+    "kind": "官方角色资料",
+    "url": "https://jujutsukaisen.jp/character/category3.php",
+    "checked_at": "2026-10-01",
+    "note": "七海曾在一般企业工作、成熟的一級术师；下班计划为原创。"
+  },
+  "luffy": {
+    "title": "ONE PIECE：路飞角色页",
+    "kind": "官方角色资料",
+    "url": "https://one-piece.com/character/luffy/index.html",
+    "checked_at": "2026-10-01",
+    "note": "船长、自由、伙伴与冒险；目标出海游戏为原创。"
+  },
+  "zoro": {
+    "title": "ONE PIECE：索隆角色页",
+    "kind": "官方角色资料",
+    "url": "https://one-piece.com/character/zoro/index.html",
+    "checked_at": "2026-10-01",
+    "note": "剑士、训练、伙伴与方向感；训练记录互动为原创。"
+  },
+  "naruto": {
+    "title": "NARUTO：官方动画资料",
+    "kind": "官方剧情资料",
+    "url": "https://naruto-official.com/en/anime/naruto2/list/01_917",
+    "checked_at": "2026-10-01",
+    "note": "鸣人与卡卡西所属作品、团队关联；目标训练对话为原创。"
+  },
+  "kakashi": {
+    "title": "NARUTO：卡卡西生日专栏",
+    "kind": "官方角色资料",
+    "url": "https://naruto-official.com/en/news/01_1903",
+    "checked_at": "2026-10-01",
+    "note": "团队测试与重视同伴；铃铛式协作练习为原创。"
+  },
+  "conan": {
+    "title": "小学馆：柯南原作角色资料",
+    "kind": "出版方角色资料",
+    "url": "https://www.conan-portal.com/",
+    "checked_at": "2026-10-01",
+    "note": "柯南与灰原的基本身份；本库案件完全原创。"
+  },
+  "bocchi": {
+    "title": "孤独摇滚：演员评论",
+    "kind": "官方演员资料",
+    "url": "https://bocchi.rocks/tv/caststaff/",
+    "checked_at": "2026-10-01",
+    "note": "后藤一里的角色与负面自我意识演绎；社交小步练习为原创。"
+  },
+  "marin": {
+    "title": "更衣人偶：角色页",
+    "kind": "官方角色资料",
+    "url": "https://bisquedoll-anime.com/1st/character/",
+    "checked_at": "2026-10-01",
+    "note": "海梦开朗、模特与Cosplay爱好；道具预算互动为原创。"
+  },
+  "kurisu": {
+    "title": "STEINS;GATE：官方站",
+    "kind": "官方作品资料",
+    "url": "https://steinsgate.tv/",
+    "checked_at": "2026-10-01",
+    "note": "作品与角色设定入口；实验反驳流程是原创，默认不剧透。"
+  },
+  "lelouch": {
+    "title": "Code Geass：R2 鲁路修角色页",
+    "kind": "官方角色资料",
+    "url": "https://geass.jp/r2/chara_01.html",
+    "checked_at": "2026-10-01",
+    "note": "聪明的学生与反叛角色；棋局推演为原创且不强迫用户。"
+  },
+  "dandadan": {
+    "title": "Crunchyroll：2026 Anime Awards 获奖与提名",
+    "kind": "官方奖项",
+    "url": "https://www.crunchyroll.com/news/latest/2026/5/22/anime-awards-2026-winners-list?pubDate=20260523",
+    "checked_at": "2026-10-01",
+    "note": "猫猫、阿尼亚获奖，桃和厄卡伦为主角奖提名；只以奖项说明选材热度，不声称角色全球排名。"
+  },
+  "zhongli": {
+    "title": "Genshin Official：钟离演示",
+    "kind": "官方发布",
+    "url": "https://www.hoyolab.com/article/94640",
+    "checked_at": "2026-10-01",
+    "note": "官方角色演示入口；茶馆契约与谈古玩法为原创。"
+  },
+  "furina": {
+    "title": "HoYoWiki：芙宁娜",
+    "kind": "官方平台角色百科",
+    "url": "https://wiki.hoyolab.com/pc/genshin/entry/4376?crawler=Googlebot&lang=",
+    "checked_at": "2026-10-01",
+    "note": "角色与官方演示索引；剧场谢幕互动为原创。"
+  },
+  "raiden": {
+    "title": "HoYoWiki：雷电将军",
+    "kind": "官方平台角色百科",
+    "url": "https://wiki.hoyolab.com/pc/genshin/entry/49?crawler=Googlebot&lang=",
+    "checked_at": "2026-10-01",
+    "note": "角色与官方演示索引；变化辩论为原创，区分将军与影。"
+  },
+  "nahida": {
+    "title": "HoYoWiki：角色演示索引",
+    "kind": "官方平台百科",
+    "url": "https://wiki.hoyolab.com/",
+    "checked_at": "2026-10-01",
+    "note": "纳西妲的角色演示索引；树状问答与知识花园为原创。"
+  },
+  "starrail": {
+    "title": "星穹铁道：官方角色页面",
+    "kind": "官方角色资料",
+    "url": "https://sr.mihoyo.com/main?nav=world",
+    "checked_at": "2026-10-01",
+    "note": "三月七、卡芙卡、流萤的角色入口；列车日记、分支与散步玩法为原创。"
+  },
+  "kafka": {
+    "title": "Star Rail Official：Kafka Trailer",
+    "kind": "官方角色预告",
+    "url": "https://www.youtube.com/watch?v=AEUffI4nAIM",
+    "checked_at": "2026-10-01",
+    "note": "官方预告的戏剧节奏；分支叙事不宣称控制现实用户。"
+  },
+  "arona": {
+    "title": "Blue Archive：阿罗娜通信",
+    "kind": "官方角色互动",
+    "url": "https://bluearchive.jp/arona_report/",
+    "checked_at": "2026-10-01",
+    "note": "阿罗娜以通信方式回应玩家；蓝色便签助理为原创。"
+  },
+  "tga": {
+    "title": "The Game Awards：2023 年名单",
+    "kind": "官方奖项",
+    "url": "https://thegameawards.com/rewind/year-2023",
+    "checked_at": "2026-10-01",
+    "note": "原神与星穹铁道出现在获奖名单中；用于作品层面的社区覆盖参考，不代表单角人气。"
+  },
+  "card": {
+    "title": "SillyTavern：Character Design",
+    "kind": "官方项目文档",
+    "url": "https://github.com/SillyTavern/SillyTavern-Docs/blob/main/Usage/Characters/characterdesign.md",
+    "checked_at": "2026-10-01",
+    "note": "角色描述、性格、情景、首句、示例对话等结构启发；不复制社区角色卡。"
+  }
+}

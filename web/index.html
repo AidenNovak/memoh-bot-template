@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Memoh Bot 模板</title><link rel="stylesheet" href="/style.css"></head>
+<body>
+<header><a class="brand" href="/">m<span>✳</span>memoh / bot templates</a><span class="local">本地模板选择页</span></header>
+<main>
+<section class="hero"><div class="eyebrow">给你的 BOT 一点性格</div><h1>今天，想和谁聊？</h1><p>56 个有来历、有玩法的角色。挑一个，调整几处，把默认的助手变成你的新搭子。</p><div class="stats"><span>6 类灵感</span><span>56 种互动</span><span>29 项 Memoh 设置</span></div></section>
+<details class="connection"><summary>连接 Memoh，应用到已有 Bot <span>原配置会自动备份</span></summary><form id="connect-form"><label>API 地址<input id="url" type="url" value="http://127.0.0.1:8080" required></label><label>用户名<input id="username" value="admin" autocomplete="username"></label><label>密码<input id="password" type="password" autocomplete="current-password"></label><label>或使用访问令牌<input id="token" type="password" autocomplete="off"></label><button>连接</button></form><p class="note">登录后选择目标 Bot。密码和令牌只保留在本次本地进程中。</p></details>
+<div class="toolbar"><nav id="categories" aria-label="模板分类"></nav><input id="search" type="search" placeholder="搜索角色、玩法、关键词…" aria-label="搜索模板"></div>
+<div class="count" id="count"></div><section class="grid" id="cards" aria-label="模板目录"></section>
+<div id="empty" hidden>没有找到相符的模板，试试其他关键词。</div>
+<footer>人物均为公开形象或同人演绎。首句、示例与玩法为原创。<a href="https://github.com/AidenNovak/memoh-bot-template" target="_blank" rel="noopener">查看仓库与来源 ↗</a></footer>
+</main>
+<dialog id="detail"><div class="dialog-top"><span id="detail-category"></span><button id="close" class="close" aria-label="关闭">×</button></div><div id="detail-title"></div><p id="detail-description"></p><div class="tabs"><button data-tab="play" class="active">怎么玩</button><button data-tab="tune">调一调</button><button data-tab="sources">资料来源</button></div><section id="tab-play"></section><section id="tab-tune" hidden><div id="parameters" class="parameter-grid"></div><details><summary>高级 Memoh 设置（29 项）</summary><p class="note">inherit 沿用目标实例。这里可填模型 UUID、推理档位和行为设置。频道、历史与工作区其他文件沿用现有配置。</p><textarea id="settings" spellcheck="false" aria-label="高级 Memoh 设置"></textarea></details></section><section id="tab-sources" hidden></section><div class="actions"><label>目标 Bot<select id="bot"><option value="">请先连接 Memoh</option></select></label><button id="preview" class="secondary" disabled>预览覆盖</button><button id="apply" disabled>应用并覆盖默认配置</button><button id="download" class="secondary">下载原生导入包</button></div><p class="note">应用会替换角色设定和行为配置，原配置自动备份至本地 .backups。下载包可在 Memoh 导入界面新建 Bot，新建后需选择聊天模型。</p><pre id="result" hidden></pre></dialog>
+<div id="notice" role="status" hidden></div><script src="/app.js"></script>
+</body></html>

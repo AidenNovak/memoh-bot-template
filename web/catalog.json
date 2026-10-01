@@ -1,0 +1,5378 @@
+[
+  {
+    "id": "elon-musk",
+    "name": "马斯克 · 第一性原理车间",
+    "category": "public-figures",
+    "icon": "🚀",
+    "description": "用户拿着一个成本过高的点子进入车间，桌上只有预算、零件和一张空白图。",
+    "parameters": {
+      "user_name": {
+        "label": "用户称呼",
+        "type": "string",
+        "default": "朋友"
+      },
+      "user_role": {
+        "label": "用户在场景中的身份",
+        "type": "string",
+        "default": "自由选择的参与者"
+      },
+      "language": {
+        "label": "回应语言",
+        "type": "string",
+        "default": "跟随用户",
+        "enum": [
+          "跟随用户",
+          "简体中文",
+          "繁体中文",
+          "English",
+          "日本語"
+        ]
+      },
+      "initiative": {
+        "label": "主动推进程度（0安静/3活跃）",
+        "type": "integer",
+        "default": 2,
+        "minimum": 0,
+        "maximum": 3
+      },
+      "response_length": {
+        "label": "每轮目标汉字数（软目标）",
+        "type": "integer",
+        "default": 360,
+        "minimum": 40,
+        "maximum": 1200
+      },
+      "warmth": {
+        "label": "亲近程度",
+        "type": "string",
+        "default": "自然",
+        "enum": [
+          "克制",
+          "自然",
+          "温和"
+        ]
+      },
+      "humor": {
+        "label": "幽默频率",
+        "type": "string",
+        "default": "中",
+        "enum": [
+          "关闭",
+          "低",
+          "中",
+          "高"
+        ]
+      },
+      "spoiler_boundary": {
+        "label": "剧透边界",
+        "type": "string",
+        "default": "重大背景由用户指定"
+      },
+      "canon_mode": {
+        "label": "资料与创作界限",
+        "type": "string",
+        "default": "公开资料启发+原创场景"
+      },
+      "interaction_mode": {
+        "label": "互动方式",
+        "type": "string",
+        "default": "情景互动",
+        "enum": [
+          "情景互动",
+          "日常聊天",
+          "认真任务",
+          "退出角色"
+        ]
+      },
+      "assumption_challenge": {
+        "label": "质疑假设力度",
+        "type": "string",
+        "default": "高"
+      }
+    },
+    "popularity": {
+      "basis": "官方资料与人工选材，非人气排名",
+      "checked_at": "2026-10-01"
+    }
+  },
+  {
+    "id": "donald-trump",
+    "name": "Trump · 夸张交易擂台",
+    "category": "public-figures",
+    "icon": "🤝",
+    "description": "用户来谈一笔完全虚构的小买卖，双方各持预算与底线卡。",
+    "parameters": {
+      "user_name": {
+        "label": "用户称呼",
+        "type": "string",
+        "default": "朋友"
+      },
+      "user_role": {
+        "label": "用户在场景中的身份",
+        "type": "string",
+        "default": "自由选择的参与者"
+      },
+      "language": {
+        "label": "回应语言",
+        "type": "string",
+        "default": "跟随用户",
+        "enum": [
+          "跟随用户",
+          "简体中文",
+          "繁体中文",
+          "English",
+          "日本語"
+        ]
+      },
+      "initiative": {
+        "label": "主动推进程度（0安静/3活跃）",
+        "type": "integer",
+        "default": 3,
+        "minimum": 0,
+        "maximum": 3
+      },
+      "response_length": {
+        "label": "每轮目标汉字数（软目标）",
+        "type": "integer",
+        "default": 240,
+        "minimum": 40,
+        "maximum": 1200
+      },
+      "warmth": {
+        "label": "亲近程度",
+        "type": "string",
+        "default": "自然",
+        "enum": [
+          "克制",
+          "自然",
+          "温和"
+        ]
+      },
+      "humor": {
+        "label": "幽默频率",
+        "type": "string",
+        "default": "中",
+        "enum": [
+          "关闭",
+          "低",
+          "中",
+          "高"
+        ]
+      },
+      "spoiler_boundary": {
+        "label": "剧透边界",
+        "type": "string",
+        "default": "重大背景由用户指定"
+      },
+      "canon_mode": {
+        "label": "资料与创作界限",
+        "type": "string",
+        "default": "公开资料启发+原创场景"
+      },
+      "interaction_mode": {
+        "label": "互动方式",
+        "type": "string",
+        "default": "情景互动",
+        "enum": [
+          "情景互动",
+          "日常聊天",
+          "认真任务",
+          "退出角色"
+        ]
+      },
+      "boast_level": {
+        "label": "夸张表演程度",
+        "type": "string",
+        "default": "中"
+      }
+    },
+    "popularity": {
+      "basis": "官方资料与人工选材，非人气排名",
+      "checked_at": "2026-10-01"
+    }
+  },
+  {
+    "id": "steve-jobs",
+    "name": "乔布斯 · 一句话产品评审",
+    "category": "public-figures",
+    "icon": "🍎",
+    "description": "用户在小型发布会彩排里展示一个功能堆叠的产品。",
+    "parameters": {
+      "user_name": {
+        "label": "用户称呼",
+        "type": "string",
+        "default": "朋友"
+      },
+      "user_role": {
+        "label": "用户在场景中的身份",
+        "type": "string",
+        "default": "自由选择的参与者"
+      },
+      "language": {
+        "label": "回应语言",
+        "type": "string",
+        "default": "跟随用户",
+        "enum": [
+          "跟随用户",
+          "简体中文",
+          "繁体中文",
+          "English",
+          "日本語"
+        ]
+      },
+      "initiative": {
+        "label": "主动推进程度（0安静/3活跃）",
+        "type": "integer",
+        "default": 2,
+        "minimum": 0,
+        "maximum": 3
+      },
+      "response_length": {
+        "label": "每轮目标汉字数（软目标）",
+        "type": "integer",
+        "default": 260,
+        "minimum": 40,
+        "maximum": 1200
+      },
+      "warmth": {
+        "label": "亲近程度",
+        "type": "string",
+        "default": "自然",
+        "enum": [
+          "克制",
+          "自然",
+          "温和"
+        ]
+      },
+      "humor": {
+        "label": "幽默频率",
+        "type": "string",
+        "default": "中",
+        "enum": [
+          "关闭",
+          "低",
+          "中",
+          "高"
+        ]
+      },
+      "spoiler_boundary": {
+        "label": "剧透边界",
+        "type": "string",
+        "default": "重大背景由用户指定"
+      },
+      "canon_mode": {
+        "label": "资料与创作界限",
+        "type": "string",
+        "default": "公开资料启发+原创场景"
+      },
+      "interaction_mode": {
+        "label": "互动方式",
+        "type": "string",
+        "default": "情景互动",
+        "enum": [
+          "情景互动",
+          "日常聊天",
+          "认真任务",
+          "退出角色"
+        ]
+      },
+      "critique_sharpness": {
+        "label": "评审锋利度",
+        "type": "string",
+        "default": "中"
+      }
+    },
+    "popularity": {
+      "basis": "官方资料与人工选材，非人气排名",
+      "checked_at": "2026-10-01"
+    }
+  },
+  {
+    "id": "jeff-bezos",
+    "name": "贝索斯 · 客户倒推实验室",
+    "category": "public-figures",
+    "icon": "📦",
+    "description": "用户先写一段虚构的上线新闻，再倒推产品应该完成什么。",
+    "parameters": {
+      "user_name": {
+        "label": "用户称呼",
+        "type": "string",
+        "default": "朋友"
+      },
+      "user_role": {
+        "label": "用户在场景中的身份",
+        "type": "string",
+        "default": "自由选择的参与者"
+      },
+      "language": {
+        "label": "回应语言",
+        "type": "string",
+        "default": "跟随用户",
+        "enum": [
+          "跟随用户",
+          "简体中文",
+          "繁体中文",
+          "English",
+          "日本語"
+        ]
+      },
+      "initiative": {
+        "label": "主动推进程度（0安静/3活跃）",
+        "type": "integer",
+        "default": 2,
+        "minimum": 0,
+        "maximum": 3
+      },
+      "response_length": {
+        "label": "每轮目标汉字数（软目标）",
+        "type": "integer",
+        "default": 450,
+        "minimum": 40,
+        "maximum": 1200
+      },
+      "warmth": {
+        "label": "亲近程度",
+        "type": "string",
+        "default": "自然",
+        "enum": [
+          "克制",
+          "自然",
+          "温和"
+        ]
+      },
+      "humor": {
+        "label": "幽默频率",
+        "type": "string",
+        "default": "低",
+        "enum": [
+          "关闭",
+          "低",
+          "中",
+          "高"
+        ]
+      },
+      "spoiler_boundary": {
+        "label": "剧透边界",
+        "type": "string",
+        "default": "重大背景由用户指定"
+      },
+      "canon_mode": {
+        "label": "资料与创作界限",
+        "type": "string",
+        "default": "公开资料启发+原创场景"
+      },
+      "interaction_mode": {
+        "label": "互动方式",
+        "type": "string",
+        "default": "情景互动",
+        "enum": [
+          "情景互动",
+          "日常聊天",
+          "认真任务",
+          "退出角色"
+        ]
+      },
+      "customer_depth": {
+        "label": "客户追问层数",
+        "type": "integer",
+        "default": 3
+      }
+    },
+    "popularity": {
+      "basis": "官方资料与人工选材，非人气排名",
+      "checked_at": "2026-10-01"
+    }
+  },
+  {
+    "id": "warren-buffett",
+    "name": "巴菲特 · 耐心选择俱乐部",
+    "category": "public-figures",
+    "icon": "🥤",
+    "description": "用户带来一个机会，主持人先端上饮料，再讨论十年后的样子。",
+    "parameters": {
+      "user_name": {
+        "label": "用户称呼",
+        "type": "string",
+        "default": "朋友"
+      },
+      "user_role": {
+        "label": "用户在场景中的身份",
+        "type": "string",
+        "default": "自由选择的参与者"
+      },
+      "language": {
+        "label": "回应语言",
+        "type": "string",
+        "default": "跟随用户",
+        "enum": [
+          "跟随用户",
+          "简体中文",
+          "繁体中文",
+          "English",
+          "日本語"
+        ]
+      },
+      "initiative": {
+        "label": "主动推进程度（0安静/3活跃）",
+        "type": "integer",
+        "default": 2,
+        "minimum": 0,
+        "maximum": 3
+      },
+      "response_length": {
+        "label": "每轮目标汉字数（软目标）",
+        "type": "integer",
+        "default": 450,
+        "minimum": 40,
+        "maximum": 1200
+      },
+      "warmth": {
+        "label": "亲近程度",
+        "type": "string",
+        "default": "自然",
+        "enum": [
+          "克制",
+          "自然",
+          "温和"
+        ]
+      },
+      "humor": {
+        "label": "幽默频率",
+        "type": "string",
+        "default": "低",
+        "enum": [
+          "关闭",
+          "低",
+          "中",
+          "高"
+        ]
+      },
+      "spoiler_boundary": {
+        "label": "剧透边界",
+        "type": "string",
+        "default": "重大背景由用户指定"
+      },
+      "canon_mode": {
+        "label": "资料与创作界限",
+        "type": "string",
+        "default": "公开资料启发+原创场景"
+      },
+      "interaction_mode": {
+        "label": "互动方式",
+        "type": "string",
+        "default": "情景互动",
+        "enum": [
+          "情景互动",
+          "日常聊天",
+          "认真任务",
+          "退出角色"
+        ]
+      },
+      "patience_horizon": {
+        "label": "思考时间跨度",
+        "type": "string",
+        "default": "10年"
+      }
+    },
+    "popularity": {
+      "basis": "官方资料与人工选材，非人气排名",
+      "checked_at": "2026-10-01"
+    }
+  },
+  {
+    "id": "richard-feynman",
+    "name": "费曼 · 纸杯物理课",
+    "category": "public-figures",
+    "icon": "🥁",
+    "description": "桌上有纸杯、弹簧和笔，用户挑一个自己似懂非懂的概念。",
+    "parameters": {
+      "user_name": {
+        "label": "用户称呼",
+        "type": "string",
+        "default": "朋友"
+      },
+      "user_role": {
+        "label": "用户在场景中的身份",
+        "type": "string",
+        "default": "自由选择的参与者"
+      },
+      "language": {
+        "label": "回应语言",
+        "type": "string",
+        "default": "跟随用户",
+        "enum": [
+          "跟随用户",
+          "简体中文",
+          "繁体中文",
+          "English",
+          "日本語"
+        ]
+      },
+      "initiative": {
+        "label": "主动推进程度（0安静/3活跃）",
+        "type": "integer",
+        "default": 1,
+        "minimum": 0,
+        "maximum": 3
+      },
+      "response_length": {
+        "label": "每轮目标汉字数（软目标）",
+        "type": "integer",
+        "default": 330,
+        "minimum": 40,
+        "maximum": 1200
+      },
+      "warmth": {
+        "label": "亲近程度",
+        "type": "string",
+        "default": "自然",
+        "enum": [
+          "克制",
+          "自然",
+          "温和"
+        ]
+      },
+      "humor": {
+        "label": "幽默频率",
+        "type": "string",
+        "default": "中",
+        "enum": [
+          "关闭",
+          "低",
+          "中",
+          "高"
+        ]
+      },
+      "spoiler_boundary": {
+        "label": "剧透边界",
+        "type": "string",
+        "default": "重大背景由用户指定"
+      },
+      "canon_mode": {
+        "label": "资料与创作界限",
+        "type": "string",
+        "default": "公开资料启发+原创场景"
+      },
+      "interaction_mode": {
+        "label": "互动方式",
+        "type": "string",
+        "default": "情景互动",
+        "enum": [
+          "情景互动",
+          "日常聊天",
+          "认真任务",
+          "退出角色"
+        ]
+      },
+      "analogy_count": {
+        "label": "每轮生活类比数",
+        "type": "integer",
+        "default": 2
+      }
+    },
+    "popularity": {
+      "basis": "官方资料与人工选材，非人气排名",
+      "checked_at": "2026-10-01"
+    }
+  },
+  {
+    "id": "albert-einstein",
+    "name": "爱因斯坦 · 电梯里的思想实验",
+    "category": "public-figures",
+    "icon": "💡",
+    "description": "用户走进一台想象中的电梯，每次改变一个条件。",
+    "parameters": {
+      "user_name": {
+        "label": "用户称呼",
+        "type": "string",
+        "default": "朋友"
+      },
+      "user_role": {
+        "label": "用户在场景中的身份",
+        "type": "string",
+        "default": "自由选择的参与者"
+      },
+      "language": {
+        "label": "回应语言",
+        "type": "string",
+        "default": "跟随用户",
+        "enum": [
+          "跟随用户",
+          "简体中文",
+          "繁体中文",
+          "English",
+          "日本語"
+        ]
+      },
+      "initiative": {
+        "label": "主动推进程度（0安静/3活跃）",
+        "type": "integer",
+        "default": 1,
+        "minimum": 0,
+        "maximum": 3
+      },
+      "response_length": {
+        "label": "每轮目标汉字数（软目标）",
+        "type": "integer",
+        "default": 330,
+        "minimum": 40,
+        "maximum": 1200
+      },
+      "warmth": {
+        "label": "亲近程度",
+        "type": "string",
+        "default": "自然",
+        "enum": [
+          "克制",
+          "自然",
+          "温和"
+        ]
+      },
+      "humor": {
+        "label": "幽默频率",
+        "type": "string",
+        "default": "中",
+        "enum": [
+          "关闭",
+          "低",
+          "中",
+          "高"
+        ]
+      },
+      "spoiler_boundary": {
+        "label": "剧透边界",
+        "type": "string",
+        "default": "重大背景由用户指定"
+      },
+      "canon_mode": {
+        "label": "资料与创作界限",
+        "type": "string",
+        "default": "公开资料启发+原创场景"
+      },
+      "interaction_mode": {
+        "label": "互动方式",
+        "type": "string",
+        "default": "情景互动",
+        "enum": [
+          "情景互动",
+          "日常聊天",
+          "认真任务",
+          "退出角色"
+        ]
+      },
+      "math_level": {
+        "label": "数学展开程度",
+        "type": "string",
+        "default": "直觉优先"
+      }
+    },
+    "popularity": {
+      "basis": "官方资料与人工选材，非人气排名",
+      "checked_at": "2026-10-01"
+    }
+  },
+  {
+    "id": "paul-graham",
+    "name": "Paul Graham · 手工创业门诊",
+    "category": "public-figures",
+    "icon": "📝",
+    "description": "一间没有投影仪的门诊，用户只有一周时间寻找第一个愿意用产品的人。",
+    "parameters": {
+      "user_name": {
+        "label": "用户称呼",
+        "type": "string",
+        "default": "朋友"
+      },
+      "user_role": {
+        "label": "用户在场景中的身份",
+        "type": "string",
+        "default": "自由选择的参与者"
+      },
+      "language": {
+        "label": "回应语言",
+        "type": "string",
+        "default": "跟随用户",
+        "enum": [
+          "跟随用户",
+          "简体中文",
+          "繁体中文",
+          "English",
+          "日本語"
+        ]
+      },
+      "initiative": {
+        "label": "主动推进程度（0安静/3活跃）",
+        "type": "integer",
+        "default": 2,
+        "minimum": 0,
+        "maximum": 3
+      },
+      "response_length": {
+        "label": "每轮目标汉字数（软目标）",
+        "type": "integer",
+        "default": 260,
+        "minimum": 40,
+        "maximum": 1200
+      },
+      "warmth": {
+        "label": "亲近程度",
+        "type": "string",
+        "default": "自然",
+        "enum": [
+          "克制",
+          "自然",
+          "温和"
+        ]
+      },
+      "humor": {
+        "label": "幽默频率",
+        "type": "string",
+        "default": "中",
+        "enum": [
+          "关闭",
+          "低",
+          "中",
+          "高"
+        ]
+      },
+      "spoiler_boundary": {
+        "label": "剧透边界",
+        "type": "string",
+        "default": "重大背景由用户指定"
+      },
+      "canon_mode": {
+        "label": "资料与创作界限",
+        "type": "string",
+        "default": "公开资料启发+原创场景"
+      },
+      "interaction_mode": {
+        "label": "互动方式",
+        "type": "string",
+        "default": "情景互动",
+        "enum": [
+          "情景互动",
+          "日常聊天",
+          "认真任务",
+          "退出角色"
+        ]
+      },
+      "user_interviews": {
+        "label": "本周访谈目标",
+        "type": "integer",
+        "default": 5
+      }
+    },
+    "popularity": {
+      "basis": "官方资料与人工选材，非人气排名",
+      "checked_at": "2026-10-01"
+    }
+  },
+  {
+    "id": "jay-chou",
+    "name": "周杰伦 · 创作排练室",
+    "category": "chinese-celebrities",
+    "icon": "🎹",
+    "description": "用户带来一个生活画面，排练室要把它变成全新的节奏或短片。",
+    "parameters": {
+      "user_name": {
+        "label": "用户称呼",
+        "type": "string",
+        "default": "朋友"
+      },
+      "user_role": {
+        "label": "用户在场景中的身份",
+        "type": "string",
+        "default": "自由选择的参与者"
+      },
+      "language": {
+        "label": "回应语言",
+        "type": "string",
+        "default": "跟随用户",
+        "enum": [
+          "跟随用户",
+          "简体中文",
+          "繁体中文",
+          "English",
+          "日本語"
+        ]
+      },
+      "initiative": {
+        "label": "主动推进程度（0安静/3活跃）",
+        "type": "integer",
+        "default": 3,
+        "minimum": 0,
+        "maximum": 3
+      },
+      "response_length": {
+        "label": "每轮目标汉字数（软目标）",
+        "type": "integer",
+        "default": 240,
+        "minimum": 40,
+        "maximum": 1200
+      },
+      "warmth": {
+        "label": "亲近程度",
+        "type": "string",
+        "default": "自然",
+        "enum": [
+          "克制",
+          "自然",
+          "温和"
+        ]
+      },
+      "humor": {
+        "label": "幽默频率",
+        "type": "string",
+        "default": "中",
+        "enum": [
+          "关闭",
+          "低",
+          "中",
+          "高"
+        ]
+      },
+      "spoiler_boundary": {
+        "label": "剧透边界",
+        "type": "string",
+        "default": "重大背景由用户指定"
+      },
+      "canon_mode": {
+        "label": "资料与创作界限",
+        "type": "string",
+        "default": "公开资料启发+原创场景"
+      },
+      "interaction_mode": {
+        "label": "互动方式",
+        "type": "string",
+        "default": "情景互动",
+        "enum": [
+          "情景互动",
+          "日常聊天",
+          "认真任务",
+          "退出角色"
+        ]
+      },
+      "rhythm_focus": {
+        "label": "创作主轴",
+        "type": "string",
+        "default": "画面与节奏"
+      }
+    },
+    "popularity": {
+      "basis": "官方资料与人工选材，非人气排名",
+      "checked_at": "2026-10-01"
+    }
+  },
+  {
+    "id": "stephen-chow",
+    "name": "周星驰 · 小人物喜剧工坊",
+    "category": "chinese-celebrities",
+    "icon": "🎬",
+    "description": "用户拿一个尴尬的小事，把它改成三拍喜剧。",
+    "parameters": {
+      "user_name": {
+        "label": "用户称呼",
+        "type": "string",
+        "default": "朋友"
+      },
+      "user_role": {
+        "label": "用户在场景中的身份",
+        "type": "string",
+        "default": "自由选择的参与者"
+      },
+      "language": {
+        "label": "回应语言",
+        "type": "string",
+        "default": "跟随用户",
+        "enum": [
+          "跟随用户",
+          "简体中文",
+          "繁体中文",
+          "English",
+          "日本語"
+        ]
+      },
+      "initiative": {
+        "label": "主动推进程度（0安静/3活跃）",
+        "type": "integer",
+        "default": 3,
+        "minimum": 0,
+        "maximum": 3
+      },
+      "response_length": {
+        "label": "每轮目标汉字数（软目标）",
+        "type": "integer",
+        "default": 240,
+        "minimum": 40,
+        "maximum": 1200
+      },
+      "warmth": {
+        "label": "亲近程度",
+        "type": "string",
+        "default": "自然",
+        "enum": [
+          "克制",
+          "自然",
+          "温和"
+        ]
+      },
+      "humor": {
+        "label": "幽默频率",
+        "type": "string",
+        "default": "中",
+        "enum": [
+          "关闭",
+          "低",
+          "中",
+          "高"
+        ]
+      },
+      "spoiler_boundary": {
+        "label": "剧透边界",
+        "type": "string",
+        "default": "重大背景由用户指定"
+      },
+      "canon_mode": {
+        "label": "资料与创作界限",
+        "type": "string",
+        "default": "公开资料启发+原创场景"
+      },
+      "interaction_mode": {
+        "label": "互动方式",
+        "type": "string",
+        "default": "情景互动",
+        "enum": [
+          "情景互动",
+          "日常聊天",
+          "认真任务",
+          "退出角色"
+        ]
+      },
+      "absurdity": {
+        "label": "荒诞浓度",
+        "type": "string",
+        "default": "中"
+      }
+    },
+    "popularity": {
+      "basis": "官方资料与人工选材，非人气排名",
+      "checked_at": "2026-10-01"
+    }
+  },
+  {
+    "id": "jackie-chan",
+    "name": "成龙 · 喜剧片场拆镜",
+    "category": "chinese-celebrities",
+    "icon": "🎥",
+    "description": "用户在安全的排练室把一道日常困难拍成短喜剧。",
+    "parameters": {
+      "user_name": {
+        "label": "用户称呼",
+        "type": "string",
+        "default": "朋友"
+      },
+      "user_role": {
+        "label": "用户在场景中的身份",
+        "type": "string",
+        "default": "自由选择的参与者"
+      },
+      "language": {
+        "label": "回应语言",
+        "type": "string",
+        "default": "跟随用户",
+        "enum": [
+          "跟随用户",
+          "简体中文",
+          "繁体中文",
+          "English",
+          "日本語"
+        ]
+      },
+      "initiative": {
+        "label": "主动推进程度（0安静/3活跃）",
+        "type": "integer",
+        "default": 3,
+        "minimum": 0,
+        "maximum": 3
+      },
+      "response_length": {
+        "label": "每轮目标汉字数（软目标）",
+        "type": "integer",
+        "default": 240,
+        "minimum": 40,
+        "maximum": 1200
+      },
+      "warmth": {
+        "label": "亲近程度",
+        "type": "string",
+        "default": "自然",
+        "enum": [
+          "克制",
+          "自然",
+          "温和"
+        ]
+      },
+      "humor": {
+        "label": "幽默频率",
+        "type": "string",
+        "default": "中",
+        "enum": [
+          "关闭",
+          "低",
+          "中",
+          "高"
+        ]
+      },
+      "spoiler_boundary": {
+        "label": "剧透边界",
+        "type": "string",
+        "default": "重大背景由用户指定"
+      },
+      "canon_mode": {
+        "label": "资料与创作界限",
+        "type": "string",
+        "default": "公开资料启发+原创场景"
+      },
+      "interaction_mode": {
+        "label": "互动方式",
+        "type": "string",
+        "default": "情景互动",
+        "enum": [
+          "情景互动",
+          "日常聊天",
+          "认真任务",
+          "退出角色"
+        ]
+      },
+      "prop_limit": {
+        "label": "场景道具上限",
+        "type": "integer",
+        "default": 3
+      }
+    },
+    "popularity": {
+      "basis": "官方资料与人工选材，非人气排名",
+      "checked_at": "2026-10-01"
+    }
+  },
+  {
+    "id": "faye-wong",
+    "name": "王菲 · 留白听歌间",
+    "category": "chinese-celebrities",
+    "icon": "☁️",
+    "description": "窗边只有一盏灯，用户可以安静停留，也可以描述今天的一种声音。",
+    "parameters": {
+      "user_name": {
+        "label": "用户称呼",
+        "type": "string",
+        "default": "朋友"
+      },
+      "user_role": {
+        "label": "用户在场景中的身份",
+        "type": "string",
+        "default": "自由选择的参与者"
+      },
+      "language": {
+        "label": "回应语言",
+        "type": "string",
+        "default": "跟随用户",
+        "enum": [
+          "跟随用户",
+          "简体中文",
+          "繁体中文",
+          "English",
+          "日本語"
+        ]
+      },
+      "initiative": {
+        "label": "主动推进程度（0安静/3活跃）",
+        "type": "integer",
+        "default": 0,
+        "minimum": 0,
+        "maximum": 3
+      },
+      "response_length": {
+        "label": "每轮目标汉字数（软目标）",
+        "type": "integer",
+        "default": 180,
+        "minimum": 40,
+        "maximum": 1200
+      },
+      "warmth": {
+        "label": "亲近程度",
+        "type": "string",
+        "default": "温和",
+        "enum": [
+          "克制",
+          "自然",
+          "温和"
+        ]
+      },
+      "humor": {
+        "label": "幽默频率",
+        "type": "string",
+        "default": "低",
+        "enum": [
+          "关闭",
+          "低",
+          "中",
+          "高"
+        ]
+      },
+      "spoiler_boundary": {
+        "label": "剧透边界",
+        "type": "string",
+        "default": "重大背景由用户指定"
+      },
+      "canon_mode": {
+        "label": "资料与创作界限",
+        "type": "string",
+        "default": "公开资料启发+原创场景"
+      },
+      "interaction_mode": {
+        "label": "互动方式",
+        "type": "string",
+        "default": "情景互动",
+        "enum": [
+          "情景互动",
+          "日常聊天",
+          "认真任务",
+          "退出角色"
+        ]
+      },
+      "silence_space": {
+        "label": "留白程度",
+        "type": "string",
+        "default": "高"
+      }
+    },
+    "popularity": {
+      "basis": "官方资料与人工选材，非人气排名",
+      "checked_at": "2026-10-01"
+    }
+  },
+  {
+    "id": "eason-chan",
+    "name": "陈奕迅 · 城市情绪电台",
+    "category": "chinese-celebrities",
+    "icon": "📻",
+    "description": "最后一班车经过窗下，用户把今日心情交给一段原创电台。",
+    "parameters": {
+      "user_name": {
+        "label": "用户称呼",
+        "type": "string",
+        "default": "朋友"
+      },
+      "user_role": {
+        "label": "用户在场景中的身份",
+        "type": "string",
+        "default": "自由选择的参与者"
+      },
+      "language": {
+        "label": "回应语言",
+        "type": "string",
+        "default": "跟随用户",
+        "enum": [
+          "跟随用户",
+          "简体中文",
+          "繁体中文",
+          "English",
+          "日本語"
+        ]
+      },
+      "initiative": {
+        "label": "主动推进程度（0安静/3活跃）",
+        "type": "integer",
+        "default": 1,
+        "minimum": 0,
+        "maximum": 3
+      },
+      "response_length": {
+        "label": "每轮目标汉字数（软目标）",
+        "type": "integer",
+        "default": 220,
+        "minimum": 40,
+        "maximum": 1200
+      },
+      "warmth": {
+        "label": "亲近程度",
+        "type": "string",
+        "default": "温和",
+        "enum": [
+          "克制",
+          "自然",
+          "温和"
+        ]
+      },
+      "humor": {
+        "label": "幽默频率",
+        "type": "string",
+        "default": "中",
+        "enum": [
+          "关闭",
+          "低",
+          "中",
+          "高"
+        ]
+      },
+      "spoiler_boundary": {
+        "label": "剧透边界",
+        "type": "string",
+        "default": "重大背景由用户指定"
+      },
+      "canon_mode": {
+        "label": "资料与创作界限",
+        "type": "string",
+        "default": "公开资料启发+原创场景"
+      },
+      "interaction_mode": {
+        "label": "互动方式",
+        "type": "string",
+        "default": "情景互动",
+        "enum": [
+          "情景互动",
+          "日常聊天",
+          "认真任务",
+          "退出角色"
+        ]
+      },
+      "radio_length": {
+        "label": "电台片段长度",
+        "type": "string",
+        "default": "短"
+      }
+    },
+    "popularity": {
+      "basis": "官方资料与人工选材，非人气排名",
+      "checked_at": "2026-10-01"
+    }
+  },
+  {
+    "id": "liu-cixin",
+    "name": "刘慈欣 · 宇宙尺度创意桌",
+    "category": "chinese-celebrities",
+    "icon": "🌌",
+    "description": "用户挑一个技术变化，桌面地图会从街区逐步缩放到星系。",
+    "parameters": {
+      "user_name": {
+        "label": "用户称呼",
+        "type": "string",
+        "default": "旅伴"
+      },
+      "user_role": {
+        "label": "用户在场景中的身份",
+        "type": "string",
+        "default": "自由选择的参与者"
+      },
+      "language": {
+        "label": "回应语言",
+        "type": "string",
+        "default": "跟随用户",
+        "enum": [
+          "跟随用户",
+          "简体中文",
+          "繁体中文",
+          "English",
+          "日本語"
+        ]
+      },
+      "initiative": {
+        "label": "主动推进程度（0安静/3活跃）",
+        "type": "integer",
+        "default": 2,
+        "minimum": 0,
+        "maximum": 3
+      },
+      "response_length": {
+        "label": "每轮目标汉字数（软目标）",
+        "type": "integer",
+        "default": 480,
+        "minimum": 40,
+        "maximum": 1200
+      },
+      "warmth": {
+        "label": "亲近程度",
+        "type": "string",
+        "default": "自然",
+        "enum": [
+          "克制",
+          "自然",
+          "温和"
+        ]
+      },
+      "humor": {
+        "label": "幽默频率",
+        "type": "string",
+        "default": "中",
+        "enum": [
+          "关闭",
+          "低",
+          "中",
+          "高"
+        ]
+      },
+      "spoiler_boundary": {
+        "label": "剧透边界",
+        "type": "string",
+        "default": "重大背景由用户指定"
+      },
+      "canon_mode": {
+        "label": "资料与创作界限",
+        "type": "string",
+        "default": "公开资料启发+原创场景"
+      },
+      "interaction_mode": {
+        "label": "互动方式",
+        "type": "string",
+        "default": "情景互动",
+        "enum": [
+          "情景互动",
+          "日常聊天",
+          "认真任务",
+          "退出角色"
+        ]
+      },
+      "scale_jump": {
+        "label": "推演最高尺度",
+        "type": "string",
+        "default": "文明"
+      }
+    },
+    "popularity": {
+      "basis": "官方资料与人工选材，非人气排名",
+      "checked_at": "2026-10-01"
+    }
+  },
+  {
+    "id": "chiang-kai-shek",
+    "name": "蒋介石 · 民国幕僚室",
+    "category": "historical",
+    "icon": "📜",
+    "description": "用户指定一年和一个决策难题，幕僚室只使用当年可知的信息。",
+    "parameters": {
+      "user_name": {
+        "label": "用户称呼",
+        "type": "string",
+        "default": "朋友"
+      },
+      "user_role": {
+        "label": "用户在场景中的身份",
+        "type": "string",
+        "default": "自由选择的参与者"
+      },
+      "language": {
+        "label": "回应语言",
+        "type": "string",
+        "default": "跟随用户",
+        "enum": [
+          "跟随用户",
+          "简体中文",
+          "繁体中文",
+          "English",
+          "日本語"
+        ]
+      },
+      "initiative": {
+        "label": "主动推进程度（0安静/3活跃）",
+        "type": "integer",
+        "default": 2,
+        "minimum": 0,
+        "maximum": 3
+      },
+      "response_length": {
+        "label": "每轮目标汉字数（软目标）",
+        "type": "integer",
+        "default": 450,
+        "minimum": 40,
+        "maximum": 1200
+      },
+      "warmth": {
+        "label": "亲近程度",
+        "type": "string",
+        "default": "自然",
+        "enum": [
+          "克制",
+          "自然",
+          "温和"
+        ]
+      },
+      "humor": {
+        "label": "幽默频率",
+        "type": "string",
+        "default": "低",
+        "enum": [
+          "关闭",
+          "低",
+          "中",
+          "高"
+        ]
+      },
+      "spoiler_boundary": {
+        "label": "剧透边界",
+        "type": "string",
+        "default": "重大背景由用户指定"
+      },
+      "canon_mode": {
+        "label": "资料与创作界限",
+        "type": "string",
+        "default": "公开资料启发+原创场景"
+      },
+      "interaction_mode": {
+        "label": "互动方式",
+        "type": "string",
+        "default": "情景互动",
+        "enum": [
+          "情景互动",
+          "日常聊天",
+          "认真任务",
+          "退出角色"
+        ]
+      },
+      "historical_mode": {
+        "label": "历史演绎方式",
+        "type": "string",
+        "default": "史实讨论"
+      }
+    },
+    "popularity": {
+      "basis": "官方资料与人工选材，非人气排名",
+      "checked_at": "2026-10-01"
+    }
+  },
+  {
+    "id": "cao-cao",
+    "name": "曹操 · 用人棋桌",
+    "category": "historical",
+    "icon": "♟️",
+    "description": "用户面前有三名虚构谋士，每人的能力、动机与忠诚线索都不完整。",
+    "parameters": {
+      "user_name": {
+        "label": "用户称呼",
+        "type": "string",
+        "default": "朋友"
+      },
+      "user_role": {
+        "label": "用户在场景中的身份",
+        "type": "string",
+        "default": "自由选择的参与者"
+      },
+      "language": {
+        "label": "回应语言",
+        "type": "string",
+        "default": "跟随用户",
+        "enum": [
+          "跟随用户",
+          "简体中文",
+          "繁体中文",
+          "English",
+          "日本語"
+        ]
+      },
+      "initiative": {
+        "label": "主动推进程度（0安静/3活跃）",
+        "type": "integer",
+        "default": 2,
+        "minimum": 0,
+        "maximum": 3
+      },
+      "response_length": {
+        "label": "每轮目标汉字数（软目标）",
+        "type": "integer",
+        "default": 430,
+        "minimum": 40,
+        "maximum": 1200
+      },
+      "warmth": {
+        "label": "亲近程度",
+        "type": "string",
+        "default": "自然",
+        "enum": [
+          "克制",
+          "自然",
+          "温和"
+        ]
+      },
+      "humor": {
+        "label": "幽默频率",
+        "type": "string",
+        "default": "中",
+        "enum": [
+          "关闭",
+          "低",
+          "中",
+          "高"
+        ]
+      },
+      "spoiler_boundary": {
+        "label": "剧透边界",
+        "type": "string",
+        "default": "重大背景由用户指定"
+      },
+      "canon_mode": {
+        "label": "资料与创作界限",
+        "type": "string",
+        "default": "公开资料启发+原创场景"
+      },
+      "interaction_mode": {
+        "label": "互动方式",
+        "type": "string",
+        "default": "情景互动",
+        "enum": [
+          "情景互动",
+          "日常聊天",
+          "认真任务",
+          "退出角色"
+        ]
+      },
+      "intrigue_level": {
+        "label": "棋局信息复杂度",
+        "type": "string",
+        "default": "中"
+      }
+    },
+    "popularity": {
+      "basis": "官方资料与人工选材，非人气排名",
+      "checked_at": "2026-10-01"
+    }
+  },
+  {
+    "id": "su-shi",
+    "name": "苏轼 · 东坡厨房夜谈",
+    "category": "historical",
+    "icon": "🍲",
+    "description": "日子不太顺时，用户和主人在想象的厨房里给剩下的食材起名字。",
+    "parameters": {
+      "user_name": {
+        "label": "用户称呼",
+        "type": "string",
+        "default": "朋友"
+      },
+      "user_role": {
+        "label": "用户在场景中的身份",
+        "type": "string",
+        "default": "自由选择的参与者"
+      },
+      "language": {
+        "label": "回应语言",
+        "type": "string",
+        "default": "跟随用户",
+        "enum": [
+          "跟随用户",
+          "简体中文",
+          "繁体中文",
+          "English",
+          "日本語"
+        ]
+      },
+      "initiative": {
+        "label": "主动推进程度（0安静/3活跃）",
+        "type": "integer",
+        "default": 1,
+        "minimum": 0,
+        "maximum": 3
+      },
+      "response_length": {
+        "label": "每轮目标汉字数（软目标）",
+        "type": "integer",
+        "default": 220,
+        "minimum": 40,
+        "maximum": 1200
+      },
+      "warmth": {
+        "label": "亲近程度",
+        "type": "string",
+        "default": "温和",
+        "enum": [
+          "克制",
+          "自然",
+          "温和"
+        ]
+      },
+      "humor": {
+        "label": "幽默频率",
+        "type": "string",
+        "default": "中",
+        "enum": [
+          "关闭",
+          "低",
+          "中",
+          "高"
+        ]
+      },
+      "spoiler_boundary": {
+        "label": "剧透边界",
+        "type": "string",
+        "default": "重大背景由用户指定"
+      },
+      "canon_mode": {
+        "label": "资料与创作界限",
+        "type": "string",
+        "default": "公开资料启发+原创场景"
+      },
+      "interaction_mode": {
+        "label": "互动方式",
+        "type": "string",
+        "default": "情景互动",
+        "enum": [
+          "情景互动",
+          "日常聊天",
+          "认真任务",
+          "退出角色"
+        ]
+      },
+      "literary_mix": {
+        "label": "文言比例",
+        "type": "string",
+        "default": "少量"
+      }
+    },
+    "popularity": {
+      "basis": "官方资料与人工选材，非人气排名",
+      "checked_at": "2026-10-01"
+    }
+  },
+  {
+    "id": "li-bai",
+    "name": "李白 · 月下意象接龙",
+    "category": "historical",
+    "icon": "🌙",
+    "description": "用户说出一个普通物件，主持把它带入月亮、江水和远行的画面。",
+    "parameters": {
+      "user_name": {
+        "label": "用户称呼",
+        "type": "string",
+        "default": "朋友"
+      },
+      "user_role": {
+        "label": "用户在场景中的身份",
+        "type": "string",
+        "default": "自由选择的参与者"
+      },
+      "language": {
+        "label": "回应语言",
+        "type": "string",
+        "default": "跟随用户",
+        "enum": [
+          "跟随用户",
+          "简体中文",
+          "繁体中文",
+          "English",
+          "日本語"
+        ]
+      },
+      "initiative": {
+        "label": "主动推进程度（0安静/3活跃）",
+        "type": "integer",
+        "default": 3,
+        "minimum": 0,
+        "maximum": 3
+      },
+      "response_length": {
+        "label": "每轮目标汉字数（软目标）",
+        "type": "integer",
+        "default": 240,
+        "minimum": 40,
+        "maximum": 1200
+      },
+      "warmth": {
+        "label": "亲近程度",
+        "type": "string",
+        "default": "自然",
+        "enum": [
+          "克制",
+          "自然",
+          "温和"
+        ]
+      },
+      "humor": {
+        "label": "幽默频率",
+        "type": "string",
+        "default": "中",
+        "enum": [
+          "关闭",
+          "低",
+          "中",
+          "高"
+        ]
+      },
+      "spoiler_boundary": {
+        "label": "剧透边界",
+        "type": "string",
+        "default": "重大背景由用户指定"
+      },
+      "canon_mode": {
+        "label": "资料与创作界限",
+        "type": "string",
+        "default": "公开资料启发+原创场景"
+      },
+      "interaction_mode": {
+        "label": "互动方式",
+        "type": "string",
+        "default": "情景互动",
+        "enum": [
+          "情景互动",
+          "日常聊天",
+          "认真任务",
+          "退出角色"
+        ]
+      },
+      "imagery_flight": {
+        "label": "意象跳跃程度",
+        "type": "string",
+        "default": "高"
+      }
+    },
+    "popularity": {
+      "basis": "官方资料与人工选材，非人气排名",
+      "checked_at": "2026-10-01"
+    }
+  },
+  {
+    "id": "lu-xun",
+    "name": "鲁迅 · 拆话术短笺",
+    "category": "historical",
+    "icon": "✒️",
+    "description": "用户带来一段说服人的话，短笺桌只拆它的逻辑。",
+    "parameters": {
+      "user_name": {
+        "label": "用户称呼",
+        "type": "string",
+        "default": "朋友"
+      },
+      "user_role": {
+        "label": "用户在场景中的身份",
+        "type": "string",
+        "default": "自由选择的参与者"
+      },
+      "language": {
+        "label": "回应语言",
+        "type": "string",
+        "default": "跟随用户",
+        "enum": [
+          "跟随用户",
+          "简体中文",
+          "繁体中文",
+          "English",
+          "日本語"
+        ]
+      },
+      "initiative": {
+        "label": "主动推进程度（0安静/3活跃）",
+        "type": "integer",
+        "default": 2,
+        "minimum": 0,
+        "maximum": 3
+      },
+      "response_length": {
+        "label": "每轮目标汉字数（软目标）",
+        "type": "integer",
+        "default": 260,
+        "minimum": 40,
+        "maximum": 1200
+      },
+      "warmth": {
+        "label": "亲近程度",
+        "type": "string",
+        "default": "自然",
+        "enum": [
+          "克制",
+          "自然",
+          "温和"
+        ]
+      },
+      "humor": {
+        "label": "幽默频率",
+        "type": "string",
+        "default": "中",
+        "enum": [
+          "关闭",
+          "低",
+          "中",
+          "高"
+        ]
+      },
+      "spoiler_boundary": {
+        "label": "剧透边界",
+        "type": "string",
+        "default": "重大背景由用户指定"
+      },
+      "canon_mode": {
+        "label": "资料与创作界限",
+        "type": "string",
+        "default": "公开资料启发+原创场景"
+      },
+      "interaction_mode": {
+        "label": "互动方式",
+        "type": "string",
+        "default": "情景互动",
+        "enum": [
+          "情景互动",
+          "日常聊天",
+          "认真任务",
+          "退出角色"
+        ]
+      },
+      "satire_edge": {
+        "label": "讽刺锋利度",
+        "type": "string",
+        "default": "中"
+      }
+    },
+    "popularity": {
+      "basis": "官方资料与人工选材，非人气排名",
+      "checked_at": "2026-10-01"
+    }
+  },
+  {
+    "id": "zhuge-liang",
+    "name": "诸葛亮 · 三案推演室",
+    "category": "historical",
+    "icon": "🪭",
+    "description": "用户带来一个多方博弈难题，案前始终放着上、中、下三策。",
+    "parameters": {
+      "user_name": {
+        "label": "用户称呼",
+        "type": "string",
+        "default": "朋友"
+      },
+      "user_role": {
+        "label": "用户在场景中的身份",
+        "type": "string",
+        "default": "自由选择的参与者"
+      },
+      "language": {
+        "label": "回应语言",
+        "type": "string",
+        "default": "跟随用户",
+        "enum": [
+          "跟随用户",
+          "简体中文",
+          "繁体中文",
+          "English",
+          "日本語"
+        ]
+      },
+      "initiative": {
+        "label": "主动推进程度（0安静/3活跃）",
+        "type": "integer",
+        "default": 2,
+        "minimum": 0,
+        "maximum": 3
+      },
+      "response_length": {
+        "label": "每轮目标汉字数（软目标）",
+        "type": "integer",
+        "default": 430,
+        "minimum": 40,
+        "maximum": 1200
+      },
+      "warmth": {
+        "label": "亲近程度",
+        "type": "string",
+        "default": "自然",
+        "enum": [
+          "克制",
+          "自然",
+          "温和"
+        ]
+      },
+      "humor": {
+        "label": "幽默频率",
+        "type": "string",
+        "default": "中",
+        "enum": [
+          "关闭",
+          "低",
+          "中",
+          "高"
+        ]
+      },
+      "spoiler_boundary": {
+        "label": "剧透边界",
+        "type": "string",
+        "default": "重大背景由用户指定"
+      },
+      "canon_mode": {
+        "label": "资料与创作界限",
+        "type": "string",
+        "default": "公开资料启发+原创场景"
+      },
+      "interaction_mode": {
+        "label": "互动方式",
+        "type": "string",
+        "default": "情景互动",
+        "enum": [
+          "情景互动",
+          "日常聊天",
+          "认真任务",
+          "退出角色"
+        ]
+      },
+      "backup_plans": {
+        "label": "备用方案数",
+        "type": "integer",
+        "default": 3
+      }
+    },
+    "popularity": {
+      "basis": "官方资料与人工选材，非人气排名",
+      "checked_at": "2026-10-01"
+    }
+  },
+  {
+    "id": "frieren",
+    "name": "芙莉莲 · 慢旅行收藏册",
+    "category": "anime",
+    "icon": "🧝",
+    "description": "用户加入一次没有期限的短途旅行，每站收集一种没有战斗用途的小魔法。",
+    "parameters": {
+      "user_name": {
+        "label": "用户称呼",
+        "type": "string",
+        "default": "朋友"
+      },
+      "user_role": {
+        "label": "用户在场景中的身份",
+        "type": "string",
+        "default": "自由选择的参与者"
+      },
+      "language": {
+        "label": "回应语言",
+        "type": "string",
+        "default": "跟随用户",
+        "enum": [
+          "跟随用户",
+          "简体中文",
+          "繁体中文",
+          "English",
+          "日本語"
+        ]
+      },
+      "initiative": {
+        "label": "主动推进程度（0安静/3活跃）",
+        "type": "integer",
+        "default": 0,
+        "minimum": 0,
+        "maximum": 3
+      },
+      "response_length": {
+        "label": "每轮目标汉字数（软目标）",
+        "type": "integer",
+        "default": 180,
+        "minimum": 40,
+        "maximum": 1200
+      },
+      "warmth": {
+        "label": "亲近程度",
+        "type": "string",
+        "default": "温和",
+        "enum": [
+          "克制",
+          "自然",
+          "温和"
+        ]
+      },
+      "humor": {
+        "label": "幽默频率",
+        "type": "string",
+        "default": "低",
+        "enum": [
+          "关闭",
+          "低",
+          "中",
+          "高"
+        ]
+      },
+      "spoiler_boundary": {
+        "label": "剧透边界",
+        "type": "string",
+        "default": "仅作品开篇背景，关键转折先问用户"
+      },
+      "canon_mode": {
+        "label": "资料与创作界限",
+        "type": "string",
+        "default": "原作背景+原创互动"
+      },
+      "interaction_mode": {
+        "label": "互动方式",
+        "type": "string",
+        "default": "情景互动",
+        "enum": [
+          "情景互动",
+          "日常聊天",
+          "认真任务",
+          "退出角色"
+        ]
+      },
+      "journey_pace": {
+        "label": "旅行节奏",
+        "type": "string",
+        "default": "慢"
+      }
+    },
+    "popularity": {
+      "basis": "近期奖项覆盖与经典作品组合；不把系列热度等同单角排名",
+      "checked_at": "2026-10-01"
+    }
+  },
+  {
+    "id": "fern",
+    "name": "菲伦 · 靠谱旅途管家",
+    "category": "anime",
+    "icon": "🧳",
+    "description": "用户要出门做一件事，而某位同伴仍在赖床。",
+    "parameters": {
+      "user_name": {
+        "label": "用户称呼",
+        "type": "string",
+        "default": "朋友"
+      },
+      "user_role": {
+        "label": "用户在场景中的身份",
+        "type": "string",
+        "default": "自由选择的参与者"
+      },
+      "language": {
+        "label": "回应语言",
+        "type": "string",
+        "default": "跟随用户",
+        "enum": [
+          "跟随用户",
+          "简体中文",
+          "繁体中文",
+          "English",
+          "日本語"
+        ]
+      },
+      "initiative": {
+        "label": "主动推进程度（0安静/3活跃）",
+        "type": "integer",
+        "default": 2,
+        "minimum": 0,
+        "maximum": 3
+      },
+      "response_length": {
+        "label": "每轮目标汉字数（软目标）",
+        "type": "integer",
+        "default": 280,
+        "minimum": 40,
+        "maximum": 1200
+      },
+      "warmth": {
+        "label": "亲近程度",
+        "type": "string",
+        "default": "自然",
+        "enum": [
+          "克制",
+          "自然",
+          "温和"
+        ]
+      },
+      "humor": {
+        "label": "幽默频率",
+        "type": "string",
+        "default": "中",
+        "enum": [
+          "关闭",
+          "低",
+          "中",
+          "高"
+        ]
+      },
+      "spoiler_boundary": {
+        "label": "剧透边界",
+        "type": "string",
+        "default": "仅作品开篇背景，关键转折先问用户"
+      },
+      "canon_mode": {
+        "label": "资料与创作界限",
+        "type": "string",
+        "default": "原作背景+原创互动"
+      },
+      "interaction_mode": {
+        "label": "互动方式",
+        "type": "string",
+        "default": "情景互动",
+        "enum": [
+          "情景互动",
+          "日常聊天",
+          "认真任务",
+          "退出角色"
+        ]
+      },
+      "reminder_firmness": {
+        "label": "提醒坚定程度",
+        "type": "string",
+        "default": "中"
+      }
+    },
+    "popularity": {
+      "basis": "近期奖项覆盖与经典作品组合；不把系列热度等同单角排名",
+      "checked_at": "2026-10-01"
+    }
+  },
+  {
+    "id": "maomao",
+    "name": "猫猫 · 线索药柜",
+    "category": "anime",
+    "icon": "🧪",
+    "description": "一间虚构药柜里发生了无害的标签错位事件，用户扮演助手。",
+    "parameters": {
+      "user_name": {
+        "label": "用户称呼",
+        "type": "string",
+        "default": "朋友"
+      },
+      "user_role": {
+        "label": "用户在场景中的身份",
+        "type": "string",
+        "default": "自由选择的参与者"
+      },
+      "language": {
+        "label": "回应语言",
+        "type": "string",
+        "default": "跟随用户",
+        "enum": [
+          "跟随用户",
+          "简体中文",
+          "繁体中文",
+          "English",
+          "日本語"
+        ]
+      },
+      "initiative": {
+        "label": "主动推进程度（0安静/3活跃）",
+        "type": "integer",
+        "default": 1,
+        "minimum": 0,
+        "maximum": 3
+      },
+      "response_length": {
+        "label": "每轮目标汉字数（软目标）",
+        "type": "integer",
+        "default": 320,
+        "minimum": 40,
+        "maximum": 1200
+      },
+      "warmth": {
+        "label": "亲近程度",
+        "type": "string",
+        "default": "自然",
+        "enum": [
+          "克制",
+          "自然",
+          "温和"
+        ]
+      },
+      "humor": {
+        "label": "幽默频率",
+        "type": "string",
+        "default": "低",
+        "enum": [
+          "关闭",
+          "低",
+          "中",
+          "高"
+        ]
+      },
+      "spoiler_boundary": {
+        "label": "剧透边界",
+        "type": "string",
+        "default": "仅作品开篇背景，关键转折先问用户"
+      },
+      "canon_mode": {
+        "label": "资料与创作界限",
+        "type": "string",
+        "default": "原作背景+原创互动"
+      },
+      "interaction_mode": {
+        "label": "互动方式",
+        "type": "string",
+        "default": "情景互动",
+        "enum": [
+          "情景互动",
+          "日常聊天",
+          "认真任务",
+          "退出角色"
+        ]
+      },
+      "clue_density": {
+        "label": "每轮线索数量",
+        "type": "integer",
+        "default": 1
+      }
+    },
+    "popularity": {
+      "basis": "近期奖项覆盖与经典作品组合；不把系列热度等同单角排名",
+      "checked_at": "2026-10-01"
+    }
+  },
+  {
+    "id": "anya-forger",
+    "name": "阿尼亚 · 花生任务本",
+    "category": "anime",
+    "icon": "🥜",
+    "description": "用户把一个小任务变成家庭侦察小游戏，成功后贴一枚纸星星。",
+    "parameters": {
+      "user_name": {
+        "label": "用户称呼",
+        "type": "string",
+        "default": "朋友"
+      },
+      "user_role": {
+        "label": "用户在场景中的身份",
+        "type": "string",
+        "default": "自由选择的参与者"
+      },
+      "language": {
+        "label": "回应语言",
+        "type": "string",
+        "default": "跟随用户",
+        "enum": [
+          "跟随用户",
+          "简体中文",
+          "繁体中文",
+          "English",
+          "日本語"
+        ]
+      },
+      "initiative": {
+        "label": "主动推进程度（0安静/3活跃）",
+        "type": "integer",
+        "default": 3,
+        "minimum": 0,
+        "maximum": 3
+      },
+      "response_length": {
+        "label": "每轮目标汉字数（软目标）",
+        "type": "integer",
+        "default": 200,
+        "minimum": 40,
+        "maximum": 1200
+      },
+      "warmth": {
+        "label": "亲近程度",
+        "type": "string",
+        "default": "自然",
+        "enum": [
+          "克制",
+          "自然",
+          "温和"
+        ]
+      },
+      "humor": {
+        "label": "幽默频率",
+        "type": "string",
+        "default": "中",
+        "enum": [
+          "关闭",
+          "低",
+          "中",
+          "高"
+        ]
+      },
+      "spoiler_boundary": {
+        "label": "剧透边界",
+        "type": "string",
+        "default": "仅作品开篇背景，关键转折先问用户"
+      },
+      "canon_mode": {
+        "label": "资料与创作界限",
+        "type": "string",
+        "default": "原作背景+原创互动"
+      },
+      "interaction_mode": {
+        "label": "互动方式",
+        "type": "string",
+        "default": "情景互动",
+        "enum": [
+          "情景互动",
+          "日常聊天",
+          "认真任务",
+          "退出角色"
+        ]
+      },
+      "mission_size": {
+        "label": "单次任务规模",
+        "type": "string",
+        "default": "超小"
+      }
+    },
+    "popularity": {
+      "basis": "近期奖项覆盖与经典作品组合；不把系列热度等同单角排名",
+      "checked_at": "2026-10-01"
+    }
+  },
+  {
+    "id": "loid-forger",
+    "name": "洛伊德 · 家庭任务简报",
+    "category": "anime",
+    "icon": "🕵️",
+    "description": "用户需要完成一次普通聚会，把准备工作写成虚构任务简报。",
+    "parameters": {
+      "user_name": {
+        "label": "用户称呼",
+        "type": "string",
+        "default": "朋友"
+      },
+      "user_role": {
+        "label": "用户在场景中的身份",
+        "type": "string",
+        "default": "自由选择的参与者"
+      },
+      "language": {
+        "label": "回应语言",
+        "type": "string",
+        "default": "跟随用户",
+        "enum": [
+          "跟随用户",
+          "简体中文",
+          "繁体中文",
+          "English",
+          "日本語"
+        ]
+      },
+      "initiative": {
+        "label": "主动推进程度（0安静/3活跃）",
+        "type": "integer",
+        "default": 2,
+        "minimum": 0,
+        "maximum": 3
+      },
+      "response_length": {
+        "label": "每轮目标汉字数（软目标）",
+        "type": "integer",
+        "default": 280,
+        "minimum": 40,
+        "maximum": 1200
+      },
+      "warmth": {
+        "label": "亲近程度",
+        "type": "string",
+        "default": "自然",
+        "enum": [
+          "克制",
+          "自然",
+          "温和"
+        ]
+      },
+      "humor": {
+        "label": "幽默频率",
+        "type": "string",
+        "default": "中",
+        "enum": [
+          "关闭",
+          "低",
+          "中",
+          "高"
+        ]
+      },
+      "spoiler_boundary": {
+        "label": "剧透边界",
+        "type": "string",
+        "default": "仅作品开篇背景，关键转折先问用户"
+      },
+      "canon_mode": {
+        "label": "资料与创作界限",
+        "type": "string",
+        "default": "原作背景+原创互动"
+      },
+      "interaction_mode": {
+        "label": "互动方式",
+        "type": "string",
+        "default": "情景互动",
+        "enum": [
+          "情景互动",
+          "日常聊天",
+          "认真任务",
+          "退出角色"
+        ]
+      },
+      "plan_layers": {
+        "label": "计划与备用层数",
+        "type": "integer",
+        "default": 2
+      }
+    },
+    "popularity": {
+      "basis": "近期奖项覆盖与经典作品组合；不把系列热度等同单角排名",
+      "checked_at": "2026-10-01"
+    }
+  },
+  {
+    "id": "yor-forger",
+    "name": "约尔 · 温柔笨拙家务课",
+    "category": "anime",
+    "icon": "🌷",
+    "description": "用户和约尔一起尝试一项简单家务，成功与失败都能变成轻松剧情。",
+    "parameters": {
+      "user_name": {
+        "label": "用户称呼",
+        "type": "string",
+        "default": "朋友"
+      },
+      "user_role": {
+        "label": "用户在场景中的身份",
+        "type": "string",
+        "default": "自由选择的参与者"
+      },
+      "language": {
+        "label": "回应语言",
+        "type": "string",
+        "default": "跟随用户",
+        "enum": [
+          "跟随用户",
+          "简体中文",
+          "繁体中文",
+          "English",
+          "日本語"
+        ]
+      },
+      "initiative": {
+        "label": "主动推进程度（0安静/3活跃）",
+        "type": "integer",
+        "default": 1,
+        "minimum": 0,
+        "maximum": 3
+      },
+      "response_length": {
+        "label": "每轮目标汉字数（软目标）",
+        "type": "integer",
+        "default": 220,
+        "minimum": 40,
+        "maximum": 1200
+      },
+      "warmth": {
+        "label": "亲近程度",
+        "type": "string",
+        "default": "温和",
+        "enum": [
+          "克制",
+          "自然",
+          "温和"
+        ]
+      },
+      "humor": {
+        "label": "幽默频率",
+        "type": "string",
+        "default": "中",
+        "enum": [
+          "关闭",
+          "低",
+          "中",
+          "高"
+        ]
+      },
+      "spoiler_boundary": {
+        "label": "剧透边界",
+        "type": "string",
+        "default": "仅作品开篇背景，关键转折先问用户"
+      },
+      "canon_mode": {
+        "label": "资料与创作界限",
+        "type": "string",
+        "default": "原作背景+原创互动"
+      },
+      "interaction_mode": {
+        "label": "互动方式",
+        "type": "string",
+        "default": "情景互动",
+        "enum": [
+          "情景互动",
+          "日常聊天",
+          "认真任务",
+          "退出角色"
+        ]
+      },
+      "clumsy_comedy": {
+        "label": "笨拙喜剧频率",
+        "type": "string",
+        "default": "低"
+      }
+    },
+    "popularity": {
+      "basis": "近期奖项覆盖与经典作品组合；不把系列热度等同单角排名",
+      "checked_at": "2026-10-01"
+    }
+  },
+  {
+    "id": "satoru-gojo",
+    "name": "五条悟 · 甜品挑战课",
+    "category": "anime",
+    "icon": "😎",
+    "description": "用户来上一堂带甜品奖励的训练课，挑战是把复杂问题拆开。",
+    "parameters": {
+      "user_name": {
+        "label": "用户称呼",
+        "type": "string",
+        "default": "朋友"
+      },
+      "user_role": {
+        "label": "用户在场景中的身份",
+        "type": "string",
+        "default": "自由选择的参与者"
+      },
+      "language": {
+        "label": "回应语言",
+        "type": "string",
+        "default": "跟随用户",
+        "enum": [
+          "跟随用户",
+          "简体中文",
+          "繁体中文",
+          "English",
+          "日本語"
+        ]
+      },
+      "initiative": {
+        "label": "主动推进程度（0安静/3活跃）",
+        "type": "integer",
+        "default": 3,
+        "minimum": 0,
+        "maximum": 3
+      },
+      "response_length": {
+        "label": "每轮目标汉字数（软目标）",
+        "type": "integer",
+        "default": 200,
+        "minimum": 40,
+        "maximum": 1200
+      },
+      "warmth": {
+        "label": "亲近程度",
+        "type": "string",
+        "default": "自然",
+        "enum": [
+          "克制",
+          "自然",
+          "温和"
+        ]
+      },
+      "humor": {
+        "label": "幽默频率",
+        "type": "string",
+        "default": "中",
+        "enum": [
+          "关闭",
+          "低",
+          "中",
+          "高"
+        ]
+      },
+      "spoiler_boundary": {
+        "label": "剧透边界",
+        "type": "string",
+        "default": "仅作品开篇背景，关键转折先问用户"
+      },
+      "canon_mode": {
+        "label": "资料与创作界限",
+        "type": "string",
+        "default": "原作背景+原创互动"
+      },
+      "interaction_mode": {
+        "label": "互动方式",
+        "type": "string",
+        "default": "情景互动",
+        "enum": [
+          "情景互动",
+          "日常聊天",
+          "认真任务",
+          "退出角色"
+        ]
+      },
+      "teasing_level": {
+        "label": "调侃强度",
+        "type": "string",
+        "default": "低"
+      }
+    },
+    "popularity": {
+      "basis": "近期奖项覆盖与经典作品组合；不把系列热度等同单角排名",
+      "checked_at": "2026-10-01"
+    }
+  },
+  {
+    "id": "kento-nanami",
+    "name": "七海建人 · 准时下班计划",
+    "category": "anime",
+    "icon": "⌚",
+    "description": "用户把今天工作放到桌上，目标是在合理时段内完成最值得做的部分。",
+    "parameters": {
+      "user_name": {
+        "label": "用户称呼",
+        "type": "string",
+        "default": "朋友"
+      },
+      "user_role": {
+        "label": "用户在场景中的身份",
+        "type": "string",
+        "default": "自由选择的参与者"
+      },
+      "language": {
+        "label": "回应语言",
+        "type": "string",
+        "default": "跟随用户",
+        "enum": [
+          "跟随用户",
+          "简体中文",
+          "繁体中文",
+          "English",
+          "日本語"
+        ]
+      },
+      "initiative": {
+        "label": "主动推进程度（0安静/3活跃）",
+        "type": "integer",
+        "default": 2,
+        "minimum": 0,
+        "maximum": 3
+      },
+      "response_length": {
+        "label": "每轮目标汉字数（软目标）",
+        "type": "integer",
+        "default": 280,
+        "minimum": 40,
+        "maximum": 1200
+      },
+      "warmth": {
+        "label": "亲近程度",
+        "type": "string",
+        "default": "自然",
+        "enum": [
+          "克制",
+          "自然",
+          "温和"
+        ]
+      },
+      "humor": {
+        "label": "幽默频率",
+        "type": "string",
+        "default": "中",
+        "enum": [
+          "关闭",
+          "低",
+          "中",
+          "高"
+        ]
+      },
+      "spoiler_boundary": {
+        "label": "剧透边界",
+        "type": "string",
+        "default": "仅作品开篇背景，关键转折先问用户"
+      },
+      "canon_mode": {
+        "label": "资料与创作界限",
+        "type": "string",
+        "default": "原作背景+原创互动"
+      },
+      "interaction_mode": {
+        "label": "互动方式",
+        "type": "string",
+        "default": "情景互动",
+        "enum": [
+          "情景互动",
+          "日常聊天",
+          "认真任务",
+          "退出角色"
+        ]
+      },
+      "work_boundary": {
+        "label": "下班边界强度",
+        "type": "string",
+        "default": "高"
+      }
+    },
+    "popularity": {
+      "basis": "近期奖项覆盖与经典作品组合；不把系列热度等同单角排名",
+      "checked_at": "2026-10-01"
+    }
+  },
+  {
+    "id": "monkey-d-luffy",
+    "name": "路飞 · 目标出海团",
+    "category": "anime",
+    "icon": "🏴‍☠️",
+    "description": "用户组建一艘想象的小船，把现实目标变成可选择的航线。",
+    "parameters": {
+      "user_name": {
+        "label": "用户称呼",
+        "type": "string",
+        "default": "朋友"
+      },
+      "user_role": {
+        "label": "用户在场景中的身份",
+        "type": "string",
+        "default": "自由选择的参与者"
+      },
+      "language": {
+        "label": "回应语言",
+        "type": "string",
+        "default": "跟随用户",
+        "enum": [
+          "跟随用户",
+          "简体中文",
+          "繁体中文",
+          "English",
+          "日本語"
+        ]
+      },
+      "initiative": {
+        "label": "主动推进程度（0安静/3活跃）",
+        "type": "integer",
+        "default": 3,
+        "minimum": 0,
+        "maximum": 3
+      },
+      "response_length": {
+        "label": "每轮目标汉字数（软目标）",
+        "type": "integer",
+        "default": 200,
+        "minimum": 40,
+        "maximum": 1200
+      },
+      "warmth": {
+        "label": "亲近程度",
+        "type": "string",
+        "default": "自然",
+        "enum": [
+          "克制",
+          "自然",
+          "温和"
+        ]
+      },
+      "humor": {
+        "label": "幽默频率",
+        "type": "string",
+        "default": "中",
+        "enum": [
+          "关闭",
+          "低",
+          "中",
+          "高"
+        ]
+      },
+      "spoiler_boundary": {
+        "label": "剧透边界",
+        "type": "string",
+        "default": "仅作品开篇背景，关键转折先问用户"
+      },
+      "canon_mode": {
+        "label": "资料与创作界限",
+        "type": "string",
+        "default": "原作背景+原创互动"
+      },
+      "interaction_mode": {
+        "label": "互动方式",
+        "type": "string",
+        "default": "情景互动",
+        "enum": [
+          "情景互动",
+          "日常聊天",
+          "认真任务",
+          "退出角色"
+        ]
+      },
+      "adventure_size": {
+        "label": "冒险规模",
+        "type": "string",
+        "default": "小步出发"
+      }
+    },
+    "popularity": {
+      "basis": "近期奖项覆盖与经典作品组合；不把系列热度等同单角排名",
+      "checked_at": "2026-10-01"
+    }
+  },
+  {
+    "id": "roronoa-zoro",
+    "name": "索隆 · 十分钟训练账",
+    "category": "anime",
+    "icon": "⚔️",
+    "description": "用户选择一项安全技能，每次只练十分钟并记录一个变化。",
+    "parameters": {
+      "user_name": {
+        "label": "用户称呼",
+        "type": "string",
+        "default": "朋友"
+      },
+      "user_role": {
+        "label": "用户在场景中的身份",
+        "type": "string",
+        "default": "自由选择的参与者"
+      },
+      "language": {
+        "label": "回应语言",
+        "type": "string",
+        "default": "跟随用户",
+        "enum": [
+          "跟随用户",
+          "简体中文",
+          "繁体中文",
+          "English",
+          "日本語"
+        ]
+      },
+      "initiative": {
+        "label": "主动推进程度（0安静/3活跃）",
+        "type": "integer",
+        "default": 2,
+        "minimum": 0,
+        "maximum": 3
+      },
+      "response_length": {
+        "label": "每轮目标汉字数（软目标）",
+        "type": "integer",
+        "default": 220,
+        "minimum": 40,
+        "maximum": 1200
+      },
+      "warmth": {
+        "label": "亲近程度",
+        "type": "string",
+        "default": "自然",
+        "enum": [
+          "克制",
+          "自然",
+          "温和"
+        ]
+      },
+      "humor": {
+        "label": "幽默频率",
+        "type": "string",
+        "default": "中",
+        "enum": [
+          "关闭",
+          "低",
+          "中",
+          "高"
+        ]
+      },
+      "spoiler_boundary": {
+        "label": "剧透边界",
+        "type": "string",
+        "default": "仅作品开篇背景，关键转折先问用户"
+      },
+      "canon_mode": {
+        "label": "资料与创作界限",
+        "type": "string",
+        "default": "原作背景+原创互动"
+      },
+      "interaction_mode": {
+        "label": "互动方式",
+        "type": "string",
+        "default": "情景互动",
+        "enum": [
+          "情景互动",
+          "日常聊天",
+          "认真任务",
+          "退出角色"
+        ]
+      },
+      "training_minutes": {
+        "label": "单次练习分钟数",
+        "type": "integer",
+        "default": 10
+      }
+    },
+    "popularity": {
+      "basis": "近期奖项覆盖与经典作品组合；不把系列热度等同单角排名",
+      "checked_at": "2026-10-01"
+    }
+  },
+  {
+    "id": "naruto-uzumaki",
+    "name": "鸣人 · 逆风练习场",
+    "category": "anime",
+    "icon": "🍜",
+    "description": "用户把失败经历带到一间虚构训练场，墙上只写下一次要改什么。",
+    "parameters": {
+      "user_name": {
+        "label": "用户称呼",
+        "type": "string",
+        "default": "朋友"
+      },
+      "user_role": {
+        "label": "用户在场景中的身份",
+        "type": "string",
+        "default": "自由选择的参与者"
+      },
+      "language": {
+        "label": "回应语言",
+        "type": "string",
+        "default": "跟随用户",
+        "enum": [
+          "跟随用户",
+          "简体中文",
+          "繁体中文",
+          "English",
+          "日本語"
+        ]
+      },
+      "initiative": {
+        "label": "主动推进程度（0安静/3活跃）",
+        "type": "integer",
+        "default": 2,
+        "minimum": 0,
+        "maximum": 3
+      },
+      "response_length": {
+        "label": "每轮目标汉字数（软目标）",
+        "type": "integer",
+        "default": 220,
+        "minimum": 40,
+        "maximum": 1200
+      },
+      "warmth": {
+        "label": "亲近程度",
+        "type": "string",
+        "default": "自然",
+        "enum": [
+          "克制",
+          "自然",
+          "温和"
+        ]
+      },
+      "humor": {
+        "label": "幽默频率",
+        "type": "string",
+        "default": "中",
+        "enum": [
+          "关闭",
+          "低",
+          "中",
+          "高"
+        ]
+      },
+      "spoiler_boundary": {
+        "label": "剧透边界",
+        "type": "string",
+        "default": "仅作品开篇背景，关键转折先问用户"
+      },
+      "canon_mode": {
+        "label": "资料与创作界限",
+        "type": "string",
+        "default": "原作背景+原创互动"
+      },
+      "interaction_mode": {
+        "label": "互动方式",
+        "type": "string",
+        "default": "情景互动",
+        "enum": [
+          "情景互动",
+          "日常聊天",
+          "认真任务",
+          "退出角色"
+        ]
+      },
+      "encouragement_volume": {
+        "label": "热血表达强度",
+        "type": "string",
+        "default": "中"
+      }
+    },
+    "popularity": {
+      "basis": "近期奖项覆盖与经典作品组合；不把系列热度等同单角排名",
+      "checked_at": "2026-10-01"
+    }
+  },
+  {
+    "id": "kakashi-hatake",
+    "name": "卡卡西 · 铃铛协作课",
+    "category": "anime",
+    "icon": "🔔",
+    "description": "用户进入一个虚构的协作测试，单人最优不一定是团队最优。",
+    "parameters": {
+      "user_name": {
+        "label": "用户称呼",
+        "type": "string",
+        "default": "朋友"
+      },
+      "user_role": {
+        "label": "用户在场景中的身份",
+        "type": "string",
+        "default": "自由选择的参与者"
+      },
+      "language": {
+        "label": "回应语言",
+        "type": "string",
+        "default": "跟随用户",
+        "enum": [
+          "跟随用户",
+          "简体中文",
+          "繁体中文",
+          "English",
+          "日本語"
+        ]
+      },
+      "initiative": {
+        "label": "主动推进程度（0安静/3活跃）",
+        "type": "integer",
+        "default": 1,
+        "minimum": 0,
+        "maximum": 3
+      },
+      "response_length": {
+        "label": "每轮目标汉字数（软目标）",
+        "type": "integer",
+        "default": 330,
+        "minimum": 40,
+        "maximum": 1200
+      },
+      "warmth": {
+        "label": "亲近程度",
+        "type": "string",
+        "default": "自然",
+        "enum": [
+          "克制",
+          "自然",
+          "温和"
+        ]
+      },
+      "humor": {
+        "label": "幽默频率",
+        "type": "string",
+        "default": "中",
+        "enum": [
+          "关闭",
+          "低",
+          "中",
+          "高"
+        ]
+      },
+      "spoiler_boundary": {
+        "label": "剧透边界",
+        "type": "string",
+        "default": "仅作品开篇背景，关键转折先问用户"
+      },
+      "canon_mode": {
+        "label": "资料与创作界限",
+        "type": "string",
+        "default": "原作背景+原创互动"
+      },
+      "interaction_mode": {
+        "label": "互动方式",
+        "type": "string",
+        "default": "情景互动",
+        "enum": [
+          "情景互动",
+          "日常聊天",
+          "认真任务",
+          "退出角色"
+        ]
+      },
+      "team_size": {
+        "label": "协作题参与者数",
+        "type": "integer",
+        "default": 3
+      }
+    },
+    "popularity": {
+      "basis": "近期奖项覆盖与经典作品组合；不把系列热度等同单角排名",
+      "checked_at": "2026-10-01"
+    }
+  },
+  {
+    "id": "edogawa-conan",
+    "name": "柯南 · 公平线索小案",
+    "category": "anime",
+    "icon": "🔍",
+    "description": "用户和侦探查一件原创的遗失物事件，每个关键线索都会公开。",
+    "parameters": {
+      "user_name": {
+        "label": "用户称呼",
+        "type": "string",
+        "default": "朋友"
+      },
+      "user_role": {
+        "label": "用户在场景中的身份",
+        "type": "string",
+        "default": "自由选择的参与者"
+      },
+      "language": {
+        "label": "回应语言",
+        "type": "string",
+        "default": "跟随用户",
+        "enum": [
+          "跟随用户",
+          "简体中文",
+          "繁体中文",
+          "English",
+          "日本語"
+        ]
+      },
+      "initiative": {
+        "label": "主动推进程度（0安静/3活跃）",
+        "type": "integer",
+        "default": 1,
+        "minimum": 0,
+        "maximum": 3
+      },
+      "response_length": {
+        "label": "每轮目标汉字数（软目标）",
+        "type": "integer",
+        "default": 320,
+        "minimum": 40,
+        "maximum": 1200
+      },
+      "warmth": {
+        "label": "亲近程度",
+        "type": "string",
+        "default": "自然",
+        "enum": [
+          "克制",
+          "自然",
+          "温和"
+        ]
+      },
+      "humor": {
+        "label": "幽默频率",
+        "type": "string",
+        "default": "低",
+        "enum": [
+          "关闭",
+          "低",
+          "中",
+          "高"
+        ]
+      },
+      "spoiler_boundary": {
+        "label": "剧透边界",
+        "type": "string",
+        "default": "仅作品开篇背景，关键转折先问用户"
+      },
+      "canon_mode": {
+        "label": "资料与创作界限",
+        "type": "string",
+        "default": "原作背景+原创互动"
+      },
+      "interaction_mode": {
+        "label": "互动方式",
+        "type": "string",
+        "default": "情景互动",
+        "enum": [
+          "情景互动",
+          "日常聊天",
+          "认真任务",
+          "退出角色"
+        ]
+      },
+      "case_difficulty": {
+        "label": "案件难度",
+        "type": "string",
+        "default": "入门"
+      }
+    },
+    "popularity": {
+      "basis": "近期奖项覆盖与经典作品组合；不把系列热度等同单角排名",
+      "checked_at": "2026-10-01"
+    }
+  },
+  {
+    "id": "ai-haibara",
+    "name": "灰原哀 · 冷静证据便签",
+    "category": "anime",
+    "icon": "🧫",
+    "description": "用户把一个不确定结论写在便签上，一起寻找能改变判断的证据。",
+    "parameters": {
+      "user_name": {
+        "label": "用户称呼",
+        "type": "string",
+        "default": "朋友"
+      },
+      "user_role": {
+        "label": "用户在场景中的身份",
+        "type": "string",
+        "default": "自由选择的参与者"
+      },
+      "language": {
+        "label": "回应语言",
+        "type": "string",
+        "default": "跟随用户",
+        "enum": [
+          "跟随用户",
+          "简体中文",
+          "繁体中文",
+          "English",
+          "日本語"
+        ]
+      },
+      "initiative": {
+        "label": "主动推进程度（0安静/3活跃）",
+        "type": "integer",
+        "default": 0,
+        "minimum": 0,
+        "maximum": 3
+      },
+      "response_length": {
+        "label": "每轮目标汉字数（软目标）",
+        "type": "integer",
+        "default": 180,
+        "minimum": 40,
+        "maximum": 1200
+      },
+      "warmth": {
+        "label": "亲近程度",
+        "type": "string",
+        "default": "温和",
+        "enum": [
+          "克制",
+          "自然",
+          "温和"
+        ]
+      },
+      "humor": {
+        "label": "幽默频率",
+        "type": "string",
+        "default": "低",
+        "enum": [
+          "关闭",
+          "低",
+          "中",
+          "高"
+        ]
+      },
+      "spoiler_boundary": {
+        "label": "剧透边界",
+        "type": "string",
+        "default": "仅作品开篇背景，关键转折先问用户"
+      },
+      "canon_mode": {
+        "label": "资料与创作界限",
+        "type": "string",
+        "default": "原作背景+原创互动"
+      },
+      "interaction_mode": {
+        "label": "互动方式",
+        "type": "string",
+        "default": "情景互动",
+        "enum": [
+          "情景互动",
+          "日常聊天",
+          "认真任务",
+          "退出角色"
+        ]
+      },
+      "dry_humor": {
+        "label": "冷幽默频率",
+        "type": "string",
+        "default": "低"
+      }
+    },
+    "popularity": {
+      "basis": "近期奖项覆盖与经典作品组合；不把系列热度等同单角排名",
+      "checked_at": "2026-10-01"
+    }
+  },
+  {
+    "id": "bocchi",
+    "name": "后藤一里 · 社恐小步合奏",
+    "category": "anime",
+    "icon": "🎸",
+    "description": "用户和她练习一个很小的交流场景，失败也能重来。",
+    "parameters": {
+      "user_name": {
+        "label": "用户称呼",
+        "type": "string",
+        "default": "朋友"
+      },
+      "user_role": {
+        "label": "用户在场景中的身份",
+        "type": "string",
+        "default": "自由选择的参与者"
+      },
+      "language": {
+        "label": "回应语言",
+        "type": "string",
+        "default": "跟随用户",
+        "enum": [
+          "跟随用户",
+          "简体中文",
+          "繁体中文",
+          "English",
+          "日本語"
+        ]
+      },
+      "initiative": {
+        "label": "主动推进程度（0安静/3活跃）",
+        "type": "integer",
+        "default": 1,
+        "minimum": 0,
+        "maximum": 3
+      },
+      "response_length": {
+        "label": "每轮目标汉字数（软目标）",
+        "type": "integer",
+        "default": 220,
+        "minimum": 40,
+        "maximum": 1200
+      },
+      "warmth": {
+        "label": "亲近程度",
+        "type": "string",
+        "default": "温和",
+        "enum": [
+          "克制",
+          "自然",
+          "温和"
+        ]
+      },
+      "humor": {
+        "label": "幽默频率",
+        "type": "string",
+        "default": "中",
+        "enum": [
+          "关闭",
+          "低",
+          "中",
+          "高"
+        ]
+      },
+      "spoiler_boundary": {
+        "label": "剧透边界",
+        "type": "string",
+        "default": "仅作品开篇背景，关键转折先问用户"
+      },
+      "canon_mode": {
+        "label": "资料与创作界限",
+        "type": "string",
+        "default": "原作背景+原创互动"
+      },
+      "interaction_mode": {
+        "label": "互动方式",
+        "type": "string",
+        "default": "情景互动",
+        "enum": [
+          "情景互动",
+          "日常聊天",
+          "认真任务",
+          "退出角色"
+        ]
+      },
+      "social_step": {
+        "label": "社交练习步幅",
+        "type": "string",
+        "default": "微小"
+      }
+    },
+    "popularity": {
+      "basis": "近期奖项覆盖与经典作品组合；不把系列热度等同单角排名",
+      "checked_at": "2026-10-01"
+    }
+  },
+  {
+    "id": "marin-kitagawa",
+    "name": "喜多川海梦 · Cosplay灵感板",
+    "category": "anime",
+    "icon": "🧵",
+    "description": "用户把一个喜欢的角色风格转成可在预算内完成的道具计划。",
+    "parameters": {
+      "user_name": {
+        "label": "用户称呼",
+        "type": "string",
+        "default": "朋友"
+      },
+      "user_role": {
+        "label": "用户在场景中的身份",
+        "type": "string",
+        "default": "自由选择的参与者"
+      },
+      "language": {
+        "label": "回应语言",
+        "type": "string",
+        "default": "跟随用户",
+        "enum": [
+          "跟随用户",
+          "简体中文",
+          "繁体中文",
+          "English",
+          "日本語"
+        ]
+      },
+      "initiative": {
+        "label": "主动推进程度（0安静/3活跃）",
+        "type": "integer",
+        "default": 3,
+        "minimum": 0,
+        "maximum": 3
+      },
+      "response_length": {
+        "label": "每轮目标汉字数（软目标）",
+        "type": "integer",
+        "default": 200,
+        "minimum": 40,
+        "maximum": 1200
+      },
+      "warmth": {
+        "label": "亲近程度",
+        "type": "string",
+        "default": "自然",
+        "enum": [
+          "克制",
+          "自然",
+          "温和"
+        ]
+      },
+      "humor": {
+        "label": "幽默频率",
+        "type": "string",
+        "default": "中",
+        "enum": [
+          "关闭",
+          "低",
+          "中",
+          "高"
+        ]
+      },
+      "spoiler_boundary": {
+        "label": "剧透边界",
+        "type": "string",
+        "default": "仅作品开篇背景，关键转折先问用户"
+      },
+      "canon_mode": {
+        "label": "资料与创作界限",
+        "type": "string",
+        "default": "原作背景+原创互动"
+      },
+      "interaction_mode": {
+        "label": "互动方式",
+        "type": "string",
+        "default": "情景互动",
+        "enum": [
+          "情景互动",
+          "日常聊天",
+          "认真任务",
+          "退出角色"
+        ]
+      },
+      "craft_budget": {
+        "label": "默认制作预算",
+        "type": "string",
+        "default": "100元"
+      }
+    },
+    "popularity": {
+      "basis": "近期奖项覆盖与经典作品组合；不把系列热度等同单角排名",
+      "checked_at": "2026-10-01"
+    }
+  },
+  {
+    "id": "makise-kurisu",
+    "name": "牧濑红莉栖 · 反驳实验桌",
+    "category": "anime",
+    "icon": "🧠",
+    "description": "用户带来一个大胆假说，实验桌上先写可被推翻的预测。",
+    "parameters": {
+      "user_name": {
+        "label": "用户称呼",
+        "type": "string",
+        "default": "朋友"
+      },
+      "user_role": {
+        "label": "用户在场景中的身份",
+        "type": "string",
+        "default": "自由选择的参与者"
+      },
+      "language": {
+        "label": "回应语言",
+        "type": "string",
+        "default": "跟随用户",
+        "enum": [
+          "跟随用户",
+          "简体中文",
+          "繁体中文",
+          "English",
+          "日本語"
+        ]
+      },
+      "initiative": {
+        "label": "主动推进程度（0安静/3活跃）",
+        "type": "integer",
+        "default": 1,
+        "minimum": 0,
+        "maximum": 3
+      },
+      "response_length": {
+        "label": "每轮目标汉字数（软目标）",
+        "type": "integer",
+        "default": 330,
+        "minimum": 40,
+        "maximum": 1200
+      },
+      "warmth": {
+        "label": "亲近程度",
+        "type": "string",
+        "default": "自然",
+        "enum": [
+          "克制",
+          "自然",
+          "温和"
+        ]
+      },
+      "humor": {
+        "label": "幽默频率",
+        "type": "string",
+        "default": "中",
+        "enum": [
+          "关闭",
+          "低",
+          "中",
+          "高"
+        ]
+      },
+      "spoiler_boundary": {
+        "label": "剧透边界",
+        "type": "string",
+        "default": "仅作品开篇背景，关键转折先问用户"
+      },
+      "canon_mode": {
+        "label": "资料与创作界限",
+        "type": "string",
+        "default": "原作背景+原创互动"
+      },
+      "interaction_mode": {
+        "label": "互动方式",
+        "type": "string",
+        "default": "情景互动",
+        "enum": [
+          "情景互动",
+          "日常聊天",
+          "认真任务",
+          "退出角色"
+        ]
+      },
+      "skepticism": {
+        "label": "证据追问力度",
+        "type": "string",
+        "default": "高"
+      }
+    },
+    "popularity": {
+      "basis": "近期奖项覆盖与经典作品组合；不把系列热度等同单角排名",
+      "checked_at": "2026-10-01"
+    }
+  },
+  {
+    "id": "lelouch",
+    "name": "鲁路修 · 棋局分支室",
+    "category": "anime",
+    "icon": "👑",
+    "description": "用户掌握一张虚构校园活动地图，要在多方约束中决定下一步。",
+    "parameters": {
+      "user_name": {
+        "label": "用户称呼",
+        "type": "string",
+        "default": "朋友"
+      },
+      "user_role": {
+        "label": "用户在场景中的身份",
+        "type": "string",
+        "default": "自由选择的参与者"
+      },
+      "language": {
+        "label": "回应语言",
+        "type": "string",
+        "default": "跟随用户",
+        "enum": [
+          "跟随用户",
+          "简体中文",
+          "繁体中文",
+          "English",
+          "日本語"
+        ]
+      },
+      "initiative": {
+        "label": "主动推进程度（0安静/3活跃）",
+        "type": "integer",
+        "default": 2,
+        "minimum": 0,
+        "maximum": 3
+      },
+      "response_length": {
+        "label": "每轮目标汉字数（软目标）",
+        "type": "integer",
+        "default": 430,
+        "minimum": 40,
+        "maximum": 1200
+      },
+      "warmth": {
+        "label": "亲近程度",
+        "type": "string",
+        "default": "自然",
+        "enum": [
+          "克制",
+          "自然",
+          "温和"
+        ]
+      },
+      "humor": {
+        "label": "幽默频率",
+        "type": "string",
+        "default": "中",
+        "enum": [
+          "关闭",
+          "低",
+          "中",
+          "高"
+        ]
+      },
+      "spoiler_boundary": {
+        "label": "剧透边界",
+        "type": "string",
+        "default": "仅作品开篇背景，关键转折先问用户"
+      },
+      "canon_mode": {
+        "label": "资料与创作界限",
+        "type": "string",
+        "default": "原作背景+原创互动"
+      },
+      "interaction_mode": {
+        "label": "互动方式",
+        "type": "string",
+        "default": "情景互动",
+        "enum": [
+          "情景互动",
+          "日常聊天",
+          "认真任务",
+          "退出角色"
+        ]
+      },
+      "strategy_depth": {
+        "label": "前瞻推演步数",
+        "type": "integer",
+        "default": 2
+      }
+    },
+    "popularity": {
+      "basis": "近期奖项覆盖与经典作品组合；不把系列热度等同单角排名",
+      "checked_at": "2026-10-01"
+    }
+  },
+  {
+    "id": "momo-ayase",
+    "name": "绫濑桃 · 怪谈调查搭子",
+    "category": "anime",
+    "icon": "👻",
+    "description": "用户带来一条校园传闻，两人决定先查有没有普通解释。",
+    "parameters": {
+      "user_name": {
+        "label": "用户称呼",
+        "type": "string",
+        "default": "朋友"
+      },
+      "user_role": {
+        "label": "用户在场景中的身份",
+        "type": "string",
+        "default": "自由选择的参与者"
+      },
+      "language": {
+        "label": "回应语言",
+        "type": "string",
+        "default": "跟随用户",
+        "enum": [
+          "跟随用户",
+          "简体中文",
+          "繁体中文",
+          "English",
+          "日本語"
+        ]
+      },
+      "initiative": {
+        "label": "主动推进程度（0安静/3活跃）",
+        "type": "integer",
+        "default": 3,
+        "minimum": 0,
+        "maximum": 3
+      },
+      "response_length": {
+        "label": "每轮目标汉字数（软目标）",
+        "type": "integer",
+        "default": 200,
+        "minimum": 40,
+        "maximum": 1200
+      },
+      "warmth": {
+        "label": "亲近程度",
+        "type": "string",
+        "default": "自然",
+        "enum": [
+          "克制",
+          "自然",
+          "温和"
+        ]
+      },
+      "humor": {
+        "label": "幽默频率",
+        "type": "string",
+        "default": "中",
+        "enum": [
+          "关闭",
+          "低",
+          "中",
+          "高"
+        ]
+      },
+      "spoiler_boundary": {
+        "label": "剧透边界",
+        "type": "string",
+        "default": "仅作品开篇背景，关键转折先问用户"
+      },
+      "canon_mode": {
+        "label": "资料与创作界限",
+        "type": "string",
+        "default": "原作背景+原创互动"
+      },
+      "interaction_mode": {
+        "label": "互动方式",
+        "type": "string",
+        "default": "情景互动",
+        "enum": [
+          "情景互动",
+          "日常聊天",
+          "认真任务",
+          "退出角色"
+        ]
+      },
+      "spooky_level": {
+        "label": "怪谈惊吓程度",
+        "type": "string",
+        "default": "轻微"
+      }
+    },
+    "popularity": {
+      "basis": "近期奖项覆盖与经典作品组合；不把系列热度等同单角排名",
+      "checked_at": "2026-10-01"
+    }
+  },
+  {
+    "id": "okarun",
+    "name": "厄卡伦 · 超自然资料社",
+    "category": "anime",
+    "icon": "👽",
+    "description": "用户和资料社为一个原创都市传说整理卡片。",
+    "parameters": {
+      "user_name": {
+        "label": "用户称呼",
+        "type": "string",
+        "default": "朋友"
+      },
+      "user_role": {
+        "label": "用户在场景中的身份",
+        "type": "string",
+        "default": "自由选择的参与者"
+      },
+      "language": {
+        "label": "回应语言",
+        "type": "string",
+        "default": "跟随用户",
+        "enum": [
+          "跟随用户",
+          "简体中文",
+          "繁体中文",
+          "English",
+          "日本語"
+        ]
+      },
+      "initiative": {
+        "label": "主动推进程度（0安静/3活跃）",
+        "type": "integer",
+        "default": 1,
+        "minimum": 0,
+        "maximum": 3
+      },
+      "response_length": {
+        "label": "每轮目标汉字数（软目标）",
+        "type": "integer",
+        "default": 220,
+        "minimum": 40,
+        "maximum": 1200
+      },
+      "warmth": {
+        "label": "亲近程度",
+        "type": "string",
+        "default": "温和",
+        "enum": [
+          "克制",
+          "自然",
+          "温和"
+        ]
+      },
+      "humor": {
+        "label": "幽默频率",
+        "type": "string",
+        "default": "中",
+        "enum": [
+          "关闭",
+          "低",
+          "中",
+          "高"
+        ]
+      },
+      "spoiler_boundary": {
+        "label": "剧透边界",
+        "type": "string",
+        "default": "仅作品开篇背景，关键转折先问用户"
+      },
+      "canon_mode": {
+        "label": "资料与创作界限",
+        "type": "string",
+        "default": "原作背景+原创互动"
+      },
+      "interaction_mode": {
+        "label": "互动方式",
+        "type": "string",
+        "default": "情景互动",
+        "enum": [
+          "情景互动",
+          "日常聊天",
+          "认真任务",
+          "退出角色"
+        ]
+      },
+      "lore_enthusiasm": {
+        "label": "资料展开热情",
+        "type": "string",
+        "default": "中"
+      }
+    },
+    "popularity": {
+      "basis": "近期奖项覆盖与经典作品组合；不把系列热度等同单角排名",
+      "checked_at": "2026-10-01"
+    }
+  },
+  {
+    "id": "zhongli",
+    "name": "钟离 · 契约茶馆",
+    "category": "games",
+    "icon": "🍵",
+    "description": "用户带来一个承诺或一件老物件，茶馆里先谈它的来历和界限。",
+    "parameters": {
+      "user_name": {
+        "label": "用户称呼",
+        "type": "string",
+        "default": "朋友"
+      },
+      "user_role": {
+        "label": "用户在场景中的身份",
+        "type": "string",
+        "default": "自由选择的参与者"
+      },
+      "language": {
+        "label": "回应语言",
+        "type": "string",
+        "default": "跟随用户",
+        "enum": [
+          "跟随用户",
+          "简体中文",
+          "繁体中文",
+          "English",
+          "日本語"
+        ]
+      },
+      "initiative": {
+        "label": "主动推进程度（0安静/3活跃）",
+        "type": "integer",
+        "default": 0,
+        "minimum": 0,
+        "maximum": 3
+      },
+      "response_length": {
+        "label": "每轮目标汉字数（软目标）",
+        "type": "integer",
+        "default": 180,
+        "minimum": 40,
+        "maximum": 1200
+      },
+      "warmth": {
+        "label": "亲近程度",
+        "type": "string",
+        "default": "温和",
+        "enum": [
+          "克制",
+          "自然",
+          "温和"
+        ]
+      },
+      "humor": {
+        "label": "幽默频率",
+        "type": "string",
+        "default": "低",
+        "enum": [
+          "关闭",
+          "低",
+          "中",
+          "高"
+        ]
+      },
+      "spoiler_boundary": {
+        "label": "剧透边界",
+        "type": "string",
+        "default": "仅作品开篇背景，关键转折先问用户"
+      },
+      "canon_mode": {
+        "label": "资料与创作界限",
+        "type": "string",
+        "default": "原作背景+原创互动"
+      },
+      "interaction_mode": {
+        "label": "互动方式",
+        "type": "string",
+        "default": "情景互动",
+        "enum": [
+          "情景互动",
+          "日常聊天",
+          "认真任务",
+          "退出角色"
+        ]
+      },
+      "tea_story_length": {
+        "label": "茶馆故事长度",
+        "type": "string",
+        "default": "短"
+      }
+    },
+    "popularity": {
+      "basis": "近期奖项覆盖与经典作品组合；不把系列热度等同单角排名",
+      "checked_at": "2026-10-01"
+    }
+  },
+  {
+    "id": "furina",
+    "name": "芙宁娜 · 小剧场谢幕",
+    "category": "games",
+    "icon": "🎭",
+    "description": "用户把今天的一场尴尬改成一出可以重新排练的微型戏剧。",
+    "parameters": {
+      "user_name": {
+        "label": "用户称呼",
+        "type": "string",
+        "default": "朋友"
+      },
+      "user_role": {
+        "label": "用户在场景中的身份",
+        "type": "string",
+        "default": "自由选择的参与者"
+      },
+      "language": {
+        "label": "回应语言",
+        "type": "string",
+        "default": "跟随用户",
+        "enum": [
+          "跟随用户",
+          "简体中文",
+          "繁体中文",
+          "English",
+          "日本語"
+        ]
+      },
+      "initiative": {
+        "label": "主动推进程度（0安静/3活跃）",
+        "type": "integer",
+        "default": 3,
+        "minimum": 0,
+        "maximum": 3
+      },
+      "response_length": {
+        "label": "每轮目标汉字数（软目标）",
+        "type": "integer",
+        "default": 240,
+        "minimum": 40,
+        "maximum": 1200
+      },
+      "warmth": {
+        "label": "亲近程度",
+        "type": "string",
+        "default": "自然",
+        "enum": [
+          "克制",
+          "自然",
+          "温和"
+        ]
+      },
+      "humor": {
+        "label": "幽默频率",
+        "type": "string",
+        "default": "中",
+        "enum": [
+          "关闭",
+          "低",
+          "中",
+          "高"
+        ]
+      },
+      "spoiler_boundary": {
+        "label": "剧透边界",
+        "type": "string",
+        "default": "仅作品开篇背景，关键转折先问用户"
+      },
+      "canon_mode": {
+        "label": "资料与创作界限",
+        "type": "string",
+        "default": "原作背景+原创互动"
+      },
+      "interaction_mode": {
+        "label": "互动方式",
+        "type": "string",
+        "default": "情景互动",
+        "enum": [
+          "情景互动",
+          "日常聊天",
+          "认真任务",
+          "退出角色"
+        ]
+      },
+      "stage_grandeur": {
+        "label": "舞台华丽程度",
+        "type": "string",
+        "default": "中"
+      }
+    },
+    "popularity": {
+      "basis": "近期奖项覆盖与经典作品组合；不把系列热度等同单角排名",
+      "checked_at": "2026-10-01"
+    }
+  },
+  {
+    "id": "nahida",
+    "name": "纳西妲 · 知识花园",
+    "category": "games",
+    "icon": "🌱",
+    "description": "用户在知识花园种下一个问题，旁支随理解生长。",
+    "parameters": {
+      "user_name": {
+        "label": "用户称呼",
+        "type": "string",
+        "default": "朋友"
+      },
+      "user_role": {
+        "label": "用户在场景中的身份",
+        "type": "string",
+        "default": "自由选择的参与者"
+      },
+      "language": {
+        "label": "回应语言",
+        "type": "string",
+        "default": "跟随用户",
+        "enum": [
+          "跟随用户",
+          "简体中文",
+          "繁体中文",
+          "English",
+          "日本語"
+        ]
+      },
+      "initiative": {
+        "label": "主动推进程度（0安静/3活跃）",
+        "type": "integer",
+        "default": 1,
+        "minimum": 0,
+        "maximum": 3
+      },
+      "response_length": {
+        "label": "每轮目标汉字数（软目标）",
+        "type": "integer",
+        "default": 330,
+        "minimum": 40,
+        "maximum": 1200
+      },
+      "warmth": {
+        "label": "亲近程度",
+        "type": "string",
+        "default": "自然",
+        "enum": [
+          "克制",
+          "自然",
+          "温和"
+        ]
+      },
+      "humor": {
+        "label": "幽默频率",
+        "type": "string",
+        "default": "中",
+        "enum": [
+          "关闭",
+          "低",
+          "中",
+          "高"
+        ]
+      },
+      "spoiler_boundary": {
+        "label": "剧透边界",
+        "type": "string",
+        "default": "仅作品开篇背景，关键转折先问用户"
+      },
+      "canon_mode": {
+        "label": "资料与创作界限",
+        "type": "string",
+        "default": "原作背景+原创互动"
+      },
+      "interaction_mode": {
+        "label": "互动方式",
+        "type": "string",
+        "default": "情景互动",
+        "enum": [
+          "情景互动",
+          "日常聊天",
+          "认真任务",
+          "退出角色"
+        ]
+      },
+      "question_branches": {
+        "label": "问题分支数",
+        "type": "integer",
+        "default": 3
+      }
+    },
+    "popularity": {
+      "basis": "近期奖项覆盖与经典作品组合；不把系列热度等同单角排名",
+      "checked_at": "2026-10-01"
+    }
+  },
+  {
+    "id": "raiden-shogun",
+    "name": "雷电将军 · 永恒与变化辩题",
+    "category": "games",
+    "icon": "⚡",
+    "description": "用户拿一条自己坚持的规则，讨论何时保留、何时更新。",
+    "parameters": {
+      "user_name": {
+        "label": "用户称呼",
+        "type": "string",
+        "default": "朋友"
+      },
+      "user_role": {
+        "label": "用户在场景中的身份",
+        "type": "string",
+        "default": "自由选择的参与者"
+      },
+      "language": {
+        "label": "回应语言",
+        "type": "string",
+        "default": "跟随用户",
+        "enum": [
+          "跟随用户",
+          "简体中文",
+          "繁体中文",
+          "English",
+          "日本語"
+        ]
+      },
+      "initiative": {
+        "label": "主动推进程度（0安静/3活跃）",
+        "type": "integer",
+        "default": 2,
+        "minimum": 0,
+        "maximum": 3
+      },
+      "response_length": {
+        "label": "每轮目标汉字数（软目标）",
+        "type": "integer",
+        "default": 430,
+        "minimum": 40,
+        "maximum": 1200
+      },
+      "warmth": {
+        "label": "亲近程度",
+        "type": "string",
+        "default": "自然",
+        "enum": [
+          "克制",
+          "自然",
+          "温和"
+        ]
+      },
+      "humor": {
+        "label": "幽默频率",
+        "type": "string",
+        "default": "中",
+        "enum": [
+          "关闭",
+          "低",
+          "中",
+          "高"
+        ]
+      },
+      "spoiler_boundary": {
+        "label": "剧透边界",
+        "type": "string",
+        "default": "仅作品开篇背景，关键转折先问用户"
+      },
+      "canon_mode": {
+        "label": "资料与创作界限",
+        "type": "string",
+        "default": "原作背景+原创互动"
+      },
+      "interaction_mode": {
+        "label": "互动方式",
+        "type": "string",
+        "default": "情景互动",
+        "enum": [
+          "情景互动",
+          "日常聊天",
+          "认真任务",
+          "退出角色"
+        ]
+      },
+      "persona_view": {
+        "label": "演绎视角",
+        "type": "string",
+        "default": "影"
+      }
+    },
+    "popularity": {
+      "basis": "近期奖项覆盖与经典作品组合；不把系列热度等同单角排名",
+      "checked_at": "2026-10-01"
+    }
+  },
+  {
+    "id": "kafka",
+    "name": "卡芙卡 · 剧本分支游戏",
+    "category": "games",
+    "icon": "🕸️",
+    "description": "用户收到一份只写到今晚的虚构剧本，之后由自己的选择续写。",
+    "parameters": {
+      "user_name": {
+        "label": "用户称呼",
+        "type": "string",
+        "default": "旅伴"
+      },
+      "user_role": {
+        "label": "用户在场景中的身份",
+        "type": "string",
+        "default": "自由选择的参与者"
+      },
+      "language": {
+        "label": "回应语言",
+        "type": "string",
+        "default": "跟随用户",
+        "enum": [
+          "跟随用户",
+          "简体中文",
+          "繁体中文",
+          "English",
+          "日本語"
+        ]
+      },
+      "initiative": {
+        "label": "主动推进程度（0安静/3活跃）",
+        "type": "integer",
+        "default": 2,
+        "minimum": 0,
+        "maximum": 3
+      },
+      "response_length": {
+        "label": "每轮目标汉字数（软目标）",
+        "type": "integer",
+        "default": 480,
+        "minimum": 40,
+        "maximum": 1200
+      },
+      "warmth": {
+        "label": "亲近程度",
+        "type": "string",
+        "default": "自然",
+        "enum": [
+          "克制",
+          "自然",
+          "温和"
+        ]
+      },
+      "humor": {
+        "label": "幽默频率",
+        "type": "string",
+        "default": "中",
+        "enum": [
+          "关闭",
+          "低",
+          "中",
+          "高"
+        ]
+      },
+      "spoiler_boundary": {
+        "label": "剧透边界",
+        "type": "string",
+        "default": "仅作品开篇背景，关键转折先问用户"
+      },
+      "canon_mode": {
+        "label": "资料与创作界限",
+        "type": "string",
+        "default": "原作背景+原创互动"
+      },
+      "interaction_mode": {
+        "label": "互动方式",
+        "type": "string",
+        "default": "情景互动",
+        "enum": [
+          "情景互动",
+          "日常聊天",
+          "认真任务",
+          "退出角色"
+        ]
+      },
+      "suspense": {
+        "label": "叙事悬念程度",
+        "type": "string",
+        "default": "中"
+      }
+    },
+    "popularity": {
+      "basis": "近期奖项覆盖与经典作品组合；不把系列热度等同单角排名",
+      "checked_at": "2026-10-01"
+    }
+  },
+  {
+    "id": "march-7th",
+    "name": "三月七 · 列车旅行日记",
+    "category": "games",
+    "icon": "📷",
+    "description": "用户登上想象的列车，给今天拍一张纯文字照片。",
+    "parameters": {
+      "user_name": {
+        "label": "用户称呼",
+        "type": "string",
+        "default": "朋友"
+      },
+      "user_role": {
+        "label": "用户在场景中的身份",
+        "type": "string",
+        "default": "自由选择的参与者"
+      },
+      "language": {
+        "label": "回应语言",
+        "type": "string",
+        "default": "跟随用户",
+        "enum": [
+          "跟随用户",
+          "简体中文",
+          "繁体中文",
+          "English",
+          "日本語"
+        ]
+      },
+      "initiative": {
+        "label": "主动推进程度（0安静/3活跃）",
+        "type": "integer",
+        "default": 3,
+        "minimum": 0,
+        "maximum": 3
+      },
+      "response_length": {
+        "label": "每轮目标汉字数（软目标）",
+        "type": "integer",
+        "default": 200,
+        "minimum": 40,
+        "maximum": 1200
+      },
+      "warmth": {
+        "label": "亲近程度",
+        "type": "string",
+        "default": "自然",
+        "enum": [
+          "克制",
+          "自然",
+          "温和"
+        ]
+      },
+      "humor": {
+        "label": "幽默频率",
+        "type": "string",
+        "default": "中",
+        "enum": [
+          "关闭",
+          "低",
+          "中",
+          "高"
+        ]
+      },
+      "spoiler_boundary": {
+        "label": "剧透边界",
+        "type": "string",
+        "default": "仅作品开篇背景，关键转折先问用户"
+      },
+      "canon_mode": {
+        "label": "资料与创作界限",
+        "type": "string",
+        "default": "原作背景+原创互动"
+      },
+      "interaction_mode": {
+        "label": "互动方式",
+        "type": "string",
+        "default": "情景互动",
+        "enum": [
+          "情景互动",
+          "日常聊天",
+          "认真任务",
+          "退出角色"
+        ]
+      },
+      "diary_details": {
+        "label": "文字照片细节数",
+        "type": "integer",
+        "default": 3
+      }
+    },
+    "popularity": {
+      "basis": "近期奖项覆盖与经典作品组合；不把系列热度等同单角排名",
+      "checked_at": "2026-10-01"
+    }
+  },
+  {
+    "id": "firefly",
+    "name": "流萤 · 短途散步地图",
+    "category": "games",
+    "icon": "🦋",
+    "description": "用户只空出十分钟，和旅伴设计一段想象中的城市散步。",
+    "parameters": {
+      "user_name": {
+        "label": "用户称呼",
+        "type": "string",
+        "default": "朋友"
+      },
+      "user_role": {
+        "label": "用户在场景中的身份",
+        "type": "string",
+        "default": "自由选择的参与者"
+      },
+      "language": {
+        "label": "回应语言",
+        "type": "string",
+        "default": "跟随用户",
+        "enum": [
+          "跟随用户",
+          "简体中文",
+          "繁体中文",
+          "English",
+          "日本語"
+        ]
+      },
+      "initiative": {
+        "label": "主动推进程度（0安静/3活跃）",
+        "type": "integer",
+        "default": 1,
+        "minimum": 0,
+        "maximum": 3
+      },
+      "response_length": {
+        "label": "每轮目标汉字数（软目标）",
+        "type": "integer",
+        "default": 220,
+        "minimum": 40,
+        "maximum": 1200
+      },
+      "warmth": {
+        "label": "亲近程度",
+        "type": "string",
+        "default": "温和",
+        "enum": [
+          "克制",
+          "自然",
+          "温和"
+        ]
+      },
+      "humor": {
+        "label": "幽默频率",
+        "type": "string",
+        "default": "中",
+        "enum": [
+          "关闭",
+          "低",
+          "中",
+          "高"
+        ]
+      },
+      "spoiler_boundary": {
+        "label": "剧透边界",
+        "type": "string",
+        "default": "仅作品开篇背景，关键转折先问用户"
+      },
+      "canon_mode": {
+        "label": "资料与创作界限",
+        "type": "string",
+        "default": "原作背景+原创互动"
+      },
+      "interaction_mode": {
+        "label": "互动方式",
+        "type": "string",
+        "default": "情景互动",
+        "enum": [
+          "情景互动",
+          "日常聊天",
+          "认真任务",
+          "退出角色"
+        ]
+      },
+      "walk_pace": {
+        "label": "散步节奏",
+        "type": "string",
+        "default": "缓慢"
+      }
+    },
+    "popularity": {
+      "basis": "近期奖项覆盖与经典作品组合；不把系列热度等同单角排名",
+      "checked_at": "2026-10-01"
+    }
+  },
+  {
+    "id": "arona",
+    "name": "阿罗娜 · 蓝色便签助手",
+    "category": "games",
+    "icon": "💙",
+    "description": "用户选择今天三件事，蓝色便签把它们改成可以划掉的小格子。",
+    "parameters": {
+      "user_name": {
+        "label": "用户称呼",
+        "type": "string",
+        "default": "朋友"
+      },
+      "user_role": {
+        "label": "用户在场景中的身份",
+        "type": "string",
+        "default": "自由选择的参与者"
+      },
+      "language": {
+        "label": "回应语言",
+        "type": "string",
+        "default": "跟随用户",
+        "enum": [
+          "跟随用户",
+          "简体中文",
+          "繁体中文",
+          "English",
+          "日本語"
+        ]
+      },
+      "initiative": {
+        "label": "主动推进程度（0安静/3活跃）",
+        "type": "integer",
+        "default": 2,
+        "minimum": 0,
+        "maximum": 3
+      },
+      "response_length": {
+        "label": "每轮目标汉字数（软目标）",
+        "type": "integer",
+        "default": 280,
+        "minimum": 40,
+        "maximum": 1200
+      },
+      "warmth": {
+        "label": "亲近程度",
+        "type": "string",
+        "default": "自然",
+        "enum": [
+          "克制",
+          "自然",
+          "温和"
+        ]
+      },
+      "humor": {
+        "label": "幽默频率",
+        "type": "string",
+        "default": "中",
+        "enum": [
+          "关闭",
+          "低",
+          "中",
+          "高"
+        ]
+      },
+      "spoiler_boundary": {
+        "label": "剧透边界",
+        "type": "string",
+        "default": "仅作品开篇背景，关键转折先问用户"
+      },
+      "canon_mode": {
+        "label": "资料与创作界限",
+        "type": "string",
+        "default": "原作背景+原创互动"
+      },
+      "interaction_mode": {
+        "label": "互动方式",
+        "type": "string",
+        "default": "情景互动",
+        "enum": [
+          "情景互动",
+          "日常聊天",
+          "认真任务",
+          "退出角色"
+        ]
+      },
+      "sticky_slots": {
+        "label": "便签格子上限",
+        "type": "integer",
+        "default": 3
+      }
+    },
+    "popularity": {
+      "basis": "近期奖项覆盖与经典作品组合；不把系列热度等同单角排名",
+      "checked_at": "2026-10-01"
+    }
+  },
+  {
+    "id": "trpg-gm",
+    "name": "酒馆骰子 · 轻量TRPG主持",
+    "category": "original",
+    "icon": "🎲",
+    "description": "雨夜酒馆收到一封没有署名的求助信，玩家可以追查也可以拒绝。",
+    "parameters": {
+      "user_name": {
+        "label": "用户称呼",
+        "type": "string",
+        "default": "旅伴"
+      },
+      "user_role": {
+        "label": "用户在场景中的身份",
+        "type": "string",
+        "default": "自由选择的参与者"
+      },
+      "language": {
+        "label": "回应语言",
+        "type": "string",
+        "default": "跟随用户",
+        "enum": [
+          "跟随用户",
+          "简体中文",
+          "繁体中文",
+          "English",
+          "日本語"
+        ]
+      },
+      "initiative": {
+        "label": "主动推进程度（0安静/3活跃）",
+        "type": "integer",
+        "default": 2,
+        "minimum": 0,
+        "maximum": 3
+      },
+      "response_length": {
+        "label": "每轮目标汉字数（软目标）",
+        "type": "integer",
+        "default": 480,
+        "minimum": 40,
+        "maximum": 1200
+      },
+      "warmth": {
+        "label": "亲近程度",
+        "type": "string",
+        "default": "自然",
+        "enum": [
+          "克制",
+          "自然",
+          "温和"
+        ]
+      },
+      "humor": {
+        "label": "幽默频率",
+        "type": "string",
+        "default": "中",
+        "enum": [
+          "关闭",
+          "低",
+          "中",
+          "高"
+        ]
+      },
+      "spoiler_boundary": {
+        "label": "剧透边界",
+        "type": "string",
+        "default": "重大背景由用户指定"
+      },
+      "canon_mode": {
+        "label": "资料与创作界限",
+        "type": "string",
+        "default": "公开资料启发+原创场景"
+      },
+      "interaction_mode": {
+        "label": "互动方式",
+        "type": "string",
+        "default": "情景互动",
+        "enum": [
+          "情景互动",
+          "日常聊天",
+          "认真任务",
+          "退出角色"
+        ]
+      },
+      "dice_rule": {
+        "label": "检定方式",
+        "type": "string",
+        "default": "用户掷d20"
+      }
+    },
+    "popularity": {
+      "basis": "原创玩法",
+      "checked_at": "2026-10-01"
+    }
+  },
+  {
+    "id": "cyber-bartender",
+    "name": "霓虹酒吧 · 零酒精调饮师",
+    "category": "original",
+    "icon": "🍸",
+    "description": "城市下着紫色霓虹雨，用户坐在一个可以随时离开的吧台前。",
+    "parameters": {
+      "user_name": {
+        "label": "用户称呼",
+        "type": "string",
+        "default": "朋友"
+      },
+      "user_role": {
+        "label": "用户在场景中的身份",
+        "type": "string",
+        "default": "自由选择的参与者"
+      },
+      "language": {
+        "label": "回应语言",
+        "type": "string",
+        "default": "跟随用户",
+        "enum": [
+          "跟随用户",
+          "简体中文",
+          "繁体中文",
+          "English",
+          "日本語"
+        ]
+      },
+      "initiative": {
+        "label": "主动推进程度（0安静/3活跃）",
+        "type": "integer",
+        "default": 1,
+        "minimum": 0,
+        "maximum": 3
+      },
+      "response_length": {
+        "label": "每轮目标汉字数（软目标）",
+        "type": "integer",
+        "default": 220,
+        "minimum": 40,
+        "maximum": 1200
+      },
+      "warmth": {
+        "label": "亲近程度",
+        "type": "string",
+        "default": "温和",
+        "enum": [
+          "克制",
+          "自然",
+          "温和"
+        ]
+      },
+      "humor": {
+        "label": "幽默频率",
+        "type": "string",
+        "default": "中",
+        "enum": [
+          "关闭",
+          "低",
+          "中",
+          "高"
+        ]
+      },
+      "spoiler_boundary": {
+        "label": "剧透边界",
+        "type": "string",
+        "default": "重大背景由用户指定"
+      },
+      "canon_mode": {
+        "label": "资料与创作界限",
+        "type": "string",
+        "default": "公开资料启发+原创场景"
+      },
+      "interaction_mode": {
+        "label": "互动方式",
+        "type": "string",
+        "default": "情景互动",
+        "enum": [
+          "情景互动",
+          "日常聊天",
+          "认真任务",
+          "退出角色"
+        ]
+      },
+      "menu_mode": {
+        "label": "饮品模式",
+        "type": "string",
+        "default": "现实无酒精"
+      }
+    },
+    "popularity": {
+      "basis": "原创玩法",
+      "checked_at": "2026-10-01"
+    }
+  },
+  {
+    "id": "cat-office",
+    "name": "猫猫事务所 · 摸鱼任务助理",
+    "category": "original",
+    "icon": "🐈",
+    "description": "用户把一件拖延的事交给猫事务所，猫只批准一个最小动作。",
+    "parameters": {
+      "user_name": {
+        "label": "用户称呼",
+        "type": "string",
+        "default": "朋友"
+      },
+      "user_role": {
+        "label": "用户在场景中的身份",
+        "type": "string",
+        "default": "自由选择的参与者"
+      },
+      "language": {
+        "label": "回应语言",
+        "type": "string",
+        "default": "跟随用户",
+        "enum": [
+          "跟随用户",
+          "简体中文",
+          "繁体中文",
+          "English",
+          "日本語"
+        ]
+      },
+      "initiative": {
+        "label": "主动推进程度（0安静/3活跃）",
+        "type": "integer",
+        "default": 3,
+        "minimum": 0,
+        "maximum": 3
+      },
+      "response_length": {
+        "label": "每轮目标汉字数（软目标）",
+        "type": "integer",
+        "default": 200,
+        "minimum": 40,
+        "maximum": 1200
+      },
+      "warmth": {
+        "label": "亲近程度",
+        "type": "string",
+        "default": "自然",
+        "enum": [
+          "克制",
+          "自然",
+          "温和"
+        ]
+      },
+      "humor": {
+        "label": "幽默频率",
+        "type": "string",
+        "default": "中",
+        "enum": [
+          "关闭",
+          "低",
+          "中",
+          "高"
+        ]
+      },
+      "spoiler_boundary": {
+        "label": "剧透边界",
+        "type": "string",
+        "default": "重大背景由用户指定"
+      },
+      "canon_mode": {
+        "label": "资料与创作界限",
+        "type": "string",
+        "default": "公开资料启发+原创场景"
+      },
+      "interaction_mode": {
+        "label": "互动方式",
+        "type": "string",
+        "default": "情景互动",
+        "enum": [
+          "情景互动",
+          "日常聊天",
+          "认真任务",
+          "退出角色"
+        ]
+      },
+      "cat_speech": {
+        "label": "猫语密度",
+        "type": "string",
+        "default": "低"
+      }
+    },
+    "popularity": {
+      "basis": "原创玩法",
+      "checked_at": "2026-10-01"
+    }
+  },
+  {
+    "id": "ghost-roommate",
+    "name": "合租幽灵 · 轻惊悚室友",
+    "category": "original",
+    "icon": "🕯️",
+    "description": "用户搬进一间灯会慢半拍亮起的房间，室友先留下一张礼貌便条。",
+    "parameters": {
+      "user_name": {
+        "label": "用户称呼",
+        "type": "string",
+        "default": "旅伴"
+      },
+      "user_role": {
+        "label": "用户在场景中的身份",
+        "type": "string",
+        "default": "自由选择的参与者"
+      },
+      "language": {
+        "label": "回应语言",
+        "type": "string",
+        "default": "跟随用户",
+        "enum": [
+          "跟随用户",
+          "简体中文",
+          "繁体中文",
+          "English",
+          "日本語"
+        ]
+      },
+      "initiative": {
+        "label": "主动推进程度（0安静/3活跃）",
+        "type": "integer",
+        "default": 2,
+        "minimum": 0,
+        "maximum": 3
+      },
+      "response_length": {
+        "label": "每轮目标汉字数（软目标）",
+        "type": "integer",
+        "default": 480,
+        "minimum": 40,
+        "maximum": 1200
+      },
+      "warmth": {
+        "label": "亲近程度",
+        "type": "string",
+        "default": "自然",
+        "enum": [
+          "克制",
+          "自然",
+          "温和"
+        ]
+      },
+      "humor": {
+        "label": "幽默频率",
+        "type": "string",
+        "default": "中",
+        "enum": [
+          "关闭",
+          "低",
+          "中",
+          "高"
+        ]
+      },
+      "spoiler_boundary": {
+        "label": "剧透边界",
+        "type": "string",
+        "default": "重大背景由用户指定"
+      },
+      "canon_mode": {
+        "label": "资料与创作界限",
+        "type": "string",
+        "default": "公开资料启发+原创场景"
+      },
+      "interaction_mode": {
+        "label": "互动方式",
+        "type": "string",
+        "default": "情景互动",
+        "enum": [
+          "情景互动",
+          "日常聊天",
+          "认真任务",
+          "退出角色"
+        ]
+      },
+      "horror_level": {
+        "label": "惊悚强度",
+        "type": "string",
+        "default": "微弱"
+      }
+    },
+    "popularity": {
+      "basis": "原创玩法",
+      "checked_at": "2026-10-01"
+    }
+  },
+  {
+    "id": "lighthouse-radio",
+    "name": "灯塔电台 · 五分钟夜航",
+    "category": "original",
+    "icon": "🏮",
+    "description": "一座不会追问姓名的灯塔，用户决定今晚播一段天气还是一段日记。",
+    "parameters": {
+      "user_name": {
+        "label": "用户称呼",
+        "type": "string",
+        "default": "朋友"
+      },
+      "user_role": {
+        "label": "用户在场景中的身份",
+        "type": "string",
+        "default": "自由选择的参与者"
+      },
+      "language": {
+        "label": "回应语言",
+        "type": "string",
+        "default": "跟随用户",
+        "enum": [
+          "跟随用户",
+          "简体中文",
+          "繁体中文",
+          "English",
+          "日本語"
+        ]
+      },
+      "initiative": {
+        "label": "主动推进程度（0安静/3活跃）",
+        "type": "integer",
+        "default": 0,
+        "minimum": 0,
+        "maximum": 3
+      },
+      "response_length": {
+        "label": "每轮目标汉字数（软目标）",
+        "type": "integer",
+        "default": 180,
+        "minimum": 40,
+        "maximum": 1200
+      },
+      "warmth": {
+        "label": "亲近程度",
+        "type": "string",
+        "default": "温和",
+        "enum": [
+          "克制",
+          "自然",
+          "温和"
+        ]
+      },
+      "humor": {
+        "label": "幽默频率",
+        "type": "string",
+        "default": "低",
+        "enum": [
+          "关闭",
+          "低",
+          "中",
+          "高"
+        ]
+      },
+      "spoiler_boundary": {
+        "label": "剧透边界",
+        "type": "string",
+        "default": "重大背景由用户指定"
+      },
+      "canon_mode": {
+        "label": "资料与创作界限",
+        "type": "string",
+        "default": "公开资料启发+原创场景"
+      },
+      "interaction_mode": {
+        "label": "互动方式",
+        "type": "string",
+        "default": "情景互动",
+        "enum": [
+          "情景互动",
+          "日常聊天",
+          "认真任务",
+          "退出角色"
+        ]
+      },
+      "broadcast_minutes": {
+        "label": "夜航时长目标",
+        "type": "integer",
+        "default": 5
+      }
+    },
+    "popularity": {
+      "basis": "原创玩法",
+      "checked_at": "2026-10-01"
+    }
+  },
+  {
+    "id": "debate-salon",
+    "name": "三椅茶会 · 观点圆桌",
+    "category": "original",
+    "icon": "🪑",
+    "description": "用户带来一个决策问题，三把椅子轮流陈述并接受追问。",
+    "parameters": {
+      "user_name": {
+        "label": "用户称呼",
+        "type": "string",
+        "default": "朋友"
+      },
+      "user_role": {
+        "label": "用户在场景中的身份",
+        "type": "string",
+        "default": "自由选择的参与者"
+      },
+      "language": {
+        "label": "回应语言",
+        "type": "string",
+        "default": "跟随用户",
+        "enum": [
+          "跟随用户",
+          "简体中文",
+          "繁体中文",
+          "English",
+          "日本語"
+        ]
+      },
+      "initiative": {
+        "label": "主动推进程度（0安静/3活跃）",
+        "type": "integer",
+        "default": 2,
+        "minimum": 0,
+        "maximum": 3
+      },
+      "response_length": {
+        "label": "每轮目标汉字数（软目标）",
+        "type": "integer",
+        "default": 450,
+        "minimum": 40,
+        "maximum": 1200
+      },
+      "warmth": {
+        "label": "亲近程度",
+        "type": "string",
+        "default": "自然",
+        "enum": [
+          "克制",
+          "自然",
+          "温和"
+        ]
+      },
+      "humor": {
+        "label": "幽默频率",
+        "type": "string",
+        "default": "低",
+        "enum": [
+          "关闭",
+          "低",
+          "中",
+          "高"
+        ]
+      },
+      "spoiler_boundary": {
+        "label": "剧透边界",
+        "type": "string",
+        "default": "重大背景由用户指定"
+      },
+      "canon_mode": {
+        "label": "资料与创作界限",
+        "type": "string",
+        "default": "公开资料启发+原创场景"
+      },
+      "interaction_mode": {
+        "label": "互动方式",
+        "type": "string",
+        "default": "情景互动",
+        "enum": [
+          "情景互动",
+          "日常聊天",
+          "认真任务",
+          "退出角色"
+        ]
+      },
+      "rounds": {
+        "label": "讨论轮数",
+        "type": "integer",
+        "default": 2
+      }
+    },
+    "popularity": {
+      "basis": "原创玩法",
+      "checked_at": "2026-10-01"
+    }
+  },
+  {
+    "id": "locked-room",
+    "name": "纸盒密室 · 公平推理主持",
+    "category": "original",
+    "icon": "🗝️",
+    "description": "用户面前是一只纸盒、三张卡片和一道不会影响现实的文字锁。",
+    "parameters": {
+      "user_name": {
+        "label": "用户称呼",
+        "type": "string",
+        "default": "朋友"
+      },
+      "user_role": {
+        "label": "用户在场景中的身份",
+        "type": "string",
+        "default": "自由选择的参与者"
+      },
+      "language": {
+        "label": "回应语言",
+        "type": "string",
+        "default": "跟随用户",
+        "enum": [
+          "跟随用户",
+          "简体中文",
+          "繁体中文",
+          "English",
+          "日本語"
+        ]
+      },
+      "initiative": {
+        "label": "主动推进程度（0安静/3活跃）",
+        "type": "integer",
+        "default": 1,
+        "minimum": 0,
+        "maximum": 3
+      },
+      "response_length": {
+        "label": "每轮目标汉字数（软目标）",
+        "type": "integer",
+        "default": 320,
+        "minimum": 40,
+        "maximum": 1200
+      },
+      "warmth": {
+        "label": "亲近程度",
+        "type": "string",
+        "default": "自然",
+        "enum": [
+          "克制",
+          "自然",
+          "温和"
+        ]
+      },
+      "humor": {
+        "label": "幽默频率",
+        "type": "string",
+        "default": "低",
+        "enum": [
+          "关闭",
+          "低",
+          "中",
+          "高"
+        ]
+      },
+      "spoiler_boundary": {
+        "label": "剧透边界",
+        "type": "string",
+        "default": "重大背景由用户指定"
+      },
+      "canon_mode": {
+        "label": "资料与创作界限",
+        "type": "string",
+        "default": "公开资料启发+原创场景"
+      },
+      "interaction_mode": {
+        "label": "互动方式",
+        "type": "string",
+        "default": "情景互动",
+        "enum": [
+          "情景互动",
+          "日常聊天",
+          "认真任务",
+          "退出角色"
+        ]
+      },
+      "hint_levels": {
+        "label": "提示层数",
+        "type": "integer",
+        "default": 3
+      }
+    },
+    "popularity": {
+      "basis": "原创玩法",
+      "checked_at": "2026-10-01"
+    }
+  },
+  {
+    "id": "tsundere-coach",
+    "name": "嘴硬教练 · 最小行动伙伴",
+    "category": "original",
+    "icon": "💪",
+    "description": "用户选一个学习或生活习惯，教练每次只盯一件能完成的小事。",
+    "parameters": {
+      "user_name": {
+        "label": "用户称呼",
+        "type": "string",
+        "default": "朋友"
+      },
+      "user_role": {
+        "label": "用户在场景中的身份",
+        "type": "string",
+        "default": "自由选择的参与者"
+      },
+      "language": {
+        "label": "回应语言",
+        "type": "string",
+        "default": "跟随用户",
+        "enum": [
+          "跟随用户",
+          "简体中文",
+          "繁体中文",
+          "English",
+          "日本語"
+        ]
+      },
+      "initiative": {
+        "label": "主动推进程度（0安静/3活跃）",
+        "type": "integer",
+        "default": 2,
+        "minimum": 0,
+        "maximum": 3
+      },
+      "response_length": {
+        "label": "每轮目标汉字数（软目标）",
+        "type": "integer",
+        "default": 220,
+        "minimum": 40,
+        "maximum": 1200
+      },
+      "warmth": {
+        "label": "亲近程度",
+        "type": "string",
+        "default": "自然",
+        "enum": [
+          "克制",
+          "自然",
+          "温和"
+        ]
+      },
+      "humor": {
+        "label": "幽默频率",
+        "type": "string",
+        "default": "中",
+        "enum": [
+          "关闭",
+          "低",
+          "中",
+          "高"
+        ]
+      },
+      "spoiler_boundary": {
+        "label": "剧透边界",
+        "type": "string",
+        "default": "重大背景由用户指定"
+      },
+      "canon_mode": {
+        "label": "资料与创作界限",
+        "type": "string",
+        "default": "公开资料启发+原创场景"
+      },
+      "interaction_mode": {
+        "label": "互动方式",
+        "type": "string",
+        "default": "情景互动",
+        "enum": [
+          "情景互动",
+          "日常聊天",
+          "认真任务",
+          "退出角色"
+        ]
+      },
+      "tsun_level": {
+        "label": "嘴硬程度",
+        "type": "string",
+        "default": "轻微"
+      }
+    },
+    "popularity": {
+      "basis": "原创玩法",
+      "checked_at": "2026-10-01"
+    }
+  }
+]

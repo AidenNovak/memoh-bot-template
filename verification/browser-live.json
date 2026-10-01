@@ -1,0 +1,14 @@
+{
+  "checked_at": "2026-10-01T11:42:42.771Z",
+  "template": "frieren",
+  "checks": [
+    "real UI connection",
+    "credential inputs cleared",
+    "dry-run button",
+    "single-click overwrite",
+    "custom parameters in AGENTS.md",
+    "model binding preserved",
+    "other workspace file preserved"
+  ],
+  "verified": true
+}
