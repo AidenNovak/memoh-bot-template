@@ -2,9 +2,11 @@
 
 给 Memoh 导入一些好玩的 Bot，也能**一键覆盖已有 Bot 的默认人格与行为设置**。
 
-56 个中文原创模板：8 位国际名人、6 位华语艺人与作家、6 位历史或文学人物、20 位动漫角色、8 位游戏角色、8 种原创互动玩法。每个模板有自己的性格、场景、首句、示例对话、长期记忆约定与独立旋钮，覆盖当前上游全部 **29 个 Bot Settings 字段**。研究参考 45 个来源，事实背景、同人演绎和原创玩法分别说明。
+56 个中文原创模板：8 位国际名人、6 位华语艺人与作家、6 位历史或文学人物、20 位动漫角色、8 位游戏角色、8 种原创互动玩法。每个模板有自己的性格、场景、首句、示例对话、长期记忆约定与独立旋钮，覆盖当前上游全部 **29 个 Bot Settings 字段**，并包含 **58 个配置接口面、13种渠道字段、Hooks、技能、记忆、任务与工作区**。研究参考 45 个来源，事实背景、同人演绎和原创玩法分别说明。
 
-[浏览全部模板](docs/catalog.md) · [参数与覆盖范围](docs/configuration.md) · [上游研究](docs/research/upstream.md) · [来源清单](docs/research/sources.json) · [验证记录](docs/verification.md)
+[浏览全部模板](docs/catalog.md) · [参数与覆盖范围](docs/configuration.md) · [上游研究](docs/research/upstream.md) · [来源清单](docs/research/sources.json) · [验证记录](docs/verification.md) · [真实回答对比](docs/model-evaluation.md) · [部署与体验](docs/deployment.md)
+
+[观看30秒宣传片](promo/memoh-bot-template-30s.mp4) · [插画提示词与渲染源码](promo/README.md)
 
 ![模板选择页](verification/gallery-desktop.png)
 
@@ -18,11 +20,13 @@ cd memoh-bot-template
 python3 -m memoh_templates serve --open
 ```
 
-打开 `http://127.0.0.1:8765`，连接你的 Memoh API，挑选角色和目标 Bot，点 **“应用并覆盖默认配置”**。可以先点“调一调”修改称呼、互动模式、回复长度、剧透边界和角色专属参数。Mac 也可以在终端运行 `./Open\ Templates.command`；允许执行时可直接双击。
+打开 `http://127.0.0.1:8765`，连接你的 Memoh API，挑选角色和目标 Bot，点 **“应用并覆盖默认配置”**。可以先点“调一调”修改13个人格参数，包括角色口吻强度和自然聊天模式；展开“完整Bot定制”可配置其他资源，设为apply后随同一次点击应用。Mac 也可以在终端运行 `./Open\ Templates.command`；允许执行时可直接双击。
 
 应用会覆盖显示名、头像、时区、活跃状态、`/data/AGENTS.md` 及模板的行为设置，自动将原配置备份到本地 `.backups/`，并回读确认结果。模型、服务商、外部 Agent 配置、频道连接、历史、长期记忆和其他工作区文件默认沿用现有设置；头像默认清空，可以编辑 `template.json` 指定自己的图片地址。密码与令牌只在当前进程内使用。
 
 这套覆盖入口使用当前 Memoh 的 Native 模型运行时。外部 Agent Bot 需要明确选择 Native 模型设置后再应用；不会悄悄改变运行时。当前对话已经加载的上下文可能保留旧人格，**开一个新会话**体验新角色最直接。
+
+真实模型测试已在vultr-sg的独立Memoh源码实例进行。12个角色同题对比中，回答长度中位数从318字降至114字；默认少讲流程、少布置任务，用户要深入时再展开。完整对话与剩余不足见[测试记录](docs/model-evaluation.md)。
 
 ## 直接用 Memoh 的导入界面
 
@@ -45,7 +49,8 @@ python3 -m memoh_templates apply elon-musk --bot YOUR_BOT_UUID --dry-run
 
 # 定制人格、绑定本实例模型或改行为设置
 python3 -m memoh_templates apply maomao --bot YOUR_BOT_UUID \
-  --parameters examples/parameters.json --settings my-settings.json
+  --parameters examples/parameters.json --settings my-settings.json \
+  --customization examples/customization.json
 
 # 恢复自动备份
 python3 -m memoh_templates restore .backups/GENERATED_BACKUP.json
@@ -69,7 +74,7 @@ python3 -m memoh_templates create arona --settings my-settings.json
 
 真人模板是公开形象启发的虚构演绎，角色模板是非官方同人。所有首句和示例均为原创，不搬运社区角色卡、电影对白、歌词或官方图片。奖项只解释近期选材覆盖，经典角色是人工补充，不声称存在一张覆盖所有角色的人气榜。
 
-手写内容位于 `catalog/personas.psv`，来源位于 `catalog/sources.tsv`。修改后生成可审阅配置、提示词和导入包：
+手写内容位于 `catalog/personas.psv` 和 `catalog/conversation_style.psv`，来源位于 `catalog/sources.tsv`。修改后生成可审阅配置、提示词和导入包：
 
 ```sh
 python3 scripts/build_catalog.py

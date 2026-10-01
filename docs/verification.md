@@ -1,55 +1,45 @@
 # 验证记录
 
-检查日期：2026-10-01。验证在 Memoh dev 的专用临时 Bot 上完成，结束后移除临时 Bot，确认原有 Bot 列表不变。没有修改现有用户 Bot 或生产服务。
+检查日期：2026-10-01。实际API与聊天验证在vultr-sg的独立 `memoh-template-eval` 实例进行，服务端和Web均由上游 `1bfb42154e09efacd34f68898ceaab78c10c85f3` 构建。测试创建自己的临时Bot，结束后删除；保留四个演示Bot供继续体验。
 
 ## 真实 API
 
-完整机器记录：[live.json](../verification/live.json)。
+[完整机器记录](../verification/live.json)包含56/56模板实际覆盖、56/56原生导入预览、自动备份恢复和芙莉莲的实际原生导入。每次都回读资料、29个行为字段和 `/data/AGENTS.md`，确认MEMORY.md、PROFILES.md和额外用户文件保留，最后等待临时Bot的异步删除完成。
 
-- 56/56 模板分别覆盖真实 Bot，回读资料、行为设置与实际 `/data/AGENTS.md`。
-- 每次检查 MEMORY.md、PROFILES.md 与额外用户文件内容不变。
-- 56/56 原生 `.memoh.zip` 通过 Memoh 原生导入预览，工作区恢复计划存在且无冲突。
-- 恢复第一份自动备份后，原人格与资料一致。
-- 实际原生导入芙莉莲，新建 Bot 的人格文件与渲染内容完全一致。
-- 临时 Bot 清理完成；删除异步更新期间等待列表一致。
+[完整定制验证](../verification/customization-live.json)测试了10组启用的配置：资料元数据、工作区文件、禁用MCP、定时任务、工作目录、资源限制、技能、Hooks、禁用ACL规则与禁用Agent。重复应用会复用已创建的记录ID，保留定时任务的执行参数；自动备份可以恢复该次测试中的修改。定制的原生包也经过实际预览和导入。
 
-上游锁定提交与实际 dev 实例不是同一部署：本库覆盖当前上游29字段，dev 额外的 language 兼容字段未使用。此验证证明配置导入和回读有效，不是逐角色的模型输出评分，也不保证所有宿主模型都能同样演绎角色。
+58个配置接口面已经按上游请求结构纳入模板，**本次没有逐一执行全部58个接口**。OAuth、构建时设置、交互式ACP与一次性语音参数等标为参考项，需在对应Memoh入口配置。模板的完整字段覆盖、工具可执行范围与本次实测范围分别见[配置文档](configuration.md)。
 
-复现时需已有聊天模型与管理员权限，脚本只在自己的开发实例运行：
+复现需已有聊天模型、管理员权限和自己的开发实例：
 
 ```sh
-# 使用私有环境变量或已获取的访问令牌；不要把值写进 Git
 MEMOH_URL=http://127.0.0.1:8080 python3 scripts/verify_live.py
+MEMOH_URL=http://127.0.0.1:8080 python3 scripts/verify_customization_live.py
 ```
 
-脚本读取 `MEMOH_TOKEN` 或 `MEMOH_USERNAME` / `MEMOH_PASSWORD`，不会打印凭据。它会新建临时 Bot，完整验收后删除。
+使用 `MEMOH_TOKEN` 或 `MEMOH_USERNAME` / `MEMOH_PASSWORD`；完整定制脚本使用用户名与密码。凭据不输出。`MEMOH_VERIFY_REPORT_DIR` 可把两份报告写到检出目录之外，私有备份默认写入被忽略的 `.backups/`。
 
-## 网页操作
+## 网页操作与真实回答
 
-[浏览器操作记录](../verification/browser-live.json)与[应用完成截图](../verification/gallery-applied.png)。
+- 选择页：56张卡片、搜索、角色详情、13个人格参数和完整配置编辑器；1440px桌面与390px手机无横向溢出。
+- [一次点击应用](../verification/browser-live.json)：登录后清空凭据输入框，预览无修改，实际覆盖成功；称呼和旅行节奏出现在人格文件，模型与用户文件保留，临时Bot清理完成。
+- [原生Memoh聊天](../verification/memoh-ui.json)：从真实网页发送消息，等待新的用户消息和模型回答持久化，并确认回答显示在界面。没有用本地生成文字替代模型回答。
+- 两个实际聊天模型，共90条公开回答；方法、原始记录和不足见[模型测试](model-evaluation.md)。
 
-- 56 张模板卡片、搜索、角色详情、11 个可调参数。
-- 1440px 桌面与390px手机布局无横向溢出。
-- 真实登录后清空密码与令牌输入框。
-- “预览覆盖”无修改；“应用并覆盖默认配置”一次点击成功。
-- 自定义称呼与旅行节奏出现在实际人格文件。
-- 模型 UUID 与额外工作区文件保留。
-- 临时 Bot 已删除，截图省略实例 UUID 与本机备份路径。
-
-截图：[桌面目录](../verification/gallery-desktop.png)、[调参](../verification/gallery-detail.png)、[手机](../verification/gallery-mobile.png)。浏览器脚本使用专用 Chrome 调试实例，不依赖 npm 包。
+截图：[桌面目录](../verification/gallery-desktop.png)、[调参](../verification/gallery-detail.png)、[手机](../verification/gallery-mobile.png)、[应用完成](../verification/gallery-applied.png)、[实际聊天](../verification/memoh-chat.png)。浏览器脚本使用专用Chrome调试实例，不依赖npm包。
 
 ```sh
 node scripts/verify_browser.mjs
-# 真正应用验证：MEMOH_VERIFY_ENV 为本地私有 env 文件，包含 MEMOH_ADMIN_PASSWORD
 MEMOH_VERIFY_ENV=/private/path/dev.env MEMOH_URL=http://127.0.0.1:8080 \
   node scripts/verify_browser_live.mjs
+MEMOH_WEB_URL=http://127.0.0.1:12883 node scripts/verify_memoh_ui.mjs
 ```
 
-两个脚本均要求已启动8765端口选择页与9228端口的专用 Chrome。
+前两个脚本需启动8765端口选择页和9228端口专用Chrome。最后一个需在同一Chrome中登录独立Memoh网页，且已创建演示Bot。私有env文件只需 `MEMOH_ADMIN_PASSWORD`，不提交到Git。
 
-## 自动门禁
+## 自动门禁与宣传素材
 
-18 个标准库测试覆盖模板完整性、参数渲染、全部导入包校验与 tar 路径、模型绑定继承、只读预览、备份权限、可选绑定清除、失败恢复和并发人格编辑保护。CLI 校验全部56模板、每份29个字段；还检查网页 JavaScript 语法与生成文件可复现。
+30个标准库测试覆盖模板完整性、参数渲染、强度0退出角色、原生包结构、模型继承、备份权限、失败恢复、并发编辑保护，以及完整定制的字段校验、环境引用、文件路径、重复应用、回读不一致、资源恢复、MCP包格式和定时任务嵌套参数。
 
 ```sh
 python3 -m unittest discover -s tests -v
@@ -59,4 +49,6 @@ git diff --exit-code
 node --check web/app.js
 ```
 
-提交后在干净检出上重复门禁。GitHub Actions 使用 Python 3.10 和3.12执行同样的校验，不连接任何 Memoh 实例，也不使用密钥。
+提交后使用干净检出重复门禁，并顺序重跑真实API与网页操作。GitHub Actions在Python3.10和3.12执行离线测试、56模板校验、确定性重生成和JavaScript语法检查，不连接Memoh或使用密钥。
+
+宣传片采用两张内置image_gen生成的原创插画、真实界面截图与代码生成的原创音乐。编码在服务器受限任务中完成，成片的编码、分辨率、时长与文件大小见[渲染报告](../promo/render-report.json)，脚本与生成提示词见[宣传素材](../promo/README.md)。

@@ -1,0 +1,11 @@
+{
+  "profile": {"mode": "apply", "requests": [{"metadata": {"template_note": "可自由修改的角色设定"}}]},
+  "workspace_files": {"mode": "apply", "requests": [
+    {"path": "/data/USER.md", "content": "用户昵称：小林\n偏好：日常聊天简短，有需要时再展开。\n"},
+    {"path": "/data/notes/README.md", "content": "这里保存用户同意保留的剧情笔记。\n"}
+  ]},
+  "mcp": {"mode": "apply", "requests": [{"name": "optional-mcp", "transport": "streamable-http", "url": "https://example.invalid/mcp", "is_active": false}]},
+  "schedules": {"mode": "apply", "requests": [{"name": "optional-evening-chat", "pattern": "0 21 * * *", "command": "用角色口吻问候一句，不布置任务。", "enabled": false, "max_calls": 7, "max_run_seconds": 300, "run_target": "new_session"}]},
+  "workdirs": {"mode": "apply", "requests": [{"name": "剧情笔记", "path": "/data/notes"}]},
+  "resource_limits": {"mode": "apply", "requests": [{"resource_limits": {"cpu_millicores": 500, "memory_bytes": 536870912, "storage_bytes": 5368709120}}]}
+}

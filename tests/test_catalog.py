@@ -40,6 +40,14 @@ class CatalogTests(unittest.TestCase):
         self.assertIn('compaction_threshold',settings)
         with self.assertRaises(ValueError): catalog.resolved_settings(catalog.load('elon-musk'), {'secret':'x'})
 
+    def test_zero_intensity_really_removes_role_identity_and_examples(self):
+        template=catalog.load('frieren')
+        for parameters in [{'roleplay_intensity':0},{'interaction_mode':'退出角色'}]:
+            prompt=catalog.render(template,parameters)
+            self.assertNotIn(template['persona']['identity'],prompt)
+            self.assertNotIn(template['persona']['greeting'],prompt)
+            self.assertIn('当前已退出角色演绎',prompt)
+
     def test_bundles_checksums_profile_and_workspace(self):
         for template in catalog.templates():
             with self.subTest(template=template['id']):
@@ -56,7 +64,8 @@ class CatalogTests(unittest.TestCase):
                     profile=json.loads(archive.read('bot/profile.json'))
                     self.assertEqual(profile['display_name'],template['name'])
                     with tarfile.open(fileobj=io.BytesIO(archive.read('workspace/data.tar.gz')),mode='r:gz') as tar:
-                        self.assertEqual(tar.getnames(),['AGENTS.md'])
+                        self.assertEqual(tar.getnames(),['AGENTS.md','.memoh/template/customization.json'])
+                        self.assertEqual(json.load(tar.extractfile('.memoh/template/customization.json')),template['customization'])
                         self.assertEqual(tar.extractfile('AGENTS.md').read().decode(),catalog.render(template))
 
     def test_slug_cannot_read_arbitrary_files(self):

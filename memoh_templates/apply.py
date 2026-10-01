@@ -1,5 +1,6 @@
 """Overwrite persona and behavior, with local backup and compensation."""
 import json
+import copy
 import os
 import uuid
 from datetime import datetime, timezone
@@ -47,6 +48,10 @@ def save_backup(state, directory):
 
 def restore(client, state):
     root = "/bots/" + quote(state["bot_id"], safe="")
+    errors=[]
+    if state.get('customization_receipts'):
+        from .customization import undo
+        errors=undo(client,state['customization_snapshots'],state['customization_receipts'])
     # Do not include metadata: API reads intentionally scrub external-agent secrets.
     client.request("PUT", root, {k: v for k, v in state["profile"].items() if v is not None})
     payload = {k: v for k, v in state["settings"].items() if v is not None}
@@ -62,13 +67,23 @@ def restore(client, state):
                 raise
     else:
         client.request("POST", root + "/container/fs/write", {"path": AGENTS_PATH, "content": state["agents"]["content"]})
+    if errors:raise RuntimeError('人格与行为已恢复；部分扩展需按备份处理：'+'; '.join(errors))
 
 
-def apply_template(client, template, bot_id, parameters=None, bindings=None, backup_dir=".backups", dry_run=False):
+def apply_template(client, template, bot_id, parameters=None, bindings=None, backup_dir=".backups", dry_run=False, customizations=None):
+    from .customization import plan as customization_plan, safe_plan, snapshot_actions, execute, undo, resolve
+    template=copy.deepcopy(template)
+    profile_section=(customizations or {}).get('profile',template.get('customization',{}).get('profile',{}))
+    if profile_section.get('mode')=='apply':
+        for request in profile_section.get('requests',[]):
+            template['profile'].update({k:v for k,v in resolve(request).items() if k in template['profile']})
     validate(template)
     text = render(template, parameters)
     payload = resolved_settings(template, bindings)
     contract = client.contract()
+    custom_actions=customization_plan(template,customizations,bot_id,contract)
+    for action in custom_actions:
+        if action['section']=='acl_default_effect':payload['acl_default_effect']=action['body']['default_effect']
     supported = contract["definitions"].get("settings.UpsertRequest", {}).get("properties", {})
     missing = set(payload) - set(supported)
     if missing:
@@ -76,6 +91,7 @@ def apply_template(client, template, bot_id, parameters=None, bindings=None, bac
     if "/bots/{bot_id}/container/fs/write" not in contract["paths"]:
         raise ValueError("实例缺少工作区文本写接口，未修改任何内容")
     before = snapshot(client, bot_id)
+    if custom_actions:before['customization_snapshots']=snapshot_actions(client,custom_actions)
     if before["settings"].get("chat_runtime", "model") != "model" and "chat_runtime" not in (bindings or {}):
         raise ValueError("当前 Bot 使用外部 Agent；请用 --settings 明确选择 chat_runtime=model 和 chat_model_id，或使用 Native Bot")
     # Reasoning tiers depend on the selected model; a caller can explicitly bind
@@ -97,6 +113,7 @@ def apply_template(client, template, bot_id, parameters=None, bindings=None, bac
             warnings.append("按目标模型支持的推理档位调整 reasoning_effort")
     plan = {"bot_id": bot_id, "template_id": template["id"], "profile": template["profile"], "settings": payload,
             "workspace_paths": [AGENTS_PATH], "warnings": warnings}
+    if custom_actions:plan['customization']=safe_plan(custom_actions)
     if dry_run:
         return {"dry_run": True, "plan": plan}
     backup = save_backup(before, backup_dir)
@@ -112,6 +129,11 @@ def apply_template(client, template, bot_id, parameters=None, bindings=None, bac
             write["expectedRevision"] = before["agents"]["revision"]
         file_attempted = True
         client.request("POST", root + "/container/fs/write", write)
+        if custom_actions:
+            def record(receipts):
+                before['customization_receipts']=receipts
+                backup.write_text(json.dumps(before,ensure_ascii=False,indent=2))
+            execute(client,before['customization_snapshots'],record)
         after = snapshot(client, bot_id)
         if after["agents"]["content"] != text:
             raise ValueError("工作区人格回读与模板不一致")
@@ -121,9 +143,12 @@ def apply_template(client, template, bot_id, parameters=None, bindings=None, bac
         for key, value in payload.items():
             if after["settings"].get(key) != value:
                 raise ValueError(f"设置回读不一致：{key}")
-        return {"bot_id": bot_id, "template_id": template["id"], "backup": str(backup), "verified": True, "warnings": warnings}
+        return {"bot_id": bot_id, "template_id": template["id"], "backup": str(backup), "verified": True, "warnings": warnings,
+                "customization":safe_plan(custom_actions),"customization_receipts":before.get('customization_receipts',[])}
     except Exception as exc:
         rollback = []
+        if before.get('customization_receipts'):
+            rollback.extend(undo(client,before['customization_snapshots'],before['customization_receipts']))
         operations = []
         if settings_attempted:
             previous = {k: before["settings"][k] for k in payload if k in before["settings"] and before["settings"][k] is not None}

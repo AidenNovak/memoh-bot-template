@@ -6,12 +6,12 @@
 | --- | --- | --- |
 | 持久人格与口吻 | 工作区 `/data/AGENTS.md` | 渲染角色、流程、首句、原创示例、世界设定和参数 |
 | 长期记忆 | `MEMORY.md`、`PROFILES.md` 及实例 Memory Provider | 写入记忆约定，沿用既有记忆文件与 Provider |
-| Bot 身份 | `bots.UpdateBotRequest` | 覆盖 display_name、avatar_url、timezone、is_active；保留 name、metadata |
+| Bot 身份 | `bots.UpdateBotRequest` | 覆盖 display_name、avatar_url、timezone、is_active；默认保留 name、metadata，可通过customization.profile修改 |
 | 行为、模型与运行时 | `settings.UpsertRequest`，29 项 | 完整列出；可携带本实例绑定或选择 inherit |
 | 工作区编辑 | `GET container/fs/read`、`POST container/fs/write` | 回读 revision 后以 expectedRevision 写入 |
 | 原生导入 | `POST /bots/backup/import`，multipart file | 生成 schema v1 的 `.memoh.zip` |
 | 覆盖已有 Bot | 资料、Settings 与文件编辑 API | 自动备份，覆盖，回读；失败时尝试恢复 |
-| 工具、定时任务、频道等 | 分立 API 与 Supermarket | 配置草稿与绑定建议留在 extensions，默认沿用实例 |
+| 工具、定时任务、频道等 | 分立 API 与 Supermarket | 完整请求字段列入 customization，默认inherit，显式apply时应用；授权/重建入口单列 |
 
 依据代码：
 

@@ -8,6 +8,7 @@ from . import catalog
 from .api import Client
 from .apply import apply_template, restore
 from .bundle import bundle
+from .customization import resolve, validate_body, CONFIG
 
 
 def read_object(path):
@@ -25,6 +26,7 @@ def main(argv=None):
         sub.add_argument("template")
         sub.add_argument("--parameters", help="人格参数覆盖 JSON 文件")
         sub.add_argument("--settings", help="实际 Memoh 设置/模型 UUID JSON 文件")
+        sub.add_argument("--customization", help="完整 Bot 定制面 JSON；mode=apply 的部分会应用")
         if name == "export":
             sub.add_argument("--output", required=True)
         if name in ("apply", "create"):
@@ -63,12 +65,14 @@ def main(argv=None):
         return
     item = catalog.load(args.template)
     parameters, settings = read_object(args.parameters), read_object(args.settings)
+    customizations=read_object(args.customization)
     if args.command == "show":
         print(catalog.render(item, parameters))
     elif args.command == "export":
         out = Path(args.output)
         out.parent.mkdir(parents=True, exist_ok=True)
-        out.write_bytes(bundle(item, parameters, settings))
+        out.write_bytes(bundle(item, parameters, settings, customizations))
+        out.chmod(0o600)
         print(str(out))
     else:
         client = connect(args)
@@ -76,14 +80,21 @@ def main(argv=None):
         if args.command == "create":
             if not settings.get("chat_model_id"):
                 raise ValueError("新建 Bot 需要在 --settings 文件中指定本实例的 chat_model_id")
-            created = client.request("POST", "/bots", {"name": item["id"] + "-" + __import__('uuid').uuid4().hex[:6],
-                                                       **item["profile"], "wait_for_ready": True})
+            creation = {"name": item["id"] + "-" + __import__('uuid').uuid4().hex[:6], **item["profile"], "wait_for_ready": True}
+            section = customizations.get('creation', item.get('customization', {}).get('creation', {}))
+            if section.get('mode') == 'apply':
+                for request in section.get('requests', []):
+                    body = resolve(request)
+                    validate_body(body, CONFIG['surfaces']['creation']['schema'], 'creation')
+                    creation.update(body)
+                customizations = {**customizations, 'creation': {'mode': 'inherit'}}
+            created = client.request("POST", "/bots", creation)
             bot_id = created["id"]
         else:
             bot_id = args.bot
         try:
             result = apply_template(client, item, bot_id, parameters, settings, args.backup_dir,
-                                    getattr(args, "dry_run", False))
+                                    getattr(args, "dry_run", False),customizations)
         except Exception:
             if created:
                 try:

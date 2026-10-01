@@ -1,6 +1,6 @@
 {
-  "checked_at": "2026-10-01T11:40:29.578677+00:00",
-  "instance": "Memoh dev (loopback API on vultr-sg)",
+  "checked_at": "2026-10-01T12:42:24.535987+00:00",
+  "instance": "Isolated Memoh template evaluation (loopback API on vultr-sg)",
   "upstream_commit": "1bfb42154e09efacd34f68898ceaab78c10c85f3",
   "applied": [
     "ai-haibara",

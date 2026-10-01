@@ -83,11 +83,11 @@ def serve(port=8765, open_browser=False):
                         if state["client"] is None:
                             raise ValueError("请先连接 Memoh")
                         result = apply_template(state["client"], load(data["template"]), data["bot_id"],
-                                                data.get("parameters"), data.get("settings"), ROOT / ".backups", data.get("dry_run", False))
+                                                data.get("parameters"), data.get("settings"), ROOT / ".backups", data.get("dry_run", False),data.get('customization'))
                         return self.send(200, result)
                     if self.path == "/api/export":
                         item = load(data["template"])
-                        return self.send(200, bundle(item, data.get("parameters"), data.get("settings")), "application/zip", item["id"] + ".memoh.zip")
+                        return self.send(200, bundle(item, data.get("parameters"), data.get("settings"),data.get('customization')), "application/zip", item["id"] + ".memoh.zip")
                     return self.send(404, {"error": "找不到操作"})
                 finally:
                     lock.release()

@@ -190,12 +190,29 @@
     "interaction_mode": {
       "label": "互动方式",
       "type": "string",
-      "default": "情景互动",
+      "default": "日常聊天",
       "enum": [
         "情景互动",
         "日常聊天",
         "认真任务",
         "退出角色"
+      ]
+    },
+    "roleplay_intensity": {
+      "label": "角色口吻强度（0普通/3沉浸）",
+      "type": "integer",
+      "default": 1,
+      "minimum": 0,
+      "maximum": 3
+    },
+    "conversation_style": {
+      "label": "聊天节奏",
+      "type": "string",
+      "default": "自然聊天",
+      "enum": [
+        "自然聊天",
+        "按需分析",
+        "沉浸剧情"
       ]
     },
     "historical_mode": {
@@ -221,7 +238,11 @@
       },
       {
         "user": "把强度降一点，让我自己选。",
-        "assistant": "可以。先只保留第一步，后面的节奏由你决定。 当前重点是：历史演绎方式。"
+        "assistant": "好，报告先放下。你说说亲眼看见的那件事，我们慢慢讲。"
+      },
+      {
+        "user": "今天不想跑流程，只想随便聊两句。",
+        "assistant": "这个虚构幕僚场景里也该有休息的时候。茶凉了，就先续一杯。"
       }
     ],
     "lore": [
@@ -299,6 +320,1294 @@
       "temperature": "模型/Provider能力决定；当前Bot Settings无该字段",
       "top_p": "模型/Provider能力决定",
       "max_tokens": "模型配置决定"
+    }
+  },
+  "customization": {
+    "profile": {
+      "mode": "inherit",
+      "path_parameters": {},
+      "requests": [
+        {
+          "avatar_url": "",
+          "display_name": "蒋介石 · 民国幕僚室",
+          "is_active": true,
+          "metadata": {},
+          "name": "chiang-kai-shek",
+          "timezone": "Asia/Shanghai"
+        }
+      ],
+      "apply_supported": true
+    },
+    "creation": {
+      "mode": "inherit",
+      "path_parameters": {},
+      "requests": [
+        {
+          "acl_preset": "personal",
+          "avatar_url": "",
+          "display_name": "蒋介石 · 民国幕僚室",
+          "is_active": true,
+          "metadata": {},
+          "name": "chiang-kai-shek",
+          "timezone": "Asia/Shanghai",
+          "wait_for_ready": true
+        }
+      ],
+      "apply_supported": false
+    },
+    "acl_rules": {
+      "mode": "inherit",
+      "path_parameters": {},
+      "requests": [
+        {
+          "channel_identity_id": "",
+          "description": "chiang-kai-shek-optional-rule",
+          "effect": "allow",
+          "enabled": false,
+          "source_scope": {
+            "conversation_id": "",
+            "conversation_type": "",
+            "thread_id": ""
+          },
+          "subject_channel_type": ""
+        }
+      ],
+      "apply_supported": true
+    },
+    "acl_default_effect": {
+      "mode": "inherit",
+      "path_parameters": {},
+      "requests": [
+        {
+          "default_effect": ""
+        }
+      ],
+      "apply_supported": true
+    },
+    "acl_rule_update": {
+      "mode": "inherit",
+      "path_parameters": {
+        "rule_id": ""
+      },
+      "requests": [
+        {
+          "channel_identity_id": "",
+          "description": "chiang-kai-shek-optional-rule",
+          "effect": "allow",
+          "enabled": false,
+          "source_scope": {
+            "conversation_id": "",
+            "conversation_type": "",
+            "thread_id": ""
+          },
+          "subject_channel_type": ""
+        }
+      ],
+      "apply_supported": true
+    },
+    "channels": {
+      "mode": "inherit",
+      "path_parameters": {
+        "platform": ""
+      },
+      "requests": [
+        {
+          "credentials": {},
+          "disabled": true,
+          "external_identity": "",
+          "routing": {},
+          "self_identity": {},
+          "verified_at": ""
+        }
+      ],
+      "apply_supported": true
+    },
+    "channel_status": {
+      "mode": "inherit",
+      "path_parameters": {
+        "platform": ""
+      },
+      "requests": [
+        {
+          "disabled": false
+        }
+      ],
+      "apply_supported": true
+    },
+    "mcp": {
+      "mode": "inherit",
+      "path_parameters": {},
+      "requests": [
+        {
+          "args": [],
+          "auth_type": "",
+          "command": "",
+          "cwd": "",
+          "env": {},
+          "headers": {},
+          "is_active": false,
+          "name": "chiang-kai-shek-optional-mcp",
+          "transport": "streamable-http",
+          "url": "https://example.invalid/mcp"
+        }
+      ],
+      "apply_supported": true
+    },
+    "mcp_update": {
+      "mode": "inherit",
+      "path_parameters": {
+        "id": ""
+      },
+      "requests": [
+        {
+          "args": [],
+          "auth_type": "",
+          "command": "",
+          "cwd": "",
+          "env": {},
+          "headers": {},
+          "is_active": false,
+          "name": "chiang-kai-shek-optional-mcp",
+          "transport": "streamable-http",
+          "url": "https://example.invalid/mcp"
+        }
+      ],
+      "apply_supported": true
+    },
+    "schedules": {
+      "mode": "inherit",
+      "path_parameters": {},
+      "requests": [
+        {
+          "acp_agent_id": "",
+          "acp_model_id": "",
+          "bot_agent_id": "",
+          "command": "用当前角色口吻询问今天一件小事。",
+          "description": "",
+          "enabled": false,
+          "max_calls": 7,
+          "max_run_seconds": 300,
+          "model_id": "",
+          "name": "chiang-kai-shek-daily",
+          "pattern": "0 21 * * *",
+          "reasoning_effort": "",
+          "run_target": "new_session",
+          "runtime_type": "",
+          "target_session_id": "",
+          "workdir_id": ""
+        }
+      ],
+      "apply_supported": true
+    },
+    "schedule_update": {
+      "mode": "inherit",
+      "path_parameters": {
+        "id": ""
+      },
+      "requests": [
+        {
+          "command": "用当前角色口吻询问今天一件小事。",
+          "description": "",
+          "enabled": false,
+          "execution": {
+            "acp_agent_id": "",
+            "acp_model_id": "",
+            "bot_agent_id": "",
+            "max_run_seconds": 0,
+            "model_id": "",
+            "reasoning_effort": "",
+            "run_target": "",
+            "runtime_type": "",
+            "target_session_id": "",
+            "workdir_id": ""
+          },
+          "max_calls": 7,
+          "name": "chiang-kai-shek-daily",
+          "pattern": "0 21 * * *",
+          "max_run_seconds": 300,
+          "run_target": "new_session"
+        }
+      ],
+      "apply_supported": true
+    },
+    "agents": {
+      "mode": "inherit",
+      "path_parameters": {},
+      "requests": [
+        {
+          "enabled": false,
+          "metadata": {},
+          "name": "chiang-kai-shek-optional-agent",
+          "runtime": "codex"
+        }
+      ],
+      "apply_supported": true
+    },
+    "agent_update": {
+      "mode": "inherit",
+      "path_parameters": {
+        "id": ""
+      },
+      "requests": [
+        {
+          "enabled": false,
+          "metadata": {},
+          "name": "chiang-kai-shek-optional-agent",
+          "runtime": "codex"
+        }
+      ],
+      "apply_supported": true
+    },
+    "agent_credentials": {
+      "mode": "inherit",
+      "path_parameters": {
+        "id": ""
+      },
+      "requests": [
+        {
+          "auth_kind": "",
+          "secret": {}
+        }
+      ],
+      "apply_supported": true
+    },
+    "mcp_stdio": {
+      "mode": "inherit",
+      "path_parameters": {},
+      "requests": [
+        {
+          "args": [],
+          "command": "",
+          "cwd": "",
+          "env": {},
+          "name": ""
+        }
+      ],
+      "apply_supported": false
+    },
+    "container_creation": {
+      "mode": "inherit",
+      "path_parameters": {},
+      "requests": [
+        {
+          "gpu": {
+            "devices": []
+          },
+          "image": "",
+          "restore_data": false
+        }
+      ],
+      "apply_supported": false
+    },
+    "dependency_install": {
+      "mode": "inherit",
+      "path_parameters": {
+        "dep_id": ""
+      },
+      "requests": [
+        {
+          "definition_revision": "",
+          "session_id": "",
+          "version": ""
+        }
+      ],
+      "apply_supported": false
+    },
+    "dependency_update": {
+      "mode": "inherit",
+      "path_parameters": {
+        "dep_id": ""
+      },
+      "requests": [
+        {
+          "definition_revision": "",
+          "session_id": "",
+          "version": ""
+        }
+      ],
+      "apply_supported": false
+    },
+    "workdir_git_branch": {
+      "mode": "inherit",
+      "path_parameters": {
+        "workdir_id": ""
+      },
+      "requests": [
+        {
+          "branch": ""
+        }
+      ],
+      "apply_supported": false
+    },
+    "channel_webhook": {
+      "mode": "inherit",
+      "path_parameters": {
+        "platform": ""
+      },
+      "requests": [
+        {
+          "endpoint": ""
+        }
+      ],
+      "apply_supported": false
+    },
+    "acp_runtime": {
+      "mode": "inherit",
+      "path_parameters": {},
+      "requests": [
+        {
+          "acp_agent_id": "",
+          "project_path": ""
+        }
+      ],
+      "apply_supported": false
+    },
+    "acp_mode": {
+      "mode": "inherit",
+      "path_parameters": {
+        "runtime_id": ""
+      },
+      "requests": [
+        {
+          "mode_id": ""
+        }
+      ],
+      "apply_supported": false
+    },
+    "acp_model": {
+      "mode": "inherit",
+      "path_parameters": {
+        "runtime_id": ""
+      },
+      "requests": [
+        {
+          "model_id": ""
+        }
+      ],
+      "apply_supported": false
+    },
+    "acp_reasoning": {
+      "mode": "inherit",
+      "path_parameters": {
+        "runtime_id": ""
+      },
+      "requests": [
+        {
+          "reasoning_effort": ""
+        }
+      ],
+      "apply_supported": false
+    },
+    "workdirs": {
+      "mode": "inherit",
+      "path_parameters": {},
+      "requests": [
+        {
+          "name": "chiang-kai-shek-notes",
+          "path": "/data/notes",
+          "workspace_target_id": ""
+        }
+      ],
+      "apply_supported": true
+    },
+    "workdir_update": {
+      "mode": "inherit",
+      "path_parameters": {
+        "workdir_id": ""
+      },
+      "requests": [
+        {
+          "name": ""
+        }
+      ],
+      "apply_supported": true
+    },
+    "resource_limits": {
+      "mode": "inherit",
+      "path_parameters": {},
+      "requests": [
+        {
+          "resource_limits": {
+            "cpu_millicores": 500,
+            "memory_bytes": 536870912,
+            "storage_bytes": 5368709120
+          }
+        }
+      ],
+      "apply_supported": true
+    },
+    "skills": {
+      "mode": "inherit",
+      "path_parameters": {},
+      "requests": [
+        {
+          "skills": [
+            "---\nname: chiang-kai-shek-interaction\ndescription: 用户明确要求本角色的互动玩法时使用\n---\n\n# 互动参考\n\n- 先确认年代与史实模式或架空模式\n- 列资源、情报缺口、行动代价\n- 提出两条方案并记录事后复盘，不把后见之明塞进人物脑中\n\n不逐轮执行；日常聊天先接住用户的话题。\n"
+          ],
+          "source_path": ""
+        }
+      ],
+      "apply_supported": true
+    },
+    "skill_actions": {
+      "mode": "inherit",
+      "path_parameters": {},
+      "requests": [
+        {
+          "action": "",
+          "target_path": ""
+        }
+      ],
+      "apply_supported": true
+    },
+    "workspace_files": {
+      "mode": "inherit",
+      "path_parameters": {},
+      "requests": [
+        {
+          "content": "用户主动提供并同意保留的偏好写在这里。",
+          "expectedRevision": "",
+          "path": "/data/USER.md"
+        }
+      ],
+      "apply_supported": true
+    },
+    "memory": {
+      "mode": "inherit",
+      "path_parameters": {},
+      "requests": [
+        {
+          "message": "这里放用户明确同意保存的偏好或虚构剧情状态。",
+          "messages": [],
+          "namespace": "bot",
+          "run_id": "",
+          "metadata": {
+            "template_id": "chiang-kai-shek"
+          },
+          "filters": {},
+          "infer": false,
+          "embedding_enabled": false
+        }
+      ],
+      "apply_supported": true
+    },
+    "memory_update": {
+      "mode": "inherit",
+      "path_parameters": {
+        "memory_id": ""
+      },
+      "requests": [
+        {
+          "memory": ""
+        }
+      ],
+      "apply_supported": true
+    },
+    "user_access": {
+      "mode": "inherit",
+      "path_parameters": {},
+      "requests": [
+        {
+          "permissions": [],
+          "subject_type": "",
+          "user_id": ""
+        }
+      ],
+      "apply_supported": true
+    },
+    "user_access_update": {
+      "mode": "inherit",
+      "path_parameters": {
+        "grant_id": ""
+      },
+      "requests": [
+        {
+          "permissions": []
+        }
+      ],
+      "apply_supported": true
+    },
+    "channel_managers": {
+      "mode": "inherit",
+      "path_parameters": {},
+      "requests": [
+        {
+          "channel_identity_id": "",
+          "granted": false
+        }
+      ],
+      "apply_supported": true
+    },
+    "owner": {
+      "mode": "inherit",
+      "path_parameters": {},
+      "requests": [
+        {
+          "owner_user_id": ""
+        }
+      ],
+      "apply_supported": true
+    },
+    "workspace_primary": {
+      "mode": "inherit",
+      "path_parameters": {},
+      "requests": [
+        {
+          "target_id": ""
+        }
+      ],
+      "apply_supported": true
+    },
+    "workspace_remote": {
+      "mode": "inherit",
+      "path_parameters": {
+        "runtime_id": ""
+      },
+      "requests": [
+        {}
+      ],
+      "apply_supported": true
+    },
+    "workspace_tool_approval": {
+      "mode": "inherit",
+      "path_parameters": {
+        "target_id": ""
+      },
+      "requests": [
+        {
+          "enabled": false,
+          "exec": "allow",
+          "read": "allow",
+          "tool_approval_config": {
+            "enabled": false,
+            "exec": {
+              "bypass_commands": [],
+              "force_review_commands": [],
+              "mode": "allow",
+              "require_approval": false
+            },
+            "read": {
+              "bypass_globs": [],
+              "force_review_globs": [],
+              "mode": "allow",
+              "require_approval": false
+            },
+            "write": {
+              "bypass_globs": [],
+              "force_review_globs": [],
+              "mode": "allow",
+              "require_approval": false
+            }
+          },
+          "write": "allow"
+        }
+      ],
+      "apply_supported": true
+    },
+    "apps": {
+      "mode": "inherit",
+      "path_parameters": {},
+      "requests": [
+        {
+          "app_id": "",
+          "registry_id": "",
+          "revision": ""
+        }
+      ],
+      "apply_supported": true
+    },
+    "app_update": {
+      "mode": "inherit",
+      "path_parameters": {},
+      "requests": [
+        {
+          "app_id": "",
+          "dependencies": [],
+          "registry_id": "",
+          "release": false
+        }
+      ],
+      "apply_supported": true
+    },
+    "app_connector_credentials": {
+      "mode": "inherit",
+      "path_parameters": {
+        "installation_id": "",
+        "connector_type": ""
+      },
+      "requests": [
+        {
+          "auth_method": "",
+          "fields": {}
+        }
+      ],
+      "apply_supported": true
+    },
+    "app_connector_oauth": {
+      "mode": "inherit",
+      "path_parameters": {
+        "installation_id": "",
+        "connector_type": ""
+      },
+      "requests": [
+        {
+          "auth_method": ""
+        }
+      ],
+      "apply_supported": false
+    },
+    "connector_enabled": {
+      "mode": "inherit",
+      "path_parameters": {
+        "connection_id": ""
+      },
+      "requests": [
+        {
+          "enabled": false
+        }
+      ],
+      "apply_supported": true
+    },
+    "tts_defaults": {
+      "mode": "inherit",
+      "path_parameters": {},
+      "requests": [
+        {
+          "text": ""
+        }
+      ],
+      "apply_supported": false
+    },
+    "channel_dingtalk": {
+      "mode": "inherit",
+      "path_parameters": {
+        "platform": "dingtalk"
+      },
+      "requests": [
+        {
+          "credentials": {
+            "appKey": "",
+            "appSecret": {
+              "env": "MEMOH_DINGTALK_APP_SECRET"
+            }
+          },
+          "disabled": true,
+          "external_identity": "",
+          "routing": {
+            "display_name": "",
+            "open_conversation_id": "",
+            "user_id": ""
+          },
+          "self_identity": {},
+          "verified_at": ""
+        }
+      ],
+      "target_spec": {
+        "format": "user:{userId} | group:{openConversationId}",
+        "hints": [
+          {
+            "example": "user:user123",
+            "label": "User"
+          },
+          {
+            "example": "group:cidXXXXXXXX",
+            "label": "Group"
+          }
+        ]
+      },
+      "apply_supported": true
+    },
+    "channel_discord": {
+      "mode": "inherit",
+      "path_parameters": {
+        "platform": "discord"
+      },
+      "requests": [
+        {
+          "credentials": {
+            "botToken": {
+              "env": "MEMOH_DISCORD_BOT_TOKEN"
+            }
+          },
+          "disabled": true,
+          "external_identity": "",
+          "routing": {
+            "channel_id": "",
+            "guild_id": "",
+            "user_id": "",
+            "username": ""
+          },
+          "self_identity": {},
+          "verified_at": ""
+        }
+      ],
+      "target_spec": {
+        "format": "channel_id | user_id",
+        "hints": [
+          {
+            "example": "1234567890123456789",
+            "label": "Channel ID"
+          },
+          {
+            "example": "1234567890123456789",
+            "label": "User ID"
+          }
+        ]
+      },
+      "apply_supported": true
+    },
+    "channel_feishu": {
+      "mode": "inherit",
+      "path_parameters": {
+        "platform": "feishu"
+      },
+      "requests": [
+        {
+          "credentials": {
+            "appId": "",
+            "appSecret": {
+              "env": "MEMOH_FEISHU_APP_SECRET"
+            },
+            "encryptKey": {
+              "env": "MEMOH_FEISHU_ENCRYPT_KEY"
+            },
+            "inboundMode": "websocket",
+            "region": "feishu",
+            "verificationToken": {
+              "env": "MEMOH_FEISHU_VERIFICATION_TOKEN"
+            }
+          },
+          "disabled": true,
+          "external_identity": "",
+          "routing": {
+            "open_id": "",
+            "user_id": ""
+          },
+          "self_identity": {},
+          "verified_at": ""
+        }
+      ],
+      "target_spec": {
+        "format": "open_id:xxx | user_id:xxx | chat_id:xxx",
+        "hints": [
+          {
+            "example": "open_id:ou_xxx",
+            "label": "Open ID"
+          },
+          {
+            "example": "user_id:ou_xxx",
+            "label": "User ID"
+          },
+          {
+            "example": "chat_id:oc_xxx",
+            "label": "Chat ID"
+          }
+        ]
+      },
+      "apply_supported": true
+    },
+    "channel_line": {
+      "mode": "inherit",
+      "path_parameters": {
+        "platform": "line"
+      },
+      "requests": [
+        {
+          "credentials": {
+            "channel_access_token": {
+              "env": "MEMOH_LINE_CHANNEL_ACCESS_TOKEN"
+            },
+            "channel_secret": {
+              "env": "MEMOH_LINE_CHANNEL_SECRET"
+            }
+          },
+          "disabled": true,
+          "external_identity": "",
+          "routing": {
+            "user_id": ""
+          },
+          "self_identity": {},
+          "verified_at": ""
+        }
+      ],
+      "target_spec": {
+        "format": "Uxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "hints": [
+          {
+            "example": "U4af4980629...",
+            "label": "LINE User ID"
+          }
+        ]
+      },
+      "apply_supported": true
+    },
+    "channel_matrix": {
+      "mode": "inherit",
+      "path_parameters": {
+        "platform": "matrix"
+      },
+      "requests": [
+        {
+          "credentials": {
+            "accessToken": {
+              "env": "MEMOH_MATRIX_ACCESS_TOKEN"
+            },
+            "autoJoinInvites": false,
+            "homeserverUrl": "",
+            "syncTimeoutSeconds": 30,
+            "userId": ""
+          },
+          "disabled": true,
+          "external_identity": "",
+          "routing": {
+            "room_id": "",
+            "user_id": ""
+          },
+          "self_identity": {},
+          "verified_at": ""
+        }
+      ],
+      "target_spec": {
+        "format": "!room:server | #alias:server | @user:server",
+        "hints": [
+          {
+            "example": "!abcdef:matrix.org",
+            "label": "Room ID"
+          },
+          {
+            "example": "#ops:example.com",
+            "label": "Room Alias"
+          },
+          {
+            "example": "@alice:example.com",
+            "label": "User ID"
+          }
+        ]
+      },
+      "apply_supported": true
+    },
+    "channel_misskey": {
+      "mode": "inherit",
+      "path_parameters": {
+        "platform": "misskey"
+      },
+      "requests": [
+        {
+          "credentials": {
+            "accessToken": {
+              "env": "MEMOH_MISSKEY_ACCESS_TOKEN"
+            },
+            "instanceURL": ""
+          },
+          "disabled": true,
+          "external_identity": "",
+          "routing": {
+            "user_id": "",
+            "username": ""
+          },
+          "self_identity": {},
+          "verified_at": ""
+        }
+      ],
+      "target_spec": {
+        "format": "user_id | @username",
+        "hints": [
+          {
+            "example": "9abcdef123456789",
+            "label": "User ID"
+          },
+          {
+            "example": "@alice",
+            "label": "Username"
+          }
+        ]
+      },
+      "apply_supported": true
+    },
+    "channel_qq": {
+      "mode": "inherit",
+      "path_parameters": {
+        "platform": "qq"
+      },
+      "requests": [
+        {
+          "credentials": {
+            "appId": "",
+            "clientSecret": {
+              "env": "MEMOH_QQ_CLIENT_SECRET"
+            },
+            "enableInputHint": false,
+            "enableStreaming": false,
+            "markdownSupport": false
+          },
+          "disabled": true,
+          "external_identity": "",
+          "routing": {
+            "target_id": "",
+            "target_type": "c2c"
+          },
+          "self_identity": {},
+          "verified_at": ""
+        }
+      ],
+      "target_spec": {
+        "format": "c2c:<openid> | group:<group_openid> | channel:<channel_id>",
+        "hints": [
+          {
+            "example": "c2c:00112233445566778899AABBCCDDEEFF",
+            "label": "Direct"
+          },
+          {
+            "example": "group:00112233445566778899AABBCCDDEEFF",
+            "label": "Group"
+          },
+          {
+            "example": "channel:1234567890",
+            "label": "Channel"
+          }
+        ]
+      },
+      "apply_supported": true
+    },
+    "channel_slack": {
+      "mode": "inherit",
+      "path_parameters": {
+        "platform": "slack"
+      },
+      "requests": [
+        {
+          "credentials": {
+            "appToken": {
+              "env": "MEMOH_SLACK_APP_TOKEN"
+            },
+            "botToken": {
+              "env": "MEMOH_SLACK_BOT_TOKEN"
+            }
+          },
+          "disabled": true,
+          "external_identity": "",
+          "routing": {
+            "channel_id": "",
+            "user_id": "",
+            "username": ""
+          },
+          "self_identity": {},
+          "verified_at": ""
+        }
+      ],
+      "target_spec": {
+        "format": "channel_id | user_id",
+        "hints": [
+          {
+            "example": "C0123456789",
+            "label": "Channel ID"
+          },
+          {
+            "example": "U0123456789",
+            "label": "User ID"
+          }
+        ]
+      },
+      "apply_supported": true
+    },
+    "channel_telegram": {
+      "mode": "inherit",
+      "path_parameters": {
+        "platform": "telegram"
+      },
+      "requests": [
+        {
+          "credentials": {
+            "apiBaseURL": "",
+            "botToken": {
+              "env": "MEMOH_TELEGRAM_BOT_TOKEN"
+            },
+            "httpProxyUrl": {
+              "env": "MEMOH_TELEGRAM_HTTP_PROXY_URL"
+            }
+          },
+          "disabled": true,
+          "external_identity": "",
+          "routing": {
+            "chat_id": "",
+            "user_id": "",
+            "username": ""
+          },
+          "self_identity": {},
+          "verified_at": ""
+        }
+      ],
+      "target_spec": {
+        "format": "chat_id | @username",
+        "hints": [
+          {
+            "example": "123456789",
+            "label": "Chat ID"
+          },
+          {
+            "example": "@alice",
+            "label": "Username"
+          }
+        ]
+      },
+      "apply_supported": true
+    },
+    "channel_web": {
+      "mode": "inherit",
+      "path_parameters": {
+        "platform": "web"
+      },
+      "requests": [
+        {
+          "credentials": {},
+          "disabled": true,
+          "external_identity": "",
+          "routing": {},
+          "self_identity": {},
+          "verified_at": ""
+        }
+      ],
+      "target_spec": {
+        "format": "bot_id",
+        "hints": [
+          {
+            "example": "bot_123",
+            "label": "Bot ID"
+          }
+        ]
+      },
+      "apply_supported": true
+    },
+    "channel_wechatoa": {
+      "mode": "inherit",
+      "path_parameters": {
+        "platform": "wechatoa"
+      },
+      "requests": [
+        {
+          "credentials": {
+            "appId": "",
+            "appSecret": {
+              "env": "MEMOH_WECHATOA_APP_SECRET"
+            },
+            "encodingAESKey": {
+              "env": "MEMOH_WECHATOA_ENCODING_A_E_S_KEY"
+            },
+            "encryptionMode": "safe",
+            "httpProxyUrl": {
+              "env": "MEMOH_WECHATOA_HTTP_PROXY_URL"
+            },
+            "token": {
+              "env": "MEMOH_WECHATOA_TOKEN"
+            }
+          },
+          "disabled": true,
+          "external_identity": "",
+          "routing": {
+            "openid": "",
+            "unionid": ""
+          },
+          "self_identity": {},
+          "verified_at": ""
+        }
+      ],
+      "target_spec": {
+        "format": "openid:xxx",
+        "hints": [
+          {
+            "example": "openid:o6_bmjrPTlm6_2sgVt7hMZOPfL2M",
+            "label": "OpenID"
+          }
+        ]
+      },
+      "apply_supported": true
+    },
+    "channel_wecom": {
+      "mode": "inherit",
+      "path_parameters": {
+        "platform": "wecom"
+      },
+      "requests": [
+        {
+          "credentials": {
+            "ackTimeoutSeconds": 0,
+            "botId": "",
+            "heartbeatSeconds": 0,
+            "readTimeoutSeconds": 0,
+            "secret": {
+              "env": "MEMOH_WECOM_SECRET"
+            },
+            "writeTimeoutSeconds": 0,
+            "wsUrl": ""
+          },
+          "disabled": true,
+          "external_identity": "",
+          "routing": {
+            "chat_id": "",
+            "user_id": ""
+          },
+          "self_identity": {},
+          "verified_at": ""
+        }
+      ],
+      "target_spec": {
+        "format": "chat_id:xxx | user_id:xxx",
+        "hints": [
+          {
+            "example": "chat_id:work_abc",
+            "label": "Chat ID"
+          },
+          {
+            "example": "user_id:zhangsan",
+            "label": "User ID"
+          }
+        ]
+      },
+      "apply_supported": true
+    },
+    "channel_weixin": {
+      "mode": "inherit",
+      "path_parameters": {
+        "platform": "weixin"
+      },
+      "requests": [
+        {
+          "credentials": {
+            "enableTyping": false,
+            "pollTimeoutSeconds": 0,
+            "token": {
+              "env": "MEMOH_WEIXIN_TOKEN"
+            }
+          },
+          "disabled": true,
+          "external_identity": "",
+          "routing": {
+            "user_id": ""
+          },
+          "self_identity": {},
+          "verified_at": ""
+        }
+      ],
+      "target_spec": {
+        "format": "<user_id>",
+        "hints": [
+          {
+            "example": "abc123@im.wechat",
+            "label": "User ID"
+          }
+        ]
+      },
+      "apply_supported": true
+    },
+    "hooks": {
+      "mode": "inherit",
+      "path_parameters": {},
+      "requests": [
+        {
+          "version": 1,
+          "enabled": false,
+          "env": {},
+          "defaults": {
+            "timeout": "5s",
+            "on_error": "ignore",
+            "max_output_bytes": 8192,
+            "trigger_nested_hooks": false
+          },
+          "hooks": [
+            {
+              "name": "chiang-kai-shek-optional-hook",
+              "event": "TurnEnd",
+              "matcher": "",
+              "enabled": false,
+              "priority": 0,
+              "conditions": [
+                {
+                  "expr": "false"
+                }
+              ],
+              "actions": [
+                {
+                  "type": "command",
+                  "command": "printf '{}'",
+                  "tool": "",
+                  "server": "",
+                  "input": {},
+                  "timeout": "5s",
+                  "on_error": "ignore",
+                  "work_dir": "/data",
+                  "trigger_nested_hooks": false
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "supported_events": [
+        "PreToolUse",
+        "PostToolUse",
+        "ToolError",
+        "SessionStart",
+        "UserMessageReceived",
+        "BeforePromptBuild",
+        "AfterPromptBuild",
+        "BeforeModelCall",
+        "AfterModelCall",
+        "TurnEnd",
+        "TurnError",
+        "BeforeMemorySearch",
+        "AfterMemorySearch",
+        "BeforeMemoryWrite",
+        "AfterMemoryWrite",
+        "MemoryExtracted",
+        "WorkspaceStart",
+        "WorkspaceStop",
+        "BeforeWorkspaceCommand",
+        "AfterWorkspaceCommand",
+        "BeforeFileWrite",
+        "AfterFileWrite",
+        "BeforeApprovalCreate",
+        "ApprovalRequested",
+        "ApprovalResolved",
+        "ApprovalTimeout",
+        "InboundMessageNormalized",
+        "BeforeOutboundMessage",
+        "AfterOutboundMessage",
+        "ChannelDeliveryFailed",
+        "PreCompact",
+        "PostCompact",
+        "SubagentStart",
+        "SubagentStop"
+      ]
+    },
+    "connector_bindings": {
+      "mode": "inherit",
+      "connection_id": {
+        "binding": "inherit"
+      },
+      "connector_type": {
+        "binding": "inherit"
+      },
+      "auth_method": {
+        "binding": "inherit"
+      },
+      "credential_fields": {},
+      "oauth_scopes": [],
+      "binding_note": "最新版通过 App 的 app_connector_credentials / app_connector_oauth 入口授权，再通过 connector_enabled 调整开关。OAuth 需用户在 Memoh 完成。"
+    },
+    "model_sampling": {
+      "mode": "inherit",
+      "request_defaults": {
+        "temperature": {
+          "binding": "inherit"
+        },
+        "top_p": {
+          "binding": "inherit"
+        },
+        "max_tokens": {
+          "binding": "inherit"
+        }
+      },
+      "binding_note": "当前 Bot Settings 无这些字段；由所选模型的 Provider 配置决定，不能通过 Bot API 写入。"
     }
   }
 }

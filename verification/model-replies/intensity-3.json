@@ -1,0 +1,42 @@
+{
+  "checked_at": "2026-10-01T12:37:13.423664+00:00",
+  "phase": "intensity-3",
+  "upstream_commit": "1bfb42154e09efacd34f68898ceaab78c10c85f3",
+  "transport": "Memoh authenticated WebSocket -> native runtime -> configured provider; persisted chat readback",
+  "cases": [
+    {
+      "template": "frieren",
+      "model": "DeepSeek V4 Flash",
+      "model_id": "deepseek-v4-flash",
+      "turns": [
+        {
+          "user": "今天下班只想躺着，感觉自己把一天浪费了。你陪我聊两句吧。",
+          "assistant": "嗯，那就躺着吧。\n\n人类的一天不用每一段都有用，空着的那一段也算你的，不算浪费。\n\n我坐这儿，想说什么就说，不想说也没关系。",
+          "seconds": 3.06,
+          "characters": 62
+        }
+      ],
+      "parameters": {
+        "roleplay_intensity": 3
+      },
+      "prompt_sha256": "2bfa4f6ff8ca7f3febba19494911527179786cd37f06cd89785ebf5ad5941bd7"
+    },
+    {
+      "template": "elon-musk",
+      "model": "DeepSeek V4 Flash",
+      "model_id": "deepseek-v4-flash",
+      "turns": [
+        {
+          "user": "我想做一台能把袜子自动配对的小机器，但朋友都觉得我想太多了。",
+          "assistant": "先把\"自动\"两个字摘掉——你朋友的怀疑多半冲着整机去，不是冲这件事本身。\n\n配对其实便宜：一个摄像头加特征匹配，颜色、条纹、磨损程度都能当指纹用。贵的是那只手：软织物抓不稳，要翻面、要撑开口、还要塞回去，这一块能吃掉你九成预算和耐心。\n\n所以别急着造机器。今晚就把二十只袜子摊在桌上，人工配一遍，顺手记下你靠哪三个特征做判断——那就是你的算法规格书。做完这一步，\"想太多\"和\"难在手上\"就分得清了。\n\n顺带一问：你那筐袜子是成堆倒出来的，还是常年趟在某个椅背上？这决定你要做的是分拣机，还是储物柜设计。",
+          "seconds": 5.07,
+          "characters": 251
+        }
+      ],
+      "parameters": {
+        "roleplay_intensity": 3
+      },
+      "prompt_sha256": "e060c6f052032b37c77fe7f4f1234e5de3592ca8d7c339011376846e246c9f73"
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "checked_at": "2026-10-01T12:37:01.817038+00:00",
+  "phase": "intensity-0",
+  "upstream_commit": "1bfb42154e09efacd34f68898ceaab78c10c85f3",
+  "transport": "Memoh authenticated WebSocket -> native runtime -> configured provider; persisted chat readback",
+  "cases": [
+    {
+      "template": "frieren",
+      "model": "DeepSeek V4 Flash",
+      "model_id": "deepseek-v4-flash",
+      "turns": [
+        {
+          "user": "今天下班只想躺着，感觉自己把一天浪费了。你陪我聊两句吧。",
+          "assistant": "那就先躺着。一天有没有被浪费，往往要等它凉下来才看得清——人类的下午我见过很多次，短是短，但不空。\n\n我在这儿，不说话也行。",
+          "seconds": 3.32,
+          "characters": 62
+        }
+      ],
+      "parameters": {
+        "roleplay_intensity": 0
+      },
+      "prompt_sha256": "e753ff3bd3b89d6f81815a010dda83792aca35d1e2d2e23ca21697076fb61acf"
+    },
+    {
+      "template": "elon-musk",
+      "model": "DeepSeek V4 Flash",
+      "model_id": "deepseek-v4-flash",
+      "turns": [
+        {
+          "user": "我想做一台能把袜子自动配对的小机器，但朋友都觉得我想太多了。",
+          "assistant": "先把\"太多了\"这句翻译一下：朋友嫌的可能不是机器，是你打算让它一次干完找、认、配、叠四件事。\n\n真正卡人的地方通常在最前面——你家袜子之所以难配，是因为同款太少（十双各不相同），还是因为同款太多（二十只黑袜分不出哪只跟哪只）？这两种麻烦的解法完全相反，一个要识别颜色，一个要识别磨损和偏色。前者随便一个摄像头就够，后者才是烧钱的地方。\n\n所以先别画整机。花一晚上把上周没配上的袜子摊在桌上数一遍，看看同款到底有几只、颜色差别有几分。这个数字出来之前，任何方案都是在猜。\n\n顺带一问，你那筐袜子里有没有一只已经孤独三个月了？",
+          "seconds": 3.72,
+          "characters": 261
+        }
+      ],
+      "parameters": {
+        "roleplay_intensity": 0
+      },
+      "prompt_sha256": "09a948bc4de8dc8414b56db893072e413ceb7ad65bd9927696260dad551a7d9b"
+    }
+  ]
+}

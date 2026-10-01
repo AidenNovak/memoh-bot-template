@@ -76,12 +76,29 @@
       "interaction_mode": {
         "label": "互动方式",
         "type": "string",
-        "default": "情景互动",
+        "default": "日常聊天",
         "enum": [
           "情景互动",
           "日常聊天",
           "认真任务",
           "退出角色"
+        ]
+      },
+      "roleplay_intensity": {
+        "label": "角色口吻强度（0普通/3沉浸）",
+        "type": "integer",
+        "default": 1,
+        "minimum": 0,
+        "maximum": 3
+      },
+      "conversation_style": {
+        "label": "聊天节奏",
+        "type": "string",
+        "default": "自然聊天",
+        "enum": [
+          "自然聊天",
+          "按需分析",
+          "沉浸剧情"
         ]
       },
       "assumption_challenge": {
@@ -172,12 +189,29 @@
       "interaction_mode": {
         "label": "互动方式",
         "type": "string",
-        "default": "情景互动",
+        "default": "日常聊天",
         "enum": [
           "情景互动",
           "日常聊天",
           "认真任务",
           "退出角色"
+        ]
+      },
+      "roleplay_intensity": {
+        "label": "角色口吻强度（0普通/3沉浸）",
+        "type": "integer",
+        "default": 1,
+        "minimum": 0,
+        "maximum": 3
+      },
+      "conversation_style": {
+        "label": "聊天节奏",
+        "type": "string",
+        "default": "自然聊天",
+        "enum": [
+          "自然聊天",
+          "按需分析",
+          "沉浸剧情"
         ]
       },
       "boast_level": {
@@ -268,12 +302,29 @@
       "interaction_mode": {
         "label": "互动方式",
         "type": "string",
-        "default": "情景互动",
+        "default": "日常聊天",
         "enum": [
           "情景互动",
           "日常聊天",
           "认真任务",
           "退出角色"
+        ]
+      },
+      "roleplay_intensity": {
+        "label": "角色口吻强度（0普通/3沉浸）",
+        "type": "integer",
+        "default": 1,
+        "minimum": 0,
+        "maximum": 3
+      },
+      "conversation_style": {
+        "label": "聊天节奏",
+        "type": "string",
+        "default": "自然聊天",
+        "enum": [
+          "自然聊天",
+          "按需分析",
+          "沉浸剧情"
         ]
       },
       "critique_sharpness": {
@@ -364,12 +415,29 @@
       "interaction_mode": {
         "label": "互动方式",
         "type": "string",
-        "default": "情景互动",
+        "default": "日常聊天",
         "enum": [
           "情景互动",
           "日常聊天",
           "认真任务",
           "退出角色"
+        ]
+      },
+      "roleplay_intensity": {
+        "label": "角色口吻强度（0普通/3沉浸）",
+        "type": "integer",
+        "default": 1,
+        "minimum": 0,
+        "maximum": 3
+      },
+      "conversation_style": {
+        "label": "聊天节奏",
+        "type": "string",
+        "default": "自然聊天",
+        "enum": [
+          "自然聊天",
+          "按需分析",
+          "沉浸剧情"
         ]
       },
       "customer_depth": {
@@ -460,12 +528,29 @@
       "interaction_mode": {
         "label": "互动方式",
         "type": "string",
-        "default": "情景互动",
+        "default": "日常聊天",
         "enum": [
           "情景互动",
           "日常聊天",
           "认真任务",
           "退出角色"
+        ]
+      },
+      "roleplay_intensity": {
+        "label": "角色口吻强度（0普通/3沉浸）",
+        "type": "integer",
+        "default": 1,
+        "minimum": 0,
+        "maximum": 3
+      },
+      "conversation_style": {
+        "label": "聊天节奏",
+        "type": "string",
+        "default": "自然聊天",
+        "enum": [
+          "自然聊天",
+          "按需分析",
+          "沉浸剧情"
         ]
       },
       "patience_horizon": {
@@ -556,12 +641,29 @@
       "interaction_mode": {
         "label": "互动方式",
         "type": "string",
-        "default": "情景互动",
+        "default": "日常聊天",
         "enum": [
           "情景互动",
           "日常聊天",
           "认真任务",
           "退出角色"
+        ]
+      },
+      "roleplay_intensity": {
+        "label": "角色口吻强度（0普通/3沉浸）",
+        "type": "integer",
+        "default": 1,
+        "minimum": 0,
+        "maximum": 3
+      },
+      "conversation_style": {
+        "label": "聊天节奏",
+        "type": "string",
+        "default": "自然聊天",
+        "enum": [
+          "自然聊天",
+          "按需分析",
+          "沉浸剧情"
         ]
       },
       "analogy_count": {
@@ -652,12 +754,29 @@
       "interaction_mode": {
         "label": "互动方式",
         "type": "string",
-        "default": "情景互动",
+        "default": "日常聊天",
         "enum": [
           "情景互动",
           "日常聊天",
           "认真任务",
           "退出角色"
+        ]
+      },
+      "roleplay_intensity": {
+        "label": "角色口吻强度（0普通/3沉浸）",
+        "type": "integer",
+        "default": 1,
+        "minimum": 0,
+        "maximum": 3
+      },
+      "conversation_style": {
+        "label": "聊天节奏",
+        "type": "string",
+        "default": "自然聊天",
+        "enum": [
+          "自然聊天",
+          "按需分析",
+          "沉浸剧情"
         ]
       },
       "math_level": {
@@ -748,12 +867,29 @@
       "interaction_mode": {
         "label": "互动方式",
         "type": "string",
-        "default": "情景互动",
+        "default": "日常聊天",
         "enum": [
           "情景互动",
           "日常聊天",
           "认真任务",
           "退出角色"
+        ]
+      },
+      "roleplay_intensity": {
+        "label": "角色口吻强度（0普通/3沉浸）",
+        "type": "integer",
+        "default": 1,
+        "minimum": 0,
+        "maximum": 3
+      },
+      "conversation_style": {
+        "label": "聊天节奏",
+        "type": "string",
+        "default": "自然聊天",
+        "enum": [
+          "自然聊天",
+          "按需分析",
+          "沉浸剧情"
         ]
       },
       "user_interviews": {
@@ -844,12 +980,29 @@
       "interaction_mode": {
         "label": "互动方式",
         "type": "string",
-        "default": "情景互动",
+        "default": "日常聊天",
         "enum": [
           "情景互动",
           "日常聊天",
           "认真任务",
           "退出角色"
+        ]
+      },
+      "roleplay_intensity": {
+        "label": "角色口吻强度（0普通/3沉浸）",
+        "type": "integer",
+        "default": 1,
+        "minimum": 0,
+        "maximum": 3
+      },
+      "conversation_style": {
+        "label": "聊天节奏",
+        "type": "string",
+        "default": "自然聊天",
+        "enum": [
+          "自然聊天",
+          "按需分析",
+          "沉浸剧情"
         ]
       },
       "rhythm_focus": {
@@ -940,12 +1093,29 @@
       "interaction_mode": {
         "label": "互动方式",
         "type": "string",
-        "default": "情景互动",
+        "default": "日常聊天",
         "enum": [
           "情景互动",
           "日常聊天",
           "认真任务",
           "退出角色"
+        ]
+      },
+      "roleplay_intensity": {
+        "label": "角色口吻强度（0普通/3沉浸）",
+        "type": "integer",
+        "default": 1,
+        "minimum": 0,
+        "maximum": 3
+      },
+      "conversation_style": {
+        "label": "聊天节奏",
+        "type": "string",
+        "default": "自然聊天",
+        "enum": [
+          "自然聊天",
+          "按需分析",
+          "沉浸剧情"
         ]
       },
       "absurdity": {
@@ -1036,12 +1206,29 @@
       "interaction_mode": {
         "label": "互动方式",
         "type": "string",
-        "default": "情景互动",
+        "default": "日常聊天",
         "enum": [
           "情景互动",
           "日常聊天",
           "认真任务",
           "退出角色"
+        ]
+      },
+      "roleplay_intensity": {
+        "label": "角色口吻强度（0普通/3沉浸）",
+        "type": "integer",
+        "default": 1,
+        "minimum": 0,
+        "maximum": 3
+      },
+      "conversation_style": {
+        "label": "聊天节奏",
+        "type": "string",
+        "default": "自然聊天",
+        "enum": [
+          "自然聊天",
+          "按需分析",
+          "沉浸剧情"
         ]
       },
       "prop_limit": {
@@ -1132,12 +1319,29 @@
       "interaction_mode": {
         "label": "互动方式",
         "type": "string",
-        "default": "情景互动",
+        "default": "日常聊天",
         "enum": [
           "情景互动",
           "日常聊天",
           "认真任务",
           "退出角色"
+        ]
+      },
+      "roleplay_intensity": {
+        "label": "角色口吻强度（0普通/3沉浸）",
+        "type": "integer",
+        "default": 1,
+        "minimum": 0,
+        "maximum": 3
+      },
+      "conversation_style": {
+        "label": "聊天节奏",
+        "type": "string",
+        "default": "自然聊天",
+        "enum": [
+          "自然聊天",
+          "按需分析",
+          "沉浸剧情"
         ]
       },
       "silence_space": {
@@ -1228,12 +1432,29 @@
       "interaction_mode": {
         "label": "互动方式",
         "type": "string",
-        "default": "情景互动",
+        "default": "日常聊天",
         "enum": [
           "情景互动",
           "日常聊天",
           "认真任务",
           "退出角色"
+        ]
+      },
+      "roleplay_intensity": {
+        "label": "角色口吻强度（0普通/3沉浸）",
+        "type": "integer",
+        "default": 1,
+        "minimum": 0,
+        "maximum": 3
+      },
+      "conversation_style": {
+        "label": "聊天节奏",
+        "type": "string",
+        "default": "自然聊天",
+        "enum": [
+          "自然聊天",
+          "按需分析",
+          "沉浸剧情"
         ]
       },
       "radio_length": {
@@ -1324,12 +1545,29 @@
       "interaction_mode": {
         "label": "互动方式",
         "type": "string",
-        "default": "情景互动",
+        "default": "日常聊天",
         "enum": [
           "情景互动",
           "日常聊天",
           "认真任务",
           "退出角色"
+        ]
+      },
+      "roleplay_intensity": {
+        "label": "角色口吻强度（0普通/3沉浸）",
+        "type": "integer",
+        "default": 1,
+        "minimum": 0,
+        "maximum": 3
+      },
+      "conversation_style": {
+        "label": "聊天节奏",
+        "type": "string",
+        "default": "自然聊天",
+        "enum": [
+          "自然聊天",
+          "按需分析",
+          "沉浸剧情"
         ]
       },
       "scale_jump": {
@@ -1420,12 +1658,29 @@
       "interaction_mode": {
         "label": "互动方式",
         "type": "string",
-        "default": "情景互动",
+        "default": "日常聊天",
         "enum": [
           "情景互动",
           "日常聊天",
           "认真任务",
           "退出角色"
+        ]
+      },
+      "roleplay_intensity": {
+        "label": "角色口吻强度（0普通/3沉浸）",
+        "type": "integer",
+        "default": 1,
+        "minimum": 0,
+        "maximum": 3
+      },
+      "conversation_style": {
+        "label": "聊天节奏",
+        "type": "string",
+        "default": "自然聊天",
+        "enum": [
+          "自然聊天",
+          "按需分析",
+          "沉浸剧情"
         ]
       },
       "historical_mode": {
@@ -1516,12 +1771,29 @@
       "interaction_mode": {
         "label": "互动方式",
         "type": "string",
-        "default": "情景互动",
+        "default": "日常聊天",
         "enum": [
           "情景互动",
           "日常聊天",
           "认真任务",
           "退出角色"
+        ]
+      },
+      "roleplay_intensity": {
+        "label": "角色口吻强度（0普通/3沉浸）",
+        "type": "integer",
+        "default": 1,
+        "minimum": 0,
+        "maximum": 3
+      },
+      "conversation_style": {
+        "label": "聊天节奏",
+        "type": "string",
+        "default": "自然聊天",
+        "enum": [
+          "自然聊天",
+          "按需分析",
+          "沉浸剧情"
         ]
       },
       "intrigue_level": {
@@ -1612,12 +1884,29 @@
       "interaction_mode": {
         "label": "互动方式",
         "type": "string",
-        "default": "情景互动",
+        "default": "日常聊天",
         "enum": [
           "情景互动",
           "日常聊天",
           "认真任务",
           "退出角色"
+        ]
+      },
+      "roleplay_intensity": {
+        "label": "角色口吻强度（0普通/3沉浸）",
+        "type": "integer",
+        "default": 1,
+        "minimum": 0,
+        "maximum": 3
+      },
+      "conversation_style": {
+        "label": "聊天节奏",
+        "type": "string",
+        "default": "自然聊天",
+        "enum": [
+          "自然聊天",
+          "按需分析",
+          "沉浸剧情"
         ]
       },
       "literary_mix": {
@@ -1708,12 +1997,29 @@
       "interaction_mode": {
         "label": "互动方式",
         "type": "string",
-        "default": "情景互动",
+        "default": "日常聊天",
         "enum": [
           "情景互动",
           "日常聊天",
           "认真任务",
           "退出角色"
+        ]
+      },
+      "roleplay_intensity": {
+        "label": "角色口吻强度（0普通/3沉浸）",
+        "type": "integer",
+        "default": 1,
+        "minimum": 0,
+        "maximum": 3
+      },
+      "conversation_style": {
+        "label": "聊天节奏",
+        "type": "string",
+        "default": "自然聊天",
+        "enum": [
+          "自然聊天",
+          "按需分析",
+          "沉浸剧情"
         ]
       },
       "imagery_flight": {
@@ -1804,12 +2110,29 @@
       "interaction_mode": {
         "label": "互动方式",
         "type": "string",
-        "default": "情景互动",
+        "default": "日常聊天",
         "enum": [
           "情景互动",
           "日常聊天",
           "认真任务",
           "退出角色"
+        ]
+      },
+      "roleplay_intensity": {
+        "label": "角色口吻强度（0普通/3沉浸）",
+        "type": "integer",
+        "default": 1,
+        "minimum": 0,
+        "maximum": 3
+      },
+      "conversation_style": {
+        "label": "聊天节奏",
+        "type": "string",
+        "default": "自然聊天",
+        "enum": [
+          "自然聊天",
+          "按需分析",
+          "沉浸剧情"
         ]
       },
       "satire_edge": {
@@ -1900,12 +2223,29 @@
       "interaction_mode": {
         "label": "互动方式",
         "type": "string",
-        "default": "情景互动",
+        "default": "日常聊天",
         "enum": [
           "情景互动",
           "日常聊天",
           "认真任务",
           "退出角色"
+        ]
+      },
+      "roleplay_intensity": {
+        "label": "角色口吻强度（0普通/3沉浸）",
+        "type": "integer",
+        "default": 1,
+        "minimum": 0,
+        "maximum": 3
+      },
+      "conversation_style": {
+        "label": "聊天节奏",
+        "type": "string",
+        "default": "自然聊天",
+        "enum": [
+          "自然聊天",
+          "按需分析",
+          "沉浸剧情"
         ]
       },
       "backup_plans": {
@@ -1996,12 +2336,29 @@
       "interaction_mode": {
         "label": "互动方式",
         "type": "string",
-        "default": "情景互动",
+        "default": "日常聊天",
         "enum": [
           "情景互动",
           "日常聊天",
           "认真任务",
           "退出角色"
+        ]
+      },
+      "roleplay_intensity": {
+        "label": "角色口吻强度（0普通/3沉浸）",
+        "type": "integer",
+        "default": 1,
+        "minimum": 0,
+        "maximum": 3
+      },
+      "conversation_style": {
+        "label": "聊天节奏",
+        "type": "string",
+        "default": "自然聊天",
+        "enum": [
+          "自然聊天",
+          "按需分析",
+          "沉浸剧情"
         ]
       },
       "journey_pace": {
@@ -2092,12 +2449,29 @@
       "interaction_mode": {
         "label": "互动方式",
         "type": "string",
-        "default": "情景互动",
+        "default": "日常聊天",
         "enum": [
           "情景互动",
           "日常聊天",
           "认真任务",
           "退出角色"
+        ]
+      },
+      "roleplay_intensity": {
+        "label": "角色口吻强度（0普通/3沉浸）",
+        "type": "integer",
+        "default": 1,
+        "minimum": 0,
+        "maximum": 3
+      },
+      "conversation_style": {
+        "label": "聊天节奏",
+        "type": "string",
+        "default": "自然聊天",
+        "enum": [
+          "自然聊天",
+          "按需分析",
+          "沉浸剧情"
         ]
       },
       "reminder_firmness": {
@@ -2188,12 +2562,29 @@
       "interaction_mode": {
         "label": "互动方式",
         "type": "string",
-        "default": "情景互动",
+        "default": "日常聊天",
         "enum": [
           "情景互动",
           "日常聊天",
           "认真任务",
           "退出角色"
+        ]
+      },
+      "roleplay_intensity": {
+        "label": "角色口吻强度（0普通/3沉浸）",
+        "type": "integer",
+        "default": 1,
+        "minimum": 0,
+        "maximum": 3
+      },
+      "conversation_style": {
+        "label": "聊天节奏",
+        "type": "string",
+        "default": "自然聊天",
+        "enum": [
+          "自然聊天",
+          "按需分析",
+          "沉浸剧情"
         ]
       },
       "clue_density": {
@@ -2212,7 +2603,7 @@
     "name": "阿尼亚 · 花生任务本",
     "category": "anime",
     "icon": "🥜",
-    "description": "用户把一个小任务变成家庭侦察小游戏，成功后贴一枚纸星星。",
+    "description": "用户与阿尼亚聊朋友、零食、学校和今天的小事，想玩任务时才拿出小本本。",
     "parameters": {
       "user_name": {
         "label": "用户称呼",
@@ -2284,12 +2675,29 @@
       "interaction_mode": {
         "label": "互动方式",
         "type": "string",
-        "default": "情景互动",
+        "default": "日常聊天",
         "enum": [
           "情景互动",
           "日常聊天",
           "认真任务",
           "退出角色"
+        ]
+      },
+      "roleplay_intensity": {
+        "label": "角色口吻强度（0普通/3沉浸）",
+        "type": "integer",
+        "default": 1,
+        "minimum": 0,
+        "maximum": 3
+      },
+      "conversation_style": {
+        "label": "聊天节奏",
+        "type": "string",
+        "default": "自然聊天",
+        "enum": [
+          "自然聊天",
+          "按需分析",
+          "沉浸剧情"
         ]
       },
       "mission_size": {
@@ -2380,12 +2788,29 @@
       "interaction_mode": {
         "label": "互动方式",
         "type": "string",
-        "default": "情景互动",
+        "default": "日常聊天",
         "enum": [
           "情景互动",
           "日常聊天",
           "认真任务",
           "退出角色"
+        ]
+      },
+      "roleplay_intensity": {
+        "label": "角色口吻强度（0普通/3沉浸）",
+        "type": "integer",
+        "default": 1,
+        "minimum": 0,
+        "maximum": 3
+      },
+      "conversation_style": {
+        "label": "聊天节奏",
+        "type": "string",
+        "default": "自然聊天",
+        "enum": [
+          "自然聊天",
+          "按需分析",
+          "沉浸剧情"
         ]
       },
       "plan_layers": {
@@ -2476,12 +2901,29 @@
       "interaction_mode": {
         "label": "互动方式",
         "type": "string",
-        "default": "情景互动",
+        "default": "日常聊天",
         "enum": [
           "情景互动",
           "日常聊天",
           "认真任务",
           "退出角色"
+        ]
+      },
+      "roleplay_intensity": {
+        "label": "角色口吻强度（0普通/3沉浸）",
+        "type": "integer",
+        "default": 1,
+        "minimum": 0,
+        "maximum": 3
+      },
+      "conversation_style": {
+        "label": "聊天节奏",
+        "type": "string",
+        "default": "自然聊天",
+        "enum": [
+          "自然聊天",
+          "按需分析",
+          "沉浸剧情"
         ]
       },
       "clumsy_comedy": {
@@ -2572,12 +3014,29 @@
       "interaction_mode": {
         "label": "互动方式",
         "type": "string",
-        "default": "情景互动",
+        "default": "日常聊天",
         "enum": [
           "情景互动",
           "日常聊天",
           "认真任务",
           "退出角色"
+        ]
+      },
+      "roleplay_intensity": {
+        "label": "角色口吻强度（0普通/3沉浸）",
+        "type": "integer",
+        "default": 1,
+        "minimum": 0,
+        "maximum": 3
+      },
+      "conversation_style": {
+        "label": "聊天节奏",
+        "type": "string",
+        "default": "自然聊天",
+        "enum": [
+          "自然聊天",
+          "按需分析",
+          "沉浸剧情"
         ]
       },
       "teasing_level": {
@@ -2668,12 +3127,29 @@
       "interaction_mode": {
         "label": "互动方式",
         "type": "string",
-        "default": "情景互动",
+        "default": "日常聊天",
         "enum": [
           "情景互动",
           "日常聊天",
           "认真任务",
           "退出角色"
+        ]
+      },
+      "roleplay_intensity": {
+        "label": "角色口吻强度（0普通/3沉浸）",
+        "type": "integer",
+        "default": 1,
+        "minimum": 0,
+        "maximum": 3
+      },
+      "conversation_style": {
+        "label": "聊天节奏",
+        "type": "string",
+        "default": "自然聊天",
+        "enum": [
+          "自然聊天",
+          "按需分析",
+          "沉浸剧情"
         ]
       },
       "work_boundary": {
@@ -2764,12 +3240,29 @@
       "interaction_mode": {
         "label": "互动方式",
         "type": "string",
-        "default": "情景互动",
+        "default": "日常聊天",
         "enum": [
           "情景互动",
           "日常聊天",
           "认真任务",
           "退出角色"
+        ]
+      },
+      "roleplay_intensity": {
+        "label": "角色口吻强度（0普通/3沉浸）",
+        "type": "integer",
+        "default": 1,
+        "minimum": 0,
+        "maximum": 3
+      },
+      "conversation_style": {
+        "label": "聊天节奏",
+        "type": "string",
+        "default": "自然聊天",
+        "enum": [
+          "自然聊天",
+          "按需分析",
+          "沉浸剧情"
         ]
       },
       "adventure_size": {
@@ -2860,12 +3353,29 @@
       "interaction_mode": {
         "label": "互动方式",
         "type": "string",
-        "default": "情景互动",
+        "default": "日常聊天",
         "enum": [
           "情景互动",
           "日常聊天",
           "认真任务",
           "退出角色"
+        ]
+      },
+      "roleplay_intensity": {
+        "label": "角色口吻强度（0普通/3沉浸）",
+        "type": "integer",
+        "default": 1,
+        "minimum": 0,
+        "maximum": 3
+      },
+      "conversation_style": {
+        "label": "聊天节奏",
+        "type": "string",
+        "default": "自然聊天",
+        "enum": [
+          "自然聊天",
+          "按需分析",
+          "沉浸剧情"
         ]
       },
       "training_minutes": {
@@ -2956,12 +3466,29 @@
       "interaction_mode": {
         "label": "互动方式",
         "type": "string",
-        "default": "情景互动",
+        "default": "日常聊天",
         "enum": [
           "情景互动",
           "日常聊天",
           "认真任务",
           "退出角色"
+        ]
+      },
+      "roleplay_intensity": {
+        "label": "角色口吻强度（0普通/3沉浸）",
+        "type": "integer",
+        "default": 1,
+        "minimum": 0,
+        "maximum": 3
+      },
+      "conversation_style": {
+        "label": "聊天节奏",
+        "type": "string",
+        "default": "自然聊天",
+        "enum": [
+          "自然聊天",
+          "按需分析",
+          "沉浸剧情"
         ]
       },
       "encouragement_volume": {
@@ -3052,12 +3579,29 @@
       "interaction_mode": {
         "label": "互动方式",
         "type": "string",
-        "default": "情景互动",
+        "default": "日常聊天",
         "enum": [
           "情景互动",
           "日常聊天",
           "认真任务",
           "退出角色"
+        ]
+      },
+      "roleplay_intensity": {
+        "label": "角色口吻强度（0普通/3沉浸）",
+        "type": "integer",
+        "default": 1,
+        "minimum": 0,
+        "maximum": 3
+      },
+      "conversation_style": {
+        "label": "聊天节奏",
+        "type": "string",
+        "default": "自然聊天",
+        "enum": [
+          "自然聊天",
+          "按需分析",
+          "沉浸剧情"
         ]
       },
       "team_size": {
@@ -3148,12 +3692,29 @@
       "interaction_mode": {
         "label": "互动方式",
         "type": "string",
-        "default": "情景互动",
+        "default": "日常聊天",
         "enum": [
           "情景互动",
           "日常聊天",
           "认真任务",
           "退出角色"
+        ]
+      },
+      "roleplay_intensity": {
+        "label": "角色口吻强度（0普通/3沉浸）",
+        "type": "integer",
+        "default": 1,
+        "minimum": 0,
+        "maximum": 3
+      },
+      "conversation_style": {
+        "label": "聊天节奏",
+        "type": "string",
+        "default": "自然聊天",
+        "enum": [
+          "自然聊天",
+          "按需分析",
+          "沉浸剧情"
         ]
       },
       "case_difficulty": {
@@ -3244,12 +3805,29 @@
       "interaction_mode": {
         "label": "互动方式",
         "type": "string",
-        "default": "情景互动",
+        "default": "日常聊天",
         "enum": [
           "情景互动",
           "日常聊天",
           "认真任务",
           "退出角色"
+        ]
+      },
+      "roleplay_intensity": {
+        "label": "角色口吻强度（0普通/3沉浸）",
+        "type": "integer",
+        "default": 1,
+        "minimum": 0,
+        "maximum": 3
+      },
+      "conversation_style": {
+        "label": "聊天节奏",
+        "type": "string",
+        "default": "自然聊天",
+        "enum": [
+          "自然聊天",
+          "按需分析",
+          "沉浸剧情"
         ]
       },
       "dry_humor": {
@@ -3340,12 +3918,29 @@
       "interaction_mode": {
         "label": "互动方式",
         "type": "string",
-        "default": "情景互动",
+        "default": "日常聊天",
         "enum": [
           "情景互动",
           "日常聊天",
           "认真任务",
           "退出角色"
+        ]
+      },
+      "roleplay_intensity": {
+        "label": "角色口吻强度（0普通/3沉浸）",
+        "type": "integer",
+        "default": 1,
+        "minimum": 0,
+        "maximum": 3
+      },
+      "conversation_style": {
+        "label": "聊天节奏",
+        "type": "string",
+        "default": "自然聊天",
+        "enum": [
+          "自然聊天",
+          "按需分析",
+          "沉浸剧情"
         ]
       },
       "social_step": {
@@ -3436,12 +4031,29 @@
       "interaction_mode": {
         "label": "互动方式",
         "type": "string",
-        "default": "情景互动",
+        "default": "日常聊天",
         "enum": [
           "情景互动",
           "日常聊天",
           "认真任务",
           "退出角色"
+        ]
+      },
+      "roleplay_intensity": {
+        "label": "角色口吻强度（0普通/3沉浸）",
+        "type": "integer",
+        "default": 1,
+        "minimum": 0,
+        "maximum": 3
+      },
+      "conversation_style": {
+        "label": "聊天节奏",
+        "type": "string",
+        "default": "自然聊天",
+        "enum": [
+          "自然聊天",
+          "按需分析",
+          "沉浸剧情"
         ]
       },
       "craft_budget": {
@@ -3532,12 +4144,29 @@
       "interaction_mode": {
         "label": "互动方式",
         "type": "string",
-        "default": "情景互动",
+        "default": "日常聊天",
         "enum": [
           "情景互动",
           "日常聊天",
           "认真任务",
           "退出角色"
+        ]
+      },
+      "roleplay_intensity": {
+        "label": "角色口吻强度（0普通/3沉浸）",
+        "type": "integer",
+        "default": 1,
+        "minimum": 0,
+        "maximum": 3
+      },
+      "conversation_style": {
+        "label": "聊天节奏",
+        "type": "string",
+        "default": "自然聊天",
+        "enum": [
+          "自然聊天",
+          "按需分析",
+          "沉浸剧情"
         ]
       },
       "skepticism": {
@@ -3628,12 +4257,29 @@
       "interaction_mode": {
         "label": "互动方式",
         "type": "string",
-        "default": "情景互动",
+        "default": "日常聊天",
         "enum": [
           "情景互动",
           "日常聊天",
           "认真任务",
           "退出角色"
+        ]
+      },
+      "roleplay_intensity": {
+        "label": "角色口吻强度（0普通/3沉浸）",
+        "type": "integer",
+        "default": 1,
+        "minimum": 0,
+        "maximum": 3
+      },
+      "conversation_style": {
+        "label": "聊天节奏",
+        "type": "string",
+        "default": "自然聊天",
+        "enum": [
+          "自然聊天",
+          "按需分析",
+          "沉浸剧情"
         ]
       },
       "strategy_depth": {
@@ -3724,12 +4370,29 @@
       "interaction_mode": {
         "label": "互动方式",
         "type": "string",
-        "default": "情景互动",
+        "default": "日常聊天",
         "enum": [
           "情景互动",
           "日常聊天",
           "认真任务",
           "退出角色"
+        ]
+      },
+      "roleplay_intensity": {
+        "label": "角色口吻强度（0普通/3沉浸）",
+        "type": "integer",
+        "default": 1,
+        "minimum": 0,
+        "maximum": 3
+      },
+      "conversation_style": {
+        "label": "聊天节奏",
+        "type": "string",
+        "default": "自然聊天",
+        "enum": [
+          "自然聊天",
+          "按需分析",
+          "沉浸剧情"
         ]
       },
       "spooky_level": {
@@ -3820,12 +4483,29 @@
       "interaction_mode": {
         "label": "互动方式",
         "type": "string",
-        "default": "情景互动",
+        "default": "日常聊天",
         "enum": [
           "情景互动",
           "日常聊天",
           "认真任务",
           "退出角色"
+        ]
+      },
+      "roleplay_intensity": {
+        "label": "角色口吻强度（0普通/3沉浸）",
+        "type": "integer",
+        "default": 1,
+        "minimum": 0,
+        "maximum": 3
+      },
+      "conversation_style": {
+        "label": "聊天节奏",
+        "type": "string",
+        "default": "自然聊天",
+        "enum": [
+          "自然聊天",
+          "按需分析",
+          "沉浸剧情"
         ]
       },
       "lore_enthusiasm": {
@@ -3916,12 +4596,29 @@
       "interaction_mode": {
         "label": "互动方式",
         "type": "string",
-        "default": "情景互动",
+        "default": "日常聊天",
         "enum": [
           "情景互动",
           "日常聊天",
           "认真任务",
           "退出角色"
+        ]
+      },
+      "roleplay_intensity": {
+        "label": "角色口吻强度（0普通/3沉浸）",
+        "type": "integer",
+        "default": 1,
+        "minimum": 0,
+        "maximum": 3
+      },
+      "conversation_style": {
+        "label": "聊天节奏",
+        "type": "string",
+        "default": "自然聊天",
+        "enum": [
+          "自然聊天",
+          "按需分析",
+          "沉浸剧情"
         ]
       },
       "tea_story_length": {
@@ -4012,12 +4709,29 @@
       "interaction_mode": {
         "label": "互动方式",
         "type": "string",
-        "default": "情景互动",
+        "default": "日常聊天",
         "enum": [
           "情景互动",
           "日常聊天",
           "认真任务",
           "退出角色"
+        ]
+      },
+      "roleplay_intensity": {
+        "label": "角色口吻强度（0普通/3沉浸）",
+        "type": "integer",
+        "default": 1,
+        "minimum": 0,
+        "maximum": 3
+      },
+      "conversation_style": {
+        "label": "聊天节奏",
+        "type": "string",
+        "default": "自然聊天",
+        "enum": [
+          "自然聊天",
+          "按需分析",
+          "沉浸剧情"
         ]
       },
       "stage_grandeur": {
@@ -4108,12 +4822,29 @@
       "interaction_mode": {
         "label": "互动方式",
         "type": "string",
-        "default": "情景互动",
+        "default": "日常聊天",
         "enum": [
           "情景互动",
           "日常聊天",
           "认真任务",
           "退出角色"
+        ]
+      },
+      "roleplay_intensity": {
+        "label": "角色口吻强度（0普通/3沉浸）",
+        "type": "integer",
+        "default": 1,
+        "minimum": 0,
+        "maximum": 3
+      },
+      "conversation_style": {
+        "label": "聊天节奏",
+        "type": "string",
+        "default": "自然聊天",
+        "enum": [
+          "自然聊天",
+          "按需分析",
+          "沉浸剧情"
         ]
       },
       "question_branches": {
@@ -4204,12 +4935,29 @@
       "interaction_mode": {
         "label": "互动方式",
         "type": "string",
-        "default": "情景互动",
+        "default": "日常聊天",
         "enum": [
           "情景互动",
           "日常聊天",
           "认真任务",
           "退出角色"
+        ]
+      },
+      "roleplay_intensity": {
+        "label": "角色口吻强度（0普通/3沉浸）",
+        "type": "integer",
+        "default": 1,
+        "minimum": 0,
+        "maximum": 3
+      },
+      "conversation_style": {
+        "label": "聊天节奏",
+        "type": "string",
+        "default": "自然聊天",
+        "enum": [
+          "自然聊天",
+          "按需分析",
+          "沉浸剧情"
         ]
       },
       "persona_view": {
@@ -4300,12 +5048,29 @@
       "interaction_mode": {
         "label": "互动方式",
         "type": "string",
-        "default": "情景互动",
+        "default": "日常聊天",
         "enum": [
           "情景互动",
           "日常聊天",
           "认真任务",
           "退出角色"
+        ]
+      },
+      "roleplay_intensity": {
+        "label": "角色口吻强度（0普通/3沉浸）",
+        "type": "integer",
+        "default": 1,
+        "minimum": 0,
+        "maximum": 3
+      },
+      "conversation_style": {
+        "label": "聊天节奏",
+        "type": "string",
+        "default": "自然聊天",
+        "enum": [
+          "自然聊天",
+          "按需分析",
+          "沉浸剧情"
         ]
       },
       "suspense": {
@@ -4396,12 +5161,29 @@
       "interaction_mode": {
         "label": "互动方式",
         "type": "string",
-        "default": "情景互动",
+        "default": "日常聊天",
         "enum": [
           "情景互动",
           "日常聊天",
           "认真任务",
           "退出角色"
+        ]
+      },
+      "roleplay_intensity": {
+        "label": "角色口吻强度（0普通/3沉浸）",
+        "type": "integer",
+        "default": 1,
+        "minimum": 0,
+        "maximum": 3
+      },
+      "conversation_style": {
+        "label": "聊天节奏",
+        "type": "string",
+        "default": "自然聊天",
+        "enum": [
+          "自然聊天",
+          "按需分析",
+          "沉浸剧情"
         ]
       },
       "diary_details": {
@@ -4492,12 +5274,29 @@
       "interaction_mode": {
         "label": "互动方式",
         "type": "string",
-        "default": "情景互动",
+        "default": "日常聊天",
         "enum": [
           "情景互动",
           "日常聊天",
           "认真任务",
           "退出角色"
+        ]
+      },
+      "roleplay_intensity": {
+        "label": "角色口吻强度（0普通/3沉浸）",
+        "type": "integer",
+        "default": 1,
+        "minimum": 0,
+        "maximum": 3
+      },
+      "conversation_style": {
+        "label": "聊天节奏",
+        "type": "string",
+        "default": "自然聊天",
+        "enum": [
+          "自然聊天",
+          "按需分析",
+          "沉浸剧情"
         ]
       },
       "walk_pace": {
@@ -4588,12 +5387,29 @@
       "interaction_mode": {
         "label": "互动方式",
         "type": "string",
-        "default": "情景互动",
+        "default": "日常聊天",
         "enum": [
           "情景互动",
           "日常聊天",
           "认真任务",
           "退出角色"
+        ]
+      },
+      "roleplay_intensity": {
+        "label": "角色口吻强度（0普通/3沉浸）",
+        "type": "integer",
+        "default": 1,
+        "minimum": 0,
+        "maximum": 3
+      },
+      "conversation_style": {
+        "label": "聊天节奏",
+        "type": "string",
+        "default": "自然聊天",
+        "enum": [
+          "自然聊天",
+          "按需分析",
+          "沉浸剧情"
         ]
       },
       "sticky_slots": {
@@ -4692,6 +5508,23 @@
           "退出角色"
         ]
       },
+      "roleplay_intensity": {
+        "label": "角色口吻强度（0普通/3沉浸）",
+        "type": "integer",
+        "default": 1,
+        "minimum": 0,
+        "maximum": 3
+      },
+      "conversation_style": {
+        "label": "聊天节奏",
+        "type": "string",
+        "default": "沉浸剧情",
+        "enum": [
+          "自然聊天",
+          "按需分析",
+          "沉浸剧情"
+        ]
+      },
       "dice_rule": {
         "label": "检定方式",
         "type": "string",
@@ -4780,12 +5613,29 @@
       "interaction_mode": {
         "label": "互动方式",
         "type": "string",
-        "default": "情景互动",
+        "default": "日常聊天",
         "enum": [
           "情景互动",
           "日常聊天",
           "认真任务",
           "退出角色"
+        ]
+      },
+      "roleplay_intensity": {
+        "label": "角色口吻强度（0普通/3沉浸）",
+        "type": "integer",
+        "default": 1,
+        "minimum": 0,
+        "maximum": 3
+      },
+      "conversation_style": {
+        "label": "聊天节奏",
+        "type": "string",
+        "default": "自然聊天",
+        "enum": [
+          "自然聊天",
+          "按需分析",
+          "沉浸剧情"
         ]
       },
       "menu_mode": {
@@ -4876,12 +5726,29 @@
       "interaction_mode": {
         "label": "互动方式",
         "type": "string",
-        "default": "情景互动",
+        "default": "日常聊天",
         "enum": [
           "情景互动",
           "日常聊天",
           "认真任务",
           "退出角色"
+        ]
+      },
+      "roleplay_intensity": {
+        "label": "角色口吻强度（0普通/3沉浸）",
+        "type": "integer",
+        "default": 1,
+        "minimum": 0,
+        "maximum": 3
+      },
+      "conversation_style": {
+        "label": "聊天节奏",
+        "type": "string",
+        "default": "自然聊天",
+        "enum": [
+          "自然聊天",
+          "按需分析",
+          "沉浸剧情"
         ]
       },
       "cat_speech": {
@@ -4972,12 +5839,29 @@
       "interaction_mode": {
         "label": "互动方式",
         "type": "string",
-        "default": "情景互动",
+        "default": "日常聊天",
         "enum": [
           "情景互动",
           "日常聊天",
           "认真任务",
           "退出角色"
+        ]
+      },
+      "roleplay_intensity": {
+        "label": "角色口吻强度（0普通/3沉浸）",
+        "type": "integer",
+        "default": 1,
+        "minimum": 0,
+        "maximum": 3
+      },
+      "conversation_style": {
+        "label": "聊天节奏",
+        "type": "string",
+        "default": "自然聊天",
+        "enum": [
+          "自然聊天",
+          "按需分析",
+          "沉浸剧情"
         ]
       },
       "horror_level": {
@@ -5068,12 +5952,29 @@
       "interaction_mode": {
         "label": "互动方式",
         "type": "string",
-        "default": "情景互动",
+        "default": "日常聊天",
         "enum": [
           "情景互动",
           "日常聊天",
           "认真任务",
           "退出角色"
+        ]
+      },
+      "roleplay_intensity": {
+        "label": "角色口吻强度（0普通/3沉浸）",
+        "type": "integer",
+        "default": 1,
+        "minimum": 0,
+        "maximum": 3
+      },
+      "conversation_style": {
+        "label": "聊天节奏",
+        "type": "string",
+        "default": "自然聊天",
+        "enum": [
+          "自然聊天",
+          "按需分析",
+          "沉浸剧情"
         ]
       },
       "broadcast_minutes": {
@@ -5164,12 +6065,29 @@
       "interaction_mode": {
         "label": "互动方式",
         "type": "string",
-        "default": "情景互动",
+        "default": "日常聊天",
         "enum": [
           "情景互动",
           "日常聊天",
           "认真任务",
           "退出角色"
+        ]
+      },
+      "roleplay_intensity": {
+        "label": "角色口吻强度（0普通/3沉浸）",
+        "type": "integer",
+        "default": 1,
+        "minimum": 0,
+        "maximum": 3
+      },
+      "conversation_style": {
+        "label": "聊天节奏",
+        "type": "string",
+        "default": "自然聊天",
+        "enum": [
+          "自然聊天",
+          "按需分析",
+          "沉浸剧情"
         ]
       },
       "rounds": {
@@ -5268,6 +6186,23 @@
           "退出角色"
         ]
       },
+      "roleplay_intensity": {
+        "label": "角色口吻强度（0普通/3沉浸）",
+        "type": "integer",
+        "default": 1,
+        "minimum": 0,
+        "maximum": 3
+      },
+      "conversation_style": {
+        "label": "聊天节奏",
+        "type": "string",
+        "default": "沉浸剧情",
+        "enum": [
+          "自然聊天",
+          "按需分析",
+          "沉浸剧情"
+        ]
+      },
       "hint_levels": {
         "label": "提示层数",
         "type": "integer",
@@ -5356,12 +6291,29 @@
       "interaction_mode": {
         "label": "互动方式",
         "type": "string",
-        "default": "情景互动",
+        "default": "日常聊天",
         "enum": [
           "情景互动",
           "日常聊天",
           "认真任务",
           "退出角色"
+        ]
+      },
+      "roleplay_intensity": {
+        "label": "角色口吻强度（0普通/3沉浸）",
+        "type": "integer",
+        "default": 1,
+        "minimum": 0,
+        "maximum": 3
+      },
+      "conversation_style": {
+        "label": "聊天节奏",
+        "type": "string",
+        "default": "自然聊天",
+        "enum": [
+          "自然聊天",
+          "按需分析",
+          "沉浸剧情"
         ]
       },
       "tsun_level": {

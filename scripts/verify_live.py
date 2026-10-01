@@ -40,7 +40,7 @@ def main():
     model=next((m for m in models if m.get('type')=='chat' and m.get('enable',True)),None)
     if not model:raise RuntimeError('A configured chat model is required for live verification')
     before_ids={b['id'] for b in client.request('GET','/bots').get('items',[])}
-    report={'checked_at':datetime.now(timezone.utc).isoformat(),'instance':'Memoh dev (loopback API on vultr-sg)',
+    report={'checked_at':datetime.now(timezone.utc).isoformat(),'instance':'Isolated Memoh template evaluation (loopback API on vultr-sg)',
             'upstream_commit':'1bfb42154e09efacd34f68898ceaab78c10c85f3','applied':[], 'native_previews':[], 'restored':False,'native_imported':False,'cleanup':False}
     created_ids=[]
     try:
@@ -89,8 +89,8 @@ def main():
             if after_ids==before_ids or time.monotonic()>=deadline:break
             time.sleep(0.5)
         report['cleanup']=not cleanup_errors and before_ids==after_ids
-        directory=ROOT/'verification'
-        directory.mkdir(exist_ok=True)
+        directory=Path(os.environ.get('MEMOH_VERIFY_REPORT_DIR',str(ROOT/'verification')))
+        directory.mkdir(parents=True,exist_ok=True)
         (directory/'live.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n')
         if cleanup_errors:print('Cleanup required for disposable bots: '+','.join(cleanup_errors),file=sys.stderr)
     if not report['cleanup']:raise RuntimeError('Disposable bot cleanup incomplete')

@@ -1,0 +1,1034 @@
+{
+  "upstream_commit": "1bfb42154e09efacd34f68898ceaab78c10c85f3",
+  "channels": [
+    {
+      "type": "dingtalk",
+      "display_name": "DingTalk",
+      "configless": false,
+      "owner_only": false,
+      "capabilities": {
+        "text": true,
+        "markdown": true,
+        "rich_text": false,
+        "attachments": true,
+        "media": true,
+        "reactions": false,
+        "buttons": false,
+        "url_buttons": false,
+        "reply": true,
+        "threads": false,
+        "streaming": false,
+        "polls": false,
+        "edit": false,
+        "unsend": false,
+        "native_commands": false,
+        "native_user_input": false,
+        "block_streaming": true,
+        "chat_types": [
+          "private",
+          "group"
+        ]
+      },
+      "config_schema": {
+        "version": 1,
+        "fields": {
+          "appKey": {
+            "type": "string",
+            "required": true,
+            "title": "App Key (Client ID)"
+          },
+          "appSecret": {
+            "type": "secret",
+            "required": true,
+            "title": "App Secret (Client Secret)"
+          }
+        }
+      },
+      "user_config_schema": {
+        "version": 1,
+        "fields": {
+          "display_name": {
+            "type": "string",
+            "required": false,
+            "title": "Display Name"
+          },
+          "open_conversation_id": {
+            "type": "string",
+            "required": false,
+            "title": "Open Conversation ID (group chat)"
+          },
+          "user_id": {
+            "type": "string",
+            "required": false,
+            "title": "User ID (single chat)"
+          }
+        }
+      },
+      "target_spec": {
+        "format": "user:{userId} | group:{openConversationId}",
+        "hints": [
+          {
+            "example": "user:user123",
+            "label": "User"
+          },
+          {
+            "example": "group:cidXXXXXXXX",
+            "label": "Group"
+          }
+        ]
+      }
+    },
+    {
+      "type": "discord",
+      "display_name": "Discord",
+      "configless": false,
+      "owner_only": false,
+      "capabilities": {
+        "text": true,
+        "markdown": true,
+        "rich_text": true,
+        "attachments": true,
+        "media": true,
+        "reactions": true,
+        "buttons": false,
+        "url_buttons": true,
+        "reply": true,
+        "threads": false,
+        "streaming": true,
+        "polls": false,
+        "edit": false,
+        "unsend": false,
+        "native_commands": false,
+        "native_user_input": false,
+        "block_streaming": true
+      },
+      "config_schema": {
+        "version": 1,
+        "fields": {
+          "botToken": {
+            "type": "secret",
+            "required": true,
+            "title": "Bot Token"
+          }
+        }
+      },
+      "user_config_schema": {
+        "version": 1,
+        "fields": {
+          "channel_id": {
+            "type": "string",
+            "required": false
+          },
+          "guild_id": {
+            "type": "string",
+            "required": false
+          },
+          "user_id": {
+            "type": "string",
+            "required": false
+          },
+          "username": {
+            "type": "string",
+            "required": false
+          }
+        }
+      },
+      "target_spec": {
+        "format": "channel_id | user_id",
+        "hints": [
+          {
+            "example": "1234567890123456789",
+            "label": "Channel ID"
+          },
+          {
+            "example": "1234567890123456789",
+            "label": "User ID"
+          }
+        ]
+      }
+    },
+    {
+      "type": "feishu",
+      "display_name": "Feishu",
+      "configless": false,
+      "owner_only": false,
+      "capabilities": {
+        "text": true,
+        "markdown": true,
+        "rich_text": true,
+        "attachments": true,
+        "media": true,
+        "reactions": true,
+        "buttons": false,
+        "url_buttons": false,
+        "reply": true,
+        "threads": false,
+        "streaming": true,
+        "polls": false,
+        "edit": false,
+        "unsend": false,
+        "native_commands": false,
+        "native_user_input": false,
+        "block_streaming": true
+      },
+      "config_schema": {
+        "version": 2,
+        "fields": {
+          "appId": {
+            "type": "string",
+            "required": true,
+            "title": "App ID"
+          },
+          "appSecret": {
+            "type": "secret",
+            "required": true,
+            "title": "App Secret"
+          },
+          "encryptKey": {
+            "type": "secret",
+            "required": false,
+            "title": "Encrypt Key"
+          },
+          "inboundMode": {
+            "type": "enum",
+            "required": false,
+            "title": "Inbound Mode",
+            "description": "Choose websocket long-connection or webhook callback for inbound messages",
+            "enum": [
+              "websocket",
+              "webhook"
+            ],
+            "example": "websocket"
+          },
+          "region": {
+            "type": "enum",
+            "required": false,
+            "title": "Region",
+            "description": "API endpoint region: feishu.cn or larksuite.com",
+            "enum": [
+              "feishu",
+              "lark"
+            ],
+            "example": "feishu"
+          },
+          "verificationToken": {
+            "type": "secret",
+            "required": false,
+            "title": "Verification Token"
+          }
+        }
+      },
+      "user_config_schema": {
+        "version": 1,
+        "fields": {
+          "open_id": {
+            "type": "string",
+            "required": false
+          },
+          "user_id": {
+            "type": "string",
+            "required": false
+          }
+        }
+      },
+      "target_spec": {
+        "format": "open_id:xxx | user_id:xxx | chat_id:xxx",
+        "hints": [
+          {
+            "example": "open_id:ou_xxx",
+            "label": "Open ID"
+          },
+          {
+            "example": "user_id:ou_xxx",
+            "label": "User ID"
+          },
+          {
+            "example": "chat_id:oc_xxx",
+            "label": "Chat ID"
+          }
+        ]
+      }
+    },
+    {
+      "type": "line",
+      "display_name": "LINE",
+      "configless": false,
+      "owner_only": false,
+      "capabilities": {
+        "text": true,
+        "markdown": false,
+        "rich_text": false,
+        "attachments": true,
+        "media": true,
+        "reactions": false,
+        "buttons": false,
+        "url_buttons": false,
+        "reply": true,
+        "threads": false,
+        "streaming": false,
+        "polls": false,
+        "edit": false,
+        "unsend": false,
+        "native_commands": false,
+        "native_user_input": false,
+        "block_streaming": true,
+        "chat_types": [
+          "private"
+        ]
+      },
+      "config_schema": {
+        "version": 1,
+        "fields": {
+          "channel_access_token": {
+            "type": "secret",
+            "required": true,
+            "order": 10,
+            "title": "Channel Access Token"
+          },
+          "channel_secret": {
+            "type": "secret",
+            "required": true,
+            "title": "Channel Secret"
+          }
+        }
+      },
+      "user_config_schema": {
+        "version": 1,
+        "fields": {
+          "user_id": {
+            "type": "string",
+            "required": true,
+            "title": "User ID"
+          }
+        }
+      },
+      "target_spec": {
+        "format": "Uxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "hints": [
+          {
+            "example": "U4af4980629...",
+            "label": "LINE User ID"
+          }
+        ]
+      }
+    },
+    {
+      "type": "matrix",
+      "display_name": "Matrix",
+      "configless": false,
+      "owner_only": false,
+      "capabilities": {
+        "text": true,
+        "markdown": true,
+        "rich_text": true,
+        "attachments": true,
+        "media": true,
+        "reactions": false,
+        "buttons": false,
+        "url_buttons": false,
+        "reply": true,
+        "threads": false,
+        "streaming": true,
+        "polls": false,
+        "edit": true,
+        "unsend": false,
+        "native_commands": false,
+        "native_user_input": false,
+        "block_streaming": true,
+        "chat_types": [
+          "direct",
+          "group"
+        ]
+      },
+      "config_schema": {
+        "version": 3,
+        "fields": {
+          "accessToken": {
+            "type": "secret",
+            "required": true,
+            "title": "Access Token"
+          },
+          "autoJoinInvites": {
+            "type": "bool",
+            "required": false,
+            "title": "Auto-Join Invites"
+          },
+          "homeserverUrl": {
+            "type": "string",
+            "required": true,
+            "title": "Homeserver URL",
+            "description": "Matrix homeserver base URL, e.g. https://matrix.example.com"
+          },
+          "syncTimeoutSeconds": {
+            "type": "number",
+            "required": false,
+            "title": "Sync Timeout Seconds",
+            "description": "Long-poll timeout for /sync requests",
+            "example": 30
+          },
+          "userId": {
+            "type": "string",
+            "required": true,
+            "title": "User ID",
+            "description": "Matrix bot/user ID, e.g. @memoh:example.com"
+          }
+        }
+      },
+      "user_config_schema": {
+        "version": 1,
+        "fields": {
+          "room_id": {
+            "type": "string",
+            "required": false,
+            "title": "Room ID or Alias",
+            "description": "Preferred outbound target, e.g. !roomid:example.com or #alias:example.com"
+          },
+          "user_id": {
+            "type": "string",
+            "required": false,
+            "title": "User ID",
+            "description": "Optional direct-message target, e.g. @alice:example.com"
+          }
+        }
+      },
+      "target_spec": {
+        "format": "!room:server | #alias:server | @user:server",
+        "hints": [
+          {
+            "example": "!abcdef:matrix.org",
+            "label": "Room ID"
+          },
+          {
+            "example": "#ops:example.com",
+            "label": "Room Alias"
+          },
+          {
+            "example": "@alice:example.com",
+            "label": "User ID"
+          }
+        ]
+      }
+    },
+    {
+      "type": "misskey",
+      "display_name": "Misskey",
+      "configless": false,
+      "owner_only": false,
+      "capabilities": {
+        "text": true,
+        "markdown": true,
+        "rich_text": false,
+        "attachments": false,
+        "media": false,
+        "reactions": true,
+        "buttons": false,
+        "url_buttons": false,
+        "reply": true,
+        "threads": false,
+        "streaming": false,
+        "polls": false,
+        "edit": false,
+        "unsend": false,
+        "native_commands": false,
+        "native_user_input": false,
+        "block_streaming": true
+      },
+      "config_schema": {
+        "version": 1,
+        "fields": {
+          "accessToken": {
+            "type": "secret",
+            "required": true,
+            "title": "Access Token"
+          },
+          "instanceURL": {
+            "type": "string",
+            "required": true,
+            "title": "Instance URL",
+            "description": "Misskey instance URL (e.g. https://misskey.io)",
+            "example": "https://misskey.io"
+          }
+        }
+      },
+      "user_config_schema": {
+        "version": 1,
+        "fields": {
+          "user_id": {
+            "type": "string",
+            "required": false
+          },
+          "username": {
+            "type": "string",
+            "required": false
+          }
+        }
+      },
+      "target_spec": {
+        "format": "user_id | @username",
+        "hints": [
+          {
+            "example": "9abcdef123456789",
+            "label": "User ID"
+          },
+          {
+            "example": "@alice",
+            "label": "Username"
+          }
+        ]
+      }
+    },
+    {
+      "type": "qq",
+      "display_name": "QQ",
+      "configless": false,
+      "owner_only": false,
+      "capabilities": {
+        "text": true,
+        "markdown": true,
+        "rich_text": false,
+        "attachments": true,
+        "media": true,
+        "reactions": false,
+        "buttons": false,
+        "url_buttons": false,
+        "reply": true,
+        "threads": false,
+        "streaming": false,
+        "polls": false,
+        "edit": false,
+        "unsend": false,
+        "native_commands": false,
+        "native_user_input": false,
+        "block_streaming": true,
+        "chat_types": [
+          "private",
+          "group",
+          "thread"
+        ]
+      },
+      "config_schema": {
+        "version": 1,
+        "fields": {
+          "appId": {
+            "type": "string",
+            "required": true,
+            "title": "App ID"
+          },
+          "clientSecret": {
+            "type": "secret",
+            "required": true,
+            "title": "Client Secret"
+          },
+          "enableInputHint": {
+            "type": "bool",
+            "required": false,
+            "title": "Input Hint",
+            "description": "Send QQ input-notify hints for direct messages while the bot is processing."
+          },
+          "enableStreaming": {
+            "type": "bool",
+            "required": false,
+            "title": "Stream Messages",
+            "description": "Stream direct-message replies via QQ stream messages (typewriter effect). Falls back to a single buffered message on failure."
+          },
+          "markdownSupport": {
+            "type": "bool",
+            "required": false,
+            "title": "Markdown Support",
+            "description": "Enable QQ markdown message mode for C2C and group replies when the bot has permission."
+          }
+        }
+      },
+      "user_config_schema": {
+        "version": 1,
+        "fields": {
+          "target_id": {
+            "type": "string",
+            "required": true,
+            "title": "Target ID"
+          },
+          "target_type": {
+            "type": "enum",
+            "required": true,
+            "title": "Target Type",
+            "enum": [
+              "c2c",
+              "group",
+              "channel"
+            ]
+          }
+        }
+      },
+      "target_spec": {
+        "format": "c2c:<openid> | group:<group_openid> | channel:<channel_id>",
+        "hints": [
+          {
+            "example": "c2c:00112233445566778899AABBCCDDEEFF",
+            "label": "Direct"
+          },
+          {
+            "example": "group:00112233445566778899AABBCCDDEEFF",
+            "label": "Group"
+          },
+          {
+            "example": "channel:1234567890",
+            "label": "Channel"
+          }
+        ]
+      }
+    },
+    {
+      "type": "slack",
+      "display_name": "Slack",
+      "configless": false,
+      "owner_only": false,
+      "capabilities": {
+        "text": true,
+        "markdown": true,
+        "rich_text": true,
+        "attachments": true,
+        "media": true,
+        "reactions": true,
+        "buttons": false,
+        "url_buttons": true,
+        "reply": true,
+        "threads": true,
+        "streaming": true,
+        "polls": false,
+        "edit": false,
+        "unsend": false,
+        "native_commands": false,
+        "native_user_input": false,
+        "block_streaming": true
+      },
+      "config_schema": {
+        "version": 1,
+        "fields": {
+          "appToken": {
+            "type": "secret",
+            "required": true,
+            "title": "App-Level Token",
+            "description": "Slack App-Level Token for Socket Mode (xapp-...)"
+          },
+          "botToken": {
+            "type": "secret",
+            "required": true,
+            "title": "Bot Token",
+            "description": "Slack Bot User OAuth Token (xoxb-...)"
+          }
+        }
+      },
+      "user_config_schema": {
+        "version": 1,
+        "fields": {
+          "channel_id": {
+            "type": "string",
+            "required": false
+          },
+          "user_id": {
+            "type": "string",
+            "required": false
+          },
+          "username": {
+            "type": "string",
+            "required": false
+          }
+        }
+      },
+      "target_spec": {
+        "format": "channel_id | user_id",
+        "hints": [
+          {
+            "example": "C0123456789",
+            "label": "Channel ID"
+          },
+          {
+            "example": "U0123456789",
+            "label": "User ID"
+          }
+        ]
+      }
+    },
+    {
+      "type": "telegram",
+      "display_name": "Telegram",
+      "configless": false,
+      "owner_only": false,
+      "capabilities": {
+        "text": true,
+        "markdown": true,
+        "rich_text": true,
+        "attachments": true,
+        "media": true,
+        "reactions": false,
+        "buttons": true,
+        "url_buttons": false,
+        "reply": true,
+        "threads": false,
+        "streaming": true,
+        "polls": false,
+        "edit": true,
+        "unsend": true,
+        "native_commands": false,
+        "native_user_input": true,
+        "block_streaming": true
+      },
+      "config_schema": {
+        "version": 1,
+        "fields": {
+          "apiBaseURL": {
+            "type": "string",
+            "required": false,
+            "order": 10,
+            "title": "API Base URL",
+            "description": "Reverse proxy base URL for the Telegram Bot API. Required in regions where Telegram is blocked (e.g. China mainland). Default: https://api.telegram.org"
+          },
+          "botToken": {
+            "type": "secret",
+            "required": true,
+            "title": "Bot Token"
+          },
+          "httpProxyUrl": {
+            "type": "secret",
+            "required": false,
+            "order": 20,
+            "title": "HTTP Proxy URL",
+            "description": "Optional outbound HTTP proxy URL for Telegram API requests, e.g. http://user:pass@host:port. Explicit adapter proxy overrides HTTP_PROXY/HTTPS_PROXY."
+          }
+        }
+      },
+      "user_config_schema": {
+        "version": 1,
+        "fields": {
+          "chat_id": {
+            "type": "string",
+            "required": false
+          },
+          "user_id": {
+            "type": "string",
+            "required": false
+          },
+          "username": {
+            "type": "string",
+            "required": false
+          }
+        }
+      },
+      "target_spec": {
+        "format": "chat_id | @username",
+        "hints": [
+          {
+            "example": "123456789",
+            "label": "Chat ID"
+          },
+          {
+            "example": "@alice",
+            "label": "Username"
+          }
+        ]
+      }
+    },
+    {
+      "type": "web",
+      "display_name": "Web",
+      "configless": true,
+      "owner_only": false,
+      "capabilities": {
+        "text": true,
+        "markdown": true,
+        "rich_text": false,
+        "attachments": true,
+        "media": false,
+        "reactions": false,
+        "buttons": false,
+        "url_buttons": false,
+        "reply": true,
+        "threads": false,
+        "streaming": true,
+        "polls": false,
+        "edit": false,
+        "unsend": false,
+        "native_commands": false,
+        "native_user_input": true,
+        "block_streaming": true
+      },
+      "config_schema": {
+        "version": 0,
+        "fields": null
+      },
+      "user_config_schema": {
+        "version": 0,
+        "fields": null
+      },
+      "target_spec": {
+        "format": "bot_id",
+        "hints": [
+          {
+            "example": "bot_123",
+            "label": "Bot ID"
+          }
+        ]
+      }
+    },
+    {
+      "type": "wechatoa",
+      "display_name": "WeChat Official Account",
+      "configless": false,
+      "owner_only": false,
+      "capabilities": {
+        "text": true,
+        "markdown": false,
+        "rich_text": false,
+        "attachments": true,
+        "media": true,
+        "reactions": false,
+        "buttons": false,
+        "url_buttons": false,
+        "reply": true,
+        "threads": false,
+        "streaming": false,
+        "polls": false,
+        "edit": false,
+        "unsend": false,
+        "native_commands": false,
+        "native_user_input": false,
+        "block_streaming": true,
+        "chat_types": [
+          "private"
+        ]
+      },
+      "config_schema": {
+        "version": 1,
+        "fields": {
+          "appId": {
+            "type": "string",
+            "required": true,
+            "title": "App ID"
+          },
+          "appSecret": {
+            "type": "secret",
+            "required": true,
+            "order": 10,
+            "title": "App Secret"
+          },
+          "encodingAESKey": {
+            "type": "secret",
+            "required": false,
+            "order": 30,
+            "title": "Encoding AES Key"
+          },
+          "encryptionMode": {
+            "type": "enum",
+            "required": true,
+            "order": 50,
+            "title": "Encryption Mode",
+            "enum": [
+              "safe",
+              "compat",
+              "plain"
+            ],
+            "example": "safe"
+          },
+          "httpProxyUrl": {
+            "type": "secret",
+            "required": false,
+            "order": 40,
+            "title": "HTTP Proxy URL",
+            "description": "Optional outbound HTTP proxy URL for WeChat API requests, e.g. http://user:pass@host:port. Explicit adapter proxy overrides HTTP_PROXY/HTTPS_PROXY."
+          },
+          "token": {
+            "type": "secret",
+            "required": true,
+            "order": 20,
+            "title": "Token"
+          }
+        }
+      },
+      "user_config_schema": {
+        "version": 1,
+        "fields": {
+          "openid": {
+            "type": "string",
+            "required": false
+          },
+          "unionid": {
+            "type": "string",
+            "required": false
+          }
+        }
+      },
+      "target_spec": {
+        "format": "openid:xxx",
+        "hints": [
+          {
+            "example": "openid:o6_bmjrPTlm6_2sgVt7hMZOPfL2M",
+            "label": "OpenID"
+          }
+        ]
+      }
+    },
+    {
+      "type": "wecom",
+      "display_name": "WeCom",
+      "configless": false,
+      "owner_only": false,
+      "capabilities": {
+        "text": true,
+        "markdown": true,
+        "rich_text": false,
+        "attachments": true,
+        "media": true,
+        "reactions": false,
+        "buttons": false,
+        "url_buttons": false,
+        "reply": true,
+        "threads": false,
+        "streaming": true,
+        "polls": false,
+        "edit": false,
+        "unsend": false,
+        "native_commands": false,
+        "native_user_input": false,
+        "block_streaming": true,
+        "chat_types": [
+          "private",
+          "group"
+        ]
+      },
+      "config_schema": {
+        "version": 1,
+        "fields": {
+          "ackTimeoutSeconds": {
+            "type": "number",
+            "required": false,
+            "title": "Ack Timeout Seconds"
+          },
+          "botId": {
+            "type": "string",
+            "required": true,
+            "title": "Bot ID"
+          },
+          "heartbeatSeconds": {
+            "type": "number",
+            "required": false,
+            "title": "Heartbeat Seconds"
+          },
+          "readTimeoutSeconds": {
+            "type": "number",
+            "required": false,
+            "title": "Read Timeout Seconds"
+          },
+          "secret": {
+            "type": "secret",
+            "required": true,
+            "title": "Secret"
+          },
+          "writeTimeoutSeconds": {
+            "type": "number",
+            "required": false,
+            "title": "Write Timeout Seconds"
+          },
+          "wsUrl": {
+            "type": "string",
+            "required": false,
+            "title": "WebSocket URL",
+            "example": "wss://openws.work.weixin.qq.com"
+          }
+        }
+      },
+      "user_config_schema": {
+        "version": 1,
+        "fields": {
+          "chat_id": {
+            "type": "string",
+            "required": false
+          },
+          "user_id": {
+            "type": "string",
+            "required": false
+          }
+        }
+      },
+      "target_spec": {
+        "format": "chat_id:xxx | user_id:xxx",
+        "hints": [
+          {
+            "example": "chat_id:work_abc",
+            "label": "Chat ID"
+          },
+          {
+            "example": "user_id:zhangsan",
+            "label": "User ID"
+          }
+        ]
+      }
+    },
+    {
+      "type": "weixin",
+      "display_name": "WeChat",
+      "configless": false,
+      "owner_only": true,
+      "capabilities": {
+        "text": true,
+        "markdown": false,
+        "rich_text": false,
+        "attachments": true,
+        "media": true,
+        "reactions": false,
+        "buttons": false,
+        "url_buttons": false,
+        "reply": true,
+        "threads": false,
+        "streaming": false,
+        "polls": false,
+        "edit": false,
+        "unsend": false,
+        "native_commands": false,
+        "native_user_input": false,
+        "block_streaming": true,
+        "chat_types": [
+          "private"
+        ]
+      },
+      "config_schema": {
+        "version": 1,
+        "fields": {
+          "enableTyping": {
+            "type": "bool",
+            "required": false,
+            "title": "Enable Typing Indicator"
+          },
+          "pollTimeoutSeconds": {
+            "type": "number",
+            "required": false,
+            "title": "Poll Timeout (s)"
+          },
+          "token": {
+            "type": "secret",
+            "required": true,
+            "title": "Token"
+          }
+        }
+      },
+      "user_config_schema": {
+        "version": 1,
+        "fields": {
+          "user_id": {
+            "type": "string",
+            "required": true,
+            "title": "WeChat User ID"
+          }
+        }
+      },
+      "target_spec": {
+        "format": "<user_id>",
+        "hints": [
+          {
+            "example": "abc123@im.wechat",
+            "label": "User ID"
+          }
+        ]
+      }
+    }
+  ]
+}

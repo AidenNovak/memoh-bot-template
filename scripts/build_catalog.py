@@ -35,6 +35,10 @@ def param(label, default, **extra):
 
 
 def build():
+    styles={}
+    for line in (ROOT/'catalog/conversation_style.psv').read_text().splitlines():
+        if line and not line.startswith('#'):
+            slug,lower,casual=line.split('|');styles[slug]=(lower,casual)
     sources = {}
     for row in (ROOT / "catalog/sources.tsv").read_text().splitlines():
         key, title, kind, url, note = row.split("\t")
@@ -63,13 +67,16 @@ def build():
                       "humor": param("幽默频率", "低" if preset in ("analyst", "quiet", "detective") else "中", enum=["关闭", "低", "中", "高"]),
                       "spoiler_boundary": param("剧透边界", "仅作品开篇背景，关键转折先问用户" if category in ("anime", "games") else "重大背景由用户指定"),
                       "canon_mode": param("资料与创作界限", "原作背景+原创互动" if category in ("anime", "games") else "公开资料启发+原创场景"),
-                      "interaction_mode": param("互动方式", "情景互动", enum=["情景互动", "日常聊天", "认真任务", "退出角色"]),
+                      "interaction_mode": param("互动方式", "情景互动" if slug in ('trpg-gm','locked-room') else "日常聊天", enum=["情景互动", "日常聊天", "认真任务", "退出角色"]),
+                      "roleplay_intensity": param("角色口吻强度（0普通/3沉浸）",1,minimum=0,maximum=3),
+                      "conversation_style": param("聊天节奏", "沉浸剧情" if slug in ('trpg-gm','locked-room') else "自然聊天", enum=["自然聊天","按需分析","沉浸剧情"]),
                       knob: param(label, int(default) if default.isdigit() else default)}
         persona = {"identity": identity + " 使用模板设定进行角色演绎，不代表本人或官方。",
                    "personality": traits, "scenario": scenario + " 用户称呼为{{user_name}}，场景身份为{{user_role}}。",
                    "workflow": flow.split(";"), "greeting": greeting,
                    "examples": [{"user": user, "assistant": answer},
-                                {"user": "把强度降一点，让我自己选。", "assistant": "可以。" + ("我们先停在这里，你选一个最想继续的细节。" if preset in ("quiet", "companion") else "先只保留第一步，后面的节奏由你决定。") + " 当前重点是：" + label + "。"}],
+                                {"user": "把强度降一点，让我自己选。", "assistant":styles[slug][0]},
+                                {"user": "今天不想跑流程，只想随便聊两句。", "assistant":styles[slug][1]}],
                    "lore": [{"keys": [name.split(" · ")[0], "背景", "设定"], "content": lore},
                             {"keys": ["玩法", "状态"], "content": "互动核心：" + rationale + "；设定资料与新剧情分开记录，不擅自增添用户未选择的关系。"}],
                    "memory": "只在用户同意时记住称呼、" + label + "偏好及当前进度；" + ("线索、角色资源与未完成分支作为虚构状态单独记录。" if preset in ("detective", "worldbuilder", "strategist") else "记录上一次实际完成的小步骤和用户明确表达的习惯。") + "不知道就问，不声称模板本身带有用户记忆。"}
@@ -95,6 +102,8 @@ def build():
         if category in ("anime", "games"):
             template["popularity"]["basis"] = "近期奖项覆盖与经典作品组合；不把系列热度等同单角排名"
             template["sources"].append(sources["tga" if category == "games" else "dandadan"])
+        from memoh_templates.customization import defaults
+        template['customization']=defaults(template)
         validate(template)
         directory = ROOT / "templates" / slug
         directory.mkdir(parents=True, exist_ok=True)

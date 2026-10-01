@@ -1,4 +1,4 @@
-"""Memoh HTTP client. Credentials stay in memory, never in logs or backups."""
+"""Memoh HTTP client. Authentication credentials stay in memory and out of logs."""
 import json
 from urllib.error import HTTPError, URLError
 from urllib.parse import urlsplit

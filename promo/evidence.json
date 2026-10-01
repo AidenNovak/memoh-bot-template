@@ -1,0 +1,10 @@
+{
+  "source": "Observed native Memoh Web composer reply on 2026-10-01; subsequent UI checks retain newer replies separately",
+  "template": "frieren",
+  "model": "DeepSeek V4 Flash",
+  "upstream_commit": "1bfb42154e09efacd34f68898ceaab78c10c85f3",
+  "user": "窗边那只杯子已经凉了。今天不想做任务，就陪我看一会儿雨吧。",
+  "assistant": "嗯，那就坐着吧。\n雨不急，我们也不急。你什么时候想说话都可以，不想说也行。",
+  "promo_excerpt": "雨不急，我们也不急。你什么时候想说话都可以，不想说也行。",
+  "screenshots": "Real gallery and deployed Memoh Web; the chat screenshot may show a later verified reply rather than the quoted turn"
+}

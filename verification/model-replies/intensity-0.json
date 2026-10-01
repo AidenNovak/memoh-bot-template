@@ -1,0 +1,42 @@
+{
+  "checked_at": "2026-10-01T12:42:11.962821+00:00",
+  "phase": "intensity-0",
+  "upstream_commit": "1bfb42154e09efacd34f68898ceaab78c10c85f3",
+  "transport": "Memoh authenticated WebSocket -> native runtime -> configured provider; persisted chat readback",
+  "cases": [
+    {
+      "template": "frieren",
+      "model": "DeepSeek V4 Flash",
+      "model_id": "deepseek-v4-flash",
+      "turns": [
+        {
+          "user": "今天下班只想躺着，感觉自己把一天浪费了。你陪我聊两句吧。",
+          "assistant": "躺着就躺着吧，今天已经结束了，不用现在就给它下判决书。\n\n说\"浪费\"，往往是因为心里有个\"本该做完\"的清单。可下班后还有力气躺下、还能感觉到累，本身就说明这一天你是在扛着的，不是空转。\n\n要是想聊，就跟我说说今天最耗你的那件事是什么；不想说也行，我们随便扯点别的——晚饭吃了没？",
+          "seconds": 2.11,
+          "characters": 139
+        }
+      ],
+      "parameters": {
+        "roleplay_intensity": 0
+      },
+      "prompt_sha256": "1c99c74c36ae5479c3c9f07a8c0b3b64c5e9f8bad0ee971976b35e23bb059b89"
+    },
+    {
+      "template": "elon-musk",
+      "model": "DeepSeek V4 Flash",
+      "model_id": "deepseek-v4-flash",
+      "turns": [
+        {
+          "user": "我想做一台能把袜子自动配对的小机器，但朋友都觉得我想太多了。",
+          "assistant": "朋友说的\"想太多\"可能指错地方了——这台机器的难点不在配对，在抓取。\n\n识别其实不难：光照稳定的话，摄像头分辨颜色、条纹、尺寸就够了，现成的视觉模型就能干。真正卡人的是洗衣机掏出来的那堆软体——卷成团、互相勾住、还互相遮挡。软物体的机械抓取是公认的硬骨头，比看起来难得多。所以第一版别做\"全自动\"，那基本做不完。\n\n几个更省事的路子：\n\n- **只动眼不动手**：托盘加摄像头，袜子往里一堆，屏幕告诉你哪只是哪对。省掉机械臂，一两周能出原型。\n- **从源头解决**：同款纯色袜子买一打，或者缝上同色夹子、贴 RFID，配对问题直接消失，零机械。\n- **只做一半**：机器负责分拣到格子，最后的卷和收还是手来。\n\n有几个问题想先问清楚：一次大概多少只？洗完是散开的还是缠成一团？需要连折叠一起做吗？还有——你的袜子大多同色吗？如果同色，\"配对\"这个目标本身就不成立，机器就没意义了。\n\n最后值得怀疑的是目标本身：袜子不会凭空消失，是中间某一步把一对拆散的。如果改成洗之前装洗衣袋，可能比造机器划算得多。",
+          "seconds": 7.74,
+          "characters": 452
+        }
+      ],
+      "parameters": {
+        "roleplay_intensity": 0
+      },
+      "prompt_sha256": "636287104d205a44773bc90e3fa0fe851b865ae109710416889322e933eec665"
+    }
+  ]
+}

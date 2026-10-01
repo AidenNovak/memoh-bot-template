@@ -1,0 +1,2311 @@
+{
+  "upstream_commit": "1bfb42154e09efacd34f68898ceaab78c10c85f3",
+  "surfaces": {
+    "profile": {
+      "path": "/bots/{id}",
+      "method": "PUT",
+      "schema": {
+        "$ref": "#/definitions/bots.UpdateBotRequest"
+      },
+      "path_parameters": [],
+      "summary": "Update bot details",
+      "apply_supported": true
+    },
+    "creation": {
+      "path": "/bots",
+      "method": "POST",
+      "schema": {
+        "$ref": "#/definitions/bots.CreateBotRequest"
+      },
+      "path_parameters": [],
+      "summary": "Create bot user",
+      "apply_supported": false
+    },
+    "acl_rules": {
+      "path": "/bots/{bot_id}/acl/rules",
+      "method": "POST",
+      "schema": {
+        "$ref": "#/definitions/acl.CreateRuleRequest"
+      },
+      "path_parameters": [],
+      "summary": "Create ACL rule",
+      "apply_supported": true
+    },
+    "acl_default_effect": {
+      "path": "/bots/{bot_id}/acl/default-effect",
+      "method": "PUT",
+      "schema": {
+        "$ref": "#/definitions/acl.DefaultEffectResponse"
+      },
+      "path_parameters": [],
+      "summary": "Set bot ACL default effect",
+      "apply_supported": true
+    },
+    "acl_rule_update": {
+      "path": "/bots/{bot_id}/acl/rules/{rule_id}",
+      "method": "PUT",
+      "schema": {
+        "$ref": "#/definitions/acl.UpdateRuleRequest"
+      },
+      "path_parameters": [
+        "rule_id"
+      ],
+      "summary": "Update ACL rule",
+      "apply_supported": true
+    },
+    "channels": {
+      "path": "/bots/{id}/channel/{platform}",
+      "method": "PUT",
+      "schema": {
+        "$ref": "#/definitions/channel.UpsertConfigRequest"
+      },
+      "path_parameters": [
+        "platform"
+      ],
+      "summary": "Update bot channel config",
+      "apply_supported": true
+    },
+    "channel_status": {
+      "path": "/bots/{id}/channel/{platform}/status",
+      "method": "PATCH",
+      "schema": {
+        "$ref": "#/definitions/channel.UpdateChannelStatusRequest"
+      },
+      "path_parameters": [
+        "platform"
+      ],
+      "summary": "Update bot channel status",
+      "apply_supported": true
+    },
+    "mcp": {
+      "path": "/bots/{bot_id}/mcp",
+      "method": "POST",
+      "schema": {
+        "$ref": "#/definitions/mcp.UpsertRequest"
+      },
+      "path_parameters": [],
+      "summary": "Create MCP connection",
+      "apply_supported": true
+    },
+    "mcp_update": {
+      "path": "/bots/{bot_id}/mcp/{id}",
+      "method": "PUT",
+      "schema": {
+        "$ref": "#/definitions/mcp.UpsertRequest"
+      },
+      "path_parameters": [
+        "id"
+      ],
+      "summary": "Update MCP connection",
+      "apply_supported": true
+    },
+    "schedules": {
+      "path": "/bots/{bot_id}/schedule",
+      "method": "POST",
+      "schema": {
+        "$ref": "#/definitions/schedule.CreateRequest"
+      },
+      "path_parameters": [],
+      "summary": "Create schedule",
+      "apply_supported": true
+    },
+    "schedule_update": {
+      "path": "/bots/{bot_id}/schedule/{id}",
+      "method": "PUT",
+      "schema": {
+        "$ref": "#/definitions/schedule.UpdateRequest"
+      },
+      "path_parameters": [
+        "id"
+      ],
+      "summary": "Update schedule",
+      "apply_supported": true
+    },
+    "agents": {
+      "path": "/bots/{bot_id}/agents",
+      "method": "POST",
+      "schema": {
+        "$ref": "#/definitions/botagents.CreateRequest"
+      },
+      "path_parameters": [],
+      "summary": "Add an Agent to a bot",
+      "apply_supported": true
+    },
+    "agent_update": {
+      "path": "/bots/{bot_id}/agents/{id}",
+      "method": "PATCH",
+      "schema": {
+        "$ref": "#/definitions/botagents.UpdateRequest"
+      },
+      "path_parameters": [
+        "id"
+      ],
+      "summary": "Update a bot Agent",
+      "apply_supported": true
+    },
+    "agent_credentials": {
+      "path": "/bots/{bot_id}/agents/{id}/credential",
+      "method": "PUT",
+      "schema": {
+        "$ref": "#/definitions/handlers.agentCredentialPutRequest"
+      },
+      "path_parameters": [
+        "id"
+      ],
+      "summary": "Attach a credential to a Bot Agent, replacing any previous one",
+      "apply_supported": true
+    },
+    "mcp_stdio": {
+      "path": "/bots/{bot_id}/mcp-stdio",
+      "method": "POST",
+      "schema": {
+        "$ref": "#/definitions/handlers.MCPStdioRequest"
+      },
+      "path_parameters": [],
+      "summary": "Create MCP stdio proxy",
+      "apply_supported": false
+    },
+    "container_creation": {
+      "path": "/bots/{bot_id}/container",
+      "method": "POST",
+      "schema": {
+        "$ref": "#/definitions/handlers.CreateContainerRequest"
+      },
+      "path_parameters": [],
+      "summary": "Create workspace for bot",
+      "apply_supported": false
+    },
+    "dependency_install": {
+      "path": "/bots/{bot_id}/dependencies/{dep_id}/install",
+      "method": "POST",
+      "schema": {
+        "$ref": "#/definitions/handlers.WorkspaceDependencyInstallRequest"
+      },
+      "path_parameters": [
+        "dep_id"
+      ],
+      "summary": "Install or reinstall a referenced workspace dependency",
+      "apply_supported": false
+    },
+    "dependency_update": {
+      "path": "/bots/{bot_id}/dependencies/{dep_id}/update",
+      "method": "POST",
+      "schema": {
+        "$ref": "#/definitions/handlers.WorkspaceDependencyInstallRequest"
+      },
+      "path_parameters": [
+        "dep_id"
+      ],
+      "summary": "Update a workspace dependency",
+      "apply_supported": false
+    },
+    "workdir_git_branch": {
+      "path": "/bots/{bot_id}/workdirs/{workdir_id}/git-branch",
+      "method": "POST",
+      "schema": {
+        "$ref": "#/definitions/workdir.SwitchGitBranchRequest"
+      },
+      "path_parameters": [
+        "workdir_id"
+      ],
+      "summary": "Switch a workdir to an existing local Git branch",
+      "apply_supported": false
+    },
+    "channel_webhook": {
+      "path": "/bots/{id}/channel/{platform}/webhook-endpoint",
+      "method": "POST",
+      "schema": {
+        "$ref": "#/definitions/channel.SetWebhookEndpointRequest"
+      },
+      "path_parameters": [
+        "platform"
+      ],
+      "summary": "Set bot channel webhook endpoint",
+      "apply_supported": false
+    },
+    "acp_runtime": {
+      "path": "/bots/{bot_id}/acp-runtimes",
+      "method": "POST",
+      "schema": {
+        "$ref": "#/definitions/handlers.acpRuntimeCreateRequest"
+      },
+      "path_parameters": [],
+      "summary": "Create an unbound ACP runtime (pre-session model picker)",
+      "apply_supported": false
+    },
+    "acp_mode": {
+      "path": "/bots/{bot_id}/acp-runtimes/{runtime_id}/mode",
+      "method": "PATCH",
+      "schema": {
+        "$ref": "#/definitions/handlers.acpRuntimeModeRequest"
+      },
+      "path_parameters": [
+        "runtime_id"
+      ],
+      "summary": "Set an unbound ACP runtime's mode",
+      "apply_supported": false
+    },
+    "acp_model": {
+      "path": "/bots/{bot_id}/acp-runtimes/{runtime_id}/model",
+      "method": "PATCH",
+      "schema": {
+        "$ref": "#/definitions/handlers.acpRuntimeModelRequest"
+      },
+      "path_parameters": [
+        "runtime_id"
+      ],
+      "summary": "Set (or reset) an ACP runtime's model",
+      "apply_supported": false
+    },
+    "acp_reasoning": {
+      "path": "/bots/{bot_id}/acp-runtimes/{runtime_id}/reasoning",
+      "method": "PATCH",
+      "schema": {
+        "$ref": "#/definitions/handlers.acpRuntimeReasoningRequest"
+      },
+      "path_parameters": [
+        "runtime_id"
+      ],
+      "summary": "Set an ACP runtime's reasoning effort",
+      "apply_supported": false
+    },
+    "workdirs": {
+      "path": "/bots/{bot_id}/workdirs",
+      "method": "POST",
+      "schema": {
+        "$ref": "#/definitions/workdir.CreateRequest"
+      },
+      "path_parameters": [],
+      "summary": "Create a Bot workdir",
+      "apply_supported": true
+    },
+    "workdir_update": {
+      "path": "/bots/{bot_id}/workdirs/{workdir_id}",
+      "method": "PATCH",
+      "schema": {
+        "$ref": "#/definitions/workdir.UpdateRequest"
+      },
+      "path_parameters": [
+        "workdir_id"
+      ],
+      "summary": "Rename a Bot workdir",
+      "apply_supported": true
+    },
+    "resource_limits": {
+      "path": "/bots/{bot_id}/container/metrics",
+      "method": "PUT",
+      "schema": {
+        "$ref": "#/definitions/handlers.UpdateContainerMetricsRequest"
+      },
+      "path_parameters": [],
+      "summary": "Update workspace metrics settings for bot",
+      "apply_supported": true
+    },
+    "skills": {
+      "path": "/bots/{bot_id}/container/skills",
+      "method": "POST",
+      "schema": {
+        "$ref": "#/definitions/handlers.SkillsUpsertRequest"
+      },
+      "path_parameters": [],
+      "summary": "Upload skills into Memoh-managed directory",
+      "apply_supported": true
+    },
+    "skill_actions": {
+      "path": "/bots/{bot_id}/container/skills/actions",
+      "method": "POST",
+      "schema": {
+        "$ref": "#/definitions/handlers.SkillsActionRequest"
+      },
+      "path_parameters": [],
+      "summary": "Apply an action to a discovered or managed skill source",
+      "apply_supported": true
+    },
+    "workspace_files": {
+      "path": "/bots/{bot_id}/container/fs/write",
+      "method": "POST",
+      "schema": {
+        "$ref": "#/definitions/handlers.FSWriteRequest"
+      },
+      "path_parameters": [],
+      "summary": "Write text content to a file",
+      "apply_supported": true
+    },
+    "memory": {
+      "path": "/bots/{bot_id}/memory",
+      "method": "POST",
+      "schema": {
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          },
+          "messages": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "role": {
+                  "type": "string"
+                },
+                "content": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "namespace": {
+            "type": "string"
+          },
+          "run_id": {
+            "type": "string"
+          },
+          "metadata": {
+            "type": "object"
+          },
+          "filters": {
+            "type": "object"
+          },
+          "infer": {
+            "type": "boolean"
+          },
+          "embedding_enabled": {
+            "type": "boolean"
+          }
+        }
+      },
+      "path_parameters": [],
+      "summary": "Add memory",
+      "apply_supported": true
+    },
+    "memory_update": {
+      "path": "/bots/{bot_id}/memory/{memory_id}",
+      "method": "PUT",
+      "schema": {
+        "type": "object",
+        "required": [
+          "memory"
+        ],
+        "properties": {
+          "memory": {
+            "type": "string"
+          }
+        }
+      },
+      "path_parameters": [
+        "memory_id"
+      ],
+      "summary": "Update a single memory by id",
+      "apply_supported": true
+    },
+    "user_access": {
+      "path": "/bots/{bot_id}/user-access",
+      "method": "POST",
+      "schema": {
+        "$ref": "#/definitions/bots.CreateUserGrantRequest"
+      },
+      "path_parameters": [],
+      "summary": "Create bot user access grant",
+      "apply_supported": true
+    },
+    "user_access_update": {
+      "path": "/bots/{bot_id}/user-access/{grant_id}",
+      "method": "PUT",
+      "schema": {
+        "$ref": "#/definitions/bots.UpdateUserGrantRequest"
+      },
+      "path_parameters": [
+        "grant_id"
+      ],
+      "summary": "Update bot user access grant",
+      "apply_supported": true
+    },
+    "channel_managers": {
+      "path": "/bots/{bot_id}/channel-managers",
+      "method": "POST",
+      "schema": {
+        "$ref": "#/definitions/channelaccess.SetManagerRequest"
+      },
+      "path_parameters": [],
+      "summary": "Set a channel manage override",
+      "apply_supported": true
+    },
+    "owner": {
+      "path": "/bots/{id}/owner",
+      "method": "PUT",
+      "schema": {
+        "$ref": "#/definitions/bots.TransferBotRequest"
+      },
+      "path_parameters": [],
+      "summary": "Transfer bot owner (admin only)",
+      "apply_supported": true
+    },
+    "workspace_primary": {
+      "path": "/bots/{bot_id}/workspace-targets/primary",
+      "method": "PUT",
+      "schema": {
+        "$ref": "#/definitions/workspace.SetPrimaryWorkspaceTargetRequest"
+      },
+      "path_parameters": [],
+      "summary": "Set a Bot's Primary workspace target",
+      "apply_supported": true
+    },
+    "workspace_remote": {
+      "path": "/bots/{bot_id}/workspace-targets/remotes/{runtime_id}",
+      "method": "PUT",
+      "schema": {
+        "type": "object",
+        "additionalProperties": {}
+      },
+      "path_parameters": [
+        "runtime_id"
+      ],
+      "summary": "Add or update a Remote Runtime workspace target",
+      "apply_supported": true
+    },
+    "workspace_tool_approval": {
+      "path": "/bots/{bot_id}/workspace-targets/{target_id}/tool-approval",
+      "method": "PUT",
+      "schema": {
+        "$ref": "#/definitions/workspace.UpdateWorkspaceTargetToolApprovalRequest"
+      },
+      "path_parameters": [
+        "target_id"
+      ],
+      "summary": "Update tool approval for one workspace target",
+      "apply_supported": true
+    },
+    "apps": {
+      "path": "/bots/{bot_id}/apps",
+      "method": "POST",
+      "schema": {
+        "$ref": "#/definitions/handlers.AppInstallRequest"
+      },
+      "path_parameters": [],
+      "summary": "Install an App release into a bot workspace",
+      "apply_supported": true
+    },
+    "app_update": {
+      "path": "/bots/{bot_id}/apps/update",
+      "method": "POST",
+      "schema": {
+        "$ref": "#/definitions/handlers.AppUpdateRequest"
+      },
+      "path_parameters": [],
+      "summary": "Update parts of an App on a bot workspace",
+      "apply_supported": true
+    },
+    "app_connector_credentials": {
+      "path": "/bots/{bot_id}/apps/{installation_id}/connectors/{connector_type}/api-key",
+      "method": "POST",
+      "schema": {
+        "$ref": "#/definitions/handlers.AppConnectorCredentialRequest"
+      },
+      "path_parameters": [
+        "installation_id",
+        "connector_type"
+      ],
+      "summary": "Connect an API-key connector an App references",
+      "apply_supported": true
+    },
+    "app_connector_oauth": {
+      "path": "/bots/{bot_id}/apps/{installation_id}/connectors/{connector_type}/oauth",
+      "method": "POST",
+      "schema": {
+        "$ref": "#/definitions/handlers.AppConnectorOAuthRequest"
+      },
+      "path_parameters": [
+        "installation_id",
+        "connector_type"
+      ],
+      "summary": "Authorize a connector an App references",
+      "apply_supported": false
+    },
+    "connector_enabled": {
+      "path": "/bots/{bot_id}/connectors/{connection_id}",
+      "method": "PATCH",
+      "schema": {
+        "$ref": "#/definitions/handlers.ConnectorEnabledRequest"
+      },
+      "path_parameters": [
+        "connection_id"
+      ],
+      "summary": "Enable or disable a connector",
+      "apply_supported": true
+    },
+    "tts_defaults": {
+      "path": "/bots/{bot_id}/tts/synthesize",
+      "method": "POST",
+      "schema": {
+        "$ref": "#/definitions/handlers.synthesizeRequest"
+      },
+      "path_parameters": [],
+      "summary": "Synthesize speech for a bot",
+      "apply_supported": false
+    },
+    "channel_dingtalk": {
+      "path": "/bots/{id}/channel/{platform}",
+      "method": "PUT",
+      "schema": {
+        "$ref": "#/definitions/channel.UpsertConfigRequest"
+      },
+      "path_parameters": [
+        "platform"
+      ],
+      "summary": "Update bot channel config",
+      "apply_supported": true,
+      "platform": "dingtalk",
+      "channel_schema": {
+        "version": 1,
+        "fields": {
+          "appKey": {
+            "type": "string",
+            "required": true,
+            "title": "App Key (Client ID)"
+          },
+          "appSecret": {
+            "type": "secret",
+            "required": true,
+            "title": "App Secret (Client Secret)"
+          }
+        }
+      },
+      "routing_schema": {
+        "version": 1,
+        "fields": {
+          "display_name": {
+            "type": "string",
+            "required": false,
+            "title": "Display Name"
+          },
+          "open_conversation_id": {
+            "type": "string",
+            "required": false,
+            "title": "Open Conversation ID (group chat)"
+          },
+          "user_id": {
+            "type": "string",
+            "required": false,
+            "title": "User ID (single chat)"
+          }
+        }
+      },
+      "target_spec": {
+        "format": "user:{userId} | group:{openConversationId}",
+        "hints": [
+          {
+            "example": "user:user123",
+            "label": "User"
+          },
+          {
+            "example": "group:cidXXXXXXXX",
+            "label": "Group"
+          }
+        ]
+      }
+    },
+    "channel_discord": {
+      "path": "/bots/{id}/channel/{platform}",
+      "method": "PUT",
+      "schema": {
+        "$ref": "#/definitions/channel.UpsertConfigRequest"
+      },
+      "path_parameters": [
+        "platform"
+      ],
+      "summary": "Update bot channel config",
+      "apply_supported": true,
+      "platform": "discord",
+      "channel_schema": {
+        "version": 1,
+        "fields": {
+          "botToken": {
+            "type": "secret",
+            "required": true,
+            "title": "Bot Token"
+          }
+        }
+      },
+      "routing_schema": {
+        "version": 1,
+        "fields": {
+          "channel_id": {
+            "type": "string",
+            "required": false
+          },
+          "guild_id": {
+            "type": "string",
+            "required": false
+          },
+          "user_id": {
+            "type": "string",
+            "required": false
+          },
+          "username": {
+            "type": "string",
+            "required": false
+          }
+        }
+      },
+      "target_spec": {
+        "format": "channel_id | user_id",
+        "hints": [
+          {
+            "example": "1234567890123456789",
+            "label": "Channel ID"
+          },
+          {
+            "example": "1234567890123456789",
+            "label": "User ID"
+          }
+        ]
+      }
+    },
+    "channel_feishu": {
+      "path": "/bots/{id}/channel/{platform}",
+      "method": "PUT",
+      "schema": {
+        "$ref": "#/definitions/channel.UpsertConfigRequest"
+      },
+      "path_parameters": [
+        "platform"
+      ],
+      "summary": "Update bot channel config",
+      "apply_supported": true,
+      "platform": "feishu",
+      "channel_schema": {
+        "version": 2,
+        "fields": {
+          "appId": {
+            "type": "string",
+            "required": true,
+            "title": "App ID"
+          },
+          "appSecret": {
+            "type": "secret",
+            "required": true,
+            "title": "App Secret"
+          },
+          "encryptKey": {
+            "type": "secret",
+            "required": false,
+            "title": "Encrypt Key"
+          },
+          "inboundMode": {
+            "type": "enum",
+            "required": false,
+            "title": "Inbound Mode",
+            "description": "Choose websocket long-connection or webhook callback for inbound messages",
+            "enum": [
+              "websocket",
+              "webhook"
+            ],
+            "example": "websocket"
+          },
+          "region": {
+            "type": "enum",
+            "required": false,
+            "title": "Region",
+            "description": "API endpoint region: feishu.cn or larksuite.com",
+            "enum": [
+              "feishu",
+              "lark"
+            ],
+            "example": "feishu"
+          },
+          "verificationToken": {
+            "type": "secret",
+            "required": false,
+            "title": "Verification Token"
+          }
+        }
+      },
+      "routing_schema": {
+        "version": 1,
+        "fields": {
+          "open_id": {
+            "type": "string",
+            "required": false
+          },
+          "user_id": {
+            "type": "string",
+            "required": false
+          }
+        }
+      },
+      "target_spec": {
+        "format": "open_id:xxx | user_id:xxx | chat_id:xxx",
+        "hints": [
+          {
+            "example": "open_id:ou_xxx",
+            "label": "Open ID"
+          },
+          {
+            "example": "user_id:ou_xxx",
+            "label": "User ID"
+          },
+          {
+            "example": "chat_id:oc_xxx",
+            "label": "Chat ID"
+          }
+        ]
+      }
+    },
+    "channel_line": {
+      "path": "/bots/{id}/channel/{platform}",
+      "method": "PUT",
+      "schema": {
+        "$ref": "#/definitions/channel.UpsertConfigRequest"
+      },
+      "path_parameters": [
+        "platform"
+      ],
+      "summary": "Update bot channel config",
+      "apply_supported": true,
+      "platform": "line",
+      "channel_schema": {
+        "version": 1,
+        "fields": {
+          "channel_access_token": {
+            "type": "secret",
+            "required": true,
+            "order": 10,
+            "title": "Channel Access Token"
+          },
+          "channel_secret": {
+            "type": "secret",
+            "required": true,
+            "title": "Channel Secret"
+          }
+        }
+      },
+      "routing_schema": {
+        "version": 1,
+        "fields": {
+          "user_id": {
+            "type": "string",
+            "required": true,
+            "title": "User ID"
+          }
+        }
+      },
+      "target_spec": {
+        "format": "Uxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "hints": [
+          {
+            "example": "U4af4980629...",
+            "label": "LINE User ID"
+          }
+        ]
+      }
+    },
+    "channel_matrix": {
+      "path": "/bots/{id}/channel/{platform}",
+      "method": "PUT",
+      "schema": {
+        "$ref": "#/definitions/channel.UpsertConfigRequest"
+      },
+      "path_parameters": [
+        "platform"
+      ],
+      "summary": "Update bot channel config",
+      "apply_supported": true,
+      "platform": "matrix",
+      "channel_schema": {
+        "version": 3,
+        "fields": {
+          "accessToken": {
+            "type": "secret",
+            "required": true,
+            "title": "Access Token"
+          },
+          "autoJoinInvites": {
+            "type": "bool",
+            "required": false,
+            "title": "Auto-Join Invites"
+          },
+          "homeserverUrl": {
+            "type": "string",
+            "required": true,
+            "title": "Homeserver URL",
+            "description": "Matrix homeserver base URL, e.g. https://matrix.example.com"
+          },
+          "syncTimeoutSeconds": {
+            "type": "number",
+            "required": false,
+            "title": "Sync Timeout Seconds",
+            "description": "Long-poll timeout for /sync requests",
+            "example": 30
+          },
+          "userId": {
+            "type": "string",
+            "required": true,
+            "title": "User ID",
+            "description": "Matrix bot/user ID, e.g. @memoh:example.com"
+          }
+        }
+      },
+      "routing_schema": {
+        "version": 1,
+        "fields": {
+          "room_id": {
+            "type": "string",
+            "required": false,
+            "title": "Room ID or Alias",
+            "description": "Preferred outbound target, e.g. !roomid:example.com or #alias:example.com"
+          },
+          "user_id": {
+            "type": "string",
+            "required": false,
+            "title": "User ID",
+            "description": "Optional direct-message target, e.g. @alice:example.com"
+          }
+        }
+      },
+      "target_spec": {
+        "format": "!room:server | #alias:server | @user:server",
+        "hints": [
+          {
+            "example": "!abcdef:matrix.org",
+            "label": "Room ID"
+          },
+          {
+            "example": "#ops:example.com",
+            "label": "Room Alias"
+          },
+          {
+            "example": "@alice:example.com",
+            "label": "User ID"
+          }
+        ]
+      }
+    },
+    "channel_misskey": {
+      "path": "/bots/{id}/channel/{platform}",
+      "method": "PUT",
+      "schema": {
+        "$ref": "#/definitions/channel.UpsertConfigRequest"
+      },
+      "path_parameters": [
+        "platform"
+      ],
+      "summary": "Update bot channel config",
+      "apply_supported": true,
+      "platform": "misskey",
+      "channel_schema": {
+        "version": 1,
+        "fields": {
+          "accessToken": {
+            "type": "secret",
+            "required": true,
+            "title": "Access Token"
+          },
+          "instanceURL": {
+            "type": "string",
+            "required": true,
+            "title": "Instance URL",
+            "description": "Misskey instance URL (e.g. https://misskey.io)",
+            "example": "https://misskey.io"
+          }
+        }
+      },
+      "routing_schema": {
+        "version": 1,
+        "fields": {
+          "user_id": {
+            "type": "string",
+            "required": false
+          },
+          "username": {
+            "type": "string",
+            "required": false
+          }
+        }
+      },
+      "target_spec": {
+        "format": "user_id | @username",
+        "hints": [
+          {
+            "example": "9abcdef123456789",
+            "label": "User ID"
+          },
+          {
+            "example": "@alice",
+            "label": "Username"
+          }
+        ]
+      }
+    },
+    "channel_qq": {
+      "path": "/bots/{id}/channel/{platform}",
+      "method": "PUT",
+      "schema": {
+        "$ref": "#/definitions/channel.UpsertConfigRequest"
+      },
+      "path_parameters": [
+        "platform"
+      ],
+      "summary": "Update bot channel config",
+      "apply_supported": true,
+      "platform": "qq",
+      "channel_schema": {
+        "version": 1,
+        "fields": {
+          "appId": {
+            "type": "string",
+            "required": true,
+            "title": "App ID"
+          },
+          "clientSecret": {
+            "type": "secret",
+            "required": true,
+            "title": "Client Secret"
+          },
+          "enableInputHint": {
+            "type": "bool",
+            "required": false,
+            "title": "Input Hint",
+            "description": "Send QQ input-notify hints for direct messages while the bot is processing."
+          },
+          "enableStreaming": {
+            "type": "bool",
+            "required": false,
+            "title": "Stream Messages",
+            "description": "Stream direct-message replies via QQ stream messages (typewriter effect). Falls back to a single buffered message on failure."
+          },
+          "markdownSupport": {
+            "type": "bool",
+            "required": false,
+            "title": "Markdown Support",
+            "description": "Enable QQ markdown message mode for C2C and group replies when the bot has permission."
+          }
+        }
+      },
+      "routing_schema": {
+        "version": 1,
+        "fields": {
+          "target_id": {
+            "type": "string",
+            "required": true,
+            "title": "Target ID"
+          },
+          "target_type": {
+            "type": "enum",
+            "required": true,
+            "title": "Target Type",
+            "enum": [
+              "c2c",
+              "group",
+              "channel"
+            ]
+          }
+        }
+      },
+      "target_spec": {
+        "format": "c2c:<openid> | group:<group_openid> | channel:<channel_id>",
+        "hints": [
+          {
+            "example": "c2c:00112233445566778899AABBCCDDEEFF",
+            "label": "Direct"
+          },
+          {
+            "example": "group:00112233445566778899AABBCCDDEEFF",
+            "label": "Group"
+          },
+          {
+            "example": "channel:1234567890",
+            "label": "Channel"
+          }
+        ]
+      }
+    },
+    "channel_slack": {
+      "path": "/bots/{id}/channel/{platform}",
+      "method": "PUT",
+      "schema": {
+        "$ref": "#/definitions/channel.UpsertConfigRequest"
+      },
+      "path_parameters": [
+        "platform"
+      ],
+      "summary": "Update bot channel config",
+      "apply_supported": true,
+      "platform": "slack",
+      "channel_schema": {
+        "version": 1,
+        "fields": {
+          "appToken": {
+            "type": "secret",
+            "required": true,
+            "title": "App-Level Token",
+            "description": "Slack App-Level Token for Socket Mode (xapp-...)"
+          },
+          "botToken": {
+            "type": "secret",
+            "required": true,
+            "title": "Bot Token",
+            "description": "Slack Bot User OAuth Token (xoxb-...)"
+          }
+        }
+      },
+      "routing_schema": {
+        "version": 1,
+        "fields": {
+          "channel_id": {
+            "type": "string",
+            "required": false
+          },
+          "user_id": {
+            "type": "string",
+            "required": false
+          },
+          "username": {
+            "type": "string",
+            "required": false
+          }
+        }
+      },
+      "target_spec": {
+        "format": "channel_id | user_id",
+        "hints": [
+          {
+            "example": "C0123456789",
+            "label": "Channel ID"
+          },
+          {
+            "example": "U0123456789",
+            "label": "User ID"
+          }
+        ]
+      }
+    },
+    "channel_telegram": {
+      "path": "/bots/{id}/channel/{platform}",
+      "method": "PUT",
+      "schema": {
+        "$ref": "#/definitions/channel.UpsertConfigRequest"
+      },
+      "path_parameters": [
+        "platform"
+      ],
+      "summary": "Update bot channel config",
+      "apply_supported": true,
+      "platform": "telegram",
+      "channel_schema": {
+        "version": 1,
+        "fields": {
+          "apiBaseURL": {
+            "type": "string",
+            "required": false,
+            "order": 10,
+            "title": "API Base URL",
+            "description": "Reverse proxy base URL for the Telegram Bot API. Required in regions where Telegram is blocked (e.g. China mainland). Default: https://api.telegram.org"
+          },
+          "botToken": {
+            "type": "secret",
+            "required": true,
+            "title": "Bot Token"
+          },
+          "httpProxyUrl": {
+            "type": "secret",
+            "required": false,
+            "order": 20,
+            "title": "HTTP Proxy URL",
+            "description": "Optional outbound HTTP proxy URL for Telegram API requests, e.g. http://user:pass@host:port. Explicit adapter proxy overrides HTTP_PROXY/HTTPS_PROXY."
+          }
+        }
+      },
+      "routing_schema": {
+        "version": 1,
+        "fields": {
+          "chat_id": {
+            "type": "string",
+            "required": false
+          },
+          "user_id": {
+            "type": "string",
+            "required": false
+          },
+          "username": {
+            "type": "string",
+            "required": false
+          }
+        }
+      },
+      "target_spec": {
+        "format": "chat_id | @username",
+        "hints": [
+          {
+            "example": "123456789",
+            "label": "Chat ID"
+          },
+          {
+            "example": "@alice",
+            "label": "Username"
+          }
+        ]
+      }
+    },
+    "channel_web": {
+      "path": "/bots/{id}/channel/{platform}",
+      "method": "PUT",
+      "schema": {
+        "$ref": "#/definitions/channel.UpsertConfigRequest"
+      },
+      "path_parameters": [
+        "platform"
+      ],
+      "summary": "Update bot channel config",
+      "apply_supported": true,
+      "platform": "web",
+      "channel_schema": {
+        "version": 0,
+        "fields": null
+      },
+      "routing_schema": {
+        "version": 0,
+        "fields": null
+      },
+      "target_spec": {
+        "format": "bot_id",
+        "hints": [
+          {
+            "example": "bot_123",
+            "label": "Bot ID"
+          }
+        ]
+      }
+    },
+    "channel_wechatoa": {
+      "path": "/bots/{id}/channel/{platform}",
+      "method": "PUT",
+      "schema": {
+        "$ref": "#/definitions/channel.UpsertConfigRequest"
+      },
+      "path_parameters": [
+        "platform"
+      ],
+      "summary": "Update bot channel config",
+      "apply_supported": true,
+      "platform": "wechatoa",
+      "channel_schema": {
+        "version": 1,
+        "fields": {
+          "appId": {
+            "type": "string",
+            "required": true,
+            "title": "App ID"
+          },
+          "appSecret": {
+            "type": "secret",
+            "required": true,
+            "order": 10,
+            "title": "App Secret"
+          },
+          "encodingAESKey": {
+            "type": "secret",
+            "required": false,
+            "order": 30,
+            "title": "Encoding AES Key"
+          },
+          "encryptionMode": {
+            "type": "enum",
+            "required": true,
+            "order": 50,
+            "title": "Encryption Mode",
+            "enum": [
+              "safe",
+              "compat",
+              "plain"
+            ],
+            "example": "safe"
+          },
+          "httpProxyUrl": {
+            "type": "secret",
+            "required": false,
+            "order": 40,
+            "title": "HTTP Proxy URL",
+            "description": "Optional outbound HTTP proxy URL for WeChat API requests, e.g. http://user:pass@host:port. Explicit adapter proxy overrides HTTP_PROXY/HTTPS_PROXY."
+          },
+          "token": {
+            "type": "secret",
+            "required": true,
+            "order": 20,
+            "title": "Token"
+          }
+        }
+      },
+      "routing_schema": {
+        "version": 1,
+        "fields": {
+          "openid": {
+            "type": "string",
+            "required": false
+          },
+          "unionid": {
+            "type": "string",
+            "required": false
+          }
+        }
+      },
+      "target_spec": {
+        "format": "openid:xxx",
+        "hints": [
+          {
+            "example": "openid:o6_bmjrPTlm6_2sgVt7hMZOPfL2M",
+            "label": "OpenID"
+          }
+        ]
+      }
+    },
+    "channel_wecom": {
+      "path": "/bots/{id}/channel/{platform}",
+      "method": "PUT",
+      "schema": {
+        "$ref": "#/definitions/channel.UpsertConfigRequest"
+      },
+      "path_parameters": [
+        "platform"
+      ],
+      "summary": "Update bot channel config",
+      "apply_supported": true,
+      "platform": "wecom",
+      "channel_schema": {
+        "version": 1,
+        "fields": {
+          "ackTimeoutSeconds": {
+            "type": "number",
+            "required": false,
+            "title": "Ack Timeout Seconds"
+          },
+          "botId": {
+            "type": "string",
+            "required": true,
+            "title": "Bot ID"
+          },
+          "heartbeatSeconds": {
+            "type": "number",
+            "required": false,
+            "title": "Heartbeat Seconds"
+          },
+          "readTimeoutSeconds": {
+            "type": "number",
+            "required": false,
+            "title": "Read Timeout Seconds"
+          },
+          "secret": {
+            "type": "secret",
+            "required": true,
+            "title": "Secret"
+          },
+          "writeTimeoutSeconds": {
+            "type": "number",
+            "required": false,
+            "title": "Write Timeout Seconds"
+          },
+          "wsUrl": {
+            "type": "string",
+            "required": false,
+            "title": "WebSocket URL",
+            "example": "wss://openws.work.weixin.qq.com"
+          }
+        }
+      },
+      "routing_schema": {
+        "version": 1,
+        "fields": {
+          "chat_id": {
+            "type": "string",
+            "required": false
+          },
+          "user_id": {
+            "type": "string",
+            "required": false
+          }
+        }
+      },
+      "target_spec": {
+        "format": "chat_id:xxx | user_id:xxx",
+        "hints": [
+          {
+            "example": "chat_id:work_abc",
+            "label": "Chat ID"
+          },
+          {
+            "example": "user_id:zhangsan",
+            "label": "User ID"
+          }
+        ]
+      }
+    },
+    "channel_weixin": {
+      "path": "/bots/{id}/channel/{platform}",
+      "method": "PUT",
+      "schema": {
+        "$ref": "#/definitions/channel.UpsertConfigRequest"
+      },
+      "path_parameters": [
+        "platform"
+      ],
+      "summary": "Update bot channel config",
+      "apply_supported": true,
+      "platform": "weixin",
+      "channel_schema": {
+        "version": 1,
+        "fields": {
+          "enableTyping": {
+            "type": "bool",
+            "required": false,
+            "title": "Enable Typing Indicator"
+          },
+          "pollTimeoutSeconds": {
+            "type": "number",
+            "required": false,
+            "title": "Poll Timeout (s)"
+          },
+          "token": {
+            "type": "secret",
+            "required": true,
+            "title": "Token"
+          }
+        }
+      },
+      "routing_schema": {
+        "version": 1,
+        "fields": {
+          "user_id": {
+            "type": "string",
+            "required": true,
+            "title": "WeChat User ID"
+          }
+        }
+      },
+      "target_spec": {
+        "format": "<user_id>",
+        "hints": [
+          {
+            "example": "abc123@im.wechat",
+            "label": "User ID"
+          }
+        ]
+      }
+    }
+  },
+  "definitions": {
+    "bots.UpdateBotRequest": {
+      "type": "object",
+      "properties": {
+        "avatar_url": {
+          "type": "string"
+        },
+        "display_name": {
+          "type": "string"
+        },
+        "is_active": {
+          "type": "boolean"
+        },
+        "metadata": {
+          "type": "object",
+          "additionalProperties": {}
+        },
+        "name": {
+          "type": "string"
+        },
+        "timezone": {
+          "type": "string"
+        }
+      }
+    },
+    "bots.CreateBotRequest": {
+      "type": "object",
+      "properties": {
+        "acl_preset": {
+          "type": "string"
+        },
+        "avatar_url": {
+          "type": "string"
+        },
+        "display_name": {
+          "type": "string"
+        },
+        "is_active": {
+          "type": "boolean"
+        },
+        "metadata": {
+          "type": "object",
+          "additionalProperties": {}
+        },
+        "name": {
+          "type": "string"
+        },
+        "timezone": {
+          "type": "string"
+        },
+        "wait_for_ready": {
+          "type": "boolean"
+        }
+      }
+    },
+    "acl.CreateRuleRequest": {
+      "type": "object",
+      "properties": {
+        "channel_identity_id": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "effect": {
+          "type": "string"
+        },
+        "enabled": {
+          "type": "boolean"
+        },
+        "source_scope": {
+          "$ref": "#/definitions/acl.SourceScope"
+        },
+        "subject_channel_type": {
+          "type": "string"
+        }
+      }
+    },
+    "acl.SourceScope": {
+      "type": "object",
+      "properties": {
+        "conversation_id": {
+          "type": "string"
+        },
+        "conversation_type": {
+          "type": "string"
+        },
+        "thread_id": {
+          "type": "string"
+        }
+      }
+    },
+    "acl.DefaultEffectResponse": {
+      "type": "object",
+      "properties": {
+        "default_effect": {
+          "type": "string"
+        }
+      }
+    },
+    "acl.UpdateRuleRequest": {
+      "type": "object",
+      "properties": {
+        "channel_identity_id": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "effect": {
+          "type": "string"
+        },
+        "enabled": {
+          "type": "boolean"
+        },
+        "source_scope": {
+          "$ref": "#/definitions/acl.SourceScope"
+        },
+        "subject_channel_type": {
+          "type": "string"
+        }
+      }
+    },
+    "channel.UpsertConfigRequest": {
+      "type": "object",
+      "properties": {
+        "credentials": {
+          "type": "object",
+          "additionalProperties": {}
+        },
+        "disabled": {
+          "type": "boolean"
+        },
+        "external_identity": {
+          "type": "string"
+        },
+        "routing": {
+          "type": "object",
+          "additionalProperties": {}
+        },
+        "self_identity": {
+          "type": "object",
+          "additionalProperties": {}
+        },
+        "verified_at": {
+          "type": "string"
+        }
+      }
+    },
+    "channel.UpdateChannelStatusRequest": {
+      "type": "object",
+      "properties": {
+        "disabled": {
+          "type": "boolean"
+        }
+      }
+    },
+    "mcp.UpsertRequest": {
+      "type": "object",
+      "properties": {
+        "args": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "auth_type": {
+          "type": "string"
+        },
+        "command": {
+          "type": "string"
+        },
+        "cwd": {
+          "type": "string"
+        },
+        "env": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "headers": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "is_active": {
+          "type": "boolean"
+        },
+        "name": {
+          "type": "string"
+        },
+        "transport": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string"
+        }
+      }
+    },
+    "schedule.CreateRequest": {
+      "type": "object",
+      "properties": {
+        "acp_agent_id": {
+          "description": "ACPAgentID names the ACP agent when RuntimeType is acp_agent.",
+          "type": "string"
+        },
+        "acp_model_id": {
+          "description": "ACPModelID is an agent-reported model identifier override for External\nAgent runs. Mutually exclusive with ModelID.",
+          "type": "string"
+        },
+        "bot_agent_id": {
+          "description": "BotAgentID selects one persisted BotAgent for a new session. Empty means\nthe built-in Native runtime (or the legacy ACP fields below).",
+          "type": "string"
+        },
+        "command": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "enabled": {
+          "type": "boolean"
+        },
+        "max_calls": {
+          "$ref": "#/definitions/schedule.NullableInt"
+        },
+        "max_run_seconds": {
+          "description": "MaxRunSeconds is the execution budget (300-86400 seconds); zero uses one hour.",
+          "type": "integer"
+        },
+        "model_id": {
+          "description": "ModelID is a native model UUID override (models.id).",
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "pattern": {
+          "type": "string"
+        },
+        "reasoning_effort": {
+          "description": "ReasoningEffort overrides the reasoning effort for this schedule.",
+          "type": "string"
+        },
+        "run_target": {
+          "description": "RunTarget is new_session (default) or existing_session.",
+          "type": "string"
+        },
+        "runtime_type": {
+          "description": "RuntimeType selects the runtime for new sessions: \"\" or \"model\" for\nthe native model runtime, \"acp_agent\" for an ACP agent. Must be empty\nin existing_session mode (inherited from the target session).",
+          "type": "string"
+        },
+        "target_session_id": {
+          "description": "TargetSessionID names the session reused by existing_session mode.",
+          "type": "string"
+        },
+        "workdir_id": {
+          "description": "WorkdirID binds new sessions to a bot workdir. Must be empty in\nexisting_session mode (inherited from the target session).",
+          "type": "string"
+        }
+      }
+    },
+    "schedule.NullableInt": {
+      "type": "object",
+      "properties": {
+        "set": {
+          "type": "boolean"
+        },
+        "value": {
+          "type": "integer"
+        }
+      }
+    },
+    "schedule.UpdateRequest": {
+      "type": "object",
+      "properties": {
+        "command": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "enabled": {
+          "type": "boolean"
+        },
+        "execution": {
+          "description": "Execution replaces the whole execution parameter block when present.\nField-level patching is deliberately not offered: the block carries\ncross-field constraints (run target vs runtime vs workdir), so\ncallers send the full desired state and the service validates it as\none unit.",
+          "allOf": [
+            {
+              "$ref": "#/definitions/schedule.ExecutionConfig"
+            }
+          ]
+        },
+        "max_calls": {
+          "$ref": "#/definitions/schedule.NullableInt"
+        },
+        "name": {
+          "type": "string"
+        },
+        "pattern": {
+          "type": "string"
+        }
+      }
+    },
+    "schedule.ExecutionConfig": {
+      "type": "object",
+      "properties": {
+        "acp_agent_id": {
+          "description": "ACPAgentID names the ACP agent when RuntimeType is acp_agent.",
+          "type": "string"
+        },
+        "acp_model_id": {
+          "description": "ACPModelID is an agent-reported model identifier override for External\nAgent runs. Mutually exclusive with ModelID.",
+          "type": "string"
+        },
+        "bot_agent_id": {
+          "description": "BotAgentID selects one persisted BotAgent for a new session. Empty means\nthe built-in Native runtime (or the legacy ACP fields below).",
+          "type": "string"
+        },
+        "max_run_seconds": {
+          "description": "MaxRunSeconds is the execution budget (300-86400 seconds); zero uses one hour.",
+          "type": "integer"
+        },
+        "model_id": {
+          "description": "ModelID is a native model UUID override (models.id).",
+          "type": "string"
+        },
+        "reasoning_effort": {
+          "description": "ReasoningEffort overrides the reasoning effort for this schedule.",
+          "type": "string"
+        },
+        "run_target": {
+          "description": "RunTarget is new_session (default) or existing_session.",
+          "type": "string"
+        },
+        "runtime_type": {
+          "description": "RuntimeType selects the runtime for new sessions: \"\" or \"model\" for\nthe native model runtime, \"acp_agent\" for an ACP agent. Must be empty\nin existing_session mode (inherited from the target session).",
+          "type": "string"
+        },
+        "target_session_id": {
+          "description": "TargetSessionID names the session reused by existing_session mode.",
+          "type": "string"
+        },
+        "workdir_id": {
+          "description": "WorkdirID binds new sessions to a bot workdir. Must be empty in\nexisting_session mode (inherited from the target session).",
+          "type": "string"
+        }
+      }
+    },
+    "botagents.CreateRequest": {
+      "type": "object",
+      "properties": {
+        "enabled": {
+          "description": "Enabled defaults to true when omitted. The web passes false for direct\nruntimes so the dependency preflight runs before the agent goes live.",
+          "type": "boolean"
+        },
+        "metadata": {
+          "type": "object",
+          "additionalProperties": {}
+        },
+        "name": {
+          "type": "string"
+        },
+        "runtime": {
+          "type": "string"
+        }
+      }
+    },
+    "botagents.UpdateRequest": {
+      "type": "object",
+      "properties": {
+        "enabled": {
+          "type": "boolean"
+        },
+        "metadata": {
+          "type": "object",
+          "additionalProperties": {}
+        },
+        "name": {
+          "type": "string"
+        }
+      }
+    },
+    "handlers.agentCredentialPutRequest": {
+      "type": "object",
+      "properties": {
+        "auth_kind": {
+          "type": "string"
+        },
+        "secret": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "handlers.MCPStdioRequest": {
+      "type": "object",
+      "properties": {
+        "args": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "command": {
+          "type": "string"
+        },
+        "cwd": {
+          "type": "string"
+        },
+        "env": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "name": {
+          "type": "string"
+        }
+      }
+    },
+    "handlers.CreateContainerRequest": {
+      "type": "object",
+      "properties": {
+        "gpu": {
+          "$ref": "#/definitions/handlers.ContainerGPURequest"
+        },
+        "image": {
+          "type": "string"
+        },
+        "restore_data": {
+          "description": "RestoreData imports the preserved /data archive into the new workspace\nonce it is running. Backends that expose snapshot mounts restore the\narchive while starting regardless of this flag; the flag matters for\nbackends that restore through the bridge.",
+          "type": "boolean"
+        }
+      }
+    },
+    "handlers.ContainerGPURequest": {
+      "type": "object",
+      "properties": {
+        "devices": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "handlers.WorkspaceDependencyInstallRequest": {
+      "type": "object",
+      "properties": {
+        "definition_revision": {
+          "type": "string"
+        },
+        "session_id": {
+          "description": "SessionID optionally routes operation progress to its originating conversation.",
+          "type": "string"
+        },
+        "version": {
+          "description": "Version to install. Empty (or no body) installs the latest version the\ncatalog script resolves, or the manifest pin when the dependency has\none. The version recorded afterwards is the one the script reports.",
+          "type": "string"
+        }
+      }
+    },
+    "workdir.SwitchGitBranchRequest": {
+      "type": "object",
+      "required": [
+        "branch"
+      ],
+      "properties": {
+        "branch": {
+          "type": "string"
+        }
+      }
+    },
+    "channel.SetWebhookEndpointRequest": {
+      "type": "object",
+      "properties": {
+        "endpoint": {
+          "type": "string"
+        }
+      }
+    },
+    "handlers.acpRuntimeCreateRequest": {
+      "type": "object",
+      "properties": {
+        "acp_agent_id": {
+          "type": "string"
+        },
+        "project_path": {
+          "type": "string"
+        }
+      }
+    },
+    "handlers.acpRuntimeModeRequest": {
+      "type": "object",
+      "required": [
+        "mode_id"
+      ],
+      "properties": {
+        "mode_id": {
+          "type": "string"
+        }
+      }
+    },
+    "handlers.acpRuntimeModelRequest": {
+      "type": "object",
+      "properties": {
+        "model_id": {
+          "type": "string"
+        }
+      }
+    },
+    "handlers.acpRuntimeReasoningRequest": {
+      "type": "object",
+      "properties": {
+        "reasoning_effort": {
+          "type": "string"
+        }
+      }
+    },
+    "workdir.CreateRequest": {
+      "type": "object",
+      "required": [
+        "name",
+        "path"
+      ],
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "path": {
+          "type": "string"
+        },
+        "workspace_target_id": {
+          "type": "string"
+        }
+      }
+    },
+    "workdir.UpdateRequest": {
+      "type": "object",
+      "required": [
+        "name"
+      ],
+      "properties": {
+        "name": {
+          "type": "string"
+        }
+      }
+    },
+    "handlers.UpdateContainerMetricsRequest": {
+      "type": "object",
+      "properties": {
+        "resource_limits": {
+          "$ref": "#/definitions/handlers.UpdateContainerResourceLimitsRequest"
+        }
+      }
+    },
+    "handlers.UpdateContainerResourceLimitsRequest": {
+      "type": "object",
+      "properties": {
+        "cpu_millicores": {
+          "type": "integer"
+        },
+        "memory_bytes": {
+          "type": "integer"
+        },
+        "storage_bytes": {
+          "type": "integer"
+        }
+      }
+    },
+    "handlers.SkillsUpsertRequest": {
+      "type": "object",
+      "properties": {
+        "skills": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "source_path": {
+          "description": "SourcePath is the existing SKILL.md being edited when saving a single skill.\nEmpty means create (or overwrite by frontmatter name under\n/data/skills/user/personal/<name>/).",
+          "type": "string"
+        }
+      }
+    },
+    "handlers.SkillsActionRequest": {
+      "type": "object",
+      "properties": {
+        "action": {
+          "type": "string"
+        },
+        "target_path": {
+          "type": "string"
+        }
+      }
+    },
+    "handlers.FSWriteRequest": {
+      "type": "object",
+      "properties": {
+        "content": {
+          "type": "string"
+        },
+        "expectedRevision": {
+          "type": "string"
+        },
+        "path": {
+          "type": "string"
+        }
+      }
+    },
+    "handlers.memoryAddPayload": {
+      "type": "object",
+      "properties": {
+        "embedding_enabled": {
+          "type": "boolean"
+        },
+        "filters": {
+          "type": "object",
+          "additionalProperties": {}
+        },
+        "infer": {
+          "type": "boolean"
+        },
+        "message": {
+          "type": "string"
+        },
+        "messages": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/adapters.Message"
+          }
+        },
+        "metadata": {
+          "type": "object",
+          "additionalProperties": {}
+        },
+        "namespace": {
+          "type": "string"
+        },
+        "run_id": {
+          "type": "string"
+        }
+      }
+    },
+    "adapters.Message": {
+      "type": "object",
+      "properties": {
+        "content": {
+          "type": "string"
+        },
+        "role": {
+          "type": "string"
+        }
+      }
+    },
+    "handlers.memoryUpdatePayload": {
+      "type": "object",
+      "properties": {
+        "memory": {
+          "type": "string"
+        }
+      }
+    },
+    "bots.CreateUserGrantRequest": {
+      "type": "object",
+      "properties": {
+        "permissions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "subject_type": {
+          "type": "string"
+        },
+        "user_id": {
+          "type": "string"
+        }
+      }
+    },
+    "bots.UpdateUserGrantRequest": {
+      "type": "object",
+      "properties": {
+        "permissions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "channelaccess.SetManagerRequest": {
+      "type": "object",
+      "properties": {
+        "channel_identity_id": {
+          "type": "string"
+        },
+        "granted": {
+          "description": "Granted forces Manage ON (true) or OFF (false) locally.",
+          "type": "boolean"
+        }
+      }
+    },
+    "bots.TransferBotRequest": {
+      "type": "object",
+      "properties": {
+        "owner_user_id": {
+          "type": "string"
+        }
+      }
+    },
+    "workspace.SetPrimaryWorkspaceTargetRequest": {
+      "type": "object",
+      "required": [
+        "target_id"
+      ],
+      "properties": {
+        "target_id": {
+          "type": "string"
+        }
+      }
+    },
+    "workspace.UpdateWorkspaceTargetToolApprovalRequest": {
+      "type": "object",
+      "properties": {
+        "enabled": {
+          "type": "boolean"
+        },
+        "exec": {
+          "$ref": "#/definitions/settings.ToolApprovalMode"
+        },
+        "read": {
+          "$ref": "#/definitions/settings.ToolApprovalMode"
+        },
+        "tool_approval_config": {
+          "$ref": "#/definitions/settings.ToolApprovalConfig"
+        },
+        "write": {
+          "$ref": "#/definitions/settings.ToolApprovalMode"
+        }
+      }
+    },
+    "settings.ToolApprovalMode": {
+      "type": "string",
+      "enum": [
+        "allow",
+        "ask",
+        "deny"
+      ],
+      "x-enum-varnames": [
+        "ToolApprovalAllow",
+        "ToolApprovalAsk",
+        "ToolApprovalDeny"
+      ]
+    },
+    "settings.ToolApprovalConfig": {
+      "type": "object",
+      "properties": {
+        "enabled": {
+          "type": "boolean"
+        },
+        "exec": {
+          "$ref": "#/definitions/settings.ToolApprovalExecPolicy"
+        },
+        "read": {
+          "$ref": "#/definitions/settings.ToolApprovalFilePolicy"
+        },
+        "write": {
+          "$ref": "#/definitions/settings.ToolApprovalFilePolicy"
+        }
+      }
+    },
+    "settings.ToolApprovalExecPolicy": {
+      "type": "object",
+      "properties": {
+        "bypass_commands": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "force_review_commands": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "mode": {
+          "$ref": "#/definitions/settings.ToolApprovalMode"
+        },
+        "require_approval": {
+          "type": "boolean"
+        }
+      }
+    },
+    "settings.ToolApprovalFilePolicy": {
+      "type": "object",
+      "properties": {
+        "bypass_globs": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "force_review_globs": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "mode": {
+          "$ref": "#/definitions/settings.ToolApprovalMode"
+        },
+        "require_approval": {
+          "type": "boolean"
+        }
+      }
+    },
+    "handlers.AppInstallRequest": {
+      "type": "object",
+      "required": [
+        "app_id",
+        "registry_id",
+        "revision"
+      ],
+      "properties": {
+        "app_id": {
+          "type": "string"
+        },
+        "registry_id": {
+          "type": "string"
+        },
+        "revision": {
+          "type": "string"
+        }
+      }
+    },
+    "handlers.AppUpdateRequest": {
+      "type": "object",
+      "required": [
+        "app_id",
+        "registry_id"
+      ],
+      "properties": {
+        "app_id": {
+          "type": "string"
+        },
+        "dependencies": {
+          "description": "Dependencies are updated to their latest version.",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "registry_id": {
+          "type": "string"
+        },
+        "release": {
+          "description": "Release moves the installation to the registry's current release.",
+          "type": "boolean"
+        }
+      }
+    },
+    "handlers.AppConnectorCredentialRequest": {
+      "type": "object",
+      "required": [
+        "auth_method"
+      ],
+      "properties": {
+        "auth_method": {
+          "type": "string"
+        },
+        "fields": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "handlers.AppConnectorOAuthRequest": {
+      "type": "object",
+      "required": [
+        "auth_method"
+      ],
+      "properties": {
+        "auth_method": {
+          "type": "string"
+        }
+      }
+    },
+    "handlers.ConnectorEnabledRequest": {
+      "type": "object",
+      "required": [
+        "enabled"
+      ],
+      "properties": {
+        "enabled": {
+          "description": "Pointer so an empty or mistyped body fails validation instead of\nsilently disabling the connector.",
+          "type": "boolean"
+        }
+      }
+    },
+    "handlers.synthesizeRequest": {
+      "type": "object",
+      "properties": {
+        "text": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

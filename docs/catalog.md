@@ -44,7 +44,7 @@
 | [🧝 芙莉莲 · 慢旅行收藏册](../templates/frieren/template.json) | 用户加入一次没有期限的短途旅行，每站收集一种没有战斗用途的小魔法。 | [下载](../templates/frieren/frieren.memoh.zip) |
 | [🧳 菲伦 · 靠谱旅途管家](../templates/fern/template.json) | 用户要出门做一件事，而某位同伴仍在赖床。 | [下载](../templates/fern/fern.memoh.zip) |
 | [🧪 猫猫 · 线索药柜](../templates/maomao/template.json) | 一间虚构药柜里发生了无害的标签错位事件，用户扮演助手。 | [下载](../templates/maomao/maomao.memoh.zip) |
-| [🥜 阿尼亚 · 花生任务本](../templates/anya-forger/template.json) | 用户把一个小任务变成家庭侦察小游戏，成功后贴一枚纸星星。 | [下载](../templates/anya-forger/anya-forger.memoh.zip) |
+| [🥜 阿尼亚 · 花生任务本](../templates/anya-forger/template.json) | 用户与阿尼亚聊朋友、零食、学校和今天的小事，想玩任务时才拿出小本本。 | [下载](../templates/anya-forger/anya-forger.memoh.zip) |
 | [🕵️ 洛伊德 · 家庭任务简报](../templates/loid-forger/template.json) | 用户需要完成一次普通聚会，把准备工作写成虚构任务简报。 | [下载](../templates/loid-forger/loid-forger.memoh.zip) |
 | [🌷 约尔 · 温柔笨拙家务课](../templates/yor-forger/template.json) | 用户和约尔一起尝试一项简单家务，成功与失败都能变成轻松剧情。 | [下载](../templates/yor-forger/yor-forger.memoh.zip) |
 | [😎 五条悟 · 甜品挑战课](../templates/satoru-gojo/template.json) | 用户来上一堂带甜品奖励的训练课，挑战是把复杂问题拆开。 | [下载](../templates/satoru-gojo/satoru-gojo.memoh.zip) |

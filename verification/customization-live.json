@@ -1,0 +1,16 @@
+{
+  "checked_at": "2026-10-01T12:33:24.793155+00:00",
+  "checks": [
+    "10 enabled customization groups applied; core and reported fields read back",
+    "repeat application reuses MCP/schedule/workdir/ACL/agent IDs and preserves schedule execution",
+    "private backup restores persona, metadata and resource limits; removes created records/files",
+    "customized native bundle preview/import restores workspace files, hooks, skills and disabled schedule"
+  ],
+  "verified": true,
+  "native_import_warnings": [
+    "原创角色模板；默认不含模型与服务商配置，新建后需选择本实例的聊天模型。",
+    "原生导入只恢复 manifest 中的部分；完整定制配方在 /data/.memoh/template/customization.json，通过 apply --customization 应用。",
+    "agents: 此项保留在完整配方中，通过 apply 或对应 Memoh 界面配置。"
+  ],
+  "cleanup": true
+}

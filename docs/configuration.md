@@ -4,7 +4,7 @@
 
 ## 人格与互动
 
-选择页“调一调”支持 11 个参数：10 个通用项与一个角色专属项。修改后重新渲染实际写入的 `/data/AGENTS.md`，下载包也带同样的渲染结果。
+选择页“调一调”支持 13 个参数：12 个通用项与一个角色专属项。修改后重新渲染实际写入的 `/data/AGENTS.md`，下载包也带同样的渲染结果。
 
 | 参数 | 用途 | 可选或范围 |
 | --- | --- | --- |
@@ -18,9 +18,11 @@
 | spoiler_boundary | 剧透边界 | 文本 |
 | canon_mode | 资料与创作界限 | 文本 |
 | interaction_mode | 互动方式 | 情景互动、日常聊天、认真任务、退出角色 |
+| roleplay_intensity | 角色口吻强度 | 0–3，默认1，轻点角色细节 |
+| conversation_style | 回应方式 | 自然聊天、按需分析、沉浸剧情 |
 | 角色专属参数 | 如第一性原理强度、幕僚年代、旅行节奏、案件难度 | 各模板自带名称与默认值 |
 
-人格含身份、性格、场景、三段互动流程、开场、至少两段原创对话、世界设定与记忆约定。回复长度、幽默与亲近程度由模型理解，不能保证逐字限长。记忆约定不会凭空带来用户记忆。
+人格含身份、性格、场景、三段互动流程、开场、三段原创对话、世界设定与记忆约定。回复长度、幽默与亲近程度由模型理解，不能保证逐字限长。记忆约定不会凭空带来用户记忆。
 
 ## 29 个上游 Settings 字段
 
@@ -62,33 +64,59 @@
 
 不同角色分配给 13 种行为方案，采用不同推理偏好、压缩阈值、压缩目标、工具结果保留及工具调用可见性。人格与专属参数每个角色不同；共享方案不意味着所有 Settings 都不同。
 
-资料 `profile` 另含 display_name、avatar_url、timezone、is_active 四项，覆盖入口会应用全部四项。头像默认空，可在角色 JSON 中填入自己的地址。Bot 内部 name、id 与 metadata 不改。
+资料 `profile` 另含 display_name、avatar_url、timezone、is_active 四项，覆盖入口会应用全部四项。头像默认空，可在角色 JSON 中填入自己的地址。内部 name 与 metadata 默认保留；通过 customization.profile 可显式修改 name、metadata 及其他资料字段。id 是实例身份，不属于可改的配置。
 
-## 其他可配置面
+## 完整 Bot 定制
 
-这些字段完整展示模板适配范围，**不是覆盖按钮已安装的资源**：
+每份模板的 `customization` 包含 **58 个上游接口配置面**，以及 Hooks、连接器绑定说明、模型采样说明，共61组。请求字段从锁定的 OpenAPI 及源码提取，含嵌套对象、必填项与枚举：[完整字段合约](research/configuration-contract.json)。13种渠道的凭据、路由和目标格式另见[渠道合约](research/channel-schemas.json)。
 
-| 配置面 | 本库表示 | 实际处理 |
+| 配置 | 模板中的键 | 应用方式 |
 | --- | --- | --- |
-| 工作区资源 | workspace.resource_limits：CPU、内存、存储 | inherit；由实例管理员配置 |
-| 工作目录 | workspace.workdirs | 空草稿；保留实例现状 |
-| 频道与群聊 | extensions.channels | 推荐频道与回应规则；凭据在 Memoh 配置 |
-| MCP、ACL、Apps、Connectors、Agents、Skills | extensions 中同名列表 | 空草稿；原有资源不增删 |
-| 定时任务 | extensions.schedules | 部分角色含禁用草稿；需在 Memoh 单独创建和启用 |
-| Hooks | extensions.hooks | inherit；原有工作区文件保留 |
-| 语音 | extensions.voice | 沿用普通 TTS/STT 模型；不内置真人克隆声线 |
-| temperature、top_p、max_tokens | extensions.sampling | 当前 Bot Settings 没有对应字段，按模型/Provider 能力配置 |
+| 显示名、内部名、头像、时区、活跃、metadata | profile | 一键应用 |
+| 创建资料、ACL预设、等待工作区 | creation | CLI create 时应用 |
+| 默认ACL效果、规则、用户权限、渠道管理员、所有者 | acl_default_effect、acl_rules、user_access、channel_managers、owner及更新项 | 一键应用 |
+| 频道凭据、自身身份、路由、启用 | channels、channel_status、channel_平台名 | 一键应用；默认 disabled，不发消息 |
+| MCP名称、传输、URL、headers、工具开关及OAuth元数据 | mcp、mcp_update | 一键应用；默认不连接 |
+| Apps安装/更新、API Key授权、连接器开关 | apps、app_update、app_connector_credentials、connector_enabled | 一键应用；填本实例ID和环境引用 |
+| 外部Agent与凭据 | agents、agent_update、agent_credentials | 一键应用；OAuth仍需合法授权 |
+| 工作目录、CPU/内存/存储、额外文件 | workdirs、resource_limits、workspace_files | 一键应用；先创建目录内容，再注册目录 |
+| 技能内容与管理动作 | skills、skill_actions | 一键应用；技能写入当前上游管理路径 |
+| 定时任务与完整执行参数 | schedules、schedule_update | 一键应用；默认禁用，含运行时/模型/工作目录/时长/次数/目标会话 |
+| 初始记忆、记忆更新 | memory、memory_update | 一键应用；需实例支持所选记忆服务 |
+| 远程工作区、主目标、每目标工具审批 | workspace_remote、workspace_primary、workspace_tool_approval | 一键应用；使用已有运行时/目标ID |
+| Hooks配置 | hooks | 写入 /data/.memoh/hooks.json，包含34种事件、条件、动作及错误/超时策略 |
+| 容器镜像/GPU、MCP stdio、依赖版本、Git分支、ACP临时运行时 | container_creation、mcp_stdio、dependency_*、workdir_git_branch、acp_* | 列出完整请求，使用对应Memoh入口；会重建或运行进程，不在普通覆盖中自动执行 |
+| OAuth与webhook登记 | app_connector_oauth、channel_webhook | 列出完整请求，通过Memoh授权/登记入口 |
+| 语音文本/音色/格式/语言、采样 | tts_defaults、model_sampling | 请求级或Provider级参数；当前Bot Settings无独立采样字段 |
 
-本库不是全量 Bot 迁移工具。原生导入包只含资料、可移植行为设置与人格文件；频道密钥、用户资料、历史与其他工作区内容不会进入包。Native 新建后需要选择聊天模型；已有 Bot 覆盖会沿用现有模型绑定。
+每组默认 `mode: inherit`，普通覆盖沿用实例已有资源。只将需要的组设为 `mode: apply`；选择页“完整Bot定制”编辑器和 CLI `--customization` 使用同一流程。名称相同的 MCP、任务、Agent、目录和ACL规则会更新原记录，重复应用不会不断新增。
+
+```sh
+python3 -m memoh_templates apply frieren --bot YOUR_BOT_UUID \
+  --customization examples/customization.json --dry-run
+# 检查预览后去掉 --dry-run 即可应用
+```
+
+[示例配置](../examples/customization.json)含资料metadata、用户偏好文件、笔记目录、禁用MCP、禁用任务与资源限制。每份模板另附全部字段的可编辑表单。`requests`可含多个请求；路径UUID放 `path_parameters`。不支持的实例版本、未知字段、错误类型和缺失的环境变量在修改前报错。
+
+凭据写成 `{"env":"MEMOH_TELEGRAM_BOT_TOKEN"}`，由运行本地工具的进程读取环境变量。预览只显示扩展字段名，不输出凭据；空字符串默认省略，需要明确清空时写 `{"literal":""}`。环境变量不会自动从远程服务器读取。
+
+## 原生导入与完整配方
+
+原生包始终携带人格、可移植Settings和 `/data/.memoh/template/customization.json` 完整配方。开启的额外文件、技能、Hooks、MCP、ACL、频道、任务、资源限制和目录会写入原生支持的部分。环境引用保留为配方，不把运行环境的真实密钥打入下载包。其他接口配置随配方保留，通过本库apply或Memoh对应入口应用。
+
+当前上游原生任务导入仅恢复基础字段和max_run_seconds，会丢失模型/运行时/目标会话等执行覆盖；完整任务请用apply。模型UUID是实例绑定，新建后仍需选模型。本库不是用户历史或全局Provider迁移工具。
 
 ## 备份与恢复
 
-应用前保存目标资料、29 字段范围内的设置与原人格文件，备份目录 `.backups/`，文件权限 600，不纳入 Git。备份可能含你的自定义人格内容，应自行保管。
+应用前保存资料、29项Settings、人格，以及开启定制项的原状态。`.backups/`目录权限700，文件600，不进入Git。开启扩展后备份可能含私有频道/MCP数据，应妥善保管。
 
-应用依次写 Settings、资料、人格，再回读验证。人格以 revision 检查并发编辑；写入失败时按已尝试的步骤恢复设置和资料，只在文件仍等于本次模板时恢复人格。失败回滚也可能失败，工具会报告原备份位置。手动 `restore` 是明确恢复旧配置的操作。
+应用后回读资料、Settings和人格；扩展回读比较可读取的配置字段，并在结果的customization_receipts列出实际验证字段。密钥和被上游隐藏的metadata不声称逐值验证。额外文件使用revision，并发修改后的文件不会被失败回滚覆盖。
+
+失败时按已执行步骤补偿。已创建的MCP、任务、Agent、目录、ACL和普通权限记录可删除；原文件、技能、资料和资源上限可恢复。部分接口（记忆追加、技能管理动作、安装/更新App或授权等）没有通用可逆操作；OAuth凭据读接口会隐藏数据，不能靠回读恢复其完整密钥。发生这种情况工具会明确报告需按备份处理的项。超时写入可能结果未知，先检查Bot再重试。
 
 ```sh
 python3 -m memoh_templates restore .backups/GENERATED_BACKUP.json
 ```
 
-工作区的 MEMORY.md、PROFILES.md 与其他文件原样保留；旧会话上下文也保留。新建聊天会话可更清楚地看到新角色行为。
+默认没有启用workspace_files或memory，所以MEMORY.md、PROFILES.md、其他用户文件和旧会话均保留；开启相关组即表示有意修改所指定内容。用新聊天会话体验人格最直接。
