@@ -45,10 +45,14 @@ def defaults(template):
         if key=='profile':request.update(template['profile'],name=template['id'],metadata={})
         if key=='creation':request.update(template['profile'],name=template['id'],wait_for_ready=True,acl_preset='personal')
         if key in ['mcp','mcp_update']:request.update(name=template['id']+'-optional-mcp',transport='streamable-http',url='https://example.invalid/mcp',is_active=False)
-        if key in ['schedules','schedule_update']:request.update(name=template['id']+'-daily',pattern='0 21 * * *',command='用当前角色口吻询问今天一件小事。',enabled=False,max_calls=7,max_run_seconds=300,run_target='new_session')
+        if key in ['schedules','schedule_update']:
+            request.update(name=template['id']+'-daily',pattern='0 21 * * *',command='用当前角色口吻询问今天一件小事。',enabled=False,max_calls=7)
+            execution=request if key=='schedules' else request['execution']
+            execution.update(max_run_seconds=300,run_target='new_session')
         if key=='workdirs':request.update(name=template['id']+'-notes',path='/data/notes')
         if key=='resource_limits':request['resource_limits']={'cpu_millicores':500,'memory_bytes':536870912,'storage_bytes':5368709120}
-        if key in ['agents','agent_update']:request.update(name=template['id']+'-optional-agent',runtime='codex',enabled=False)
+        if key in ['agents','agent_update']:request.update(name=template['id']+'-optional-agent',enabled=False)
+        if key=='agents':request['runtime']='codex'
         if key in ['acl_rules','acl_rule_update']:request.update(description=template['id']+'-optional-rule',enabled=False,effect='allow')
         if key=='skills':request['skills']=[f"---\nname: {template['id']}-interaction\ndescription: 用户明确要求本角色的互动玩法时使用\n---\n\n# 互动参考\n\n"+'\n'.join('- '+s for s in template['persona']['workflow'])+'\n\n不逐轮执行；日常聊天先接住用户的话题。\n']
         if key=='workspace_files':request.update(path='/data/USER.md',content='用户主动提供并同意保留的偏好写在这里。')

@@ -531,19 +531,17 @@
             "acp_agent_id": "",
             "acp_model_id": "",
             "bot_agent_id": "",
-            "max_run_seconds": 0,
+            "max_run_seconds": 300,
             "model_id": "",
             "reasoning_effort": "",
-            "run_target": "",
+            "run_target": "new_session",
             "runtime_type": "",
             "target_session_id": "",
             "workdir_id": ""
           },
           "max_calls": 7,
           "name": "kento-nanami-daily",
-          "pattern": "0 21 * * *",
-          "max_run_seconds": 300,
-          "run_target": "new_session"
+          "pattern": "0 21 * * *"
         }
       ],
       "apply_supported": true
@@ -570,8 +568,7 @@
         {
           "enabled": false,
           "metadata": {},
-          "name": "kento-nanami-optional-agent",
-          "runtime": "codex"
+          "name": "kento-nanami-optional-agent"
         }
       ],
       "apply_supported": true

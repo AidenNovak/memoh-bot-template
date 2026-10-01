@@ -8,7 +8,7 @@ import zipfile
 from unittest.mock import patch
 from memoh_templates import catalog
 from memoh_templates.bundle import bundle
-from memoh_templates.customization import CONFIG, plan, safe_plan, snapshot_actions, execute, undo
+from memoh_templates.customization import CONFIG, plan, safe_plan, snapshot_actions, execute, undo, schema_for
 
 
 class CustomizationTests(unittest.TestCase):
@@ -23,6 +23,10 @@ class CustomizationTests(unittest.TestCase):
             self.assertEqual(set(template['customization']), set(CONFIG['surfaces']) | {'hooks', 'connector_bindings', 'model_sampling'})
             self.assertEqual(plan(template, {}, 'bot', self.contract), [])
             self.assertEqual(len(template['parameters']), 13)
+            for key, surface in CONFIG['surfaces'].items():
+                properties = schema_for(surface['schema']).get('properties', {})
+                for request in template['customization'][key]['requests']:
+                    self.assertEqual(set(request) - set(properties), set(), key)
         for platform in ['telegram', 'discord', 'feishu', 'qq', 'weixin', 'web']:
             self.assertIn('channel_' + platform, self.template['customization'])
 
