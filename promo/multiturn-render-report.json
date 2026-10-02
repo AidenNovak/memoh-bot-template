@@ -1,0 +1,31 @@
+{
+  "duration_seconds": 120.0,
+  "video": {
+    "codec_name": "h264",
+    "width": 1920,
+    "height": 1080,
+    "r_frame_rate": "30/1",
+    "pix_fmt": "yuv420p"
+  },
+  "audio": {
+    "codec_name": "aac",
+    "sample_rate": "48000",
+    "channels": 1
+  },
+  "file_bytes": 8017675,
+  "sha256": "889b9bf9783292740eb406fd9f39670cd9d84e63a601220825c4ea7f549a2eef",
+  "source_sha256": "ad9ee700124adf6d9c0661e112e3f3c4f526d095d173e6319736bf6e8acf1341",
+  "bots_shown": 4,
+  "consecutive_turns_per_bot": [
+    4,
+    5,
+    6,
+    7
+  ],
+  "reply_excerpts": 16,
+  "conversation_screen_seconds": 96,
+  "excerpt_fonts_px": 35,
+  "editing": "Verbatim persisted replies; contiguous excerpts; original turn order; waiting time compressed",
+  "illustrations": "Existing built-in image_gen hero/closing and attributed Bot avatars",
+  "music": "Original procedural arpeggio; no synthetic character voices"
+}

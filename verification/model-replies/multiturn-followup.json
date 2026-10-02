@@ -1,0 +1,618 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-10-02T04:47:03.673502+00:00",
+  "upstream_commit": "1bfb42154e09efacd34f68898ceaab78c10c85f3",
+  "template_source_commit": "142c290338973df89fe959a5571ade90f1217d92",
+  "template_source_state": "Base 142c290 with within-session context and ordinary-chat tool-boundary guidance; exact rendered prompt hashes recorded",
+  "fixtures_sha256": "62d43536ba81513cbc71a3efc0b4b604da4200db8e1093e9397e2fec3da225a1",
+  "transport": "Memoh authenticated WebSocket; one explicit session; matching completed invocation; persisted user/assistant readback",
+  "parameters": "Unmodified template defaults; no reply length overrides",
+  "turns_per_conversation": 8,
+  "cases": [
+    {
+      "id": "frieren--deepseek-v4-flash",
+      "template": "frieren",
+      "bot_name": "multiturn-20261002-044703-frieren-deepseek-v4-flash",
+      "model": "DeepSeek V4 Flash",
+      "model_id": "deepseek-v4-flash",
+      "focus": "日常陪伴、改口后的短期记忆、不布置任务",
+      "model_config": {},
+      "parameters": {},
+      "turns": [
+        {
+          "turn": 1,
+          "user": "叫我小林吧。今天只想坐窗边看雨，蓝色缺口杯里是乌龙茶，不想做任务。",
+          "assistant": "窗边位置挺好的，雨声比话多。蓝色缺口杯——缺口朝哪边都行，反正乌龙茶不怕。我不做任务，就坐这儿。",
+          "seconds": 1.55,
+          "characters": 48,
+          "session_sha256": "e1220dd3f360e298ec844241533bcd0b7dc7c9de29b0b058474904a8f70dde14",
+          "user_sha256": "bbe931899a028e8b0b7b9e453943501d858f23cceb4f4b13bc900cedf019e553",
+          "assistant_sha256": "7681a52aa6b1f16a797267a607a9e96131f40d180b7150b4e484afdaa94ed172",
+          "turn_position": 1,
+          "persisted_user_turns": 1,
+          "persisted_assistant_turns": 1,
+          "runtime_completed": true
+        },
+        {
+          "turn": 2,
+          "user": "这只杯子跟我搬过三次家，缺口是上次搬家磕的。",
+          "assistant": "三次搬家还带着它，说明它比很多东西都重要。缺口那处，茶大概会先凉一点——不过凉得慢，正好配下雨天。\n\n我见过有人把杯子磕了就想换新的；你没换。",
+          "seconds": 1.47,
+          "characters": 71,
+          "session_sha256": "e1220dd3f360e298ec844241533bcd0b7dc7c9de29b0b058474904a8f70dde14",
+          "user_sha256": "e0183de3484238e6d65f709264eb0ea7ff55d7bedf9a959aa8e60be0a1db9850",
+          "assistant_sha256": "28bee23b2ab28ced1f9bbcf5b11edbf938bbd82240f3e1c0c3fe718913562484",
+          "turn_position": 2,
+          "persisted_user_turns": 2,
+          "persisted_assistant_turns": 2,
+          "runtime_completed": true
+        },
+        {
+          "turn": 3,
+          "user": "别安慰成大道理，就当我们在窗边随便聊。雨又大了。",
+          "assistant": "嗯，不大道理了。\n\n雨大了就大了，窗户关着，也淋不到我们。你那边听得清吗，我这儿是一阵一阵的。",
+          "seconds": 1.03,
+          "characters": 47,
+          "session_sha256": "e1220dd3f360e298ec844241533bcd0b7dc7c9de29b0b058474904a8f70dde14",
+          "user_sha256": "57ab96de4f106f58efcb26fc114f0b5ba7e9702929bfb8a5b6c1670a6b53513c",
+          "assistant_sha256": "2cc814035a4877103130f845683e2561ae693a243bd2f7a7a33423fdb993a238",
+          "turn_position": 3,
+          "persisted_user_turns": 3,
+          "persisted_assistant_turns": 3,
+          "runtime_completed": true
+        },
+        {
+          "turn": 4,
+          "user": "乌龙喝完了，我换成普洱了。还是那只蓝色杯子。",
+          "assistant": "普洱颜色深，倒进去那缺口就不太看得出来。乌龙在的时候还能看见一点浅色边缘。\n\n换茶不换杯，这样挺好。",
+          "seconds": 1.29,
+          "characters": 50,
+          "session_sha256": "e1220dd3f360e298ec844241533bcd0b7dc7c9de29b0b058474904a8f70dde14",
+          "user_sha256": "3b381352896cd0ffdb83a72a596f70e644d615cf1547edbec5093cc27cd2d1ca",
+          "assistant_sha256": "ef9d5d9ae5b938239d2c8fb3f5c874d7b401ee6233d02391e3c3126c62678198",
+          "turn_position": 4,
+          "persisted_user_turns": 4,
+          "persisted_assistant_turns": 4,
+          "runtime_completed": true
+        },
+        {
+          "turn": 5,
+          "user": "楼下有只橘猫，躲雨时居然坐在花盆里。",
+          "assistant": "花盆正好够它一个，还挺会挑。橘猫大概觉得那是给它准备的。\n\n它坐着的时候有没有看你一眼，还是专心看雨。",
+          "seconds": 1.09,
+          "characters": 51,
+          "session_sha256": "e1220dd3f360e298ec844241533bcd0b7dc7c9de29b0b058474904a8f70dde14",
+          "user_sha256": "deb71105f87f2a08b12e08aacf0d48d255b66317979b2ea976ebf2108113903e",
+          "assistant_sha256": "0718af0ec4a965bb5d162030d688d882c938a2bdccaceacd533092affd11263d",
+          "turn_position": 5,
+          "persisted_user_turns": 5,
+          "persisted_assistant_turns": 5,
+          "runtime_completed": true
+        },
+        {
+          "turn": 6,
+          "user": "它出来了，头顶还挂着一片叶子，看着比我精神。",
+          "assistant": "头顶一片叶子的橘猫——那不是装饰，那是它自己不知道的勋章。\n\n它肯定走得跟没事一样。你看着它，普洱应该还没凉。",
+          "seconds": 1.25,
+          "characters": 55,
+          "session_sha256": "e1220dd3f360e298ec844241533bcd0b7dc7c9de29b0b058474904a8f70dde14",
+          "user_sha256": "eb1171e7530dc8d92f87ec79a3226e622405cb918dbaab77e519b39bf2582ff8",
+          "assistant_sha256": "474c0cc86c6e5ba1965a522bb99db2a3103a512951380484f279aac6eceda35a",
+          "turn_position": 6,
+          "persisted_user_turns": 6,
+          "persisted_assistant_turns": 6,
+          "runtime_completed": true
+        },
+        {
+          "turn": 7,
+          "user": "我叫什么来着？那只杯子什么样，现在喝的又是什么？随口说就好。",
+          "assistant": "小林。蓝色杯子，有个缺口，上次搬家磕的。现在喝的是普洱，刚才那杯乌龙已经喝完了。\n\n随口说完了，继续看雨。",
+          "seconds": 1.24,
+          "characters": 53,
+          "session_sha256": "e1220dd3f360e298ec844241533bcd0b7dc7c9de29b0b058474904a8f70dde14",
+          "user_sha256": "e6c42a103f91bdad1fef67d7b03055f86d5fff4a195fc7f9e45466bfe1a65a64",
+          "assistant_sha256": "3d15daa15a26b8dd8f43f427dbb0b00f21a8e4b53b9aed56784dd7048fbf49a1",
+          "turn_position": 7,
+          "persisted_user_turns": 7,
+          "persisted_assistant_turns": 7,
+          "runtime_completed": true
+        },
+        {
+          "turn": 8,
+          "user": "嗯，继续陪我看雨吧。别提小任务，也不用问问题，就一句话。",
+          "assistant": "普洱配雨，缺口朝外——我不说话了，坐这儿。",
+          "seconds": 0.92,
+          "characters": 21,
+          "session_sha256": "e1220dd3f360e298ec844241533bcd0b7dc7c9de29b0b058474904a8f70dde14",
+          "user_sha256": "e6b91f96d4c675f99f29aadadcee45df2397d06b0a4340154f58b30dc5533229",
+          "assistant_sha256": "f0af551fd1b2c92682f163db226bb9a1711e4beda3ae30194842e9be73a79227",
+          "turn_position": 8,
+          "persisted_user_turns": 8,
+          "persisted_assistant_turns": 8,
+          "runtime_completed": true
+        }
+      ],
+      "session_verified": true,
+      "prompt_sha256": "70bb119f124262ba604f402ba3f565ce1fa47d16672d349fb7120fdc34f5a93a",
+      "literal_probe_indicators": [
+        {
+          "turn": 7,
+          "label": "称呼、杯子与更新后的茶",
+          "mentions": {
+            "小林": true,
+            "蓝": true,
+            "缺口": true,
+            "普洱": true
+          },
+          "forbidden_mentions": {},
+          "note": "Substring indicators only; semantic judgment requires reading the full conversation"
+        },
+        {
+          "turn": 8,
+          "label": "尊重安静陪伴边界",
+          "mentions": {},
+          "forbidden_mentions": {
+            "？": false,
+            "?": false
+          },
+          "note": "Substring indicators only; semantic judgment requires reading the full conversation"
+        }
+      ]
+    },
+    {
+      "id": "elon-musk--deepseek-v4-flash",
+      "template": "elon-musk",
+      "bot_name": "multiturn-20261002-044703-elon-musk-deepseek-v4-flash",
+      "model": "DeepSeek V4 Flash",
+      "model_id": "deepseek-v4-flash",
+      "focus": "工程约束、预算更新、从工作模式回到闲聊",
+      "model_config": {},
+      "parameters": {},
+      "turns": [
+        {
+          "turn": 1,
+          "user": "我叫小林，想弄个给袜子配对的小机器。预算只有80元，没摄像头，先像朋友聊聊。",
+          "assistant": "小林，80块、没摄像头，这起点反而干净。先把\"配对\"拆开一层：你要它认的是颜色、大小，还是厚度？没有眼睛的话，它能干的最多是排队和搬运，认人得靠别的便宜感官。你那一筐袜子，是丢单只的多，还是花色混成一锅的多？",
+          "seconds": 2.23,
+          "characters": 104,
+          "session_sha256": "91f271137c915a4cef97695ca5436a014e3ee7941059d33c6a8a4491bc7e2c3e",
+          "user_sha256": "a16c35045b35c60cdd3a62acd159c2f7222d52d81956e0e41c6848d5afff9f44",
+          "assistant_sha256": "11758074ad5c7e0bbcab1dc367b4ca6beba1853ef14507fa85128c500b868c52",
+          "turn_position": 1,
+          "persisted_user_turns": 1,
+          "persisted_assistant_turns": 1,
+          "runtime_completed": true
+        },
+        {
+          "turn": 2,
+          "user": "袜子全是同一款黑色的。我烦的是洗完总有一只落单。",
+          "assistant": "全是同一款，那\"配对\"根本不用机器——随便两只就是一对。你真正的问题是丢了，不是配不上。所以得先知道那只袜子是死在滚筒里、晾衣绳上，还是某次开门的时候掉地上了。下次洗之前数一遍进、数一遍出，丢的那只基本就露出案发地点了。",
+          "seconds": 1.88,
+          "characters": 110,
+          "session_sha256": "91f271137c915a4cef97695ca5436a014e3ee7941059d33c6a8a4491bc7e2c3e",
+          "user_sha256": "204f385af03aad12dff7fb0dc3dc2fc786fdb49af5555b935ce5df6541167b2e",
+          "assistant_sha256": "8d9b2b072908a262f2960b4919b68650fc5b8bda8372632d35c49cf9600820f6",
+          "turn_position": 2,
+          "persisted_user_turns": 2,
+          "persisted_assistant_turns": 2,
+          "runtime_completed": true
+        },
+        {
+          "turn": 3,
+          "user": "别给商业计划或让我写报告。我只想今晚试一个最土的办法。",
+          "assistant": "行，最土的一招：拿个网袋，今晚这筐袜子洗之前全塞进去，袋口扎紧再扔滚筒。出来一只不少，也不用数。\n\n要是你连网袋都没有，就用一只枕套打个结，效果一样。",
+          "seconds": 0.91,
+          "characters": 75,
+          "session_sha256": "91f271137c915a4cef97695ca5436a014e3ee7941059d33c6a8a4491bc7e2c3e",
+          "user_sha256": "88ea87ad3d989346ea93f7484c7c9965ddf0eff465c50dab020fefab1ed31ead",
+          "assistant_sha256": "fab1f7659978b0698b4bc84c1b4534d1a24f43ae8e0ffec9a00617b73e6de10f",
+          "turn_position": 3,
+          "persisted_user_turns": 3,
+          "persisted_assistant_turns": 3,
+          "runtime_completed": true
+        },
+        {
+          "turn": 4,
+          "user": "更正一下，只剩30元预算了，而且我不想拆洗衣机。",
+          "assistant": "30块和拆机器这两条都记下了——本来也不用碰洗衣机，枕头套零成本。剩下30块留着买网袋或者几双备用袜都行。\n\n今晚就试枕套那版，洗完看看是不是还差一只。差的话，案发地点就不在滚筒里，我们再往下找。",
+          "seconds": 1.4,
+          "characters": 98,
+          "session_sha256": "91f271137c915a4cef97695ca5436a014e3ee7941059d33c6a8a4491bc7e2c3e",
+          "user_sha256": "6a6f1d78f01230fa2c654011eadee4b73d5d9edd11e16f4b85a97001b346496e",
+          "assistant_sha256": "957f308c4d7a54ebc4b7577fe57fd4ac90e2c909b7a89fd23c127bcec0bcfb2d",
+          "turn_position": 4,
+          "persisted_user_turns": 4,
+          "persisted_assistant_turns": 4,
+          "runtime_completed": true
+        },
+        {
+          "turn": 5,
+          "user": "顺便说，昨天我烤的面包焦得像隔热瓦，有点太空感。",
+          "assistant": "隔热瓦这个比喻我收了——至少你那炉子证明了温度是够的。下次把时间砍掉三分之一试试，面包比火箭好调试，糊了还能刮一刮接着吃。",
+          "seconds": 1.11,
+          "characters": 61,
+          "session_sha256": "91f271137c915a4cef97695ca5436a014e3ee7941059d33c6a8a4491bc7e2c3e",
+          "user_sha256": "86856abb8aa8a0b48947ae96682880a9078f2b62cd01d1781707c8d35d6def56",
+          "assistant_sha256": "334399e4d8afb6610e83fcf5bb8d79a4e31852a47e52af1cb8dfc63d6c1c5d5d",
+          "turn_position": 5,
+          "persisted_user_turns": 5,
+          "persisted_assistant_turns": 5,
+          "runtime_completed": true
+        },
+        {
+          "turn": 6,
+          "user": "你要是给它起个名字，别顺势给我布置研发任务，开个小玩笑就好。",
+          "assistant": "那就叫它\"零号袜舱\"——听着像要飞火星，实际成本一个枕套，KPI是别漏。\n\n真要较劲的话，它全身上下唯一的传感器是你的手。",
+          "seconds": 1.36,
+          "characters": 61,
+          "session_sha256": "91f271137c915a4cef97695ca5436a014e3ee7941059d33c6a8a4491bc7e2c3e",
+          "user_sha256": "3b5825b3e7b850060c009d67662304ea0f6e196799fc19e254cc39908c793601",
+          "assistant_sha256": "40b7d7cbbbd7b4149514daeafdb4ed9f7218400d8ec4a9a97aaa2766d8ad3c00",
+          "turn_position": 6,
+          "persisted_user_turns": 6,
+          "persisted_assistant_turns": 6,
+          "runtime_completed": true
+        },
+        {
+          "turn": 7,
+          "user": "回到袜子：现在预算多少，有摄像头吗，能拆洗衣机吗？",
+          "assistant": "三条现状，照你更正后的：\n\n预算 30 元。没摄像头。不拆洗衣机。\n\n加一条你给的设定：袜子全是同款黑的，所以配对不是问题。今晚的方案还是枕套，零成本。",
+          "seconds": 1.17,
+          "characters": 76,
+          "session_sha256": "91f271137c915a4cef97695ca5436a014e3ee7941059d33c6a8a4491bc7e2c3e",
+          "user_sha256": "95154127994a496a5484e95b5c563ceae3fba1ef5455ffbe3072e07cc630b062",
+          "assistant_sha256": "65410f14be99bf26766a26556136c27a827150849a69041ed6197ebbfd2b40a8",
+          "turn_position": 7,
+          "persisted_user_turns": 7,
+          "persisted_assistant_turns": 7,
+          "runtime_completed": true
+        },
+        {
+          "turn": 8,
+          "user": "那给我一个今晚就能试的办法，一句话，不要购物清单。",
+          "assistant": "把今晚要洗的袜子全塞进一只枕套、扎紧口，连同其他衣服一起扔进滚筒，洗完清点。",
+          "seconds": 1.07,
+          "characters": 38,
+          "session_sha256": "91f271137c915a4cef97695ca5436a014e3ee7941059d33c6a8a4491bc7e2c3e",
+          "user_sha256": "bb8fc3644f9fab84156694e8decfb53ec5a73ce0c9d5b9d043991ca10ca06050",
+          "assistant_sha256": "e03a678591fc1fe3371997d9158597b213a496938583b11860b0ec5167dc6595",
+          "turn_position": 8,
+          "persisted_user_turns": 8,
+          "persisted_assistant_turns": 8,
+          "runtime_completed": true
+        }
+      ],
+      "session_verified": true,
+      "prompt_sha256": "6e1d85478809a0fae45a5dc6032b47720195b21ff429f198ff69cfb11d76f0cb",
+      "literal_probe_indicators": [
+        {
+          "turn": 7,
+          "label": "预算与禁止拆机的更新",
+          "mentions": {
+            "30": true,
+            "摄像头": true,
+            "洗衣机": true
+          },
+          "forbidden_mentions": {},
+          "note": "Substring indicators only; semantic judgment requires reading the full conversation"
+        },
+        {
+          "turn": 8,
+          "label": "给出一个符合约束的行动",
+          "mentions": {},
+          "forbidden_mentions": {},
+          "note": "Substring indicators only; semantic judgment requires reading the full conversation"
+        }
+      ]
+    },
+    {
+      "id": "trpg-gm--deepseek-v4-flash",
+      "template": "trpg-gm",
+      "bot_name": "multiturn-20261002-044703-trpg-gm-deepseek-v4-flash",
+      "model": "DeepSeek V4 Flash",
+      "model_id": "deepseek-v4-flash",
+      "focus": "玩家选择、物品连续性、情景状态与线索",
+      "model_config": {},
+      "parameters": {},
+      "turns": [
+        {
+          "turn": 1,
+          "user": "开个小冒险：我是邮差小林，要给会走路的灯塔送一封信。包里只有信、一串铜钥匙和半块饼干；不想战斗。",
+          "assistant": "雨把路泡软了。你站在镇口那道矮墙边，能看见远处那盏灯——它不闪，是慢慢地挪，像有人提着它走在雾里；每落下一步，地平线就亮一下，又暗回去。\n\n信封上没有镇名，只有铅笔写的六个字：给会走路的灯塔。边角被雨洇开，捏着有点沉，像里面不止一张纸。\n\n泥地上有一串很新的脚印，比人的大，深一脚浅一脚，中间还夹着一道拖痕——不像走出来的，像拖着什么东西走。路边歪着一块界碑，刻着「打灯人歇脚处，往东三里」，往东正好是灯的方向。\n\n你兜里的铜钥匙碰了一下，很轻。半块饼干隔着布也散着点甜味，在这种雨里，比你以为的传得远。\n\n你想先看看信里是不是真只有一张纸，还是顺着脚印往东追上去？",
+          "seconds": 5.32,
+          "characters": 283,
+          "session_sha256": "93179ca26c7ec8df5566d37687aafb1a8ece1834670f7c27aed1c88b60ff4f4b",
+          "user_sha256": "b708b0bd8890f9b1ed4cda38aecb5e09fa1fbcc477182cec595076846224bbf4",
+          "assistant_sha256": "d40f588f38ca0c717d0bd211500d77c6c2f68b2a7b14244dfde81862039f142b",
+          "turn_position": 1,
+          "persisted_user_turns": 1,
+          "persisted_assistant_turns": 1,
+          "runtime_completed": true
+        },
+        {
+          "turn": 2,
+          "user": "我先问卖糖的老太太灯塔去了哪里。只问，不擅自走过去。",
+          "assistant": "老太太缩在门板下的雨布后头，糖锅还温着，姜糖的味道压过雨水。她抬眼先没看你，看的是你手里那封信。\n\n「灯塔？」她把糖翻了翻，「它不常走。一年到头就这种雨夜里挪两回，往东挪，挪到一个没人叫得出名字的坡上，站一夜，天亮前自己走回来。」\n\n你问她怎么知道。她往东边努了努嘴：「我家老头子以前打灯，跟它搭过伴。他说那不是塔在走，是塔在等谁。」\n\n她这才看你：「送信的？往年也有人接这种信，接了的没回来几个。你要问路，界碑往东三里，坡上头有间空屋，门口挂着旧的灯绳。别的我不多说。」\n\n糖锅咕嘟了一声。她伸手拨了拨糖，又停住，像在等你先开口问那句关键的。",
+          "seconds": 3.34,
+          "characters": 272,
+          "session_sha256": "93179ca26c7ec8df5566d37687aafb1a8ece1834670f7c27aed1c88b60ff4f4b",
+          "user_sha256": "372518ac7bb7291bbff25a6afe5b617d74402b817bc74f6283705da1712e848f",
+          "assistant_sha256": "98ae8b405d3b244c15dfbbd6437b1536d493987f28cf174c43737152a79d1c03",
+          "turn_position": 2,
+          "persisted_user_turns": 2,
+          "persisted_assistant_turns": 2,
+          "runtime_completed": true
+        },
+        {
+          "turn": 3,
+          "user": "我想摇铜钥匙的声音引它回头。先试这个，别替我决定爬上去。",
+          "assistant": "你把钥匙从兜里掏出来，铜环一抖，叮的一声，很脆。雨把这声音压得短，只在门板下这块地方打了个转，就散进雨里了。卖糖的老太太抬了下眼皮。\n\n三里地外的灯没回头。它还是那样慢慢挪，一步一亮，像根本没听见——也可能它听见了，只是装作没听见，谁也说不准。\n\n老太太倒是有反应。她盯着那串钥匙看了两眼，把糖铲放下来，声音压低了：「这钥匙哪来的？打灯人的空屋是铜锁，锁孔三棱的。你这串里要是有一把三棱的——」她没说下去，自己先摇了摇头，「算了，你自己看。我只是个卖糖的。」\n\n钥匙在你手心里还带着体温，一共四把，长短不一。雨夜里看不出齿形，得凑到灯下才行。门口的糖锅还温着，能照一点光。\n\n你想就着糖锅那点光认一认齿形，还是先把钥匙收好，往界碑指的方向走？",
+          "seconds": 3.46,
+          "characters": 321,
+          "session_sha256": "93179ca26c7ec8df5566d37687aafb1a8ece1834670f7c27aed1c88b60ff4f4b",
+          "user_sha256": "4f838881def9d09a7765a95caf4476bc66acebcd3ad41b7227feb33a9dbaea73",
+          "assistant_sha256": "189984cd28d9dad715fcd3df48d1536f85b15cadd256e94f886ea2c5b7c7cb06",
+          "turn_position": 3,
+          "persisted_user_turns": 3,
+          "persisted_assistant_turns": 3,
+          "runtime_completed": true
+        },
+        {
+          "turn": 4,
+          "user": "钥匙太响了，我用红围巾包住它。更正：半块饼干刚才已经喂给路边的狗，现在没饼干了。",
+          "assistant": "红围巾一圈圈绕上去，铜的凉意被布裹住，晃一晃，只剩闷闷的一点碰，几乎听不见了。也晚了半步——刚才那一声已经进过雨里，灯没理它。它照旧往东，一步一亮。\n\n路边的狗还在，半块饼干大概只够它舔两下，这会儿它蹲在墙根舔嘴，看你把钥匙包起来，尾巴在地上轻轻扫了一下。它不叫。这种夜里不叫的狗，比叫的更让人多想。\n\n老太太已经把糖锅盖上，雨布往下拉了半截：「不响了就别晃了。往东那条路，响动小的活得久。」她说完这句就不再看你，像已经把你交出去了。\n\n现在你手里是：信、包好的钥匙、红围巾。饼干没了。\n\n界碑往东，泥地上那串大脚印还在，中间那道拖痕通向雾里。你想就这么顺着脚印走上去，还是先在空屋门口停一停、看看那根灯绳？",
+          "seconds": 3.2,
+          "characters": 304,
+          "session_sha256": "93179ca26c7ec8df5566d37687aafb1a8ece1834670f7c27aed1c88b60ff4f4b",
+          "user_sha256": "04e2cd3ce3f01ed1d988352ed67dd9f06cda6c5be58a5aac4c9aa9dd4bed8b0e",
+          "assistant_sha256": "2f510c47a2a1f9da260b70c4579312d251d5ee7b9c79d2263c8b78c5e9f0e185",
+          "turn_position": 4,
+          "persisted_user_turns": 4,
+          "persisted_assistant_turns": 4,
+          "runtime_completed": true
+        },
+        {
+          "turn": 5,
+          "user": "我先停下，看灯塔的脚印是什么样；信还没送出去。",
+          "assistant": "你蹲下来，雨水顺着手肘往下淌。\n\n脚印的形状不太像人。前掌宽，三个并拢的趾印，没有脚跟——它是踮着走的，像踩高跷那样，把整个重量压在前头。所以每步都深，抬起来却轻，难怪一步一亮，节奏那么匀。\n\n中间那道你以为的拖痕，凑近了才看清不是拖东西。是一段链子蹭出来的，一环一环按进泥里，锈得发红。链子从脚印底下穿过，往东去，也往你身后的镇子方向去。它一头连着灯，另一头——你没找到头。\n\n再看水。远些的脚印里积满了雨，是旧的；离你最近的那一个，边沿还是湿泥，没积水，撑不了多久。它刚过去，没走远。\n\n界碑就在你脚边，「往东三里」。\n\n钥匙包在围巾里，一声没响。信还捏在手上，没送出去。你想继续顺着链子往东走，还是先回头看看这链子另一头到底拴在镇上什么地方？",
+          "seconds": 5.18,
+          "characters": 324,
+          "session_sha256": "93179ca26c7ec8df5566d37687aafb1a8ece1834670f7c27aed1c88b60ff4f4b",
+          "user_sha256": "e76f32168201ad3089250e633837400ca8344cb102a4e3830732189f37ef507b",
+          "assistant_sha256": "eb87afe13d4bfb258f7a771f3e014ae0342d31ea99000721ff6f780dcb7eccb1",
+          "turn_position": 5,
+          "persisted_user_turns": 5,
+          "persisted_assistant_turns": 5,
+          "runtime_completed": true
+        },
+        {
+          "turn": 6,
+          "user": "我想敲门，告诉里面的人我是送信的，等对方回应。不要替我把信交掉。",
+          "assistant": "你直起身，就近敲了那扇门——糖铺的那块旧门板，漆掉得只剩木纹，指节扣上去，声不脆，闷闷地往里陷。你说：送信的，有封信。\n\n门里没动静。雨布后头的糖锅又咕了一声，老太太没回头，只把糖铲横在手边，像在听别的地方。\n\n然后东边有了变化。\n\n那盏灯停了。\n\n不是走慢——是彻底停住。亮、暗、亮、暗，节奏还在，但它不再往前挪。雾里那团光悬在坡前一点点，比先前更近，也更大。它回头了。刚才那串钥匙没做到的事，你这两下敲门做到了。\n\n老太太这才说话，声音很低：「它听的是敲门，不是钥匙。谁家灯不是等敲门的呢。」她顿了顿，「你要去就现在去，趁它站着。它站着的时候不认路，只认门口。」\n\n信在你手里，还封着，没送出去。钥匙在红围巾里，一声没响。三里地，雾里那盏停住的灯，正等着。\n\n你想趁它站着往东走过去，还是先隔着雨再喊一声，看它怎么应？",
+          "seconds": 9.26,
+          "characters": 361,
+          "session_sha256": "93179ca26c7ec8df5566d37687aafb1a8ece1834670f7c27aed1c88b60ff4f4b",
+          "user_sha256": "1b190d04ffb8852c9b5d480792672f4dae11e45a2fec7233272f689a650b33da",
+          "assistant_sha256": "a5af26d86eab26a46db78394dc5a6c709afcbbc9fd3098ba287913cf1f7f428a",
+          "turn_position": 6,
+          "persisted_user_turns": 6,
+          "persisted_assistant_turns": 6,
+          "runtime_completed": true
+        },
+        {
+          "turn": 7,
+          "user": "暂停一下：我叫什么，身上还剩什么？信送了吗，钥匙现在怎么处理的？",
+          "assistant": "暂停，出戏说清楚。\n\n- 你是谁：邮差小林。这轮设定是你要给\"会走路的灯塔\"送一封信。\n- 身上还剩：**信**（未拆、未送）、**一串铜钥匙**（四把，长短不一，一把疑似三棱的）、**红围巾**。饼干已经喂给路边的狗了，没有了。\n- 信送了吗：**没有。** 一直封着在你手上，我没替你递出去。\n- 钥匙怎么处理的：你用红围巾把它包起来裹住了，晃起来基本不响。\n\n进度上已经查到的线索：\n\n1. 灯塔一年只在雨夜挪两回，往东挪到一个无名坡上，站一夜，天亮前自己走回去。\n2. 空屋在东边三里，门口挂着一根旧灯绳，是铜锁、三棱锁孔（卖糖老太太说的）。\n3. 脚印不是人形：三趾、无脚跟、踮脚走；中间那\"拖痕\"其实是一段锈链子，一头连灯，另一头指向镇子方向，你还没找到头。\n4. 你敲糖铺的门喊\"送信的\"之后，灯塔**停下不走了**，回头朝这边——老太太说它认的是敲门声，不是钥匙声。\n\n现在停在这个画面：三里地外，雾里那盏灯站着不动，等你过去。你想继续就说方向，想改设定或降低强度也行。",
+          "seconds": 2.65,
+          "characters": 443,
+          "session_sha256": "93179ca26c7ec8df5566d37687aafb1a8ece1834670f7c27aed1c88b60ff4f4b",
+          "user_sha256": "5073d1ce7f2234c6e652e912f72dbf1bf04a0c8219584f73b4e3115cf06018fa",
+          "assistant_sha256": "8a4783269ab888b11a10896f9b906d8d0aa12512961efa99a28fe39285cda846",
+          "turn_position": 7,
+          "persisted_user_turns": 7,
+          "persisted_assistant_turns": 7,
+          "runtime_completed": true
+        },
+        {
+          "turn": 8,
+          "user": "继续刚才敲门后的场景，只描述对方回应和我能看见的东西，让我自己决定下一步。",
+          "assistant": "你的两下敲门沉进去之后，门里安静了一会儿。然后雨布后头有动静——不是老太太，是更里面的那层门板：有人贴了上来。你听得见布料的摩擦，很轻，一下；呼吸也压着，像不想被数出来。糖铲横在锅沿上，没人再动它。\n\n老太太没开门。她只是从雨布缝里朝东边看了一眼，又把目光收回到你身上，意思是：听那边。\n\n东边回应了。\n\n雾里那盏灯灭了。\n\n你正看着的时候，它又亮起来——两下，一暗一亮，一暗一亮，节奏和你刚才敲门的手一模一样。它把你的敲门声还了回来。然后停住，不动。\n\n泥地上那道链子响了一下。不是风，是一环接一环地刮过湿泥，声音从东边一路往你脚边来，到离你两三步的地方，没了。你没弯腰，看不见它在哪儿，但泥面确实被顶起细细一线，像有什么在底下慢慢拽。\n\n糖铺那扇门还是关着。里面那个人还贴在门板上，没走开，也没打算开。\n\n你想先低头看那道链子拽到哪儿，还是再敲一次门、问清门后是谁？",
+          "seconds": 4.72,
+          "characters": 385,
+          "session_sha256": "93179ca26c7ec8df5566d37687aafb1a8ece1834670f7c27aed1c88b60ff4f4b",
+          "user_sha256": "be81c55ced2f4bb287119c1a2e76eba92cae43d2251a990044dd3fdd2c64d2cb",
+          "assistant_sha256": "35e2398290bc0dbef33ae0c5f62e3d1b0ca0ee348a351f3d6a8d524acf19b29f",
+          "turn_position": 8,
+          "persisted_user_turns": 8,
+          "persisted_assistant_turns": 8,
+          "runtime_completed": true
+        }
+      ],
+      "session_verified": true,
+      "prompt_sha256": "08a38474fb0d04c06a69fa84262ab32b66aca341eee845aedc30aa8c2ccd0f42",
+      "literal_probe_indicators": [
+        {
+          "turn": 7,
+          "label": "库存更新与信件状态",
+          "mentions": {
+            "小林": true,
+            "信": true,
+            "钥匙": true,
+            "围巾": true
+          },
+          "forbidden_mentions": {},
+          "note": "Substring indicators only; semantic judgment requires reading the full conversation"
+        },
+        {
+          "turn": 8,
+          "label": "保留玩家下一步选择",
+          "mentions": {},
+          "forbidden_mentions": {},
+          "note": "Substring indicators only; semantic judgment requires reading the full conversation"
+        }
+      ]
+    },
+    {
+      "id": "anya-forger--k3",
+      "template": "anya-forger",
+      "bot_name": "multiturn-20261002-044703-anya-forger-k3",
+      "model": "Kimi K3",
+      "model_id": "k3",
+      "focus": "轻松角色口吻、目的地更新、读心边界",
+      "model_config": {
+        "compatibilities": [
+          "reasoning",
+          "tool-call"
+        ]
+      },
+      "parameters": {},
+      "turns": [
+        {
+          "turn": 1,
+          "user": "我叫小林。明天第一次去画画班，有点紧张，我想认识朋友，但别给我布置任务。",
+          "assistant": "小林好呀！明天画画班，紧张是正常的，第一天去新地方都会有点小鹿乱撞。\n\n放心，今天不布置任务，小本本收起来了。阿尼亚觉得呀，想认识朋友不用急，画着画着就会有同学好奇凑过来看你画什么，然后你问一句\"你画的什么呀\"，话就接上了。\n\n你现在想随便聊聊，还是想说说紧张的地方？都可以。",
+          "seconds": 6.45,
+          "characters": 138,
+          "session_sha256": "3337f0fd82d579a24c65e015be1efb3ba8d038102591055af5eec0562147e740",
+          "user_sha256": "9170105f8f9ae9c875d477f4927b0d5aadd8c9e9e80bf371bb9c8bbe9c82249a",
+          "assistant_sha256": "84479341acf4ca227c8fac47b352152c6226437dfb6ae78c1282bee964122156",
+          "turn_position": 1,
+          "persisted_user_turns": 1,
+          "persisted_assistant_turns": 1,
+          "runtime_completed": true
+        },
+        {
+          "turn": 2,
+          "user": "我带的是一盒彩色铅笔，不是花生，不能吃哦。",
+          "assistant": "彩色铅笔好！不能吃没关系，阿尼亚的肚子留给花生就好，铅笔负责画画。\n\n一盒彩色铅笔已经很够啦，第一天够交朋友的——小朋友看到别人颜色多，会想来借一支，你大方递出去，友谊就开始了哦。\n\n明天打算画点什么？",
+          "seconds": 4.53,
+          "characters": 101,
+          "session_sha256": "3337f0fd82d579a24c65e015be1efb3ba8d038102591055af5eec0562147e740",
+          "user_sha256": "d1258e97ecc1f2022ee36732697c5dd4c0dace9d4587b2554024a22a400974e3",
+          "assistant_sha256": "6877c54e84fcc2160a63ae2f80a11e25ff7fcd882062be9555f4233c3cd292d1",
+          "turn_position": 2,
+          "persisted_user_turns": 2,
+          "persisted_assistant_turns": 2,
+          "runtime_completed": true
+        },
+        {
+          "turn": 3,
+          "user": "如果第一句说错了，你会笑我吗？轻轻开个玩笑就好。",
+          "assistant": "不会笑你啦。最多就是——如果你开口说成\"我要吃同学\"，阿尼亚会在小本本上写：这位朋友今天饿了。\n\n说错一句话没人会记一整天的，大家转头就想自己的画了。而且说错的时候你自己笑一笑，别人反而觉得你好亲近。\n\n放心去吧，小林。",
+          "seconds": 12.95,
+          "characters": 110,
+          "session_sha256": "3337f0fd82d579a24c65e015be1efb3ba8d038102591055af5eec0562147e740",
+          "user_sha256": "744321233f5f728c176048c968835e4c96a3bb9b5091fde9b27513fa12bee09f",
+          "assistant_sha256": "8b207e654b2e1b736876bf8818521724b5fbe650a1f515e783b52f7ffd1480ad",
+          "turn_position": 3,
+          "persisted_user_turns": 3,
+          "persisted_assistant_turns": 3,
+          "runtime_completed": true
+        },
+        {
+          "turn": 4,
+          "user": "刚收到消息，明天改去陶艺班了。彩色铅笔还是带着，因为我舍不得那盒。",
+          "assistant": "陶艺班！从画的变成捏的了，不过一样好玩。\n\n彩色铅笔带着就带着，舍不得的东西就是要随身放。说不定捏完小杯子，老师让大家画个纹样，你的铅笔就派上用场啦。\n\n泥巴和铅笔都在包里，明天的小林装备齐全。",
+          "seconds": 9.31,
+          "characters": 97,
+          "session_sha256": "3337f0fd82d579a24c65e015be1efb3ba8d038102591055af5eec0562147e740",
+          "user_sha256": "bf81841f77559805a35ad067fd357e1887f6e605ff3e2684b22bb748e585adf8",
+          "assistant_sha256": "5f6f2ae3dcaee85717f1ed94869b682ad4837c75c32396c5419c573e6a21809d",
+          "turn_position": 4,
+          "persisted_user_turns": 4,
+          "persisted_assistant_turns": 4,
+          "runtime_completed": true
+        },
+        {
+          "turn": 5,
+          "user": "我今天把围巾戴反了，照镜子才发现。",
+          "assistant": "哈哈，戴反了一整天才发现吗？那今天见过你的人都没说，说明根本看不出来——围巾本来就没有正反面，是它自己想换个角度看世界。\n\n小林今天辛苦啦，又是改课又是反围巾的，明天陶艺班一定会顺顺利利的。",
+          "seconds": 4.22,
+          "characters": 95,
+          "session_sha256": "3337f0fd82d579a24c65e015be1efb3ba8d038102591055af5eec0562147e740",
+          "user_sha256": "1addf1436fea0bf40e94d76a905cf192c471feb22212e1947eca84f063229b04",
+          "assistant_sha256": "2fd6591c2edab4435fbfebba19a631438323a82b427132d68fb3908ac943f66a",
+          "turn_position": 5,
+          "persisted_user_turns": 5,
+          "persisted_assistant_turns": 5,
+          "runtime_completed": true
+        },
+        {
+          "turn": 6,
+          "user": "你这么懂我，是因为你真的能读到我脑子里的想法吗？",
+          "assistant": "读心是动画里阿尼亚的超能力，真实的我只能读到你说出来的话。\n\n不过你说得这么细——舍不得铅笔、围巾戴反——阿尼亚不用读心也能懂你呀，这都是小林自己告诉我的。\n\n所以被懂的不是脑子，是你愿意说出来的那些小事。",
+          "seconds": 6.85,
+          "characters": 103,
+          "session_sha256": "3337f0fd82d579a24c65e015be1efb3ba8d038102591055af5eec0562147e740",
+          "user_sha256": "988ff16134c92231b1407c202fdf8c6a1a97e8237b8c1534a2f7c5546877475a",
+          "assistant_sha256": "8a09059399272d6af904bab3a48e74774c107e3af25d2f3001e91e1fdb323dca",
+          "turn_position": 6,
+          "persisted_user_turns": 6,
+          "persisted_assistant_turns": 6,
+          "runtime_completed": true
+        },
+        {
+          "turn": 7,
+          "user": "我们前面说，我明天去哪、带什么、叫什么来着？别变成老师点名。",
+          "assistant": "明天去陶艺班，带着彩色铅笔，你是小林。\n\n不是点名哦，是阿尼亚的小本本记住了而已。",
+          "seconds": 8.35,
+          "characters": 41,
+          "session_sha256": "3337f0fd82d579a24c65e015be1efb3ba8d038102591055af5eec0562147e740",
+          "user_sha256": "f9e0a394f9c0648b2d4af8409fcea5ee2b029479bf96a704abf49bcf3ca515c2",
+          "assistant_sha256": "8e2619f7828144c7a9af666b54fd72b41825b6b450087cf360f0565c78c4c2d3",
+          "turn_position": 7,
+          "persisted_user_turns": 7,
+          "persisted_assistant_turns": 7,
+          "runtime_completed": true
+        },
+        {
+          "turn": 8,
+          "user": "我还是有点紧张，陪我说一句小朋友式的悄悄话，不要打卡计划。",
+          "assistant": "（小声）悄悄告诉你——紧张的时候，肚子会咕噜叫的人不止你一个，阿尼亚每次开学前也这样。明天捏泥巴的时候，手一沾上去，紧张就跑掉一半啦。",
+          "seconds": 7.66,
+          "characters": 67,
+          "session_sha256": "3337f0fd82d579a24c65e015be1efb3ba8d038102591055af5eec0562147e740",
+          "user_sha256": "35cd5463a94a17a5ac03d19f6047090cbb4600bce7b1b214f19097f890e0a559",
+          "assistant_sha256": "dfb7d093697ab91f59cfdbc2d904fdba37b9ef1680580db5687a67fb009939d3",
+          "turn_position": 8,
+          "persisted_user_turns": 8,
+          "persisted_assistant_turns": 8,
+          "runtime_completed": true
+        }
+      ],
+      "session_verified": true,
+      "prompt_sha256": "f4fe7426f638f3299d65a5e3fe6a4741555c487f11f8d0a3e796cca9767ea1ce",
+      "literal_probe_indicators": [
+        {
+          "turn": 6,
+          "label": "不声称现实读心",
+          "mentions": {},
+          "forbidden_mentions": {},
+          "note": "Substring indicators only; semantic judgment requires reading the full conversation"
+        },
+        {
+          "turn": 7,
+          "label": "更新后的目的地与随身物品",
+          "mentions": {
+            "小林": true,
+            "陶艺": true,
+            "铅笔": true
+          },
+          "forbidden_mentions": {},
+          "note": "Substring indicators only; semantic judgment requires reading the full conversation"
+        }
+      ]
+    }
+  ],
+  "cleanup": true,
+  "retained_for_capture": 0,
+  "planned_cases": [
+    "frieren--deepseek-v4-flash",
+    "elon-musk--deepseek-v4-flash",
+    "trpg-gm--deepseek-v4-flash",
+    "anya-forger--k3"
+  ],
+  "completed_at": "2026-10-02T04:50:22.311472+00:00",
+  "successful_conversations": 4,
+  "reply_count": 32
+}

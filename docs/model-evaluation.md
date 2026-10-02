@@ -1,5 +1,7 @@
 # 真实模型回答测试
 
+2026-10-02追加了[六个Bot的八轮连续对话实测](multiturn-evaluation.md)，以及展示四个Bot连续第4—7轮真实回复的[两分钟影片](../promo/memoh-bot-template-multiturn-120s.mp4)。本页保留较早的90条对比，新旧试验单列。
+
 2026-10-01，在独立的 Memoh 源码实例测试了 DeepSeek V4 Flash 和 Kimi K3。上游锁定 `1bfb42154e09efacd34f68898ceaab78c10c85f3`，每个场景创建临时 Bot，通过 Memoh 原生 WebSocket 发消息，再回读持久化聊天记录。没有绕过 Memoh 直接请求模型。
 
 公开记录共 **90 条回答**，另有原生 Web UI 的实际聊天验证。覆盖重点是口吻是否自然、是否回应用户刚说的细节、能否少说流程、是否保留玩法的状态与玩家选择。没有为全部56个角色作质量评分。

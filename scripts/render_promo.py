@@ -28,19 +28,19 @@ def run(arguments):
     subprocess.run(arguments,check=True)
 
 
-def music(path):
+def music(path, duration=30):
     """Write an original soft arpeggio; no external recordings or dependencies."""
     rate=44100
     chords=[(261.63,329.63,392.00,493.88),(293.66,349.23,440.00,523.25),
             (261.63,349.23,440.00,523.25),(246.94,293.66,392.00,440.00),
             (261.63,329.63,392.00,523.25),(261.63,329.63,392.00,493.88)]
     notes=[]
-    for step in range(60):
-        chord=chords[min(5,int(step*.5/5))]
+    for step in range(math.ceil(duration*2)):
+        chord=chords[int(step*.5/5)%len(chords)]
         notes.append((step*.5,chord[[0,2,1,3,2,1,3,2][step%8]],.07 if step%4==0 else .046))
     with wave.open(str(path),'wb') as output:
         output.setparams((1,2,rate,0,'NONE','not compressed'))
-        for second in range(30):
+        for second in range(duration):
             pcm=array.array('h')
             active=[note for note in notes if second-2<=note[0]<=second+1]
             for index in range(rate):
@@ -51,7 +51,7 @@ def music(path):
                     if 0<=age<2:
                         envelope=min(1,age/.018)*math.exp(-age*2.9)
                         sample+=volume*envelope*(math.sin(2*math.pi*freq*age)+.25*math.sin(4*math.pi*freq*age))
-                sample*=min(1,t/.5,(30-t)/1.5)
+                sample*=min(1,t/.5,(duration-t)/1.5)
                 pcm.append(round(max(-1,min(1,sample))*32767))
             output.writeframes(pcm.tobytes())
 

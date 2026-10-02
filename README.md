@@ -4,9 +4,13 @@
 
 56 个中文原创模板：8 位国际名人、6 位华语艺人与作家、6 位历史或文学人物、20 位动漫角色、8 位游戏角色、8 种原创互动玩法。每个模板有自己的性格、场景、首句、示例对话、长期记忆约定与独立旋钮，覆盖当前上游全部 **29 个 Bot Settings 字段**，并包含 **58 个配置接口面、13种渠道字段、Hooks、技能、记忆、任务与工作区**。研究参考 45 个来源，事实背景、同人演绎和原创玩法分别说明。
 
-[浏览全部模板](docs/catalog.md) · [参数与覆盖范围](docs/configuration.md) · [上游研究](docs/research/upstream.md) · [来源清单](docs/research/sources.json) · [验证记录](docs/verification.md) · [真实回答对比](docs/model-evaluation.md) · [部署与体验](docs/deployment.md)
+[浏览全部模板](docs/catalog.md) · [参数与覆盖范围](docs/configuration.md) · [上游研究](docs/research/upstream.md) · [来源清单](docs/research/sources.json) · [验证记录](docs/verification.md) · [真实回答对比](docs/model-evaluation.md) · [八轮对话实测](docs/multiturn-evaluation.md) · [部署与体验](docs/deployment.md)
 
-[观看30秒宣传片](promo/memoh-bot-template-30s.mp4) · [插画提示词与渲染源码](promo/README.md)
+[观看两分钟多轮实测宣传片](promo/memoh-bot-template-multiturn-120s.mp4) · [30秒功能介绍](promo/memoh-bot-template-30s.mp4) · [原文节选与渲染源码](promo/README.md)
+
+新版影片展示芙莉莲、马斯克、阿尼亚和TRPG连续第4—7轮，共16条真实回复节选：换茶、改预算、换课程，以及已用掉的物品。原始测试覆盖6个Bot×2个模型×8轮，修订后复测4段；称呼与更正多数能接住，也保留了笑话接偏等不足。[完整128条回复与评估](docs/multiturn-evaluation.md)可逐句核对。
+
+![四个Bot第7轮的真实回复节选](promo/multiturn-poster.png)
 
 ![模板选择页](verification/gallery-desktop.png)
 

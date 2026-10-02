@@ -7,4 +7,5 @@ dist/
 .DS_Store
 verification/local/
 promo/.render/
+promo/.render-multiturn/
 assets/avatars/.source/

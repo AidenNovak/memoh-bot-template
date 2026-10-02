@@ -1,0 +1,40 @@
+{
+  "checked_at": "2026-10-02T04:53:31.644Z",
+  "source": "verification/model-replies/multiturn-followup.json",
+  "messages_sent": 0,
+  "cases": [
+    {
+      "case_id": "frieren--deepseek-v4-flash",
+      "session_sha256": "e1220dd3f360e298ec844241533bcd0b7dc7c9de29b0b058474904a8f70dde14",
+      "pairs": 8,
+      "rendered": true,
+      "screenshot": "verification/multiturn-ui/frieren--deepseek-v4-flash.png",
+      "screenshot_sha256": "c376e5dc2cc7ad3940f5bc9c92ccbef700ed5b2467aaa4e4e09e5d33b6599458"
+    },
+    {
+      "case_id": "elon-musk--deepseek-v4-flash",
+      "session_sha256": "91f271137c915a4cef97695ca5436a014e3ee7941059d33c6a8a4491bc7e2c3e",
+      "pairs": 8,
+      "rendered": true,
+      "screenshot": "verification/multiturn-ui/elon-musk--deepseek-v4-flash.png",
+      "screenshot_sha256": "72f954b0920b632209f5a40418d13667eeb6126c53a0ab494e8289e77f5271fe"
+    },
+    {
+      "case_id": "anya-forger--k3",
+      "session_sha256": "3337f0fd82d579a24c65e015be1efb3ba8d038102591055af5eec0562147e740",
+      "pairs": 8,
+      "rendered": true,
+      "screenshot": "verification/multiturn-ui/anya-forger--k3.png",
+      "screenshot_sha256": "ed865fb42c7071bcfa85986d147a532156978f5cbba9922232c9b2d7f679bd95"
+    },
+    {
+      "case_id": "trpg-gm--deepseek-v4-flash",
+      "session_sha256": "93179ca26c7ec8df5566d37687aafb1a8ece1834670f7c27aed1c88b60ff4f4b",
+      "pairs": 8,
+      "rendered": true,
+      "screenshot": "verification/multiturn-ui/trpg-gm--deepseek-v4-flash.png",
+      "screenshot_sha256": "88ae4923f2a169f898b369d0c36573d4e41b646c16e4a2087cbc5bb62aa68b62"
+    }
+  ],
+  "verified": true
+}
