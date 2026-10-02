@@ -41,7 +41,7 @@ def main():
     if not model:raise RuntimeError('A configured chat model is required for live verification')
     before_ids={b['id'] for b in client.request('GET','/bots').get('items',[])}
     report={'checked_at':datetime.now(timezone.utc).isoformat(),'instance':'Isolated Memoh template evaluation (loopback API on vultr-sg)',
-            'upstream_commit':'1bfb42154e09efacd34f68898ceaab78c10c85f3','applied':[], 'native_previews':[], 'restored':False,'native_imported':False,'cleanup':False}
+            'upstream_commit':'1bfb42154e09efacd34f68898ceaab78c10c85f3','applied':[], 'native_previews':[], 'restored':False,'native_imported':False,'native_avatar_imported':False,'cleanup':False}
     created_ids=[]
     try:
         bot=client.request('POST','/bots',{'name':'template-verification-'+uuid.uuid4().hex[:8],'display_name':'Template verification','wait_for_ready':True})
@@ -76,6 +76,8 @@ def main():
         if any('failed' in w or 'skipped' in w for w in imported.get('warnings',[])):raise RuntimeError('Native import section failed')
         actual=client.request('GET','/bots/'+imported_id+'/container/fs/read?'+urlencode({'path':'/data/AGENTS.md'}))['content']
         if actual!=render(native):raise RuntimeError('Native import did not install actual AGENTS.md')
+        if client.request('GET','/bots/'+imported_id)['avatar_url']!=native['profile']['avatar_url']:raise RuntimeError('Native import lost embedded avatar')
+        report['native_avatar_imported']=True
         report['native_imported']=True
     finally:
         cleanup_errors=[]

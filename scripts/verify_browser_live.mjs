@@ -2,6 +2,7 @@
 // MEMOH_VERIFY_ENV points to a private env file containing MEMOH_ADMIN_PASSWORD.
 // Start the local gallery and a dedicated Chrome with debugging port 9228 first.
 import fs from 'node:fs';
+const expectedAvatar=JSON.parse(fs.readFileSync(new URL('../templates/frieren/template.json',import.meta.url),'utf8')).profile.avatar_url;
 const base=process.env.MEMOH_URL||'http://127.0.0.1:18081';
 const env=fs.readFileSync(process.env.MEMOH_VERIFY_ENV,'utf8');
 const line=env.split('\n').find(s=>s.startsWith('MEMOH_ADMIN_PASSWORD='));
@@ -38,11 +39,11 @@ try{
   const profile=await api('GET','/bots/'+bot.id),settings=await api('GET','/bots/'+bot.id+'/settings');
   const agents=await api('GET','/bots/'+bot.id+'/container/fs/read?path=%2Fdata%2FAGENTS.md');
   const sentinel=await api('GET','/bots/'+bot.id+'/container/fs/read?path=%2Fdata%2Fpreserve-test.txt');
-  if(!profile.display_name.includes('芙莉莲')||settings.chat_model_id!==model.id||!agents.content.includes('网页测试旅伴')||!agents.content.includes('旅行节奏：非常慢')||sentinel.content!=='preserve browser sentinel')throw new Error('Applied state differs from UI choice');
+  if(!profile.display_name.includes('芙莉莲')||profile.avatar_url!==expectedAvatar||settings.chat_model_id!==model.id||!agents.content.includes('网页测试旅伴')||!agents.content.includes('旅行节奏：非常慢')||sentinel.content!=='preserve browser sentinel')throw new Error('Applied state differs from UI choice');
   // The public screenshot omits machine-specific IDs and backup paths.
   await evaluate(`document.querySelector('#result').textContent=${JSON.stringify('应用成功 · 人格与配置已回读验证\n原配置已备份，聊天模型与其他文件保留')};document.querySelector('#bot').selectedOptions[0].textContent='临时验证 Bot'`);
   const screenshot=await call('Page.captureScreenshot',{format:'png'});fs.writeFileSync('verification/gallery-applied.png',Buffer.from(screenshot.data,'base64'));
-  fs.writeFileSync('verification/browser-live.json',JSON.stringify({checked_at:new Date().toISOString(),template:'frieren',checks:['real UI connection','credential inputs cleared','dry-run button','single-click overwrite','custom parameters in AGENTS.md','model binding preserved','other workspace file preserved'],verified:true},null,2)+'\n');
+  fs.writeFileSync('verification/browser-live.json',JSON.stringify({checked_at:new Date().toISOString(),template:'frieren',checks:['real UI connection','credential inputs cleared','dry-run button','single-click overwrite','embedded portrait applied','custom parameters in AGENTS.md','model binding preserved','other workspace file preserved'],verified:true},null,2)+'\n');
   console.log('Browser live checks passed: one-click overwrite and customized persona');
 }finally{
   if(bot)await api('DELETE','/bots/'+bot.id);

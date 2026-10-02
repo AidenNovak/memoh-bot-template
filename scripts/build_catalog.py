@@ -9,6 +9,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 from memoh_templates.catalog import SETTING_FIELDS, render, validate
 from memoh_templates.bundle import bundle
+from memoh_templates.avatars import data_url
 
 CATEGORIES = {"public-figures": "国际名人", "chinese-celebrities": "华语艺人与作家", "historical": "历史与文学人物",
               "anime": "动漫角色", "games": "游戏角色", "original": "原创互动玩法"}
@@ -35,6 +36,7 @@ def param(label, default, **extra):
 
 
 def build():
+    avatars = json.loads((ROOT / 'catalog/avatars.json').read_text())
     styles={}
     for line in (ROOT/'catalog/conversation_style.psv').read_text().splitlines():
         if line and not line.startswith('#'):
@@ -83,7 +85,8 @@ def build():
         template = {"schema_version": 1, "id": slug, "name": name, "category": category, "icon": icon,
                     "description": scenario, "version": "1.0.0", "license": "AGPL-3.0-only",
                     "sources": [sources[source]], "popularity": {"basis": "原创玩法" if category == "original" else "官方资料与人工选材，非人气排名", "checked_at": "2026-10-01"},
-                    "profile": {"display_name": name, "avatar_url": "", "timezone": "Asia/Shanghai", "is_active": True},
+                    "avatar": avatars[slug],
+                    "profile": {"display_name": name, "avatar_url": data_url(avatars[slug]), "timezone": "Asia/Shanghai", "is_active": True},
                     "settings": settings, "setting_rationale": rationale,
                     "parameters": parameters, "persona": persona,
                     "workspace": {"files": {"/data/AGENTS.md": "rendered persona"},
@@ -110,16 +113,26 @@ def build():
         (directory / "template.json").write_text(json.dumps(template, indent=2, ensure_ascii=False) + "\n")
         (directory / "AGENTS.md").write_text(render(template))
         (directory / (slug + ".memoh.zip")).write_bytes(bundle(template))
-        catalog.append({k: template[k] for k in ("id", "name", "category", "icon", "description", "parameters", "popularity")})
+        catalog.append({k: template[k] for k in ("id", "name", "category", "icon", "avatar", "description", "parameters", "popularity")})
     (ROOT / "web/catalog.json").write_text(json.dumps(catalog, indent=2, ensure_ascii=False) + "\n")
     lines = ["# 模板目录", "", "所有首句、示例和游戏流程均为原创；点击名称查看配置，点击导入包下载后可通过 Memoh 的 Bot 导入界面新建。覆盖已有 Bot 请用本地选择页或 `apply`。", ""]
     for category, label in CATEGORIES.items():
-        lines += [f"## {label}", "", "| 模板 | 玩法 | 原生导入包 |", "| --- | --- | --- |"]
+        lines += [f"## {label}", "", "| 头像 | 模板 | 玩法 | 原生导入包 |", "| --- | --- | --- | --- |"]
         for t in catalog:
             if t["category"] == category:
-                lines += [f"| [{t['icon']} {t['name']}](../templates/{t['id']}/template.json) | {t['description']} | [下载](../templates/{t['id']}/{t['id']}.memoh.zip) |"]
+                lines += [f"| <img src=\"../{t['avatar']['path']}\" width=\"48\" height=\"48\" alt=\"{t['name']}\"> | [{t['name']}](../templates/{t['id']}/template.json) | {t['description']} | [下载](../templates/{t['id']}/{t['id']}.memoh.zip) |"]
         lines += [""]
     (ROOT / "docs/catalog.md").write_text("\n".join(lines).rstrip() + "\n")
+    credits = ['# 头像来源与署名', '', '每个模板有独立的384×384头像。人物使用照片，古代人物使用历史肖像，动漫与游戏使用对应角色图，原创Bot使用内置image_gen生成的独立画像。', '',
+               '照片和角色图片沿用下表记录的来源许可与权利归属，不因仓库的AGPL许可而改变。裁剪和缩放仅用于头像展示。原创画像的最终提示词见[avatar-prompts.json](../catalog/avatar-prompts.json)。', '',
+               '默认头像以data URL写入Bot资料，原生包同时携带JPEG与来源记录，导入后显示无需访问外部图片站点。选择页直接读取仓库内的缩略图。', '',
+               '| 模板 | 来源 | 作者或权利人 | 来源许可或权利说明 |', '| --- | --- | --- | --- |']
+    for t in catalog:
+        a=t['avatar'];author=a['author'].replace('|','\\|').replace('\n',' ')
+        license=a['license'].replace('|','\\|')
+        if a.get('license_url'):license=f"[{license}]({a['license_url']})"
+        credits.append(f"| {t['name']} | [来源]({a['source_page']}) | {author} | {license} |")
+    (ROOT/'docs/avatars.md').write_text('\n'.join(credits)+'\n')
     print(f"Built {len(catalog)} templates, {len(sources)} research sources, {len(SETTING_FIELDS)} settings each")
 
 

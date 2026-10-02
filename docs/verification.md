@@ -1,6 +1,6 @@
 # 验证记录
 
-检查日期：2026-10-01。实际API与聊天验证在vultr-sg的独立 `memoh-template-eval` 实例进行，服务端和Web均由上游 `1bfb42154e09efacd34f68898ceaab78c10c85f3` 构建。测试创建自己的临时Bot，结束后删除；保留四个演示Bot供继续体验。
+头像更新与配置复验日期：2026-10-02；模型回答测试日期：2026-10-01。实际API与聊天验证在vultr-sg的独立 `memoh-template-eval` 实例进行，服务端和Web均由上游 `1bfb42154e09efacd34f68898ceaab78c10c85f3` 构建。测试创建自己的临时Bot，结束后删除；保留四个演示Bot供继续体验。
 
 ## 真实 API
 
@@ -22,6 +22,7 @@ MEMOH_URL=http://127.0.0.1:8080 python3 scripts/verify_customization_live.py
 ## 网页操作与真实回答
 
 - 选择页：56张卡片、搜索、角色详情、13个人格参数和完整配置编辑器；1440px桌面与390px手机无横向溢出。
+- [头像显示](../verification/avatar-ui.json)：56张选择页头像全部解码为384×384；四个演示Bot资料回读一致，内嵌图片在实际Memoh网页显示。原生导入与一键覆盖均验证头像字节，显示无需访问源图片站点。[头像总览](../verification/avatars-contact.png)与[逐图来源](avatars.md)可直接查看。
 - [一次点击应用](../verification/browser-live.json)：登录后清空凭据输入框，预览无修改，实际覆盖成功；称呼和旅行节奏出现在人格文件，模型与用户文件保留，临时Bot清理完成。
 - [原生Memoh聊天](../verification/memoh-ui.json)：从真实网页发送消息，等待新的用户消息和模型回答持久化，并确认回答显示在界面。没有用本地生成文字替代模型回答。
 - 两个实际聊天模型，共90条公开回答；方法、原始记录和不足见[模型测试](model-evaluation.md)。
@@ -33,13 +34,14 @@ node scripts/verify_browser.mjs
 MEMOH_VERIFY_ENV=/private/path/dev.env MEMOH_URL=http://127.0.0.1:8080 \
   node scripts/verify_browser_live.mjs
 MEMOH_WEB_URL=http://127.0.0.1:12883 node scripts/verify_memoh_ui.mjs
+MEMOH_WEB_URL=http://127.0.0.1:12883 node scripts/verify_avatar_ui.mjs
 ```
 
-前两个脚本需启动8765端口选择页和9228端口专用Chrome。最后一个需在同一Chrome中登录独立Memoh网页，且已创建演示Bot。私有env文件只需 `MEMOH_ADMIN_PASSWORD`，不提交到Git。
+前两个脚本需启动8765端口选择页和9228端口专用Chrome。后两个需在同一Chrome中登录独立Memoh网页，且已创建演示Bot。头像脚本读取现有演示对话，不发送新消息。私有env文件只需 `MEMOH_ADMIN_PASSWORD`，不提交到Git。
 
 ## 自动门禁与宣传素材
 
-30个标准库测试覆盖模板完整性、参数渲染、强度0退出角色、原生包结构、模型继承、备份权限、失败恢复、并发编辑保护，以及完整定制的字段校验、环境引用、文件路径、重复应用、回读不一致、资源恢复、MCP包格式和定时任务嵌套参数。
+31个标准库测试覆盖模板完整性、参数渲染、强度0退出角色、原生包结构、56个独立头像的字节与署名、离线头像导入、模型继承、备份权限、失败恢复、并发编辑保护，以及完整定制的字段校验、环境引用、文件路径、重复应用、回读不一致、资源恢复、MCP包格式和定时任务嵌套参数。
 
 ```sh
 python3 -m unittest discover -s tests -v

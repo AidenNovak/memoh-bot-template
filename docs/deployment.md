@@ -2,7 +2,7 @@
 
 2026-10-01在vultr-sg部署了独立实例，Compose项目 `memoh-template-eval`，目录 `/opt/memoh-template-eval`。服务端和Web均从锁定的上游提交 `1bfb42154e09efacd34f68898ceaab78c10c85f3` 构建，使用独立数据库、containerd命名空间和数据卷。
 
-保留四个演示Bot：芙莉莲、马斯克、阿尼亚、TRPG。已选择聊天模型并收到真实回答，可以在Memoh网页继续聊天、开新会话、调整设置。
+保留四个演示Bot：芙莉莲、马斯克、阿尼亚、TRPG。已选择聊天模型并收到真实回答，可以在Memoh网页继续聊天、开新会话、调整设置。2026-10-02已单独更新四个Bot的头像，保留现有设置与对话。
 
 在已配置 `vultr-sg` SSH别名的开发机打开隧道：
 
@@ -22,6 +22,8 @@ bash ops/build_eval_image.sh
 python3 ops/deploy_eval.py
 python3 ops/configure_eval_models.py
 python3 ops/seed_eval_demos.py
+# 仅更新已存在的四个演示Bot头像，先保存私有备份
+python3 ops/update_demo_avatars.py
 ```
 
 模型初始化脚本只在服务器内读取原dev配置，因为Provider API会隐藏密钥，读取其数据库中的原配置后写入独立评估库。凭据不经本机、不输出、不进入Git。首次构建脚本锁定提交且使用全新镜像标签；已构建时不必重复构建。

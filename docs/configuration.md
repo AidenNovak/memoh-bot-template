@@ -64,7 +64,7 @@
 
 不同角色分配给 13 种行为方案，采用不同推理偏好、压缩阈值、压缩目标、工具结果保留及工具调用可见性。人格与专属参数每个角色不同；共享方案不意味着所有 Settings 都不同。
 
-资料 `profile` 另含 display_name、avatar_url、timezone、is_active 四项，覆盖入口会应用全部四项。头像默认空，可在角色 JSON 中填入自己的地址。内部 name 与 metadata 默认保留；通过 customization.profile 可显式修改 name、metadata 及其他资料字段。id 是实例身份，不属于可改的配置。
+资料 `profile` 另含 display_name、avatar_url、timezone、is_active 四项，覆盖入口会应用全部四项。全部模板自带对应头像，默认avatar_url是内嵌JPEG的data URL；原生包携带同一头像与署名记录，导入后无需访问图片源站。内部 name 与 metadata 默认保留；通过 customization.profile 可显式修改 name、metadata、自己的avatar_url及其他资料字段。扩展表单的头像默认inherit，沿用模板头像。id 是实例身份，不属于可改的配置。
 
 ## 完整 Bot 定制
 

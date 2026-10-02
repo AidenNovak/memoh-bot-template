@@ -11,6 +11,7 @@ import posixpath
 import re
 from .catalog import render, resolved_settings
 from .customization import CONFIG, resolve, validate_body
+from .avatars import image_bytes
 
 
 def json_bytes(value):
@@ -28,6 +29,9 @@ def bundle(template, parameters=None, bindings=None, customizations=None):
     # Keep the complete portable recipe, including environment references.
     # Native Memoh restores this file; apply reads the recipe through --customization.
     files['.memoh/template/customization.json'] = json_bytes(sections)
+    if template.get('avatar'):
+        files['.memoh/template/avatar.jpg'] = image_bytes(template['avatar'])
+        files['.memoh/template/avatar-source.json'] = json_bytes(template['avatar'])
     native = {}
     options = ['settings', 'workspace']
     warnings = ["原创角色模板；默认不含模型与服务商配置，新建后需选择本实例的聊天模型。",

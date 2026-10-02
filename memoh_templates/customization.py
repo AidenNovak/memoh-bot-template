@@ -44,6 +44,7 @@ def defaults(template):
         request=form(spec['schema'])
         if key=='profile':request.update(template['profile'],name=template['id'],metadata={})
         if key=='creation':request.update(template['profile'],name=template['id'],wait_for_ready=True,acl_preset='personal')
+        if key in ['profile','creation']:request['avatar_url']=copy.deepcopy(INHERIT)
         if key in ['mcp','mcp_update']:request.update(name=template['id']+'-optional-mcp',transport='streamable-http',url='https://example.invalid/mcp',is_active=False)
         if key in ['schedules','schedule_update']:
             request.update(name=template['id']+'-daily',pattern='0 21 * * *',command='用当前角色口吻询问今天一件小事。',enabled=False,max_calls=7)

@@ -4,6 +4,26 @@
     "name": "马斯克 · 第一性原理车间",
     "category": "public-figures",
     "icon": "🚀",
+    "avatar": {
+      "kind": "photograph",
+      "subject": "Elon Musk",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Elon_Musk_-_54820081119_(cropped).jpg",
+      "source_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5e/Elon_Musk_-_54820081119_%28cropped%29.jpg/500px-Elon_Musk_-_54820081119_%28cropped%29.jpg",
+      "author": "Gage Skidmore",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "crop": {
+        "x": 0.5,
+        "y": 0.35,
+        "zoom": 1
+      },
+      "path": "assets/avatars/elon-musk.jpg",
+      "checked_at": "2026-10-02",
+      "sha256": "1ebf093502cd95d6ccc7be917cb0eb2e76b629fde6561e2c2da1401b5a31b5f1",
+      "bytes": 20392,
+      "width": 384,
+      "height": 384
+    },
     "description": "用户拿着一个成本过高的点子进入车间，桌上只有预算、零件和一张空白图。",
     "parameters": {
       "user_name": {
@@ -117,6 +137,26 @@
     "name": "Trump · 夸张交易擂台",
     "category": "public-figures",
     "icon": "🤝",
+    "avatar": {
+      "kind": "photograph",
+      "subject": "Donald Trump",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Official_Presidential_Portrait_of_President_Donald_J._Trump_(2025).jpg",
+      "source_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/16/Official_Presidential_Portrait_of_President_Donald_J._Trump_%282025%29.jpg/500px-Official_Presidential_Portrait_of_President_Donald_J._Trump_%282025%29.jpg",
+      "author": "Daniel Torok",
+      "license": "Public domain",
+      "license_url": "",
+      "crop": {
+        "x": 0.5,
+        "y": 0.35,
+        "zoom": 1
+      },
+      "path": "assets/avatars/donald-trump.jpg",
+      "checked_at": "2026-10-02",
+      "sha256": "2a434e54b6cf764c3bc7ed95cc42bc30082de321bbc3f46958c782e0c9c7cf2e",
+      "bytes": 17536,
+      "width": 384,
+      "height": 384
+    },
     "description": "用户来谈一笔完全虚构的小买卖，双方各持预算与底线卡。",
     "parameters": {
       "user_name": {
@@ -230,6 +270,26 @@
     "name": "乔布斯 · 一句话产品评审",
     "category": "public-figures",
     "icon": "🍎",
+    "avatar": {
+      "kind": "photograph",
+      "subject": "Steve Jobs",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Steve_Jobs_Headshot_2010_(cropped_4).jpg",
+      "source_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/51/Steve_Jobs_Headshot_2010_%28cropped_4%29.jpg/500px-Steve_Jobs_Headshot_2010_%28cropped_4%29.jpg",
+      "author": "Matthew Yohe",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "crop": {
+        "x": 0.5,
+        "y": 0.35,
+        "zoom": 1
+      },
+      "path": "assets/avatars/steve-jobs.jpg",
+      "checked_at": "2026-10-02",
+      "sha256": "1a65e623b45f60ccad9cb5ba2ca0db5a5dd424f1e0a75069ec033d5e973b8255",
+      "bytes": 18195,
+      "width": 384,
+      "height": 384
+    },
     "description": "用户在小型发布会彩排里展示一个功能堆叠的产品。",
     "parameters": {
       "user_name": {
@@ -343,6 +403,26 @@
     "name": "贝索斯 · 客户倒推实验室",
     "category": "public-figures",
     "icon": "📦",
+    "avatar": {
+      "kind": "photograph",
+      "subject": "Jeff Bezos",
+      "source_page": "https://commons.wikimedia.org/wiki/File:260202-D-PM193-2205_SECWAR_Arsenal_of_Freedom_Tour_-_Florida_(3x4_cropped_on_Bezos_and_rotated).jpg",
+      "source_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/260202-D-PM193-2205_SECWAR_Arsenal_of_Freedom_Tour_-_Florida_%283x4_cropped_on_Bezos_and_rotated%29.jpg/500px-260202-D-PM193-2205_SECWAR_Arsenal_of_Freedom_Tour_-_Florida_%283x4_cropped_on_Bezos_and_rotated%29.jpg",
+      "author": "SECWAR",
+      "license": "Public domain",
+      "license_url": "",
+      "crop": {
+        "x": 0.5,
+        "y": 0.35,
+        "zoom": 1
+      },
+      "path": "assets/avatars/jeff-bezos.jpg",
+      "checked_at": "2026-10-02",
+      "sha256": "480e97e9c4565318183ab0ebd0b6e6603053b83af63abda2670d28d69d6fd61e",
+      "bytes": 25295,
+      "width": 384,
+      "height": 384
+    },
     "description": "用户先写一段虚构的上线新闻，再倒推产品应该完成什么。",
     "parameters": {
       "user_name": {
@@ -456,6 +536,26 @@
     "name": "巴菲特 · 耐心选择俱乐部",
     "category": "public-figures",
     "icon": "🥤",
+    "avatar": {
+      "kind": "photograph",
+      "subject": "Warren Buffett",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Warren_Buffett_at_the_2015_SelectUSA_Investment_Summit_(cropped).jpg",
+      "source_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d4/Warren_Buffett_at_the_2015_SelectUSA_Investment_Summit_%28cropped%29.jpg/500px-Warren_Buffett_at_the_2015_SelectUSA_Investment_Summit_%28cropped%29.jpg",
+      "author": "USA International Trade Administration",
+      "license": "Public domain",
+      "license_url": "",
+      "crop": {
+        "x": 0.5,
+        "y": 0.35,
+        "zoom": 1
+      },
+      "path": "assets/avatars/warren-buffett.jpg",
+      "checked_at": "2026-10-02",
+      "sha256": "ebe4e5960593a5f68b201b1d59955cde008dea605e73b891a67b7c5d03994108",
+      "bytes": 17879,
+      "width": 384,
+      "height": 384
+    },
     "description": "用户带来一个机会，主持人先端上饮料，再讨论十年后的样子。",
     "parameters": {
       "user_name": {
@@ -569,6 +669,26 @@
     "name": "费曼 · 纸杯物理课",
     "category": "public-figures",
     "icon": "🥁",
+    "avatar": {
+      "kind": "photograph",
+      "subject": "Richard Feynman",
+      "source_page": "https://commons.wikimedia.org/wiki/File:RichardFeynman-PaineMansionWoods1984_copyrightTamikoThiel_bw.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/1/1a/RichardFeynman-PaineMansionWoods1984_copyrightTamikoThiel_bw.jpg",
+      "author": "Copyright Tamiko Thiel 1984",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "crop": {
+        "x": 0.6,
+        "y": 0.3,
+        "zoom": 1.8
+      },
+      "path": "assets/avatars/richard-feynman.jpg",
+      "checked_at": "2026-10-02",
+      "sha256": "7a23e074a0226d94e18b1ba93a7c3e4a8d4d2f76579da8045518ed2d5943c75b",
+      "bytes": 16281,
+      "width": 384,
+      "height": 384
+    },
     "description": "桌上有纸杯、弹簧和笔，用户挑一个自己似懂非懂的概念。",
     "parameters": {
       "user_name": {
@@ -682,6 +802,26 @@
     "name": "爱因斯坦 · 电梯里的思想实验",
     "category": "public-figures",
     "icon": "💡",
+    "avatar": {
+      "kind": "photograph",
+      "subject": "Albert Einstein",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Albert_Einstein_Head_cleaned.jpg",
+      "source_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/28/Albert_Einstein_Head_cleaned.jpg/500px-Albert_Einstein_Head_cleaned.jpg",
+      "author": "Oren Jack Turner",
+      "license": "Public domain",
+      "license_url": "",
+      "crop": {
+        "x": 0.5,
+        "y": 0.35,
+        "zoom": 1
+      },
+      "path": "assets/avatars/albert-einstein.jpg",
+      "checked_at": "2026-10-02",
+      "sha256": "70d270cd8928cb8dde97feff5a9d7debcdff4fee617e6fe2fd9bda1feea0b69d",
+      "bytes": 30413,
+      "width": 384,
+      "height": 384
+    },
     "description": "用户走进一台想象中的电梯，每次改变一个条件。",
     "parameters": {
       "user_name": {
@@ -795,6 +935,26 @@
     "name": "Paul Graham · 手工创业门诊",
     "category": "public-figures",
     "icon": "📝",
+    "avatar": {
+      "kind": "photograph",
+      "subject": "Paul Graham (programmer)",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Paulgraham_240x320.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/e/e3/Paulgraham_240x320.jpg",
+      "author": "Crédit photo: Sarah Harlin",
+      "license": "Public domain",
+      "license_url": "",
+      "crop": {
+        "x": 0.5,
+        "y": 0.35,
+        "zoom": 1
+      },
+      "path": "assets/avatars/paul-graham.jpg",
+      "checked_at": "2026-10-02",
+      "sha256": "c26d245fcdaa8fa56235c3b18d3179283b30cf0a7e3d58db5ca2f25c3fc90d37",
+      "bytes": 15862,
+      "width": 384,
+      "height": 384
+    },
     "description": "一间没有投影仪的门诊，用户只有一周时间寻找第一个愿意用产品的人。",
     "parameters": {
       "user_name": {
@@ -908,6 +1068,26 @@
     "name": "周杰伦 · 创作排练室",
     "category": "chinese-celebrities",
     "icon": "🎹",
+    "avatar": {
+      "kind": "photograph",
+      "subject": "Jay Chou",
+      "source_page": "https://commons.wikimedia.org/wiki/File:%E5%91%A8%E6%9D%B0%E5%80%AB_Jay_Chou_in_2026.jpg",
+      "source_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9b/%E5%91%A8%E6%9D%B0%E5%80%AB_Jay_Chou_in_2026.jpg/500px-%E5%91%A8%E6%9D%B0%E5%80%AB_Jay_Chou_in_2026.jpg",
+      "author": "娛樂星聞",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "crop": {
+        "x": 0.5,
+        "y": 0.35,
+        "zoom": 1
+      },
+      "path": "assets/avatars/jay-chou.jpg",
+      "checked_at": "2026-10-02",
+      "sha256": "d9c079ff3fa7f1fbc8df5b45179478d1cfe4ccd97b67bbaa8b7009712c9e775e",
+      "bytes": 15200,
+      "width": 384,
+      "height": 384
+    },
     "description": "用户带来一个生活画面，排练室要把它变成全新的节奏或短片。",
     "parameters": {
       "user_name": {
@@ -1021,6 +1201,26 @@
     "name": "周星驰 · 小人物喜剧工坊",
     "category": "chinese-celebrities",
     "icon": "🎬",
+    "avatar": {
+      "kind": "photograph",
+      "subject": "Stephen Chow",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Stephen_Chow,_2008_(cropped).JPG",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/6/64/Stephen_Chow%2C_2008_%28cropped%29.JPG",
+      "author": "Kit Liew",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "crop": {
+        "x": 0.5,
+        "y": 0.35,
+        "zoom": 1
+      },
+      "path": "assets/avatars/stephen-chow.jpg",
+      "checked_at": "2026-10-02",
+      "sha256": "9f2561d6ea4e19dd5990f41570653b305e7d8620c444ad9ceccbd9436feebd39",
+      "bytes": 17611,
+      "width": 384,
+      "height": 384
+    },
     "description": "用户拿一个尴尬的小事，把它改成三拍喜剧。",
     "parameters": {
       "user_name": {
@@ -1134,6 +1334,26 @@
     "name": "成龙 · 喜剧片场拆镜",
     "category": "chinese-celebrities",
     "icon": "🎥",
+    "avatar": {
+      "kind": "photograph",
+      "subject": "Jackie Chan",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Jackie_Chan.jpg",
+      "source_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/35/Jackie_Chan.jpg/500px-Jackie_Chan.jpg",
+      "author": "Segolene Liger",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "crop": {
+        "x": 0.5,
+        "y": 0.35,
+        "zoom": 1
+      },
+      "path": "assets/avatars/jackie-chan.jpg",
+      "checked_at": "2026-10-02",
+      "sha256": "caabab255a3164e18f0b82957ac45cb40a36273b6627dcd6bfca5356ae07894d",
+      "bytes": 22491,
+      "width": 384,
+      "height": 384
+    },
     "description": "用户在安全的排练室把一道日常困难拍成短喜剧。",
     "parameters": {
       "user_name": {
@@ -1247,6 +1467,26 @@
     "name": "王菲 · 留白听歌间",
     "category": "chinese-celebrities",
     "icon": "☁️",
+    "avatar": {
+      "kind": "photograph",
+      "subject": "Faye Wong",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Faye_Wong_(cropped).jpg",
+      "source_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fe/Faye_Wong_%28cropped%29.jpg/500px-Faye_Wong_%28cropped%29.jpg",
+      "author": "Brandon Lim",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+      "crop": {
+        "x": 0.5,
+        "y": 0.35,
+        "zoom": 1
+      },
+      "path": "assets/avatars/faye-wong.jpg",
+      "checked_at": "2026-10-02",
+      "sha256": "b83fba297732f3471a3032f4927ad774fc6fbdf1363db8a72ebf2291bfe2cb79",
+      "bytes": 13280,
+      "width": 384,
+      "height": 384
+    },
     "description": "窗边只有一盏灯，用户可以安静停留，也可以描述今天的一种声音。",
     "parameters": {
       "user_name": {
@@ -1360,6 +1600,26 @@
     "name": "陈奕迅 · 城市情绪电台",
     "category": "chinese-celebrities",
     "icon": "📻",
+    "avatar": {
+      "kind": "photograph",
+      "subject": "Eason Chan",
+      "source_page": "https://commons.wikimedia.org/wiki/File:%E4%B8%8A%E6%B5%B7_%E5%92%AA%E5%92%95%E9%A2%81%E5%A5%96%E7%A4%BC%E7%BA%A2%E6%AF%AF_(1).jpg",
+      "source_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/%E4%B8%8A%E6%B5%B7_%E5%92%AA%E5%92%95%E9%A2%81%E5%A5%96%E7%A4%BC%E7%BA%A2%E6%AF%AF_%281%29.jpg/500px-%E4%B8%8A%E6%B5%B7_%E5%92%AA%E5%92%95%E9%A2%81%E5%A5%96%E7%A4%BC%E7%BA%A2%E6%AF%AF_%281%29.jpg",
+      "author": "GEM_Ady (GEM_brilliant)",
+      "license": "CC BY 2.5",
+      "license_url": "https://creativecommons.org/licenses/by/2.5",
+      "crop": {
+        "x": 0.5,
+        "y": 0.35,
+        "zoom": 1
+      },
+      "path": "assets/avatars/eason-chan.jpg",
+      "checked_at": "2026-10-02",
+      "sha256": "441594699289b477a425035dac5d52f8d589508d1010522c4f7eb32df17abed2",
+      "bytes": 14736,
+      "width": 384,
+      "height": 384
+    },
     "description": "最后一班车经过窗下，用户把今日心情交给一段原创电台。",
     "parameters": {
       "user_name": {
@@ -1473,6 +1733,26 @@
     "name": "刘慈欣 · 宇宙尺度创意桌",
     "category": "chinese-celebrities",
     "icon": "🌌",
+    "avatar": {
+      "kind": "photograph",
+      "subject": "Liu Cixin",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Cixin_Liu_at_Worldcon_75,_Helsinki,_before_the_Hugo_Awards.jpg",
+      "source_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/Cixin_Liu_at_Worldcon_75%2C_Helsinki%2C_before_the_Hugo_Awards.jpg/500px-Cixin_Liu_at_Worldcon_75%2C_Helsinki%2C_before_the_Hugo_Awards.jpg",
+      "author": "Henry Söderlund",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "crop": {
+        "x": 0.5,
+        "y": 0.35,
+        "zoom": 1
+      },
+      "path": "assets/avatars/liu-cixin.jpg",
+      "checked_at": "2026-10-02",
+      "sha256": "814778bb561cb0ed9613006b5145a68dd85d36bf1267ccf427638ab492ca9736",
+      "bytes": 15155,
+      "width": 384,
+      "height": 384
+    },
     "description": "用户挑一个技术变化，桌面地图会从街区逐步缩放到星系。",
     "parameters": {
       "user_name": {
@@ -1586,6 +1866,26 @@
     "name": "蒋介石 · 民国幕僚室",
     "category": "historical",
     "icon": "📜",
+    "avatar": {
+      "kind": "photograph",
+      "subject": "Chiang Kai-shek",
+      "source_page": "https://commons.wikimedia.org/wiki/File:%E8%94%A3%E4%B8%AD%E6%AD%A3%E7%B8%BD%E7%B5%B1%E7%8E%89%E7%85%A7.png",
+      "source_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/27/%E8%94%A3%E4%B8%AD%E6%AD%A3%E7%B8%BD%E7%B5%B1%E7%8E%89%E7%85%A7.png/500px-%E8%94%A3%E4%B8%AD%E6%AD%A3%E7%B8%BD%E7%B5%B1%E7%8E%89%E7%85%A7.png",
+      "author": "Unknown photographer",
+      "license": "Attribution",
+      "license_url": "",
+      "crop": {
+        "x": 0.5,
+        "y": 0.35,
+        "zoom": 1
+      },
+      "path": "assets/avatars/chiang-kai-shek.jpg",
+      "checked_at": "2026-10-02",
+      "sha256": "3b0ed9e8d671c1195a8a1206edbfe68443ee6d18bd2d9bc18a3921e97772e955",
+      "bytes": 17556,
+      "width": 384,
+      "height": 384
+    },
     "description": "用户指定一年和一个决策难题，幕僚室只使用当年可知的信息。",
     "parameters": {
       "user_name": {
@@ -1699,6 +1999,26 @@
     "name": "曹操 · 用人棋桌",
     "category": "historical",
     "icon": "♟️",
+    "avatar": {
+      "kind": "historical-portrait",
+      "subject": "Cao Cao",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Cao_Cao_scth.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/5/57/Cao_Cao_scth.jpg",
+      "author": "Wang Qi",
+      "license": "Public domain",
+      "license_url": "",
+      "crop": {
+        "x": 0.51,
+        "y": 0.62,
+        "zoom": 1.5
+      },
+      "path": "assets/avatars/cao-cao.jpg",
+      "checked_at": "2026-10-02",
+      "sha256": "ced767baa1e5baf462a3d87966f0c4cc938962e67d122e3ffe2064f54cd53a28",
+      "bytes": 21088,
+      "width": 384,
+      "height": 384
+    },
     "description": "用户面前有三名虚构谋士，每人的能力、动机与忠诚线索都不完整。",
     "parameters": {
       "user_name": {
@@ -1812,6 +2132,26 @@
     "name": "苏轼 · 东坡厨房夜谈",
     "category": "historical",
     "icon": "🍲",
+    "avatar": {
+      "kind": "historical-portrait",
+      "subject": "Su Shi",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Su_shi.jpg",
+      "source_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/98/Su_shi.jpg/500px-Su_shi.jpg",
+      "author": "Zhao Mengfu",
+      "license": "Public domain",
+      "license_url": "",
+      "crop": {
+        "x": 0.6,
+        "y": 0.215,
+        "zoom": 2.5
+      },
+      "path": "assets/avatars/su-shi.jpg",
+      "checked_at": "2026-10-02",
+      "sha256": "93902d40a794ab036237a1e7bf3e0a035b2a4c4c9ec5b577ec26955570460ee7",
+      "bytes": 11186,
+      "width": 384,
+      "height": 384
+    },
     "description": "日子不太顺时，用户和主人在想象的厨房里给剩下的食材起名字。",
     "parameters": {
       "user_name": {
@@ -1925,6 +2265,26 @@
     "name": "李白 · 月下意象接龙",
     "category": "historical",
     "icon": "🌙",
+    "avatar": {
+      "kind": "historical-portrait",
+      "subject": "Li Bai",
+      "source_page": "https://commons.wikimedia.org/wiki/File:%E6%9D%8E%E7%99%BD.png",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/a/a6/%E6%9D%8E%E7%99%BD.png",
+      "author": "佚名（清代《唐名臣像》，中国国家博物馆藏）",
+      "license": "Public domain",
+      "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "crop": {
+        "x": 0.45,
+        "y": 0.42,
+        "zoom": 1
+      },
+      "path": "assets/avatars/li-bai.jpg",
+      "checked_at": "2026-10-02",
+      "sha256": "f822aa39574091e143bb45ed53e552e57189a13aeec889fd5352f94b17fbd44e",
+      "bytes": 23550,
+      "width": 384,
+      "height": 384
+    },
     "description": "用户说出一个普通物件，主持把它带入月亮、江水和远行的画面。",
     "parameters": {
       "user_name": {
@@ -2038,6 +2398,26 @@
     "name": "鲁迅 · 拆话术短笺",
     "category": "historical",
     "icon": "✒️",
+    "avatar": {
+      "kind": "photograph",
+      "subject": "Lu Xun",
+      "source_page": "https://commons.wikimedia.org/wiki/File:LuXun1930.jpg",
+      "source_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/48/LuXun1930.jpg/500px-LuXun1930.jpg",
+      "author": "Unknown author",
+      "license": "Public domain",
+      "license_url": "",
+      "crop": {
+        "x": 0.5,
+        "y": 0.35,
+        "zoom": 1
+      },
+      "path": "assets/avatars/lu-xun.jpg",
+      "checked_at": "2026-10-02",
+      "sha256": "80299f78832a428237ae7e1145038a415f20ee4dba15db9161573e4506226f54",
+      "bytes": 23504,
+      "width": 384,
+      "height": 384
+    },
     "description": "用户带来一段说服人的话，短笺桌只拆它的逻辑。",
     "parameters": {
       "user_name": {
@@ -2151,6 +2531,26 @@
     "name": "诸葛亮 · 三案推演室",
     "category": "historical",
     "icon": "🪭",
+    "avatar": {
+      "kind": "historical-portrait",
+      "subject": "Zhuge Liang",
+      "source_page": "https://commons.wikimedia.org/wiki/File:%E6%98%8E%E4%BA%BA%E7%BB%98_%E3%80%8A%E8%AF%B8%E8%91%9B%E4%BA%AE%E5%83%8F%E3%80%8B%EF%BC%88%E5%8D%97%E8%96%B0%E6%AE%BF%E6%9C%AC%EF%BC%89.jpg",
+      "source_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/%E6%98%8E%E4%BA%BA%E7%BB%98_%E3%80%8A%E8%AF%B8%E8%91%9B%E4%BA%AE%E5%83%8F%E3%80%8B%EF%BC%88%E5%8D%97%E8%96%B0%E6%AE%BF%E6%9C%AC%EF%BC%89.jpg/500px-%E6%98%8E%E4%BA%BA%E7%BB%98_%E3%80%8A%E8%AF%B8%E8%91%9B%E4%BA%AE%E5%83%8F%E3%80%8B%EF%BC%88%E5%8D%97%E8%96%B0%E6%AE%BF%E6%9C%AC%EF%BC%89.jpg",
+      "author": "Unknown author",
+      "license": "Public domain",
+      "license_url": "",
+      "crop": {
+        "x": 0.6,
+        "y": 0.235,
+        "zoom": 2
+      },
+      "path": "assets/avatars/zhuge-liang.jpg",
+      "checked_at": "2026-10-02",
+      "sha256": "308e614ecde91563e1e1290486ee741435441dde6b439e663d6b177d5c644fd8",
+      "bytes": 20101,
+      "width": 384,
+      "height": 384
+    },
     "description": "用户带来一个多方博弈难题，案前始终放着上、中、下三策。",
     "parameters": {
       "user_name": {
@@ -2264,6 +2664,31 @@
     "name": "芙莉莲 · 慢旅行收藏册",
     "category": "anime",
     "icon": "🧝",
+    "avatar": {
+      "kind": "character-portrait",
+      "subject": "Frieren",
+      "source_page": "https://anilist.co/character/176754",
+      "source_url": "https://s4.anilist.co/file/anilistcdn/character/large/b176754-PCnpqIOkjhFk.png",
+      "author": "原作品角色设计与美术权利人；AniList仅提供索引",
+      "license": "Original character artwork; rights retained by respective owners",
+      "license_url": "",
+      "crop": {
+        "x": 0.5,
+        "y": 0.37,
+        "zoom": 1
+      },
+      "character_id": 176754,
+      "works": [
+        "Sousou no Frieren",
+        "Sousou no Frieren"
+      ],
+      "path": "assets/avatars/frieren.jpg",
+      "checked_at": "2026-10-02",
+      "sha256": "0c5b0079c25b13b8d498e18a941d3927a789d001ab7d0cbb715c872a034ce24a",
+      "bytes": 21496,
+      "width": 384,
+      "height": 384
+    },
     "description": "用户加入一次没有期限的短途旅行，每站收集一种没有战斗用途的小魔法。",
     "parameters": {
       "user_name": {
@@ -2377,6 +2802,31 @@
     "name": "菲伦 · 靠谱旅途管家",
     "category": "anime",
     "icon": "🧳",
+    "avatar": {
+      "kind": "character-portrait",
+      "subject": "Fern",
+      "source_page": "https://anilist.co/character/183965",
+      "source_url": "https://s4.anilist.co/file/anilistcdn/character/large/b183965-uGFohBjlFoTp.png",
+      "author": "原作品角色设计与美术权利人；AniList仅提供索引",
+      "license": "Original character artwork; rights retained by respective owners",
+      "license_url": "",
+      "crop": {
+        "x": 0.5,
+        "y": 0.37,
+        "zoom": 1
+      },
+      "character_id": 183965,
+      "works": [
+        "Sousou no Frieren",
+        "Sousou no Frieren"
+      ],
+      "path": "assets/avatars/fern.jpg",
+      "checked_at": "2026-10-02",
+      "sha256": "d2deef710833eb5cab65692b63a4a38df1d929270f5c393bef2143195acfd27a",
+      "bytes": 23588,
+      "width": 384,
+      "height": 384
+    },
     "description": "用户要出门做一件事，而某位同伴仍在赖床。",
     "parameters": {
       "user_name": {
@@ -2490,6 +2940,31 @@
     "name": "猫猫 · 线索药柜",
     "category": "anime",
     "icon": "🧪",
+    "avatar": {
+      "kind": "character-portrait",
+      "subject": "Maomao",
+      "source_page": "https://anilist.co/character/126824",
+      "source_url": "https://s4.anilist.co/file/anilistcdn/character/large/b126824-MqsCncTO1qpv.png",
+      "author": "原作品角色设计与美术权利人；AniList仅提供索引",
+      "license": "Original character artwork; rights retained by respective owners",
+      "license_url": "",
+      "crop": {
+        "x": 0.5,
+        "y": 0.37,
+        "zoom": 1
+      },
+      "character_id": 126824,
+      "works": [
+        "Kusuriya no Hitorigoto",
+        "Kusuriya no Hitorigoto"
+      ],
+      "path": "assets/avatars/maomao.jpg",
+      "checked_at": "2026-10-02",
+      "sha256": "face3c941851c9b439eca41e99d89bc7e671dde70339bb1aef2329be933d6678",
+      "bytes": 33128,
+      "width": 384,
+      "height": 384
+    },
     "description": "一间虚构药柜里发生了无害的标签错位事件，用户扮演助手。",
     "parameters": {
       "user_name": {
@@ -2603,6 +3078,31 @@
     "name": "阿尼亚 · 花生任务本",
     "category": "anime",
     "icon": "🥜",
+    "avatar": {
+      "kind": "character-portrait",
+      "subject": "Anya Forger",
+      "source_page": "https://anilist.co/character/138100",
+      "source_url": "https://s4.anilist.co/file/anilistcdn/character/large/b138100-4Li0tWRCa5bQ.png",
+      "author": "原作品角色设计与美术权利人；AniList仅提供索引",
+      "license": "Original character artwork; rights retained by respective owners",
+      "license_url": "",
+      "crop": {
+        "x": 0.5,
+        "y": 0.37,
+        "zoom": 1
+      },
+      "character_id": 138100,
+      "works": [
+        "SPY×FAMILY",
+        "Dosanko Gal wa Namara Menkoi"
+      ],
+      "path": "assets/avatars/anya-forger.jpg",
+      "checked_at": "2026-10-02",
+      "sha256": "9b41fb3069d3412488257ce07c4fcbdceb5c133400621fd0c6acf93461067efb",
+      "bytes": 16972,
+      "width": 384,
+      "height": 384
+    },
     "description": "用户与阿尼亚聊朋友、零食、学校和今天的小事，想玩任务时才拿出小本本。",
     "parameters": {
       "user_name": {
@@ -2716,6 +3216,31 @@
     "name": "洛伊德 · 家庭任务简报",
     "category": "anime",
     "icon": "🕵️",
+    "avatar": {
+      "kind": "character-portrait",
+      "subject": "Loid Forger",
+      "source_page": "https://anilist.co/character/138101",
+      "source_url": "https://s4.anilist.co/file/anilistcdn/character/large/b138101-7NCB0Md8zA6G.png",
+      "author": "原作品角色设计与美术权利人；AniList仅提供索引",
+      "license": "Original character artwork; rights retained by respective owners",
+      "license_url": "",
+      "crop": {
+        "x": 0.5,
+        "y": 0.37,
+        "zoom": 1
+      },
+      "character_id": 138101,
+      "works": [
+        "SPY×FAMILY",
+        "Dosanko Gal wa Namara Menkoi"
+      ],
+      "path": "assets/avatars/loid-forger.jpg",
+      "checked_at": "2026-10-02",
+      "sha256": "8043ef6249650fa4299491d3afcfb514716e7b230dc439b7c57ea1393832fe20",
+      "bytes": 18599,
+      "width": 384,
+      "height": 384
+    },
     "description": "用户需要完成一次普通聚会，把准备工作写成虚构任务简报。",
     "parameters": {
       "user_name": {
@@ -2829,6 +3354,31 @@
     "name": "约尔 · 温柔笨拙家务课",
     "category": "anime",
     "icon": "🌷",
+    "avatar": {
+      "kind": "character-portrait",
+      "subject": "Yor Forger",
+      "source_page": "https://anilist.co/character/138102",
+      "source_url": "https://s4.anilist.co/file/anilistcdn/character/large/b138102-ZOAu9jI2d5ke.png",
+      "author": "原作品角色设计与美术权利人；AniList仅提供索引",
+      "license": "Original character artwork; rights retained by respective owners",
+      "license_url": "",
+      "crop": {
+        "x": 0.5,
+        "y": 0.37,
+        "zoom": 1
+      },
+      "character_id": 138102,
+      "works": [
+        "SPY×FAMILY",
+        "Dosanko Gal wa Namara Menkoi"
+      ],
+      "path": "assets/avatars/yor-forger.jpg",
+      "checked_at": "2026-10-02",
+      "sha256": "0d73e56359437309c6538ac6d6ffb9d0570ad61e7f8d058b7618e1d9bfa7373f",
+      "bytes": 19449,
+      "width": 384,
+      "height": 384
+    },
     "description": "用户和约尔一起尝试一项简单家务，成功与失败都能变成轻松剧情。",
     "parameters": {
       "user_name": {
@@ -2942,6 +3492,31 @@
     "name": "五条悟 · 甜品挑战课",
     "category": "anime",
     "icon": "😎",
+    "avatar": {
+      "kind": "character-portrait",
+      "subject": "Satoru Gojou",
+      "source_page": "https://anilist.co/character/127691",
+      "source_url": "https://s4.anilist.co/file/anilistcdn/character/large/b127691-9zqh1xpIubn7.png",
+      "author": "原作品角色设计与美术权利人；AniList仅提供索引",
+      "license": "Original character artwork; rights retained by respective owners",
+      "license_url": "",
+      "crop": {
+        "x": 0.5,
+        "y": 0.37,
+        "zoom": 1
+      },
+      "character_id": 127691,
+      "works": [
+        "Jujutsu Kaisen",
+        "Jujutsu Kaisen 0: Tokyo Toritsu Jujutsu Koutou Senmon Gakkou"
+      ],
+      "path": "assets/avatars/satoru-gojo.jpg",
+      "checked_at": "2026-10-02",
+      "sha256": "c10fd0d27ab5f2175971cb3390e276dc58e42c1f63b1288a0133d0b7f23b22b7",
+      "bytes": 35839,
+      "width": 384,
+      "height": 384
+    },
     "description": "用户来上一堂带甜品奖励的训练课，挑战是把复杂问题拆开。",
     "parameters": {
       "user_name": {
@@ -3055,6 +3630,31 @@
     "name": "七海建人 · 准时下班计划",
     "category": "anime",
     "icon": "⌚",
+    "avatar": {
+      "kind": "character-portrait",
+      "subject": "Kento Nanami",
+      "source_page": "https://anilist.co/character/133704",
+      "source_url": "https://s4.anilist.co/file/anilistcdn/character/large/b133704-8wLTGjc234q2.png",
+      "author": "原作品角色设计与美术权利人；AniList仅提供索引",
+      "license": "Original character artwork; rights retained by respective owners",
+      "license_url": "",
+      "crop": {
+        "x": 0.5,
+        "y": 0.37,
+        "zoom": 1
+      },
+      "character_id": 133704,
+      "works": [
+        "Jujutsu Kaisen",
+        "Jujutsu Kaisen 0: Tokyo Toritsu Jujutsu Koutou Senmon Gakkou"
+      ],
+      "path": "assets/avatars/kento-nanami.jpg",
+      "checked_at": "2026-10-02",
+      "sha256": "88cae6087e2861d37613e1ad3074d9e0fdbcc63aafcb3a20b0d4f324fcc4fccf",
+      "bytes": 36083,
+      "width": 384,
+      "height": 384
+    },
     "description": "用户把今天工作放到桌上，目标是在合理时段内完成最值得做的部分。",
     "parameters": {
       "user_name": {
@@ -3168,6 +3768,31 @@
     "name": "路飞 · 目标出海团",
     "category": "anime",
     "icon": "🏴‍☠️",
+    "avatar": {
+      "kind": "character-portrait",
+      "subject": "Luffy Monkey",
+      "source_page": "https://anilist.co/character/40",
+      "source_url": "https://s4.anilist.co/file/anilistcdn/character/large/b40-MNypXsxSRb1R.png",
+      "author": "原作品角色设计与美术权利人；AniList仅提供索引",
+      "license": "Original character artwork; rights retained by respective owners",
+      "license_url": "",
+      "crop": {
+        "x": 0.5,
+        "y": 0.37,
+        "zoom": 1
+      },
+      "character_id": 40,
+      "works": [
+        "ONE PIECE",
+        "ONE PIECE (Movie)"
+      ],
+      "path": "assets/avatars/monkey-d-luffy.jpg",
+      "checked_at": "2026-10-02",
+      "sha256": "6bc5a07ddcc14b3b11c11c7749dfc7ac8a70f62684bb8715bc6ec63043aab14d",
+      "bytes": 30293,
+      "width": 384,
+      "height": 384
+    },
     "description": "用户组建一艘想象的小船，把现实目标变成可选择的航线。",
     "parameters": {
       "user_name": {
@@ -3281,6 +3906,31 @@
     "name": "索隆 · 十分钟训练账",
     "category": "anime",
     "icon": "⚔️",
+    "avatar": {
+      "kind": "character-portrait",
+      "subject": "Zoro Roronoa",
+      "source_page": "https://anilist.co/character/62",
+      "source_url": "https://s4.anilist.co/file/anilistcdn/character/large/b62-S7oAeA9WInjV.png",
+      "author": "原作品角色设计与美术权利人；AniList仅提供索引",
+      "license": "Original character artwork; rights retained by respective owners",
+      "license_url": "",
+      "crop": {
+        "x": 0.5,
+        "y": 0.37,
+        "zoom": 1
+      },
+      "character_id": 62,
+      "works": [
+        "ONE PIECE",
+        "ONE PIECE (Movie)"
+      ],
+      "path": "assets/avatars/roronoa-zoro.jpg",
+      "checked_at": "2026-10-02",
+      "sha256": "ed924727e2114f9eaaf93d43c24101c6dbbb54c27712bd01b168ccdf144c0ca3",
+      "bytes": 34975,
+      "width": 384,
+      "height": 384
+    },
     "description": "用户选择一项安全技能，每次只练十分钟并记录一个变化。",
     "parameters": {
       "user_name": {
@@ -3394,6 +4044,31 @@
     "name": "鸣人 · 逆风练习场",
     "category": "anime",
     "icon": "🍜",
+    "avatar": {
+      "kind": "character-portrait",
+      "subject": "Naruto Uzumaki",
+      "source_page": "https://anilist.co/character/17",
+      "source_url": "https://s4.anilist.co/file/anilistcdn/character/large/b17-phjcWCkRuIhu.png",
+      "author": "原作品角色设计与美术权利人；AniList仅提供索引",
+      "license": "Original character artwork; rights retained by respective owners",
+      "license_url": "",
+      "crop": {
+        "x": 0.5,
+        "y": 0.37,
+        "zoom": 1
+      },
+      "character_id": 17,
+      "works": [
+        "NARUTO",
+        "NARUTO: Dai Katsugeki! Yuki Hime Ninpouchou Dattebayo!!"
+      ],
+      "path": "assets/avatars/naruto-uzumaki.jpg",
+      "checked_at": "2026-10-02",
+      "sha256": "e2d32e3f42f7ca1db652364313aaa7da5df245ea8adb9c926c7cab2f97fd8d58",
+      "bytes": 24720,
+      "width": 384,
+      "height": 384
+    },
     "description": "用户把失败经历带到一间虚构训练场，墙上只写下一次要改什么。",
     "parameters": {
       "user_name": {
@@ -3507,6 +4182,31 @@
     "name": "卡卡西 · 铃铛协作课",
     "category": "anime",
     "icon": "🔔",
+    "avatar": {
+      "kind": "character-portrait",
+      "subject": "Kakashi Hatake",
+      "source_page": "https://anilist.co/character/85",
+      "source_url": "https://s4.anilist.co/file/anilistcdn/character/large/b85-mkVBh2yjxjmx.png",
+      "author": "原作品角色设计与美术权利人；AniList仅提供索引",
+      "license": "Original character artwork; rights retained by respective owners",
+      "license_url": "",
+      "crop": {
+        "x": 0.5,
+        "y": 0.37,
+        "zoom": 1
+      },
+      "character_id": 85,
+      "works": [
+        "NARUTO",
+        "NARUTO: Dai Katsugeki! Yuki Hime Ninpouchou Dattebayo!!"
+      ],
+      "path": "assets/avatars/kakashi-hatake.jpg",
+      "checked_at": "2026-10-02",
+      "sha256": "eee65be0175ad8d414a38e977b2c3d58a7d618e0b7ca7c37fc9d73279910d80a",
+      "bytes": 20450,
+      "width": 384,
+      "height": 384
+    },
     "description": "用户进入一个虚构的协作测试，单人最优不一定是团队最优。",
     "parameters": {
       "user_name": {
@@ -3620,6 +4320,31 @@
     "name": "柯南 · 公平线索小案",
     "category": "anime",
     "icon": "🔍",
+    "avatar": {
+      "kind": "character-portrait",
+      "subject": "Conan Edogawa",
+      "source_page": "https://anilist.co/character/1742",
+      "source_url": "https://s4.anilist.co/file/anilistcdn/character/large/b1742-NiV278NBFOvZ.png",
+      "author": "原作品角色设计与美术权利人；AniList仅提供索引",
+      "license": "Original character artwork; rights retained by respective owners",
+      "license_url": "",
+      "crop": {
+        "x": 0.5,
+        "y": 0.37,
+        "zoom": 1
+      },
+      "character_id": 1742,
+      "works": [
+        "Meitantei Conan",
+        "Meitantei Conan: Tokei Jikake no Matenrou"
+      ],
+      "path": "assets/avatars/edogawa-conan.jpg",
+      "checked_at": "2026-10-02",
+      "sha256": "4fde15d8a62c0bd987e552ca86306a62c29099f2ec6a0b78d2245ebcada7a04b",
+      "bytes": 17942,
+      "width": 384,
+      "height": 384
+    },
     "description": "用户和侦探查一件原创的遗失物事件，每个关键线索都会公开。",
     "parameters": {
       "user_name": {
@@ -3733,6 +4458,31 @@
     "name": "灰原哀 · 冷静证据便签",
     "category": "anime",
     "icon": "🧫",
+    "avatar": {
+      "kind": "character-portrait",
+      "subject": "Ai Haibara",
+      "source_page": "https://anilist.co/character/1743",
+      "source_url": "https://s4.anilist.co/file/anilistcdn/character/large/b1743-yw1FloPUI7jO.png",
+      "author": "原作品角色设计与美术权利人；AniList仅提供索引",
+      "license": "Original character artwork; rights retained by respective owners",
+      "license_url": "",
+      "crop": {
+        "x": 0.5,
+        "y": 0.37,
+        "zoom": 1
+      },
+      "character_id": 1743,
+      "works": [
+        "Meitantei Conan",
+        "Meitantei Conan: Seikimatsu no Majutsushi"
+      ],
+      "path": "assets/avatars/ai-haibara.jpg",
+      "checked_at": "2026-10-02",
+      "sha256": "04a7dfdc7b43790d5213a6c0edc8d20cc1a5dc6f3134c2cf13dc6075cf9ef09a",
+      "bytes": 24057,
+      "width": 384,
+      "height": 384
+    },
     "description": "用户把一个不确定结论写在便签上，一起寻找能改变判断的证据。",
     "parameters": {
       "user_name": {
@@ -3846,6 +4596,31 @@
     "name": "后藤一里 · 社恐小步合奏",
     "category": "anime",
     "icon": "🎸",
+    "avatar": {
+      "kind": "character-portrait",
+      "subject": "Hitori Gotou",
+      "source_page": "https://anilist.co/character/257562",
+      "source_url": "https://s4.anilist.co/file/anilistcdn/character/large/b257562-Ru35NYPfsqhY.png",
+      "author": "原作品角色设计与美术权利人；AniList仅提供索引",
+      "license": "Original character artwork; rights retained by respective owners",
+      "license_url": "",
+      "crop": {
+        "x": 0.5,
+        "y": 0.37,
+        "zoom": 1
+      },
+      "character_id": 257562,
+      "works": [
+        "Bocchi the Rock!",
+        "Slow Loop"
+      ],
+      "path": "assets/avatars/bocchi.jpg",
+      "checked_at": "2026-10-02",
+      "sha256": "bb9e63de5961a9a1f485a69e0fffef23e2e5fd96cd8f70d3652ffad12fc70745",
+      "bytes": 22104,
+      "width": 384,
+      "height": 384
+    },
     "description": "用户和她练习一个很小的交流场景，失败也能重来。",
     "parameters": {
       "user_name": {
@@ -3959,6 +4734,31 @@
     "name": "喜多川海梦 · Cosplay灵感板",
     "category": "anime",
     "icon": "🧵",
+    "avatar": {
+      "kind": "character-portrait",
+      "subject": "Marin Kitagawa",
+      "source_page": "https://anilist.co/character/133676",
+      "source_url": "https://s4.anilist.co/file/anilistcdn/character/large/b133676-kV2czE3C8Qls.png",
+      "author": "原作品角色设计与美术权利人；AniList仅提供索引",
+      "license": "Original character artwork; rights retained by respective owners",
+      "license_url": "",
+      "crop": {
+        "x": 0.5,
+        "y": 0.37,
+        "zoom": 1
+      },
+      "character_id": 133676,
+      "works": [
+        "Sono Bisque Doll wa Koi wo Suru",
+        "Sono Bisque Doll wa Koi wo Suru"
+      ],
+      "path": "assets/avatars/marin-kitagawa.jpg",
+      "checked_at": "2026-10-02",
+      "sha256": "ce98e826eca4a176730b9e992229976eb8bc594b62245050004e0d913bb425e1",
+      "bytes": 31379,
+      "width": 384,
+      "height": 384
+    },
     "description": "用户把一个喜欢的角色风格转成可在预算内完成的道具计划。",
     "parameters": {
       "user_name": {
@@ -4072,6 +4872,31 @@
     "name": "牧濑红莉栖 · 反驳实验桌",
     "category": "anime",
     "icon": "🧠",
+    "avatar": {
+      "kind": "character-portrait",
+      "subject": "Kurisu Makise",
+      "source_page": "https://anilist.co/character/34470",
+      "source_url": "https://s4.anilist.co/file/anilistcdn/character/large/b34470-Jw2LXZBL5R8i.png",
+      "author": "原作品角色设计与美术权利人；AniList仅提供索引",
+      "license": "Original character artwork; rights retained by respective owners",
+      "license_url": "",
+      "crop": {
+        "x": 0.5,
+        "y": 0.37,
+        "zoom": 1
+      },
+      "character_id": 34470,
+      "works": [
+        "Steins;Gate",
+        "Mahou Shoujo Sonico☆Magica"
+      ],
+      "path": "assets/avatars/makise-kurisu.jpg",
+      "checked_at": "2026-10-02",
+      "sha256": "ee8374208b4500a000fb3e6ed8015c4c9f3f3c933b53b0193574770888dbd699",
+      "bytes": 15946,
+      "width": 384,
+      "height": 384
+    },
     "description": "用户带来一个大胆假说，实验桌上先写可被推翻的预测。",
     "parameters": {
       "user_name": {
@@ -4185,6 +5010,31 @@
     "name": "鲁路修 · 棋局分支室",
     "category": "anime",
     "icon": "👑",
+    "avatar": {
+      "kind": "character-portrait",
+      "subject": "Lelouch Lamperouge",
+      "source_page": "https://anilist.co/character/417",
+      "source_url": "https://s4.anilist.co/file/anilistcdn/character/large/b417-gVLmIJu9phcK.png",
+      "author": "原作品角色设计与美术权利人；AniList仅提供索引",
+      "license": "Original character artwork; rights retained by respective owners",
+      "license_url": "",
+      "crop": {
+        "x": 0.5,
+        "y": 0.37,
+        "zoom": 1
+      },
+      "character_id": 417,
+      "works": [
+        "Code Geass: Hangyaku no Lelouch",
+        "Code Geass: Hangyaku no Lelouch Picture Drama"
+      ],
+      "path": "assets/avatars/lelouch.jpg",
+      "checked_at": "2026-10-02",
+      "sha256": "41aca84174f58e4c491d90becf703b7f7c9275bff8498b68b25623f186f586e3",
+      "bytes": 23900,
+      "width": 384,
+      "height": 384
+    },
     "description": "用户掌握一张虚构校园活动地图，要在多方约束中决定下一步。",
     "parameters": {
       "user_name": {
@@ -4298,6 +5148,31 @@
     "name": "绫濑桃 · 怪谈调查搭子",
     "category": "anime",
     "icon": "👻",
+    "avatar": {
+      "kind": "character-portrait",
+      "subject": "Momo Ayase",
+      "source_page": "https://anilist.co/character/222594",
+      "source_url": "https://s4.anilist.co/file/anilistcdn/character/large/b222594-24Jn7qlI5spH.png",
+      "author": "原作品角色设计与美术权利人；AniList仅提供索引",
+      "license": "Original character artwork; rights retained by respective owners",
+      "license_url": "",
+      "crop": {
+        "x": 0.5,
+        "y": 0.37,
+        "zoom": 1
+      },
+      "character_id": 222594,
+      "works": [
+        "Dandadan",
+        "Dandadan"
+      ],
+      "path": "assets/avatars/momo-ayase.jpg",
+      "checked_at": "2026-10-02",
+      "sha256": "a512328a358f559e3ca13c2a534eb019e936e77648408809f16a49d9aced7550",
+      "bytes": 29154,
+      "width": 384,
+      "height": 384
+    },
     "description": "用户带来一条校园传闻，两人决定先查有没有普通解释。",
     "parameters": {
       "user_name": {
@@ -4411,6 +5286,31 @@
     "name": "厄卡伦 · 超自然资料社",
     "category": "anime",
     "icon": "👽",
+    "avatar": {
+      "kind": "character-portrait",
+      "subject": "Ken Takakura",
+      "source_page": "https://anilist.co/character/222593",
+      "source_url": "https://s4.anilist.co/file/anilistcdn/character/large/b222593-qBqUvpodooAI.png",
+      "author": "原作品角色设计与美术权利人；AniList仅提供索引",
+      "license": "Original character artwork; rights retained by respective owners",
+      "license_url": "",
+      "crop": {
+        "x": 0.5,
+        "y": 0.37,
+        "zoom": 1
+      },
+      "character_id": 222593,
+      "works": [
+        "Dandadan",
+        "Dandadan"
+      ],
+      "path": "assets/avatars/okarun.jpg",
+      "checked_at": "2026-10-02",
+      "sha256": "5dae01347a10f9b6ebbdb55d9c2b508a60b181e04f3810766426e8c428cd2a7f",
+      "bytes": 27074,
+      "width": 384,
+      "height": 384
+    },
     "description": "用户和资料社为一个原创都市传说整理卡片。",
     "parameters": {
       "user_name": {
@@ -4524,6 +5424,27 @@
     "name": "钟离 · 契约茶馆",
     "category": "games",
     "icon": "🍵",
+    "avatar": {
+      "kind": "game-avatar",
+      "subject": "zhongli",
+      "source_page": "https://genshin.hoyoverse.com/",
+      "source_url": "https://enka.network/ui/UI_AvatarIcon_Zhongli.png",
+      "author": "miHoYo / HoYoverse",
+      "license": "Original game artwork; rights retained by HoYoverse",
+      "license_url": "",
+      "crop": {
+        "x": 0.5,
+        "y": 0.5,
+        "zoom": 1
+      },
+      "asset_host_reference": "https://github.com/EnkaNetwork/API-docs",
+      "path": "assets/avatars/zhongli.jpg",
+      "checked_at": "2026-10-02",
+      "sha256": "507db7e60ac2806a95b6227ed9f098c36dd16ff1d473c20b3b9df7483e1ab199",
+      "bytes": 23699,
+      "width": 384,
+      "height": 384
+    },
     "description": "用户带来一个承诺或一件老物件，茶馆里先谈它的来历和界限。",
     "parameters": {
       "user_name": {
@@ -4637,6 +5558,27 @@
     "name": "芙宁娜 · 小剧场谢幕",
     "category": "games",
     "icon": "🎭",
+    "avatar": {
+      "kind": "game-avatar",
+      "subject": "furina",
+      "source_page": "https://genshin.hoyoverse.com/",
+      "source_url": "https://enka.network/ui/UI_AvatarIcon_Furina.png",
+      "author": "miHoYo / HoYoverse",
+      "license": "Original game artwork; rights retained by HoYoverse",
+      "license_url": "",
+      "crop": {
+        "x": 0.5,
+        "y": 0.5,
+        "zoom": 1
+      },
+      "asset_host_reference": "https://github.com/EnkaNetwork/API-docs",
+      "path": "assets/avatars/furina.jpg",
+      "checked_at": "2026-10-02",
+      "sha256": "5ade96c2d182d975dadd61fac218eaedb53bc87196cd310649cca890531b78c4",
+      "bytes": 34727,
+      "width": 384,
+      "height": 384
+    },
     "description": "用户把今天的一场尴尬改成一出可以重新排练的微型戏剧。",
     "parameters": {
       "user_name": {
@@ -4750,6 +5692,27 @@
     "name": "纳西妲 · 知识花园",
     "category": "games",
     "icon": "🌱",
+    "avatar": {
+      "kind": "game-avatar",
+      "subject": "nahida",
+      "source_page": "https://genshin.hoyoverse.com/",
+      "source_url": "https://enka.network/ui/UI_AvatarIcon_Nahida.png",
+      "author": "miHoYo / HoYoverse",
+      "license": "Original game artwork; rights retained by HoYoverse",
+      "license_url": "",
+      "crop": {
+        "x": 0.5,
+        "y": 0.5,
+        "zoom": 1
+      },
+      "asset_host_reference": "https://github.com/EnkaNetwork/API-docs",
+      "path": "assets/avatars/nahida.jpg",
+      "checked_at": "2026-10-02",
+      "sha256": "d16a3bb4b5df3a229844a79006590502a04b1cb58b3d14126924535fc112eacc",
+      "bytes": 33867,
+      "width": 384,
+      "height": 384
+    },
     "description": "用户在知识花园种下一个问题，旁支随理解生长。",
     "parameters": {
       "user_name": {
@@ -4863,6 +5826,27 @@
     "name": "雷电将军 · 永恒与变化辩题",
     "category": "games",
     "icon": "⚡",
+    "avatar": {
+      "kind": "game-avatar",
+      "subject": "raiden-shogun",
+      "source_page": "https://genshin.hoyoverse.com/",
+      "source_url": "https://enka.network/ui/UI_AvatarIcon_Shougun.png",
+      "author": "miHoYo / HoYoverse",
+      "license": "Original game artwork; rights retained by HoYoverse",
+      "license_url": "",
+      "crop": {
+        "x": 0.5,
+        "y": 0.5,
+        "zoom": 1
+      },
+      "asset_host_reference": "https://github.com/EnkaNetwork/API-docs",
+      "path": "assets/avatars/raiden-shogun.jpg",
+      "checked_at": "2026-10-02",
+      "sha256": "8b637963450edb238f687b766f49dac02111c4a41e5d45050b0b48cc46400d1b",
+      "bytes": 28730,
+      "width": 384,
+      "height": 384
+    },
     "description": "用户拿一条自己坚持的规则，讨论何时保留、何时更新。",
     "parameters": {
       "user_name": {
@@ -4976,6 +5960,27 @@
     "name": "卡芙卡 · 剧本分支游戏",
     "category": "games",
     "icon": "🕸️",
+    "avatar": {
+      "kind": "game-avatar",
+      "subject": "kafka",
+      "source_page": "https://hsr.hoyoverse.com/",
+      "source_url": "https://raw.githubusercontent.com/Mar-7th/StarRailRes/master/icon/character/1005.png",
+      "author": "miHoYo / HoYoverse",
+      "license": "Original game artwork; rights retained by HoYoverse",
+      "license_url": "",
+      "crop": {
+        "x": 0.5,
+        "y": 0.5,
+        "zoom": 1
+      },
+      "asset_host_reference": "https://github.com/Mar-7th/StarRailRes",
+      "path": "assets/avatars/kafka.jpg",
+      "checked_at": "2026-10-02",
+      "sha256": "19a1d2629939ba11aba5f8854fd2c318a419bcd9422a118765e498b789b5cdf0",
+      "bytes": 21725,
+      "width": 384,
+      "height": 384
+    },
     "description": "用户收到一份只写到今晚的虚构剧本，之后由自己的选择续写。",
     "parameters": {
       "user_name": {
@@ -5089,6 +6094,27 @@
     "name": "三月七 · 列车旅行日记",
     "category": "games",
     "icon": "📷",
+    "avatar": {
+      "kind": "game-avatar",
+      "subject": "march-7th",
+      "source_page": "https://hsr.hoyoverse.com/",
+      "source_url": "https://raw.githubusercontent.com/Mar-7th/StarRailRes/master/icon/character/1001.png",
+      "author": "miHoYo / HoYoverse",
+      "license": "Original game artwork; rights retained by HoYoverse",
+      "license_url": "",
+      "crop": {
+        "x": 0.5,
+        "y": 0.5,
+        "zoom": 1
+      },
+      "asset_host_reference": "https://github.com/Mar-7th/StarRailRes",
+      "path": "assets/avatars/march-7th.jpg",
+      "checked_at": "2026-10-02",
+      "sha256": "0b2124eac2d20c8dc3422089a93a45f1d70e15fac55b60de69c1019fe597b185",
+      "bytes": 33410,
+      "width": 384,
+      "height": 384
+    },
     "description": "用户登上想象的列车，给今天拍一张纯文字照片。",
     "parameters": {
       "user_name": {
@@ -5202,6 +6228,27 @@
     "name": "流萤 · 短途散步地图",
     "category": "games",
     "icon": "🦋",
+    "avatar": {
+      "kind": "game-avatar",
+      "subject": "firefly",
+      "source_page": "https://hsr.hoyoverse.com/",
+      "source_url": "https://raw.githubusercontent.com/Mar-7th/StarRailRes/master/icon/character/1310.png",
+      "author": "miHoYo / HoYoverse",
+      "license": "Original game artwork; rights retained by HoYoverse",
+      "license_url": "",
+      "crop": {
+        "x": 0.5,
+        "y": 0.5,
+        "zoom": 1
+      },
+      "asset_host_reference": "https://github.com/Mar-7th/StarRailRes",
+      "path": "assets/avatars/firefly.jpg",
+      "checked_at": "2026-10-02",
+      "sha256": "c4409dff1229576b74d3693607c0aa0d3a6f7768f999a574ac9a36a469b8bb9b",
+      "bytes": 37694,
+      "width": 384,
+      "height": 384
+    },
     "description": "用户只空出十分钟，和旅伴设计一段想象中的城市散步。",
     "parameters": {
       "user_name": {
@@ -5315,6 +6362,26 @@
     "name": "阿罗娜 · 蓝色便签助手",
     "category": "games",
     "icon": "💙",
+    "avatar": {
+      "kind": "character-portrait",
+      "subject": "Arona",
+      "source_page": "https://sh-anime.shochiku.co.jp/bluearchive-anime/character/arona/",
+      "source_url": "https://sh-anime.shochiku.co.jp/bluearchive-anime/assets/images/common/character/arona/chara-arona-look_02.png",
+      "author": "NEXON Games / Yostar / Blue Archive animation production",
+      "license": "Original character artwork; rights retained by respective owners",
+      "license_url": "",
+      "crop": {
+        "x": 0.55,
+        "y": 0.175,
+        "zoom": 1.5
+      },
+      "path": "assets/avatars/arona.jpg",
+      "checked_at": "2026-10-02",
+      "sha256": "3e0321aa061c34587afaa26acc83a86ca3ef953fa80e89888a9e2b33b19ff8ef",
+      "bytes": 20213,
+      "width": 384,
+      "height": 384
+    },
     "description": "用户选择今天三件事，蓝色便签把它们改成可以划掉的小格子。",
     "parameters": {
       "user_name": {
@@ -5428,6 +6495,26 @@
     "name": "酒馆骰子 · 轻量TRPG主持",
     "category": "original",
     "icon": "🎲",
+    "avatar": {
+      "kind": "generated-original",
+      "subject": "trpg-gm",
+      "source_page": "https://github.com/AidenNovak/memoh-bot-template/blob/main/catalog/avatar-prompts.json",
+      "source_url": "generated:image_gen",
+      "author": "memoh-bot-template / built-in image_gen",
+      "license": "AGPL-3.0-only",
+      "license_url": "https://www.gnu.org/licenses/agpl-3.0.html",
+      "crop": {
+        "x": 0.5,
+        "y": 0.5,
+        "zoom": 1
+      },
+      "path": "assets/avatars/trpg-gm.jpg",
+      "checked_at": "2026-10-02",
+      "sha256": "7dea86df90145866814a4eb3f0e2ccb1c3ae0c39984f627c78fa542b00fd098d",
+      "bytes": 28056,
+      "width": 384,
+      "height": 384
+    },
     "description": "雨夜酒馆收到一封没有署名的求助信，玩家可以追查也可以拒绝。",
     "parameters": {
       "user_name": {
@@ -5541,6 +6628,26 @@
     "name": "霓虹酒吧 · 零酒精调饮师",
     "category": "original",
     "icon": "🍸",
+    "avatar": {
+      "kind": "generated-original",
+      "subject": "cyber-bartender",
+      "source_page": "https://github.com/AidenNovak/memoh-bot-template/blob/main/catalog/avatar-prompts.json",
+      "source_url": "generated:image_gen",
+      "author": "memoh-bot-template / built-in image_gen",
+      "license": "AGPL-3.0-only",
+      "license_url": "https://www.gnu.org/licenses/agpl-3.0.html",
+      "crop": {
+        "x": 0.5,
+        "y": 0.5,
+        "zoom": 1
+      },
+      "path": "assets/avatars/cyber-bartender.jpg",
+      "checked_at": "2026-10-02",
+      "sha256": "1d65b6358b64aab7a34b6d5480442d97879568d7265ca9b0992491d0ee6b7a8f",
+      "bytes": 23424,
+      "width": 384,
+      "height": 384
+    },
     "description": "城市下着紫色霓虹雨，用户坐在一个可以随时离开的吧台前。",
     "parameters": {
       "user_name": {
@@ -5654,6 +6761,26 @@
     "name": "猫猫事务所 · 摸鱼任务助理",
     "category": "original",
     "icon": "🐈",
+    "avatar": {
+      "kind": "generated-original",
+      "subject": "cat-office",
+      "source_page": "https://github.com/AidenNovak/memoh-bot-template/blob/main/catalog/avatar-prompts.json",
+      "source_url": "generated:image_gen",
+      "author": "memoh-bot-template / built-in image_gen",
+      "license": "AGPL-3.0-only",
+      "license_url": "https://www.gnu.org/licenses/agpl-3.0.html",
+      "crop": {
+        "x": 0.5,
+        "y": 0.5,
+        "zoom": 1
+      },
+      "path": "assets/avatars/cat-office.jpg",
+      "checked_at": "2026-10-02",
+      "sha256": "acf82b6b9a9ecd49a24edc5cd29ad429b53356991c3ac2829e10e3456fa10ae1",
+      "bytes": 30951,
+      "width": 384,
+      "height": 384
+    },
     "description": "用户把一件拖延的事交给猫事务所，猫只批准一个最小动作。",
     "parameters": {
       "user_name": {
@@ -5767,6 +6894,26 @@
     "name": "合租幽灵 · 轻惊悚室友",
     "category": "original",
     "icon": "🕯️",
+    "avatar": {
+      "kind": "generated-original",
+      "subject": "ghost-roommate",
+      "source_page": "https://github.com/AidenNovak/memoh-bot-template/blob/main/catalog/avatar-prompts.json",
+      "source_url": "generated:image_gen",
+      "author": "memoh-bot-template / built-in image_gen",
+      "license": "AGPL-3.0-only",
+      "license_url": "https://www.gnu.org/licenses/agpl-3.0.html",
+      "crop": {
+        "x": 0.5,
+        "y": 0.5,
+        "zoom": 1
+      },
+      "path": "assets/avatars/ghost-roommate.jpg",
+      "checked_at": "2026-10-02",
+      "sha256": "9bd8c23bf031f18cb48863ac38406336428e09bb314ea63645d0f5b496a6f29d",
+      "bytes": 15851,
+      "width": 384,
+      "height": 384
+    },
     "description": "用户搬进一间灯会慢半拍亮起的房间，室友先留下一张礼貌便条。",
     "parameters": {
       "user_name": {
@@ -5880,6 +7027,26 @@
     "name": "灯塔电台 · 五分钟夜航",
     "category": "original",
     "icon": "🏮",
+    "avatar": {
+      "kind": "generated-original",
+      "subject": "lighthouse-radio",
+      "source_page": "https://github.com/AidenNovak/memoh-bot-template/blob/main/catalog/avatar-prompts.json",
+      "source_url": "generated:image_gen",
+      "author": "memoh-bot-template / built-in image_gen",
+      "license": "AGPL-3.0-only",
+      "license_url": "https://www.gnu.org/licenses/agpl-3.0.html",
+      "crop": {
+        "x": 0.5,
+        "y": 0.5,
+        "zoom": 1
+      },
+      "path": "assets/avatars/lighthouse-radio.jpg",
+      "checked_at": "2026-10-02",
+      "sha256": "92ff2c96b225f23937ca60d0a07b6e805b83f826fb60abde4761714414849c33",
+      "bytes": 24036,
+      "width": 384,
+      "height": 384
+    },
     "description": "一座不会追问姓名的灯塔，用户决定今晚播一段天气还是一段日记。",
     "parameters": {
       "user_name": {
@@ -5993,6 +7160,26 @@
     "name": "三椅茶会 · 观点圆桌",
     "category": "original",
     "icon": "🪑",
+    "avatar": {
+      "kind": "generated-original",
+      "subject": "debate-salon",
+      "source_page": "https://github.com/AidenNovak/memoh-bot-template/blob/main/catalog/avatar-prompts.json",
+      "source_url": "generated:image_gen",
+      "author": "memoh-bot-template / built-in image_gen",
+      "license": "AGPL-3.0-only",
+      "license_url": "https://www.gnu.org/licenses/agpl-3.0.html",
+      "crop": {
+        "x": 0.5,
+        "y": 0.5,
+        "zoom": 1
+      },
+      "path": "assets/avatars/debate-salon.jpg",
+      "checked_at": "2026-10-02",
+      "sha256": "ecd0a3de6d0e4d6083d786fda5f995889aedbe351202bb92fd8a900ea3423bd2",
+      "bytes": 21704,
+      "width": 384,
+      "height": 384
+    },
     "description": "用户带来一个决策问题，三把椅子轮流陈述并接受追问。",
     "parameters": {
       "user_name": {
@@ -6106,6 +7293,26 @@
     "name": "纸盒密室 · 公平推理主持",
     "category": "original",
     "icon": "🗝️",
+    "avatar": {
+      "kind": "generated-original",
+      "subject": "locked-room",
+      "source_page": "https://github.com/AidenNovak/memoh-bot-template/blob/main/catalog/avatar-prompts.json",
+      "source_url": "generated:image_gen",
+      "author": "memoh-bot-template / built-in image_gen",
+      "license": "AGPL-3.0-only",
+      "license_url": "https://www.gnu.org/licenses/agpl-3.0.html",
+      "crop": {
+        "x": 0.5,
+        "y": 0.5,
+        "zoom": 1
+      },
+      "path": "assets/avatars/locked-room.jpg",
+      "checked_at": "2026-10-02",
+      "sha256": "ccde4fe133e150be178e2ee98cabefe8a05f112e27f8cc4071e4cce761e723fa",
+      "bytes": 23665,
+      "width": 384,
+      "height": 384
+    },
     "description": "用户面前是一只纸盒、三张卡片和一道不会影响现实的文字锁。",
     "parameters": {
       "user_name": {
@@ -6219,6 +7426,26 @@
     "name": "嘴硬教练 · 最小行动伙伴",
     "category": "original",
     "icon": "💪",
+    "avatar": {
+      "kind": "generated-original",
+      "subject": "tsundere-coach",
+      "source_page": "https://github.com/AidenNovak/memoh-bot-template/blob/main/catalog/avatar-prompts.json",
+      "source_url": "generated:image_gen",
+      "author": "memoh-bot-template / built-in image_gen",
+      "license": "AGPL-3.0-only",
+      "license_url": "https://www.gnu.org/licenses/agpl-3.0.html",
+      "crop": {
+        "x": 0.5,
+        "y": 0.5,
+        "zoom": 1
+      },
+      "path": "assets/avatars/tsundere-coach.jpg",
+      "checked_at": "2026-10-02",
+      "sha256": "1dd646dde9dc63b308714d9f0d7b748ad864f3f5c1fe35d0dce9af7dda8a6936",
+      "bytes": 24378,
+      "width": 384,
+      "height": 384
+    },
     "description": "用户选一个学习或生活习惯，教练每次只盯一件能完成的小事。",
     "parameters": {
       "user_name": {

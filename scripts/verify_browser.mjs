@@ -11,10 +11,14 @@ const call=(method,params={})=>new Promise((resolve,reject)=>{const id=++seq;pen
 const evaluate=async(expression)=>{const r=await call('Runtime.evaluate',{expression,awaitPromise:true,returnByValue:true});if(r.exceptionDetails)throw new Error(r.exceptionDetails.text);return r.result.value;};
 const check=async(expr,label)=>{if(!await evaluate(expr))throw new Error(label);};
 fs.mkdirSync('verification',{recursive:true});
+await call('Page.bringToFront');
 await call('Emulation.setDeviceMetricsOverride',{width:1440,height:1080,deviceScaleFactor:1,mobile:false});
 await call('Page.reload');
 await evaluate(`new Promise(resolve=>{const poll=()=>document.querySelectorAll('.card').length===56?resolve(true):setTimeout(poll,30);poll();})`);
 await check(`document.querySelectorAll('.card').length===56`,'56 cards');
+await evaluate(`document.querySelectorAll('.card img.avatar').forEach(img=>img.loading='eager')`);
+await evaluate(`new Promise((resolve,reject)=>{const deadline=Date.now()+15000;const poll=()=>Array.from(document.querySelectorAll('.card img.avatar')).every(img=>img.complete&&img.naturalWidth===384)?resolve(true):Date.now()>deadline?reject(new Error('Avatar image timeout')):setTimeout(poll,50);poll();})`);
+await check(`document.querySelectorAll('.card img.avatar').length===56&&Array.from(document.querySelectorAll('.card img.avatar')).every(img=>img.complete&&img.naturalWidth===384)`,'56 actual avatars loaded');
 let screenshot=await call('Page.captureScreenshot',{format:'png'});fs.writeFileSync('verification/gallery-desktop.png',Buffer.from(screenshot.data,'base64'));
 await evaluate(`document.querySelector('#search').value='芙莉莲';document.querySelector('#search').dispatchEvent(new Event('input'))`);
 await check(`document.querySelectorAll('.card').length===1`,'search');

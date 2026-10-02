@@ -1,4 +1,5 @@
 import hashlib
+import base64
 import io
 import json
 import tarfile
@@ -64,9 +65,27 @@ class CatalogTests(unittest.TestCase):
                     profile=json.loads(archive.read('bot/profile.json'))
                     self.assertEqual(profile['display_name'],template['name'])
                     with tarfile.open(fileobj=io.BytesIO(archive.read('workspace/data.tar.gz')),mode='r:gz') as tar:
-                        self.assertEqual(tar.getnames(),['AGENTS.md','.memoh/template/customization.json'])
+                        self.assertEqual(tar.getnames(),['AGENTS.md','.memoh/template/customization.json','.memoh/template/avatar.jpg','.memoh/template/avatar-source.json'])
                         self.assertEqual(json.load(tar.extractfile('.memoh/template/customization.json')),template['customization'])
                         self.assertEqual(tar.extractfile('AGENTS.md').read().decode(),catalog.render(template))
+
+    def test_every_avatar_is_unique_attributed_and_carried_offline_in_the_bundle(self):
+        digests = set()
+        for template in catalog.templates():
+            record = template['avatar']
+            raw = (catalog.ROOT / record['path']).read_bytes()
+            self.assertEqual(hashlib.sha256(raw).hexdigest(), record['sha256'])
+            self.assertTrue(record['source_page'].startswith('https://'))
+            self.assertTrue(record['author'] and record['license'])
+            self.assertEqual(base64.b64decode(template['profile']['avatar_url'].split(',', 1)[1], validate=True), raw)
+            digests.add(record['sha256'])
+            with zipfile.ZipFile(io.BytesIO(bundle(template))) as archive:
+                profile = json.loads(archive.read('bot/profile.json'))
+                self.assertEqual(profile['avatar_url'], template['profile']['avatar_url'])
+                with tarfile.open(fileobj=io.BytesIO(archive.read('workspace/data.tar.gz')), mode='r:gz') as tar:
+                    self.assertEqual(tar.extractfile('.memoh/template/avatar.jpg').read(), raw)
+                    self.assertEqual(json.load(tar.extractfile('.memoh/template/avatar-source.json')), record)
+        self.assertEqual(len(digests), 56)
 
     def test_slug_cannot_read_arbitrary_files(self):
         for slug in ('../README','/tmp/test','UPPER','foo%2fbar'):

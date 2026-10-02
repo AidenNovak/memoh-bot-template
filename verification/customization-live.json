@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-10-01T12:33:24.793155+00:00",
+  "checked_at": "2026-10-02T02:10:32.175767+00:00",
   "checks": [
     "10 enabled customization groups applied; core and reported fields read back",
     "repeat application reuses MCP/schedule/workdir/ACL/agent IDs and preserves schedule execution",
@@ -8,7 +8,7 @@
   ],
   "verified": true,
   "native_import_warnings": [
-    "原创角色模板；默认不含模型与服务商配置，新建后需选择本实例的聊天模型。",
+    "原创角色模板；包含调用者显式指定的模型UUID，导入实例必须具有同一模型资源。",
     "原生导入只恢复 manifest 中的部分；完整定制配方在 /data/.memoh/template/customization.json，通过 apply --customization 应用。",
     "agents: 此项保留在完整配方中，通过 apply 或对应 Memoh 界面配置。"
   ],

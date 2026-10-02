@@ -6,7 +6,7 @@
 
 影片从原创角色插画进入实际模板选择页，展示角色、13个人格参数、一键应用和真实Memoh聊天，再介绍完整配置与开源地址。规格为1280×720、30fps、H.264/AAC，MP4支持faststart。
 
-两张插画由内置 **image_gen** 生成，完整最终提示词和参考关系位于[prompts.md](prompts.md)，素材保存在 `assets/hero.png` 和 `assets/closing.png`。插画中的小旅行者、发明家、纸幽灵和猫是原创吉祥物，不使用官方角色图片。实际界面截图来自 `verification/`，对话引用来源记录见[evidence.json](evidence.json)。
+两张插画由内置 **image_gen** 生成，完整最终提示词和参考关系位于[prompts.md](prompts.md)，素材保存在 `assets/hero.png` 和 `assets/closing.png`。插画中的小旅行者、发明家、纸幽灵和猫是原创吉祥物。实际界面截图来自 `verification/`，2026-10-02更新为各Bot的独立头像；界面中的照片与作品角色图沿用[各自来源和权利归属](../docs/avatars.md)。对话引用来源记录见[evidence.json](evidence.json)。
 
 音乐由渲染脚本用波形与和弦写成原创轻柔琶音，无外部录音、歌词或人物声音。镜头布局、文字动画、缩放、转场、音轨与编码均由[Python/FFmpeg脚本](../scripts/render_promo.py)生成。
 

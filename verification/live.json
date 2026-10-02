@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-10-01T12:42:24.535987+00:00",
+  "checked_at": "2026-10-02T02:10:19.828654+00:00",
   "instance": "Isolated Memoh template evaluation (loopback API on vultr-sg)",
   "upstream_commit": "1bfb42154e09efacd34f68898ceaab78c10c85f3",
   "applied": [
@@ -120,5 +120,6 @@
   ],
   "restored": true,
   "native_imported": true,
+  "native_avatar_imported": true,
   "cleanup": true
 }

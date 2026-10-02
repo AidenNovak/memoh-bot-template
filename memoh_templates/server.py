@@ -1,5 +1,6 @@
 """Loopback-only preset picker and API proxy, using Python's standard library."""
 import json
+import re
 import threading
 import webbrowser
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
@@ -48,6 +49,8 @@ def serve(port=8765, open_browser=False):
                 if path in static:
                     name, content_type = static[path]
                     return self.send(200, (ROOT / "web" / name).read_bytes(), content_type)
+                if re.fullmatch(r'/assets/avatars/[a-z0-9-]+\.jpg', path):
+                    return self.send(200, (ROOT / path.lstrip('/')).read_bytes(), 'image/jpeg')
                 if path.startswith("/api/template/"):
                     return self.send(200, load(path.rsplit("/", 1)[1]))
                 if path.startswith("/download/"):
